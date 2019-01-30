@@ -1,0 +1,4754 @@
+<p><img src="media/image1.jpeg" style="width:10in;height:5.42917in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 1 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image2.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image3.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>Everyone should be done with Assignment 3 now</p>
+</blockquote></li>
+<li><blockquote>
+<p>Milestone grades will go out soon</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image4.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 2 29 Feb 2016</p>
+<p><img src="media/image5.jpeg" style="width:9.91806in;height:2.7125in" /></p>
+<p>Spatial Transformer</p>
+<blockquote>
+<p>Segmentation</p>
+</blockquote>
+<p><img src="media/image6.jpeg" style="width:3.70833in;height:0.45694in" /></p>
+<blockquote>
+<p>Soft Attention</p>
+</blockquote>
+<p><img src="media/image7.jpeg" style="width:10in;height:2.35625in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 3 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image8.jpeg" style="width:1.93681in;height:0.85972in" /></p>
+<p>Videos</p>
+<p><img src="media/image9.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 4 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image10.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image11.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 5 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image13.jpeg" style="width:9.02778in;height:2.71042in" /></p>
+<p><strong>Dense trajectories and motion boundary descriptors for action recognition</strong> <em>Wang et al., 2013</em></p>
+<p><strong>Action Recognition with Improved Trajectories</strong></p>
+<p><em>Wang and Schmid, 2013</em></p>
+<p>(code available!)</p>
+</blockquote>
+<p><img src="media/image14.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 6 29 Feb 2016</p>
+<p><img src="media/image16.jpeg" style="width:9.34722in;height:3.48681in" /></p>
+<blockquote>
+<p><strong>Dense trajectories and motion boundary descriptors for action recognition</strong> <em>Wang et al., 2013</em></p>
+</blockquote>
+<p><img src="media/image17.jpeg" style="width:9.15417in;height:0.89306in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>detect feature points</p>
+</blockquote></td>
+<td><blockquote>
+<p>track features with</p>
+</blockquote></td>
+<td><blockquote>
+<p>extract HOG/HOF/MBH</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>features in the (stabilized)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>optical flow</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>coordinate system of</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>each tracklet</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 14</p>
+</blockquote></td>
+<td>7</td>
+<td><blockquote>
+<p>29 Feb 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image18.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image19.jpeg" style="width:9.37014in;height:4.9in" /><em>Wang et al., 2013</em></p>
+<blockquote>
+<p>detected feature points</p>
+<p>[J. Shi and C. Tomasi, “Good features to track,” CVPR 1994] [Ivan Laptev 2005]</p>
+</blockquote>
+<p><img src="media/image20.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 8 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image21.jpeg" style="width:8.74236in;height:0.82014in" /><em>Wang et al., 2013</em></p>
+<p><img src="media/image22.jpeg" style="width:9.94375in;height:3.17014in" /></p>
+<blockquote>
+<p>track each keypoint using <strong>optical flow.</strong></p>
+</blockquote>
+<p><img src="media/image23.jpeg" style="width:9.62431in;height:0.45833in" /></p>
+<blockquote>
+<p>[G. Farnebäck, “Two-frame motion estimation based on polynomial expansion,” 2003]</p>
+<p>[T. Brox and J. Malik, “Large displacement optical flow: Descriptor matching in variational motion estimation,” 2011]</p>
+</blockquote>
+<p><img src="media/image24.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 9 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image25.jpeg" style="width:8.74236in;height:0.82014in" /><em>Wang et al., 2013</em></p>
+<p><img src="media/image26.jpeg" style="width:8.79653in;height:3.22708in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Extract features in the local coordinate</td>
+<td><blockquote>
+<p>Accumulate into histograms, separately</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>according to multiple spatio-temporal layouts.</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>system of each tracklet.</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image27.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 10 29 Feb 2016</p>
+<p><img src="media/image28.jpeg" style="width:9.76597in;height:1.90972in" /></p>
+<p><em>[Krizhevsky et al. 2012]</em></p>
+</blockquote>
+<p><img src="media/image29.jpeg" style="width:9.24514in;height:1.17986in" /></p>
+<blockquote>
+<p>Input: 227x227x3 images</p>
+<p><strong>First layer</strong> (CONV1): 96 11x11 filters applied at stride 4 =&gt;</p>
+<p>Output volume <strong>[55x55x96]</strong></p>
+<p>Q: What if the input is now a small chunk of video? E.g. [227x227x3x15] ?</p>
+</blockquote>
+<p><img src="media/image30.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 11 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image31.jpeg" style="width:9.76597in;height:1.90972in" /></p>
+<p><em>[Krizhevsky et al. 2012]</em></p>
+</blockquote>
+<p><img src="media/image32.jpeg" style="width:9.24514in;height:1.17986in" /></p>
+<blockquote>
+<p>Input: 227x227x3 images</p>
+<p><strong>First layer</strong> (CONV1): 96 11x11 filters applied at stride 4 =&gt;</p>
+<p>Output volume <strong>[55x55x96]</strong></p>
+<p>Q: What if the input is now a small chunk of video? E.g. [227x227x3x15] ?</p>
+</blockquote>
+<ol type="A">
+<li><blockquote>
+<p>Extend the convolutional filters in time, perform spatio-temporal convolutions! E.g. can have 11x11xT filters, where T = 2..15.</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image33.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 12 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image34.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image35.jpeg" style="width:10in;height:4.49722in" /></p>
+<p>[3D Convolutional Neural Networks for Human Action Recognition, Ji et al., 2010]</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 13 29 Feb 2016</p>
+<p><img src="media/image36.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image37.jpeg" style="width:10in;height:4.64931in" /></p>
+<blockquote>
+<p>Sequential Deep Learning for Human Action Recognition, Baccouche et al., 2011</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 14 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image38.jpeg" style="width:9.90764in;height:1.00417in" /> spatio-temporal convolutions; worked best.</p>
+</blockquote>
+<p><img src="media/image39.jpeg" style="width:9.32847in;height:3.67431in" /></p>
+<blockquote>
+<p>[Large-scale Video Classification with Convolutional Neural Networks, Karpathy et al., 2014]</p>
+</blockquote>
+<p><img src="media/image40.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 15 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image41.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image42.jpeg" style="width:8.23889in;height:3.30903in" /></p>
+<blockquote>
+<p>Learned filters on the first layer</p>
+</blockquote>
+<p><img src="media/image43.jpeg" style="width:8.36736in;height:0.31875in" /></p>
+<blockquote>
+<p>[Large-scale Video Classification with Convolutional Neural Networks, Karpathy et al., 2014]</p>
+</blockquote>
+<p><img src="media/image44.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 16 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image45.jpeg" style="width:9.59375in;height:4.35833in" /></p>
+<p>1 million videos</p>
+<p>487 sports classes</p>
+</blockquote>
+<p><img src="media/image46.jpeg" style="width:8.36736in;height:0.31875in" /></p>
+<blockquote>
+<p>[Large-scale Video Classification with Convolutional Neural Networks, Karpathy et al., 2014]</p>
+</blockquote>
+<p><img src="media/image47.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 17 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image48.jpeg" style="width:9.02778in;height:3.77569in" /></p>
+</blockquote>
+<p><img src="media/image49.jpeg" style="width:8.47708in;height:0.45833in" /></p>
+<blockquote>
+<p>The motion information didn’t add all that much...</p>
+</blockquote>
+<p><img src="media/image50.jpeg" style="width:8.36736in;height:0.31875in" /></p>
+<blockquote>
+<p>[Large-scale Video Classification with Convolutional Neural Networks, Karpathy et al., 2014]</p>
+</blockquote>
+<p><img src="media/image51.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 18 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image52.jpeg" style="width:9.17847in;height:4.85903in" /></p>
+</blockquote>
+<p><img src="media/image53.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 19 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image54.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image55.jpeg" style="width:9.14167in;height:1.53611in" /></p>
+<blockquote>
+<p>3D VGGNet, basically.</p>
+</blockquote>
+<p><img src="media/image57.jpeg" style="width:8.26111in;height:0.68403in" /></p>
+<blockquote>
+<p>[Learning Spatiotemporal Features with 3D Convolutional Networks, Tran et al. 2015]</p>
+</blockquote>
+<p><img src="media/image58.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 20 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image59.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image60.jpeg" style="width:10in;height:4.40764in" /></p>
+<blockquote>
+<p>(of VGGNet fame)</p>
+<p>[Two-Stream Convolutional Networks for Action Recognition in Videos, <strong>Simonyan</strong> and Zisserman 2014]</p>
+</blockquote>
+<p>[T. Brox and J. Malik, “Large displacement optical flow: Descriptor matching in variational motion estimation,” 2011]</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 21 29 Feb 2016</p>
+<p><img src="media/image61.jpeg" style="width:9.79028in;height:1.4625in" /></p>
+</blockquote>
+<p><img src="media/image62.jpeg" style="width:7.81944in;height:0.96528in" /></p>
+<blockquote>
+<p>Two-stream version works much better than either alone.</p>
+</blockquote>
+<p><img src="media/image64.jpeg" style="width:10in;height:1.46528in" /></p>
+<blockquote>
+<p>[Two-Stream Convolutional Networks for Action Recognition in Videos, <strong>Simonyan</strong> and Zisserman 2014]</p>
+</blockquote>
+<p>[T. Brox and J. Malik, “Large displacement optical flow: Descriptor matching in variational motion estimation,” 2011]</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 22 29 Feb 2016</p>
+<p><img src="media/image65.jpeg" style="width:9.02778in;height:2.11458in" /></p>
+<p>All 3D ConvNets so far used local motion cues to get extra accuracy (e.g. half a second or so)</p>
+</blockquote>
+<ol start="17" type="A">
+<li><blockquote>
+<p>what if the temporal dependencies of interest are much much longer? E.g. several seconds?</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image66.jpeg" style="width:8.30139in;height:2.05972in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>event 1</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>event 2</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image67.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 23 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image72.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image73.jpeg" style="width:8.54583in;height:3.36181in" /></p>
+<blockquote>
+<p>(This paper was way ahead of its time. Cited 65 times.)</p>
+</blockquote>
+<p><img src="media/image74.jpeg" style="width:10in;height:1.14514in" /></p>
+<blockquote>
+<p>Sequential Deep Learning for Human Action Recognition, Baccouche et al., <strong>2011</strong></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 24 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image75.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image76.jpeg" style="width:4.86528in;height:0.45833in" /></p>
+<p>LSTM way before it was cool</p>
+<p><img src="media/image77.jpeg" style="width:7.35069in;height:2.07153in" /></p>
+<blockquote>
+<p>(This paper was way ahead of its time. Cited 65 times.)</p>
+</blockquote>
+<p><img src="media/image79.jpeg" style="width:10in;height:1.14514in" /></p>
+<blockquote>
+<p>Sequential Deep Learning for Human Action Recognition, Baccouche et al., <strong>2011</strong></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 25 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image80.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image81.jpeg" style="width:4.28333in;height:3.01875in" /></p>
+<blockquote>
+<p>[Long-term Recurrent Convolutional Networks for Visual Recognition and Description, Donahue et al., 2015]</p>
+</blockquote>
+<p><img src="media/image83.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 26 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image84.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image85.jpeg" style="width:9.71806in;height:3.92361in" /></p>
+<blockquote>
+<p>[Beyond Short Snippets: Deep Networks for Video Classification, Ng et al., 2015]</p>
+</blockquote>
+<p><img src="media/image86.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 27 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image87.jpeg" style="width:9.02778in;height:4.55208in" /></p>
+<p>We looked at two types of architectural patterns:</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Model temporal motion locally (3D CONV)</p>
+</blockquote>
+<ol start="2" type="1">
+<li><blockquote>
+<p>Model temporal motion globally (LSTM / RNN) + Fusions of both approaches at the same time.</p>
+</blockquote></li>
+</ol></li>
+</ol>
+<p><img src="media/image88.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 28 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image89.jpeg" style="width:9.51389in;height:4.55208in" /></p>
+<p>We looked at two types of architectural patterns:</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Model temporal motion locally (3D CONV)</p>
+</blockquote>
+<ol start="2" type="1">
+<li><blockquote>
+<p>Model temporal motion globally (LSTM / RNN)</p>
+</blockquote></li>
+</ol></li>
+</ol>
+<blockquote>
+<p>+ Fusions of both approaches at the same time.</p>
+</blockquote>
+<p>There is another (cleaner) way!</p>
+<p><img src="media/image90.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 29 29 Feb 2016</p>
+<p><img src="media/image91.jpeg" style="width:2.34444in;height:0.59097in" /></p>
+<blockquote>
+<p>RNN</p>
+</blockquote>
+<p><img src="media/image92.jpeg" style="width:0.95694in" /></p>
+<blockquote>
+<p>3D</p>
+<p>CONVNET</p>
+</blockquote>
+<p><img src="media/image94.jpeg" style="width:8.66736in;height:0.51597in" /></p>
+<p>Infinite (in theory)</p>
+<p><img src="media/image95.jpeg" style="width:3.5875in;height:0.31875in" /></p>
+<p>temporal extent</p>
+<p>(neurons that are function</p>
+<p>of all video frames in the past)</p>
+<p><img src="media/image96.jpeg" style="width:3.42222in;height:0.31875in" /></p>
+<blockquote>
+<p>Finite temporal</p>
+<p>extent</p>
+<p>(neurons that are only</p>
+<p>a function of finitely many</p>
+<p>video frames in the past)</p>
+<p>video</p>
+</blockquote>
+<p><img src="media/image97.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 30 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image98.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image99.jpeg" style="width:3.81736in;height:3.43681in" /></p>
+<blockquote>
+<p>Beautiful:</p>
+</blockquote>
+<p><img src="media/image100.jpeg" style="width:5.71736in;height:3.09375in" /></p>
+<blockquote>
+<p>All neurons in the ConvNet are recurrent.</p>
+<p>Only requires (existing) 2D CONV routines. No need for 3D spatio-temporal CONV.</p>
+</blockquote>
+<p><img src="media/image101.jpeg" style="width:9.15556in;height:0.39444in" /></p>
+<blockquote>
+<p>[Delving Deeper into Convolutional Networks for Learning Video Representations, Ballas et al., 2016]</p>
+</blockquote>
+<p><img src="media/image102.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 31 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image103.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image104.jpeg" style="width:3.76111in;height:0.39444in" /></p>
+<blockquote>
+<p>Normal ConvNet:</p>
+</blockquote>
+<p><img src="media/image105.jpeg" style="width:4.42222in;height:1.70208in" /></p>
+<blockquote>
+<p>Convolution Layer</p>
+</blockquote>
+<p><img src="media/image106.jpeg" style="width:9.15556in;height:0.39444in" /></p>
+<blockquote>
+<p>[Delving Deeper into Convolutional Networks for Learning Video Representations, Ballas et al., 2016]</p>
+</blockquote>
+<p><img src="media/image108.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 32 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image109.jpeg" style="width:9.66875in;height:4.5125in" /></p>
+<p>layer N</p>
+<p>layer N+1 at previous timestep</p>
+</blockquote>
+<p>CONV</p>
+<p><img src="media/image110.jpeg" style="width:2.01875in" /></p>
+<blockquote>
+<p>RNN-like recurrence</p>
+</blockquote>
+<p><img src="media/image111.jpeg" style="width:0.89097in" /></p>
+<blockquote>
+<p>(GRU)</p>
+<p>CONV</p>
+</blockquote>
+<p><img src="media/image112.jpeg" style="width:1.97014in" /></p>
+<p>layer N+1</p>
+<p><img src="media/image113.jpeg" style="width:9.15556in;height:0.39444in" /></p>
+<blockquote>
+<p>[Delving Deeper into Convolutional Networks for Learning Video Representations, Ballas et al., 2016]</p>
+</blockquote>
+<p><img src="media/image114.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 33 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image115.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image116.jpeg" style="width:9.44722in;height:1.14583in" /></p>
+<blockquote>
+<p>Recall: RNNs Vanilla RNN</p>
+</blockquote>
+<p><img src="media/image117.jpeg" style="width:8.88889in;height:1.76528in" /></p>
+<blockquote>
+<p>GRU LSTM</p>
+</blockquote>
+<p><img src="media/image118.jpeg" style="width:9.15556in;height:1.76319in" /></p>
+<blockquote>
+<p>[Delving Deeper into Convolutional Networks for Learning Video Representations, Ballas et al., 2016]</p>
+</blockquote>
+<p><img src="media/image120.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 34 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image121.jpeg" style="width:9.02778in;height:0.95139in" /></p>
+</blockquote>
+<p><img src="media/image122.jpeg" style="width:6.12222in;height:1.40278in" /></p>
+<blockquote>
+<p>Recall: RNNs</p>
+</blockquote>
+<p><img src="media/image123.jpeg" style="width:4.81597in;height:1.87292in" /></p>
+<blockquote>
+<p>GRU</p>
+</blockquote>
+<p>Matrix multiply</p>
+<p><img src="media/image124.jpeg" style="width:3.96181in;height:1.47153in" /></p>
+<p>=&gt;</p>
+<p>CONV</p>
+<p><img src="media/image125.jpeg" style="width:9.15556in;height:0.39444in" /></p>
+<blockquote>
+<p>[Delving Deeper into Convolutional Networks for Learning Video Representations, Ballas et al., 2016]</p>
+</blockquote>
+<p><img src="media/image126.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 35 29 Feb 2016</p>
+<p><img src="media/image127.jpeg" style="width:2.34444in;height:0.59097in" /></p>
+<blockquote>
+<p>RNN</p>
+</blockquote>
+<p><img src="media/image128.jpeg" style="width:0.95694in" /></p>
+<blockquote>
+<p>3D</p>
+<p>CONVNET</p>
+</blockquote>
+<p><img src="media/image130.jpeg" style="width:8.66736in;height:0.51597in" /></p>
+<p>Infinite (in theory)</p>
+<p><img src="media/image131.jpeg" style="width:3.5875in;height:0.31875in" /></p>
+<p>temporal extent</p>
+<p>(neurons that are function</p>
+<p>of all video frames in the past)</p>
+<p><img src="media/image132.jpeg" style="width:3.42222in;height:0.31875in" /></p>
+<blockquote>
+<p>Finite temporal</p>
+<p>extent</p>
+<p>(neurons that are only</p>
+<p>a function of finitely many</p>
+<p>video frames in the past)</p>
+<p>video</p>
+</blockquote>
+<p><img src="media/image133.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 36 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image134.jpeg" style="width:6.07361in;height:3.73056in" /></p>
+<p>RNN</p>
+<p>CONVNET</p>
+</blockquote>
+<p><img src="media/image135.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Infinite (in theory)</p>
+<p><img src="media/image137.jpeg" style="width:3.3625in;height:0.31875in" /></p>
+<p>temporal extent</p>
+<p>(neurons that are function</p>
+<p>of all video frames in the past)</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 37 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image139.jpeg" style="width:9.02778in;height:4.63542in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>You think you need a Spatio-Temporal Fancy Video ConvNet</p>
+</blockquote></li>
+<li><blockquote>
+<p>STOP. Do you really?</p>
+</blockquote></li>
+<li><blockquote>
+<p>Okay fine: do you want to model:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><span class="underline">local motion?</span> (use 3D CONV), or</p>
+</blockquote></li>
+<li><blockquote>
+<p><span class="underline">global motion?</span> (use LSTM).</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>Try out using Optical Flow in a second stream (can work better sometimes)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Try out GRU-RCN! (imo best model)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image140.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 38 29 Feb 2016</p>
+<p><img src="media/image141.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<p>Unsupervised Learning</p>
+<p><img src="media/image142.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 39 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image143.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image144.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>Definitions</p>
+</blockquote></li>
+<li><blockquote>
+<p>Autoencoders</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Vanilla</p>
+</blockquote></li>
+<li><blockquote>
+<p>Variational</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>Adversarial Networks</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image145.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 40 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image146.jpeg" style="width:10in;height:5.41389in" /></p>
+<p><strong>Supervised Learning</strong></p>
+<p><strong>Data</strong>: (x, y)</p>
+<p>x is data, y is label</p>
+<p><strong>Goal</strong>: Learn a <em>function</em> to</p>
+<p>map x -&gt; y</p>
+<p><strong>Examples</strong>: Classification,</p>
+<p>regression, object detection,</p>
+<p>semantic segmentation, image</p>
+<p>captioning, etc</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 41 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image147.jpeg" style="width:10in;height:5.41389in" /></p>
+<p><strong>Supervised Learning Data</strong>: (x, y)</p>
+<p>x is data, y is label</p>
+<p><strong>Goal</strong>: Learn a <em>function</em> to map x -&gt; y</p>
+<p><strong>Examples</strong>: Classification, regression, object detection, semantic segmentation, image captioning, etc</p>
+</blockquote>
+<p><strong>Unsupervised Learning Data</strong>: x</p>
+<p>Just data, no labels!</p>
+<p><strong>Goal</strong>: Learn some <em>structure</em> of the data</p>
+<p><strong>Examples</strong>: Clustering, dimensionality reduction, feature learning, generative models, etc.</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 42 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image148.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image149.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>Autoencoders</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Traditional: feature learning</p>
+</blockquote></li>
+<li><blockquote>
+<p>Variational: generate samples</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>Generative Adversarial Networks: Generate samples</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image150.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 43 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image151.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image152.jpeg" style="width:4.58333in;height:1.7625in" /></p>
+<p>Features</p>
+<blockquote>
+<p>Input data</p>
+</blockquote>
+<p><strong>z</strong></p>
+<p><img src="media/image153.jpeg" style="height:0.87431in" /></p>
+<p>Encoder</p>
+<p><strong>x</strong></p>
+<p><img src="media/image155.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 44 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image156.jpeg" style="width:9.42083in;height:1.79306in" /></p>
+<p><strong>Originally</strong>: Linear + nonlinearity (sigmoid)</p>
+<p><strong>Later</strong>: Deep, fully-connected</p>
+<p><strong>Later</strong>: ReLU CNN</p>
+</blockquote>
+<p><img src="media/image157.jpeg" style="width:4.58333in;height:2.71875in" /></p>
+<p>Features</p>
+<blockquote>
+<p>Input data</p>
+</blockquote>
+<p><strong>z</strong></p>
+<p><img src="media/image158.jpeg" style="height:0.87431in" /></p>
+<p>Encoder</p>
+<p><strong>x</strong></p>
+<p><img src="media/image160.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 45 29 Feb 2016</p>
+<p>Autoencoders</p>
+<blockquote>
+<p><strong>z</strong> usually smaller than <strong>x</strong> (dimensionality reduction)</p>
+</blockquote>
+<p><strong>Originally</strong>: Linear + nonlinearity (sigmoid)</p>
+<p><img src="media/image161.jpeg" style="width:9.42083in;height:4.73125in" /></p>
+<p><strong>Later</strong>: Deep, fully-connected</p>
+<p><strong>Later</strong>: ReLU CNN</p>
+<p>Features</p>
+<blockquote>
+<p>Input data</p>
+</blockquote>
+<p><strong>z</strong></p>
+<p><img src="media/image162.jpeg" style="height:0.87431in" /></p>
+<p>Encoder</p>
+<p><strong>x</strong></p>
+<p><img src="media/image163.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 46 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image164.jpeg" style="width:9.2875in;height:4.73125in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Reconstructed</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>xx</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>input data</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image165.jpeg" style="height:0.87431in" /></p>
+<p>Decoder</p>
+<p>Features</p>
+<blockquote>
+<p>Input data</p>
+</blockquote>
+<p><strong>z</strong></p>
+<p><img src="media/image166.jpeg" style="height:0.87431in" /></p>
+<p>Encoder</p>
+<p><strong>x</strong></p>
+<p><img src="media/image167.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 47 29 Feb 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Autoencoders</td>
+<td><blockquote>
+<p><strong>Originally</strong>: Linear +</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>nonlinearity (sigmoid)</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>Later</strong>: Deep, fully-connected</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>Later</strong>: ReLU CNN (upconv)</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image168.jpeg" style="width:9.43819in;height:4.87986in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Reconstructed</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>xx</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>input data</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image169.jpeg" style="height:0.87431in" /></p>
+<blockquote>
+<p>Decoder</p>
+<p>Features <strong>z</strong></p>
+</blockquote>
+<p><img src="media/image170.jpeg" style="height:0.87431in" /></p>
+<blockquote>
+<p>Encoder</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Input data</td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image171.jpeg" style="width:10in;height:0.58889in" /></p>
+<p><strong>Encoder</strong>: 4-layer conv</p>
+<p><strong>Decoder</strong>: 4-layer upconv</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 48 29 Feb 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Autoencoders</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Originally</strong>: Linear +</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>nonlinearity (sigmoid)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>Later</strong>: Deep, fully-connected</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>Later</strong>: ReLU CNN (upconv)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>Reconstructed</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>xx</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>input data</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Decoder</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Encoder / decoder</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>sometimes share</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>weights</td>
+<td><blockquote>
+<p>Features</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><em>Example<strong>:</strong></em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Encoder</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>dim(<strong>x</strong>) = D</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>dim(<strong>z</strong>) = H</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>w<sub>e</sub></strong>: H x D</td>
+<td>data</td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>w</strong></td>
+<td><strong>d</strong></td>
+<td>: D x H = <strong>w</strong> <strong><sup>T</sup></strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>e</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image172.jpeg" style="width:9.71111in;height:4.91181in" /></p>
+<p>Train for</p>
+<p>reconstruction with no labels!</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 49 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image176.jpeg" style="width:9.2875in;height:4.73125in" /> <strong>Loss function</strong></p>
+<p><strong>(Often L2)</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Reconstructed</td>
+<td><blockquote>
+<p><strong>xx</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>input data</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>Decoder</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image177.jpeg" style="height:0.87431in" /></p>
+<blockquote>
+<p>Features <strong>z</strong></p>
+</blockquote>
+<p><img src="media/image178.jpeg" style="height:0.87431in" /></p>
+<blockquote>
+<p>Encoder</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Input data</td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image179.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Train for</p>
+<p>reconstruction</p>
+<p>with no labels!</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 50 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image180.jpeg" style="width:9.71111in;height:4.7625in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Reconstructed</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><strong>xx</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>input data</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>After training,</td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Decoder</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>throw away</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>decoder!</td>
+<td><blockquote>
+<p>Features</p>
+</blockquote></td>
+<td><strong>z</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Encoder</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>data</td>
+<td></td>
+<td><strong>x</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image181.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 51 29 Feb 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Autoencoders</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Loss function</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>(Softmax, etc)</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Predicted<sub>Label</sub></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>yy</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p><strong>y</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Use encoder to</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>initialize a</td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Classifier</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>supervised</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>model</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Features</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image184.jpeg" style="width:9.82083in;height:4.58194in" /></p>
+<blockquote>
+<p>Encoder</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Input data</td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image188.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>bird plane</p>
+<p>dog deer truck</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Fine-tune</td>
+<td><blockquote>
+<p>Train for final task</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td>encoder</td>
+<td><blockquote>
+<p>(sometimes with</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td>jointly with</td>
+<td><blockquote>
+<p>small data)</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td>classifier</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 52 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image189.jpeg" style="width:9.3375in;height:4.51806in" /></p>
+<p>In mid 2000s layer-wise pretraining with Restricted Boltzmann Machines (RBM) was common</p>
+<p>Training deep nets was hard in 2006!</p>
+</blockquote>
+<p><img src="media/image190.jpeg" style="width:10in;height:0.87847in" /></p>
+<p>Hinton and Salakhutdinov, “Reducing the Dimensionality of Data with Neural Networks”, Science 2006</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 53 29 Feb 2016</p>
+<p><img src="media/image191.jpeg" style="width:9.75347in;height:4.51806in" /></p>
+<p>In mid 2000s layer-wise pretraining with Restricted Boltzmann Machines (RBM) was common</p>
+<p>Training deep nets was hard in 2006!</p>
+</blockquote>
+<p><img src="media/image192.jpeg" style="width:10in;height:0.87847in" /></p>
+<p>Hinton and Salakhutdinov, “Reducing the Dimensionality of Data with Neural Networks”, Science 2006</p>
+<p>Not common anymore</p>
+<p>With ReLU, proper initialization, batchnorm, Adam, etc easily train from scratch</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 54 29 Feb 2016</p>
+<p><img src="media/image193.jpeg" style="width:9.23542in;height:4.51667in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Reconstructed</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>xx</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>input data</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image194.jpeg" style="height:0.87431in" /></p>
+<p>Decoder</p>
+<blockquote>
+<p>Features <strong>z</strong></p>
+</blockquote>
+<p><img src="media/image195.jpeg" style="height:0.87431in" /></p>
+<blockquote>
+<p>Encoder</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Input data</td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image196.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Autoencoders can reconstruct data, and can learn features to initialize a supervised model</p>
+<p>Can we generate images from an autoencoder?</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 55 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image197.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image198.jpeg" style="width:10in;height:4.32639in" /></p>
+<blockquote>
+<p>A Bayesian spin on an autoencoder - lets us generate data!</p>
+<p>Assume our data <img src="media/image199.jpeg" style="width:1.59444in;height:0.59722in" /> is generated like this:</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Sample from <em>true</em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><em>conditional</em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sample from</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><em>true prior</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image200.jpeg" style="width:2.65278in" /></p>
+<blockquote>
+<p>Kingma and Welling, “Auto-Encoding</p>
+<p>Variational Bayes”, ICLR 2014</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 56 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image201.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>A Bayesian spin on an autoencoder!</p>
+<p>Assume our data <img src="media/image202.jpeg" style="width:1.59444in;height:0.59722in" /> is generated like this:</p>
+<p>Sample from <em>true</em></p>
+<p><em>conditional</em></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Sample from</td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><em>true prior</em></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image203.jpeg" style="width:2.65278in" /></p>
+<blockquote>
+<p><strong>Intuition</strong>: <strong>x</strong> is an image, <strong>z</strong> gives class, orientation, attributes, etc</p>
+</blockquote>
+<p>Kingma and Welling, “Auto-Encoding Variational Bayes”, ICLR 2014</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 57 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image204.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>A Bayesian spin on an autoencoder!</p>
+<p>Assume our data <img src="media/image205.jpeg" style="width:1.59444in;height:0.59722in" /> is generated like this:</p>
+</blockquote>
+<p><strong>Intuition</strong>: <strong>x</strong> is an image, <strong>z</strong> gives class, orientation, attributes, etc</p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>Sample from <em>true</em></td>
+<td></td>
+<td><blockquote>
+<p><strong>Problem</strong>: Estimate</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Sample from</td>
+<td></td>
+<td><em>conditional</em></td>
+<td></td>
+<td><blockquote>
+<p>without access to</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>latent states</p>
+</blockquote></td>
+<td>!</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><em>true prior</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image206.jpeg" style="width:2.65278in" /></p>
+<blockquote>
+<p>Kingma and Welling, “Auto-Encoding</p>
+<p>Variational Bayes”, ICLR 2014</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 58 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image207.jpeg" style="width:9.34028in;height:1.91042in" /></p>
+<p><strong>Prior</strong>: Assume <img src="media/image208.jpeg" style="width:0.96389in;height:0.45972in" /></p>
+<p>is a unit Gaussian</p>
+</blockquote>
+<p><img src="media/image209.jpeg" style="width:10in;height:0.94097in" /></p>
+<p>Kingma and Welling, ICLR 2014</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 59 29 Feb 2016</p>
+<p><img src="media/image210.jpeg" style="width:9.34028in;height:1.91042in" /></p>
+<p><strong>Prior</strong>: Assume <img src="media/image211.jpeg" style="width:0.96389in;height:0.45972in" /></p>
+<p>is a unit Gaussian</p>
+</blockquote>
+<p><img src="media/image212.jpeg" style="width:3.36458in;height:2.375in" /></p>
+<blockquote>
+<p><strong>Conditional</strong>: Assume</p>
+<p>is a</p>
+<p>diagonal Gaussian,</p>
+<p>predict mean and</p>
+<p>variance with neural</p>
+<p>net</p>
+</blockquote>
+<p><img src="media/image213.jpeg" style="width:10in;height:0.94097in" /></p>
+<p>Kingma and Welling, ICLR 2014</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 60 29 Feb 2016</p>
+<p><img src="media/image214.jpeg" style="width:10in;height:5.41389in" /></p>
+<p><strong>Prior</strong>: Assume <img src="media/image215.jpeg" style="width:0.96389in;height:0.36458in" /> is a unit Gaussian</p>
+<p><strong>Conditional</strong>: Assume</p>
+<p>is a</p>
+<p>diagonal Gaussian,</p>
+<p>predict mean and</p>
+<p>variance with neural</p>
+<p>net</p>
+</blockquote>
+<p>Kingma and Welling, ICLR 2014</p>
+<blockquote>
+<p>Mean and (diagonal) covariance of <img src="media/image216.jpeg" style="width:1.56597in;height:0.44792in" /></p>
+<p><strong>x</strong> <strong><sub>Σ</sub>x</strong></p>
+<p>Decoder network</p>
+</blockquote>
+<p>with parameters</p>
+<p><strong>z</strong></p>
+<blockquote>
+<p>Latent state</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 61 29 Feb 2016</p>
+<p><img src="media/image217.jpeg" style="width:10in;height:5.41389in" /></p>
+<p><strong>Prior</strong>: Assume <img src="media/image218.jpeg" style="width:0.96389in;height:0.36458in" /> is a unit Gaussian</p>
+<p><strong>Conditional</strong>: Assume</p>
+<p>is a</p>
+<p>diagonal Gaussian,</p>
+<p>predict mean and</p>
+<p>variance with neural</p>
+<p>net</p>
+</blockquote>
+<p>Kingma and Welling, ICLR 2014</p>
+<blockquote>
+<p>Mean and (diagonal) covariance of <img src="media/image219.jpeg" style="width:1.56597in;height:0.44792in" /></p>
+<p><strong>x</strong> <strong><sub>Σ</sub>x</strong></p>
+<p>Decoder network</p>
+<p>with parameters</p>
+<p><strong>z</strong></p>
+</blockquote>
+<p>Fully-connected or</p>
+<blockquote>
+<p>Latent state</p>
+<p>upconvolutional</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 62 29 Feb 2016</p>
+<p><img src="media/image220.jpeg" style="width:9.51389in;height:2.51736in" /></p>
+<p>By Bayes Rule the posterior is:</p>
+</blockquote>
+<p><img src="media/image221.jpeg" style="width:1.87014in;height:0.45833in" /></p>
+<p>Kingma and Welling,</p>
+<p>ICLR 2014</p>
+<p><img src="media/image222.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 63 29 Feb 2016</p>
+<p><img src="media/image223.jpeg" style="width:9.51389in;height:3.66736in" /></p>
+<p>By Bayes Rule the posterior is:</p>
+<p><strong>Use decoder network =)</strong></p>
+<p><strong>Gaussian =)</strong></p>
+<p><strong>Intractible integral =(</strong></p>
+</blockquote>
+<p><img src="media/image224.jpeg" style="width:1.87014in;height:0.45833in" /></p>
+<p>Kingma and Welling,</p>
+<p>ICLR 2014</p>
+<p><img src="media/image225.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 64 29 Feb 2016</p>
+<p><img src="media/image226.jpeg" style="width:10in;height:5.41389in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>By Bayes Rule the posterior is:</td>
+<td><blockquote>
+<p>Mean and (diagonal)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>covariance of</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Use decoder network =)</strong></td>
+<td><blockquote>
+<p>Encoder network</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Gaussian =)</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Intractible integral =(</strong></td>
+<td><blockquote>
+<p>with parameters</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Kingma and Welling,</p>
+<p>ICLR 2014</p>
+<p><strong>x</strong></p>
+<p>Data point</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 65 29 Feb 2016</p>
+<p><img src="media/image227.jpeg" style="width:10in;height:5.41389in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>By Bayes Rule the posterior is:</td>
+<td><blockquote>
+<p>Mean and (diagonal)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>covariance of</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Use decoder network =)</strong></td>
+<td><blockquote>
+<p>Encoder network</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Gaussian =)</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Intractible integral =(</strong></td>
+<td><blockquote>
+<p>with parameters</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Kingma and Welling, ICLR 2014</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Approximate posterior with</td>
+<td></td>
+<td><strong>x</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>encoder network</strong></td>
+<td><blockquote>
+<p>Data point</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 66 29 Feb 2016</p>
+<p><img src="media/image228.jpeg" style="width:10in;height:5.41389in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>By Bayes Rule the posterior is:</td>
+<td><blockquote>
+<p>Mean and (diagonal)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>covariance of</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Fully-connected</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>or convolutional</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Use decoder network =)</strong></td>
+<td><blockquote>
+<p>Encoder network</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Gaussian =)</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Intractible integral =(</strong></td>
+<td><blockquote>
+<p>with parameters</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Kingma and Welling, ICLR 2014</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Approximate posterior with</td>
+<td></td>
+<td><strong>x</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>encoder network</strong></td>
+<td><blockquote>
+<p>Data point</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 67 29 Feb 2016</p>
+<p><img src="media/image229.jpeg" style="width:9.02778in;height:0.92708in" /></p>
+</blockquote>
+<p><img src="media/image230.jpeg" style="width:10in;height:1.13194in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Data point</td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p>Kingma and Welling, ICLR 2014</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 68 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image231.jpeg" style="width:9.02778in;height:0.92708in" /></p>
+</blockquote>
+<p><img src="media/image232.jpeg" style="width:10in;height:2.27153in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Mean and (diagonal)</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p><strong>Σ<sup>z</sup></strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>covariance of</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Encoder network</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Data point</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Kingma and Welling, ICLR 2014</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 69 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image233.jpeg" style="width:9.02778in;height:0.92708in" /></p>
+</blockquote>
+<p><img src="media/image234.jpeg" style="width:10in;height:2.97153in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><strong>z</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>Sample from</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Mean and (diagonal)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>Σ<sup>z</sup></strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>covariance of</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Encoder network</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Data point</p>
+</blockquote></td>
+<td></td>
+<td><strong>x</strong></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Kingma and Welling, ICLR 2014</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 70 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image235.jpeg" style="width:9.02778in;height:0.92708in" /></p>
+</blockquote>
+<p><img src="media/image236.jpeg" style="width:10in;height:3.82361in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong><sub>Σ</sub>x</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>Mean and (diagonal)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Decoder network</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>covariance of</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><strong>z</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>Sample from</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Mean and (diagonal)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>Σ<sup>z</sup></strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>covariance of</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Encoder network</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Data point</p>
+</blockquote></td>
+<td></td>
+<td><strong>x</strong></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Kingma and Welling, ICLR 2014</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 71 29 Feb 2016</p>
+<p><img src="media/image237.jpeg" style="width:10in;height:5.625in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Reconstructed</td>
+<td></td>
+<td></td>
+<td><strong>xx</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>Sample from</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong><sub>Σ</sub>x</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>Mean and (diagonal)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Decoder network</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>covariance of</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>z</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>Sample from</p>
+</blockquote></td>
+<td><blockquote>
+<p>Mean and (diagonal)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>Σ<sup>z</sup></strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>covariance of</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Encoder network</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Data point</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><strong>x</strong></td>
+<td></td>
+<td><blockquote>
+<p>Kingma and Welling, ICLR 2014</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 72 29 Feb 2016</p>
+</blockquote>
+<p>73 29 Feb 2016</p>
+<p>Kingma and Welling, ICLR 2014</p>
+<blockquote>
+<p><img src="media/image238.jpeg" style="width:10in;height:5.625in" /></p>
+<p>Reconstructed <strong>xx</strong></p>
+<p>Sample from</p>
+<p><strong>x</strong> <strong><sub>Σ</sub>x</strong></p>
+</blockquote>
+<p>Decoder network<img src="media/image239.jpeg" style="width:0.27431in;height:0.2375in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><strong>z</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>Sample from</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p><strong>Σ<sup>z</sup></strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Encoder network</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Data point</p>
+</blockquote></td>
+<td></td>
+<td><strong>x</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Training like a normal autoencoder: <strong>reconstruction loss</strong> at the end, <strong>regularization toward prior</strong> in middle</p>
+<p>Mean and (diagonal) covariance of <img src="media/image240.jpeg" style="width:1.20625in;height:0.39583in" /> <strong>(should be close to data x)</strong></p>
+</blockquote>
+<p>Mean and (diagonal) covariance of <img src="media/image241.jpeg" style="width:1.20625in;height:0.28125in" /> <strong>(should be close</strong></p>
+<p><strong>to prior</strong> <img src="media/image242.jpeg" style="width:0.95069in;height:0.41667in" /><strong>)</strong></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14</p>
+<p><img src="media/image243.jpeg" style="width:9.74722in;height:1.41458in" /></p>
+<p>After network is trained:</p>
+</blockquote>
+<p><img src="media/image244.jpeg" style="width:1.91319in;height:0.96042in" /></p>
+<blockquote>
+<p><strong>z</strong></p>
+<p>Sample from</p>
+<p>prior</p>
+</blockquote>
+<p><img src="media/image245.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 74 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image246.jpeg" style="width:9.74722in;height:1.41458in" /></p>
+<p>After network is trained:</p>
+<p><strong>x</strong> <strong><sub>Σ</sub>x</strong></p>
+</blockquote>
+<p><img src="media/image247.jpeg" style="width:3.56597in;height:2.05972in" /></p>
+<blockquote>
+<p>Decoder</p>
+<p>network</p>
+<p><strong>z</strong></p>
+<p>Sample from</p>
+<p>prior</p>
+</blockquote>
+<p><img src="media/image248.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 75 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image249.jpeg" style="width:9.74722in;height:1.41458in" /></p>
+<p>After network is trained:</p>
+</blockquote>
+<p><img src="media/image250.jpeg" style="width:3.72569in;height:3.04167in" /></p>
+<p>Generated <strong>xx</strong></p>
+<blockquote>
+<p>Sample from</p>
+<p><strong>x</strong> <strong><sub>Σ</sub>x</strong></p>
+<p>Decoder</p>
+<p>network</p>
+<p><strong>z</strong></p>
+<p>Sample from</p>
+<p>prior</p>
+</blockquote>
+<p><img src="media/image251.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 76 29 Feb 2016</p>
+<p><img src="media/image252.jpeg" style="width:9.74722in;height:1.41458in" /></p>
+<p>After network is trained:</p>
+</blockquote>
+<p><img src="media/image253.jpeg" style="width:7.08333in;height:3.22361in" /></p>
+<p>Generated <strong>xx</strong></p>
+<blockquote>
+<p>Sample from</p>
+<p><strong>x</strong> <strong><sub>Σ</sub>x</strong></p>
+<p>Decoder</p>
+<p>network</p>
+<p><strong>z</strong></p>
+<p>Sample from</p>
+<p>prior</p>
+</blockquote>
+<p><img src="media/image254.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 77 29 Feb 2016</p>
+<p><img src="media/image255.jpeg" style="width:9.94097in;height:4.77778in" /></p>
+<p>After network is trained:</p>
+</blockquote>
+<p>Generated <strong>xx</strong></p>
+<blockquote>
+<p>Sample from</p>
+<p><strong>x</strong> <strong><sub>Σ</sub>x</strong></p>
+<p>Decoder</p>
+<p>network</p>
+<p><strong>z</strong></p>
+<p>Sample from</p>
+<p>prior</p>
+</blockquote>
+<p><img src="media/image256.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 78 29 Feb 2016</p>
+<p><img src="media/image257.jpeg" style="width:9.94097in;height:4.77778in" /></p>
+<p>After network is trained: <sup>Diagonal prior on <strong>z</strong> =&gt; independent latent variables</sup></p>
+</blockquote>
+<p>Generated <strong>xx</strong></p>
+<blockquote>
+<p>Sample from</p>
+<p><strong>x</strong> <strong><sub>Σ</sub>x</strong></p>
+<p>Decoder</p>
+<p>network</p>
+<p><strong>z</strong></p>
+<p>Sample from</p>
+<p>prior</p>
+</blockquote>
+<p><img src="media/image258.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 79 29 Feb 2016</p>
+<p>Variational Autoencoder: Math Maximum Likelihood?</p>
+</blockquote>
+<p><img src="media/image259.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<blockquote>
+<p>Maximize likelihood of dataset <img src="media/image261.jpeg" style="width:1.59444in;height:0.59722in" /></p>
+</blockquote>
+<p><img src="media/image262.jpeg" style="width:10in;height:0.97153in" /></p>
+<p>Kingma and Welling, ICLR 2014</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 80 29 Feb 2016</p>
+<blockquote>
+<p>Variational Autoencoder: Math Maximum Likelihood?</p>
+</blockquote>
+<p><img src="media/image263.jpeg" style="width:9.04306in;height:3.57153in" /></p>
+<blockquote>
+<p>Maximize likelihood of dataset <img src="media/image264.jpeg" style="width:1.59444in;height:0.59722in" /></p>
+<p>Maximize log-likelihood instead because sums are nicer</p>
+</blockquote>
+<p><img src="media/image265.jpeg" style="width:10in;height:0.97153in" /></p>
+<p>Kingma and Welling, ICLR 2014</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 81 29 Feb 2016</p>
+<blockquote>
+<p>Variational Autoencoder: Math Maximum Likelihood?</p>
+</blockquote>
+<p><img src="media/image266.jpeg" style="width:9.04306in;height:3.57153in" /></p>
+<blockquote>
+<p>Maximize likelihood of dataset <img src="media/image267.jpeg" style="width:1.59444in;height:0.59722in" /></p>
+<p>Maximize log-likelihood instead because sums are nicer</p>
+</blockquote>
+<p><img src="media/image268.jpeg" style="width:10in;height:1.68681in" /></p>
+<blockquote>
+<p>Marginalize joint</p>
+<p>distribution</p>
+</blockquote>
+<p>Kingma and Welling, ICLR 2014</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 82 29 Feb 2016</p>
+<blockquote>
+<p>Variational Autoencoder: Math Maximum Likelihood?</p>
+</blockquote>
+<p><img src="media/image269.jpeg" style="width:9.04306in;height:3.57153in" /></p>
+<blockquote>
+<p>Maximize likelihood of dataset <img src="media/image270.jpeg" style="width:1.59444in;height:0.59722in" /></p>
+<p>Maximize log-likelihood instead because sums are nicer</p>
+</blockquote>
+<p><img src="media/image271.jpeg" style="width:9.84861in;height:0.96528in" /></p>
+<p>Intractible integral =(</p>
+<p><img src="media/image272.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 83 29 Feb 2016</p>
+<p><img src="media/image273.jpeg" style="width:9.01389in;height:1.04375in" /></p>
+<p><img src="media/image274.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 84 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image276.jpeg" style="width:9.92569in;height:1.04375in" /></p>
+<p><img src="media/image277.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 85 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image279.jpeg" style="width:9.92569in;height:1.75486in" /></p>
+<p><img src="media/image280.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 86 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image282.jpeg" style="width:9.92569in;height:2.48056in" /></p>
+<p><img src="media/image283.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 87 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image285.jpeg" style="width:9.92569in;height:3.11875in" /></p>
+<p><img src="media/image286.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 88 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image288.jpeg" style="width:9.94653in;height:4.00486in" /></p>
+<p><img src="media/image289.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 89 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image290.jpeg" style="width:9.94653in;height:4.06528in" /></p>
+<blockquote>
+<p><strong>“Elbow”</strong></p>
+</blockquote>
+<p><img src="media/image291.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 90 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image292.jpeg" style="width:9.92569in;height:4.06528in" /></p>
+<blockquote>
+<p><strong>“Elbow”</strong></p>
+</blockquote>
+<p><img src="media/image293.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 91 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image294.jpeg" style="width:9.92569in;height:4.94722in" /></p>
+<blockquote>
+<p><strong>“Elbow”</strong></p>
+<p><strong>Variational lower bound (elbow)</strong></p>
+</blockquote>
+<p><img src="media/image295.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 92 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image296.jpeg" style="width:9.92569in;height:5.01875in" /></p>
+<blockquote>
+<p>Variational Autoencoder: Math</p>
+<p><strong>“Elbow”</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Variational lower bound (elbow)</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Training: Maximize lower bound</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 14 93</p>
+</blockquote></td>
+<td><blockquote>
+<p>29 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image297.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image298.jpeg" style="width:9.92569in;height:5.01875in" /></p>
+<blockquote>
+<p>Variational Autoencoder: Math</p>
+<p><strong>Reconstruct</strong></p>
+<p><strong>the input</strong></p>
+<p><strong>data</strong></p>
+<p><strong>“Elbow”</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Variational lower bound (elbow)</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Training: Maximize lower bound</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 14 94</p>
+</blockquote></td>
+<td><blockquote>
+<p>29 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image299.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image300.jpeg" style="width:10in;height:5.01875in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Variational Autoencoder: Math</td>
+<td><blockquote>
+<p><strong>Latent states</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>should follow</strong></p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Reconstruct</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>the prior</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><strong>the input</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><strong>data</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>“Elbow”</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Variational lower bound (elbow)</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Training: Maximize lower bound</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 14 95</p>
+</blockquote></td>
+<td><blockquote>
+<p>29 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image301.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image302.jpeg" style="width:10in;height:5.01875in" /></p>
+<blockquote>
+<p>Variational Autoencoder: Math</p>
+<p><strong>Reconstruct</strong></p>
+<p><strong>the input</strong></p>
+<p><strong>data</strong></p>
+<p><strong>Sampling</strong></p>
+<p><strong>with</strong></p>
+<p><strong>reparam.</strong></p>
+<p><strong>trick</strong></p>
+<p><strong>(see paper)</strong></p>
+<p><strong>“Elbow”</strong></p>
+</blockquote>
+<p><strong>Latent states should follow the prior</strong></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Variational lower bound (elbow)</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Training: Maximize lower bound</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 14 96</p>
+</blockquote></td>
+<td><blockquote>
+<p>29 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image303.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image304.jpeg" style="width:10in;height:5.01875in" /></p>
+<blockquote>
+<p>Variational Autoencoder: Math</p>
+<p><strong>Reconstruct</strong></p>
+<p><strong>the input</strong></p>
+<p><strong>data</strong></p>
+<p><strong>Sampling</strong></p>
+<p><strong>with</strong></p>
+<p><strong>reparam.</strong></p>
+<p><strong>trick</strong></p>
+<p><strong>(see paper)</strong></p>
+<p><strong>“Elbow”</strong></p>
+</blockquote>
+<p><strong>Latent states should follow the prior</strong></p>
+<blockquote>
+<p><strong>Everything is Gaussian, closed form solution!</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Variational lower bound (elbow)</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Training: Maximize lower bound</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 14 97</p>
+</blockquote></td>
+<td><blockquote>
+<p>29 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image305.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<blockquote>
+<p><img src="media/image306.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image307.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>Traditional Autoencoders</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Try to reconstruct input</p>
+</blockquote></li>
+<li><blockquote>
+<p>Used to learn features, initialize supervised model</p>
+</blockquote></li>
+<li><blockquote>
+<p>Not used much anymore</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>Variational Autoencoders</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Bayesian meets deep learning</p>
+</blockquote></li>
+<li><blockquote>
+<p>Sample from model to generate images</p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p><img src="media/image308.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 98 29 Feb 2016</p>
+<p><img src="media/image309.jpeg" style="width:9.47431in;height:1.59375in" /></p>
+<blockquote>
+<p>Generative Adversarial Nets</p>
+</blockquote>
+<p>Goodfellow et al, “Generative Adversarial Nets”, NIPS 2014</p>
+<p>Can we generate images with less math?</p>
+<p><img src="media/image310.jpeg" style="width:3.3625in;height:0.45833in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Random noise</td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image311.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 99 29 Feb 2016</p>
+<p><img src="media/image312.jpeg" style="width:9.47431in;height:1.59375in" /></p>
+<blockquote>
+<p>Generative Adversarial Nets</p>
+</blockquote>
+<p>Goodfellow et al, “Generative Adversarial Nets”, NIPS 2014</p>
+<p>Can we generate images with less math?</p>
+<p><img src="media/image313.jpeg" style="width:3.85764in;height:1.7625in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Fake image</td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image314.jpeg" style="height:0.87431in" /></p>
+<blockquote>
+<p><strong>Generator</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Random noise</td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image315.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 100 29 Feb 2016</p>
+<p><img src="media/image316.jpeg" style="width:9.63125in;height:4.53194in" /></p>
+<blockquote>
+<p>Generative Adversarial Nets</p>
+</blockquote>
+<p>Goodfellow et al, “Generative Adversarial Nets”, NIPS 2014</p>
+<p>Can we generate images with less math?</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Real or fake?</td>
+<td><blockquote>
+<p><strong>y</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image317.jpeg" style="height:0.87431in" /></p>
+<blockquote>
+<p><strong>Discriminator</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Fake image</td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image318.jpeg" style="height:0.87431in" /></p>
+<blockquote>
+<p><strong>Generator</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Random noise</td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image319.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 101 29 Feb 2016</p>
+<p><img src="media/image320.jpeg" style="width:9.63125in;height:4.57708in" /></p>
+<blockquote>
+<p>Generative Adversarial Nets</p>
+</blockquote>
+<p>Goodfellow et al, “Generative Adversarial Nets”, NIPS 2014</p>
+<p>Can we generate images with less math?</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Real or fake?</td>
+<td><blockquote>
+<p><strong>y</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image321.jpeg" style="height:0.87431in" /></p>
+<blockquote>
+<p><strong>Discriminator</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Fake image</td>
+<td></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><strong>Generator</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>Real image</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Fake examples: from generator</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Random noise</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Real examples: from dataset</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image322.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 102 29 Feb 2016</p>
+<p><img src="media/image324.jpeg" style="width:9.63125in;height:4.57708in" /></p>
+<blockquote>
+<p>Generative Adversarial Nets</p>
+</blockquote>
+<p>Goodfellow et al, “Generative Adversarial Nets”, NIPS 2014</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Real or fake?</td>
+<td><blockquote>
+<p><strong>y</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image325.jpeg" style="height:0.87431in" /></p>
+<blockquote>
+<p><strong>Discriminator</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Fake image</td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image326.jpeg" style="height:0.87431in" /></p>
+<blockquote>
+<p><strong>Generator</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Random noise</td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p>Can we generate images with less math?</p>
+<blockquote>
+<p>Train generator and discriminator jointly After training, easy to generate images</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>Real image</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Fake examples: from generator</p>
+<p>Real examples: from dataset</p>
+</blockquote>
+<p><img src="media/image327.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 103 29 Feb 2016</p>
+<p><img src="media/image328.jpeg" style="width:10in;height:5.41389in" /></p>
+<blockquote>
+<p>Generative Adversarial Nets</p>
+</blockquote>
+<p>Generated samples</p>
+<blockquote>
+<p>Nearest neighbor from training set</p>
+</blockquote>
+<p>Goodfellow et al, “Generative Adversarial Nets”, NIPS 2014</p>
+<p><img src="media/image329.jpeg" style="width:5.77014in;height:0.58194in" /> Lecture 14 104 29 Feb 2016</p>
+<p><img src="media/image330.jpeg" style="width:10in;height:5.41389in" /></p>
+<blockquote>
+<p>Generative Adversarial Nets</p>
+</blockquote>
+<p>Generated samples (CIFAR-10)</p>
+<blockquote>
+<p>Nearest neighbor from training set</p>
+</blockquote>
+<p>Goodfellow et al, “Generative Adversarial Nets”, NIPS 2014</p>
+<p><img src="media/image331.jpeg" style="width:5.77014in;height:0.58194in" /> Lecture 14 105 29 Feb 2016</p>
+<p><img src="media/image332.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<p><img src="media/image333.jpeg" style="width:10in;height:3.89653in" /></p>
+<p>Denton et al, “Deep generative image models using a Laplacian pyramid of adversarial networks”, NIPS 2015</p>
+<p>Generate low-res</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 106 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image334.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<p><img src="media/image335.jpeg" style="width:10in;height:4.34097in" /></p>
+<p>Upsample</p>
+<p>Denton et al, “Deep generative image models using a Laplacian pyramid of adversarial networks”, NIPS 2015</p>
+<p>Generate low-res</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 107 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image336.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<p><img src="media/image337.jpeg" style="width:10in;height:4.34097in" /></p>
+<p>Upsample</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>delta, add</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>low-res</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Denton et al, “Deep generative image models using a Laplacian pyramid of adversarial networks”, NIPS 2015</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 108 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image338.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<p><img src="media/image339.jpeg" style="width:10in;height:4.34097in" /></p>
+<blockquote>
+<p>Upsample Upsample</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>delta, add</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>low-res</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Denton et al, “Deep generative image models using a Laplacian pyramid of adversarial networks”, NIPS 2015</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 109 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image340.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<p><img src="media/image341.jpeg" style="width:10in;height:4.34097in" /></p>
+<blockquote>
+<p>Upsample Upsample</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>delta, add</p>
+</blockquote></td>
+<td><blockquote>
+<p>delta, add</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>low-res</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Denton et al, “Deep generative image models using a Laplacian pyramid of adversarial networks”, NIPS 2015</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 110 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image342.jpeg" style="width:10in;height:5.41389in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Upsample</td>
+<td><blockquote>
+<p>Upsample</p>
+</blockquote></td>
+<td><blockquote>
+<p>Upsample</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>delta, add</p>
+</blockquote></td>
+<td><blockquote>
+<p>delta, add</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>low-res</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Denton et al, “Deep generative image models using a Laplacian pyramid of adversarial networks”, NIPS 2015</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 111 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image343.jpeg" style="width:10in;height:5.41389in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Done!</td>
+<td><blockquote>
+<p>Upsample</p>
+</blockquote></td>
+<td><blockquote>
+<p>Upsample</p>
+</blockquote></td>
+<td><blockquote>
+<p>Upsample</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td><blockquote>
+<p>Generate</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>delta, add</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>delta, add</p>
+</blockquote></td>
+<td><blockquote>
+<p>delta, add</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>low-res</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Denton et al, “Deep generative image models</td>
+<td><blockquote>
+<p>pyramid of adversarial networks”, NIPS 2015</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 112 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image344.jpeg" style="width:10in;height:5.41389in" /></p>
+<blockquote>
+<p>Discriminators work</p>
+<p>at every scale!</p>
+</blockquote>
+<p>Denton et al, NIPS 2015</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 113 29 Feb 2016</p>
+</blockquote>
+<p><img src="media/image345.jpeg" style="width:9.97986in;height:5.41389in" /></p>
+<p>Generative Adversarial Nets: Multiscale</p>
+<blockquote>
+<p>Train separate model per-class on CIFAR-10</p>
+<p>Denton et al, NIPS 2015</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej</p>
+</blockquote></td>
+<td>2016</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image346.jpeg" style="width:9.29167in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image347.jpeg" style="width:9.36389in;height:0.88264in" /></p>
+<blockquote>
+<p>Generator is an upsampling network with fractionally-strided convolutions Discriminator is a convolutional network</p>
+</blockquote>
+<p><img src="media/image348.jpeg" style="width:10in;height:3.50903in" /></p>
+<blockquote>
+<p>Radford et al, “Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks”, ICLR 2016</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 115 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image349.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>Generator</p>
+<p>Radford et al, “Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks”, ICLR 2016</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 116 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image350.jpeg" style="width:9.94653in;height:4.82292in" /></p>
+<p>Samples from the model look amazing!</p>
+</blockquote>
+<p>Radford et al, ICLR 2016</p>
+<p><img src="media/image351.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 117 29 Feb 2016</p>
+<p><img src="media/image352.jpeg" style="width:9.84236in;height:4.82083in" /></p>
+</blockquote>
+<p>Interpolating</p>
+<p>between</p>
+<p>random</p>
+<p>points in latent</p>
+<p>space</p>
+<p>Radford et al, ICLR 2016</p>
+<p><img src="media/image353.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 118 29 Feb 2016</p>
+<p>Generative Adversarial Nets: Vector Math</p>
+</blockquote>
+<p><img src="media/image354.jpeg" style="width:9.55625in;height:3.04167in" /></p>
+<p>Smiling woman Neutral woman Neutral man</p>
+<blockquote>
+<p>Samples from the model</p>
+</blockquote>
+<p><img src="media/image355.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Radford et al, ICLR 2016</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 119 29 Feb 2016</p>
+<blockquote>
+<p>Generative Adversarial Nets: Vector Math</p>
+</blockquote>
+<p><img src="media/image356.jpeg" style="width:9.68333in;height:4.05069in" /></p>
+<blockquote>
+<p>Radford et al, ICLR 2016</p>
+<p>Smiling woman Neutral woman Neutral man</p>
+<p>Samples from the model</p>
+<p>Average Z vectors, do arithmetic</p>
+</blockquote>
+<p><img src="media/image357.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 120 29 Feb 2016</p>
+<blockquote>
+<p>Generative Adversarial Nets: Vector Math</p>
+</blockquote>
+<p><img src="media/image358.jpeg" style="width:9.71667in;height:4.05069in" /></p>
+<blockquote>
+<p>Smiling woman Neutral woman Neutral man</p>
+</blockquote>
+<p>Radford et al, ICLR 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Samples</td>
+<td><blockquote>
+<p>Smiling Man</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>from the</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>model</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Average Z vectors, do arithmetic</p>
+</blockquote>
+<p><img src="media/image359.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 121 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image360.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>Glasses man No glasses man No glasses woman</p>
+<p>Radford et al, ICLR 2016</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 122 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image361.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>Glasses man No glasses man No glasses woman</p>
+<p>Woman with glasses</p>
+<p>Radford et al, ICLR 2016</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 123 29 Feb 2016</p>
+<p><img src="media/image362.jpeg" style="width:9.46389in;height:1.10347in" /></p>
+<blockquote>
+<p>Putting everything together</p>
+</blockquote>
+<p><img src="media/image363.jpeg" style="width:4.06806in;height:3.26806in" /></p>
+<blockquote>
+<p>Pixel loss</p>
+</blockquote>
+<p><img src="media/image364.jpeg" style="height:0.75625in" /></p>
+<blockquote>
+<p><strong>xx</strong></p>
+<p><strong>x</strong> <strong><sub>Σ</sub>x</strong></p>
+<p>Variational</p>
+<p>Autoencoder <strong>z</strong></p>
+<p><strong>z</strong> <strong><sub>Σ</sub>z</strong></p>
+<p><strong>x</strong></p>
+</blockquote>
+<p><img src="media/image367.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Dosovitskiy and Brox, “Generating Images with Perceptual Similarity Metrics based on Deep Networks”, arXiv 2016</p>
+<p><img src="media/image368.jpeg" style="width:0.25972in;height:0.25972in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 124 29 Feb 2016</p>
+<p><img src="media/image370.jpeg" style="width:9.54236in;height:4.84236in" /></p>
+<blockquote>
+<p>Putting everything together</p>
+<p>Real or Generated</p>
+</blockquote>
+<p><img src="media/image371.jpeg" style="height:0.65764in" /></p>
+<p>Dosovitskiy and Brox, “Generating Images with Perceptual Similarity Metrics based on Deep Networks”, arXiv 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Discriminator</td>
+<td><blockquote>
+<p>Pixel loss</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>network</td>
+<td><blockquote>
+<p><strong>y</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image372.jpeg" style="height:0.75625in" /></p>
+<blockquote>
+<p><strong>xx</strong></p>
+<p><strong>x</strong> <strong><sub>Σ</sub>x</strong></p>
+<p>Variational</p>
+<p>Autoencoder <strong>z</strong></p>
+<p><strong>z</strong> <strong><sub>Σ</sub>z</strong></p>
+<p><strong>x</strong></p>
+</blockquote>
+<p><img src="media/image373.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 125 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image374.jpeg" style="width:9.54236in;height:4.84236in" /></p>
+<p>Images with Perceptual Similarity</p>
+<p>Putting everything together Metrics based on Deep Networks”, arXiv 2016</p>
+<p>Real or Generated</p>
+<p>Pretrained AlexNet</p>
+</blockquote>
+<p><img src="media/image375.jpeg" style="height:0.65764in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Discriminator</td>
+<td><blockquote>
+<p>Pixel loss</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>network</td>
+<td><blockquote>
+<p><strong>y</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image376.jpeg" style="height:0.75625in" /></p>
+<blockquote>
+<p><strong>xx</strong></p>
+<p><strong>x</strong> <strong><sub>Σ</sub>x</strong></p>
+<p>Variational</p>
+<p>Autoencoder <strong>z</strong></p>
+<p><strong>z</strong> <strong><sub>Σ</sub>z</strong></p>
+<p><strong>x</strong></p>
+</blockquote>
+<p><img src="media/image377.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 126 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image378.jpeg" style="width:9.59306in;height:4.84236in" /></p>
+<p>Images with Perceptual Similarity</p>
+<p>Putting everything together Metrics based on Deep Networks”, arXiv 2016</p>
+<p>Real or Generated</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Pretrained AlexNet</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Discriminator</td>
+<td><blockquote>
+<p>Pixel loss</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>network</td>
+<td><blockquote>
+<p><strong>y</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>xx</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Variational</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Σ<sup>x</sup></strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Features of</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>Features of</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>xf</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Autoencoder</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>xxf</strong> reconstructed</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Σ<sup>z</sup></strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>real image</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>image</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image379.jpeg" style="height:0.67014in" /></p>
+<blockquote>
+<p><strong>x</strong></p>
+</blockquote>
+<p><img src="media/image383.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 127 29 Feb 2016</p>
+<p><img src="media/image384.jpeg" style="width:9.59306in;height:4.93403in" /></p>
+<blockquote>
+<p>Dosovitskiy and Brox, “Generating</p>
+<p>Images with Perceptual Similarity</p>
+<p>Putting everything together Metrics based on Deep Networks”, arXiv 2016</p>
+<p>Real or Generated</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Pretrained AlexNet</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Discriminator</p>
+</blockquote></td>
+<td><blockquote>
+<p>Pixel loss</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>network</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>y</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>xx</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Variational</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Σ<sup>x</sup></strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Features of</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>Features of</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>xf</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Autoencoder</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>xxf</strong> reconstructed</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>z</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Σ<sup>z</sup></strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>real image</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>image</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>x</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>L2 loss</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</td>
+<td><blockquote>
+<p>Lecture 14 128</p>
+</blockquote></td>
+<td><blockquote>
+<p>29 Feb 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image385.jpeg" style="width:10in;height:0.58889in" /></p>
+<p><img src="media/image390.jpeg" style="width:10in;height:5.55139in" /></p>
+<blockquote>
+<p>Putting everything together</p>
+<p>Samples from the model, trained on ImageNet</p>
+</blockquote>
+<p>Dosovitskiy and Brox, “Generating Images with Perceptual Similarity Metrics based on Deep Networks”, arXiv 2016</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 129 29 Feb 2016</p>
+<blockquote>
+<p><img src="media/image391.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image392.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>Videos</p>
+</blockquote></li>
+<li><blockquote>
+<p>Unsupervised learning</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Autoencoders: Traditional / variational</p>
+</blockquote></li>
+<li><blockquote>
+<p>Generative Adversarial Networks</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>Next time: Guest lecture from Jeff Dean</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image393.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 14 130 29 Feb 2016</p>

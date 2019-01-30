@@ -1,0 +1,1235 @@
+<p><img src="media/image1.jpeg" style="width:9.73125in;height:1.92431in" /></p>
+<p>Training Neural Networks,</p>
+<p>Part 2</p>
+<p><img src="media/image2.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 1 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image3.jpeg" style="width:9.7625in;height:4.21528in" /></p>
+<p>A2 is out. It’s meaty. It’s due Feb 5 (next Friday)</p>
+<p>You’ll implement:</p>
+<p>Neural Nets (with Layer Forward/Backward API)</p>
+<p>Batch Norm</p>
+<p>Dropout</p>
+<p>ConvNets</p>
+</blockquote>
+<p><img src="media/image4.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 2 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image5.jpeg" style="width:9.77222in;height:4.76944in" /></p>
+<p>Loop:</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p><strong>Sample</strong> a batch of data</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Forward</strong> prop it through the graph, get loss</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Backprop</strong> to calculate the gradients</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Update</strong> the parameters using the gradient</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image6.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 3 25 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Activation Functions</td>
+<td><blockquote>
+<p><strong>Leaky ReLU</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>max(0.1x, x)</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Sigmoid</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image7.jpeg" style="width:9.44931in;height:0.91319in" /></p>
+<blockquote>
+<p><strong>Maxout</strong></p>
+<p><strong>tanh</strong> tanh(x)</p>
+</blockquote>
+<p><img src="media/image9.jpeg" style="width:3.82778in;height:1.78611in" /></p>
+<blockquote>
+<p><strong>ELU</strong></p>
+</blockquote>
+<p><img src="media/image11.jpeg" style="width:4.85625in;height:1.17847in" /></p>
+<blockquote>
+<p><strong>ReLU</strong> max(0,x)</p>
+</blockquote>
+<p><img src="media/image12.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 4 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image13.jpeg" style="width:9.6375in;height:2.18681in" /></p>
+<p>Preprocessing</p>
+</blockquote>
+<p><img src="media/image14.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 5 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image16.jpeg" style="width:9.96042in;height:4.90903in" /></p>
+<p><strong>Reasonable initialization.</strong> (Mathematical derivation assumes linear activations)</p>
+<p>Weight Initialization</p>
+</blockquote>
+<p><img src="media/image17.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 6 25 Jan 2016</p>
+<blockquote>
+<p>Batch Normalization</p>
+<p>Normalize:</p>
+<p>And then allow the network to squash the range if it wants to:</p>
+<p>[Ioffe and Szegedy, 2015]</p>
+</blockquote>
+<p><img src="media/image18.jpeg" style="width:9.81597in;height:4.72639in" /></p>
+<ul>
+<li><p>Improves gradient flow through the network</p></li>
+<li><p>Allows higher learning rates</p></li>
+<li><p>Reduces the strong dependence on initialization</p></li>
+<li><p>Acts as a form of regularization in a funny way, and slightly reduces the need for dropout, maybe</p></li>
+</ul>
+<p><img src="media/image19.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 7 25 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Babysitting the</td>
+<td><blockquote>
+<p>Cross-validation</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>learning process</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image20.jpeg" style="height:5.04653in" /></p>
+<blockquote>
+<p>Loss barely changing:</p>
+<p>Learning rate is probably</p>
+<p>too low</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 8 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image22.jpeg" style="width:8.53542in;height:4.72014in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Parameter update schemes</p>
+</blockquote></li>
+<li><blockquote>
+<p>Learning rate schedules</p>
+</blockquote></li>
+<li><blockquote>
+<p>Dropout</p>
+</blockquote></li>
+<li><blockquote>
+<p>Gradient checking</p>
+</blockquote></li>
+<li><blockquote>
+<p>Model ensembles</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image23.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 9 25 Jan 2016</p>
+<p><img src="media/image24.jpeg" style="width:8.80417in;height:3.69931in" /></p>
+<blockquote>
+<p>Parameter Updates</p>
+</blockquote>
+<p><img src="media/image25.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 10 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image26.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+</blockquote>
+<p><img src="media/image27.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 11 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image29.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+</blockquote>
+<p><img src="media/image30.jpeg" style="width:5.78194in;height:3.51458in" /></p>
+<blockquote>
+<p>simple gradient descent update</p>
+<p>now: complicate.</p>
+</blockquote>
+<p><img src="media/image31.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 12 25 Jan 2016</p>
+<p><img src="media/image32.jpeg" style="width:7.00278in;height:4.27361in" /></p>
+<blockquote>
+<p>Image credits: Alec Radford</p>
+</blockquote>
+<p><img src="media/image33.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 13 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image34.jpeg" style="width:9.69444in;height:0.58472in" /></p>
+</blockquote>
+<p><img src="media/image35.jpeg" style="width:9in;height:1.84167in" /></p>
+<ol start="17" type="A">
+<li><blockquote>
+<p>What is the trajectory along which we converge towards the minimum with SGD?</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image37.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 14 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image38.jpeg" style="width:9.69444in;height:0.58472in" /></p>
+</blockquote>
+<p><img src="media/image39.jpeg" style="width:8.25486in;height:0.63056in" /></p>
+<ol start="17" type="A">
+<li><blockquote>
+<p>What is the trajectory along which we converge towards the minimum with SGD?</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image43.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 15 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image44.jpeg" style="width:9.69444in;height:0.58472in" /></p>
+</blockquote>
+<p><img src="media/image45.jpeg" style="width:8.25486in;height:0.63056in" /></p>
+<ol start="17" type="A">
+<li><blockquote>
+<p>What is the trajectory along which we converge towards the minimum with SGD? very slow progress along flat direction, jitter along steep one</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image47.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 16 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image48.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+</blockquote>
+<p><img src="media/image49.jpeg" style="width:4.55903in;height:0.59028in" /></p>
+<ul>
+<li><blockquote>
+<p>Physical interpretation as ball rolling down the loss function + friction (mu coefficient).</p>
+</blockquote></li>
+<li><blockquote>
+<p>mu = usually ~0.5, 0.9, or 0.99 (Sometimes annealed over time, e.g. from 0.5 -&gt; 0.99)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image54.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 17 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image55.jpeg" style="width:9.86111in;height:2.66667in" /></p>
+</blockquote>
+<p><img src="media/image56.jpeg" style="height:0.69028in" /></p>
+<ul>
+<li><blockquote>
+<p>Allows a velocity to “build up” along shallow directions</p>
+</blockquote></li>
+<li><blockquote>
+<p>Velocity becomes damped in steep direction due to quickly changing sign</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image58.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 18 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image59.jpeg" style="width:6.79653in;height:3.99722in" /></p>
+<p>vs</p>
+<p>Momentum</p>
+</blockquote>
+<p><img src="media/image60.jpeg" style="width:2.88819in;height:2.21181in" /></p>
+<blockquote>
+<p>notice momentum overshooting the target, but overall getting to the minimum much faster.</p>
+</blockquote>
+<p><img src="media/image61.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 19 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image62.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+</blockquote>
+<p><img src="media/image63.jpeg" style="width:7.03819in;height:1.16528in" /></p>
+<p>Ordinary momentum update:</p>
+<p><img src="media/image64.jpeg" style="width:1.44722in" /></p>
+<blockquote>
+<p>momentum</p>
+<p>step</p>
+<p>actual step</p>
+</blockquote>
+<p><img src="media/image66.jpeg" style="width:1.44722in" /></p>
+<blockquote>
+<p>gradient</p>
+<p>step</p>
+</blockquote>
+<p><img src="media/image67.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 20 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image68.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+</blockquote>
+<p><img src="media/image69.jpeg" style="width:7.90347in;height:3.52917in" /></p>
+<blockquote>
+<p>Momentum update</p>
+</blockquote>
+<p><img src="media/image70.jpeg" style="width:1.44722in" /></p>
+<blockquote>
+<p>momentum</p>
+<p>step</p>
+</blockquote>
+<p>actual step</p>
+<p><img src="media/image71.jpeg" style="width:1.44722in" /></p>
+<blockquote>
+<p>gradient</p>
+<p>step</p>
+</blockquote>
+<p>Nesterov momentum update</p>
+<p><img src="media/image72.jpeg" style="width:5.07708in;height:1.84167in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>“lookahead” gradient</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>momentum</td>
+<td><blockquote>
+<p>step (bit different than</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>original)</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>step</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>actual step</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image73.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 21 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image74.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+</blockquote>
+<p><img src="media/image75.jpeg" style="height:2.51806in" /></p>
+<blockquote>
+<p>Momentum update</p>
+</blockquote>
+<p><img src="media/image77.jpeg" style="width:1.44722in" /></p>
+<blockquote>
+<p>momentum</p>
+<p>step</p>
+</blockquote>
+<p>actual step</p>
+<p><img src="media/image78.jpeg" style="width:1.44722in" /></p>
+<blockquote>
+<p>gradient</p>
+<p>step</p>
+</blockquote>
+<p>Nesterov momentum update</p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>“lookahead” gradient</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>momentum</td>
+<td><blockquote>
+<p>step (bit different than</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>original)</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>step</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>actual step</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Nesterov: the only difference...</p>
+<p><img src="media/image79.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 22 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image80.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+</blockquote>
+<p><img src="media/image81.jpeg" style="width:9.69097in;height:1.24861in" /></p>
+<blockquote>
+<p>Slightly inconvenient… usually we have :</p>
+</blockquote>
+<p><img src="media/image82.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 23 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image83.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+</blockquote>
+<p><img src="media/image84.jpeg" style="width:9.69097in;height:1.24861in" /></p>
+<blockquote>
+<p>Slightly inconvenient… usually we have :</p>
+</blockquote>
+<p><img src="media/image85.jpeg" style="width:9.56667in" /></p>
+<blockquote>
+<p>Variable transform and rearranging saves the day:</p>
+</blockquote>
+<p><img src="media/image87.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 24 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image88.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+</blockquote>
+<p><img src="media/image89.jpeg" style="width:9.69097in;height:1.24861in" /></p>
+<blockquote>
+<p>Slightly inconvenient… usually we have :</p>
+</blockquote>
+<p><img src="media/image90.jpeg" style="width:9.56667in" /></p>
+<blockquote>
+<p>Variable transform and rearranging saves the day:</p>
+<p>Replace all thetas with phis, rearrange and obtain:</p>
+</blockquote>
+<p><img src="media/image92.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 25 25 Jan 2016</p>
+<p><img src="media/image94.jpeg" style="width:7.18264in;height:3.99722in" /></p>
+<blockquote>
+<p>nag =</p>
+<p>Nesterov</p>
+<p>Accelerated</p>
+<p>Gradient</p>
+</blockquote>
+<p><img src="media/image95.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 26 25 Jan 2016</p>
+<p><img src="media/image96.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+<blockquote>
+<p>AdaGrad update</p>
+</blockquote>
+<p><img src="media/image97.jpeg" style="width:6.60069in;height:0.87014in" /></p>
+<p>[Duchi et al., 2011]</p>
+<p><img src="media/image98.jpeg" style="width:6.60069in;height:0.55139in" /></p>
+<blockquote>
+<p>Added element-wise scaling of the gradient based on the historical sum of squares in each dimension</p>
+</blockquote>
+<p><img src="media/image100.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 27 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image101.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+</blockquote>
+<p><img src="media/image102.jpeg" style="width:9in;height:3.59306in" /></p>
+<blockquote>
+<p>Q: What happens with AdaGrad?</p>
+</blockquote>
+<p><img src="media/image103.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 28 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image104.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+</blockquote>
+<p><img src="media/image105.jpeg" style="width:9in;height:3.59306in" /></p>
+<blockquote>
+<p>Q2: What happens to the step size over long time?</p>
+</blockquote>
+<p><img src="media/image106.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 29 25 Jan 2016</p>
+<blockquote>
+<p>RMSProp update</p>
+</blockquote>
+<p><img src="media/image107.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>[Tieleman and Hinton, 2012]</p>
+<p><img src="media/image110.jpeg" style="width:9.62083in;height:0.48403in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 30 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image111.jpeg" style="width:9.70556in;height:3.6625in" /></p>
+</blockquote>
+<p><img src="media/image112.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 31 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image113.jpeg" style="width:9.70556in;height:3.6625in" /></p>
+</blockquote>
+<p><img src="media/image114.jpeg" style="width:8.99236in;height:0.86111in" /></p>
+<blockquote>
+<p>Cited by several papers as:</p>
+</blockquote>
+<p><img src="media/image115.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 32 25 Jan 2016</p>
+<p><img src="media/image116.jpeg" style="width:6.27639in;height:3.99722in" /></p>
+<blockquote>
+<p>adagrad</p>
+</blockquote>
+<p><img src="media/image117.jpeg" style="width:0.46944in;height:0.22708in" /></p>
+<blockquote>
+<p>rmsprop</p>
+</blockquote>
+<p><img src="media/image118.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 33 25 Jan 2016</p>
+<blockquote>
+<p>Adam update</p>
+</blockquote>
+<p><img src="media/image119.jpeg" style="width:4.54097in;height:0.50069in" /></p>
+<p>[Kingma and Ba, 2014]</p>
+<p><img src="media/image120.jpeg" style="width:9.62083in;height:0.48403in" /></p>
+<blockquote>
+<p>(incomplete, but close)</p>
+</blockquote>
+<p><img src="media/image121.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 34 25 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Adam update</td>
+<td><blockquote>
+<p>[Kingma and Ba, 2014]</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>(incomplete, but close)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image123.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+<blockquote>
+<p>momentum</p>
+<p>RMSProp-like</p>
+<p>Looks a bit like RMSProp with momentum</p>
+</blockquote>
+<p><img src="media/image126.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 35 25 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Adam update</td>
+<td><blockquote>
+<p>[Kingma and Ba, 2014]</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>(incomplete, but close)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image127.jpeg" style="width:6.17639in;height:0.43611in" /></p>
+<blockquote>
+<p>momentum</p>
+<p>RMSProp-like</p>
+<p>Looks a bit like RMSProp with momentum</p>
+</blockquote>
+<p><img src="media/image130.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 36 25 Jan 2016</p>
+<blockquote>
+<p>Adam update</p>
+</blockquote>
+<p><img src="media/image131.jpeg" style="width:7.3375in;height:2.32986in" /></p>
+<p>[Kingma and Ba, 2014]</p>
+<p><img src="media/image133.jpeg" style="width:9.62083in;height:0.48403in" /></p>
+<blockquote>
+<p>momentum</p>
+<p>bias correction</p>
+<p>(only relevant in first few iterations when t is small)</p>
+</blockquote>
+<p><img src="media/image135.jpeg" style="width:2.26597in;height:0.67778in" /></p>
+<blockquote>
+<p>RMSProp-like</p>
+<p>The bias correction compensates for the fact that m,v are initialized at zero and need some time to “warm up”.</p>
+</blockquote>
+<p><img src="media/image136.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 37 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image137.jpeg" style="width:9.44097in;height:0.53333in" /><strong>learning rate</strong> as a hyperparameter.</p>
+</blockquote>
+<p><img src="media/image138.jpeg" style="width:9.13264in;height:3.39722in" /></p>
+<blockquote>
+<p>Q: Which one of these learning rates is best to use?</p>
+</blockquote>
+<p><img src="media/image139.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 38 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image140.jpeg" style="width:9.44097in;height:0.53333in" /><strong>learning rate</strong> as a hyperparameter.</p>
+</blockquote>
+<p><img src="media/image141.jpeg" style="width:9.37361in;height:3.48681in" /></p>
+<blockquote>
+<p><strong>=&gt; Learning rate decay over time!</strong></p>
+<p><strong>step decay:</strong></p>
+<p>e.g. decay learning rate by half every few epochs.</p>
+<p><strong>exponential decay:</strong></p>
+<p><strong>1/t decay:</strong></p>
+</blockquote>
+<p><img src="media/image142.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 39 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image143.jpeg" style="width:9.28611in;height:0.61528in" /></p>
+</blockquote>
+<p><img src="media/image144.jpeg" style="width:8.72222in;height:1.31875in" /></p>
+<blockquote>
+<p>second-order Taylor expansion:</p>
+</blockquote>
+<p><img src="media/image145.jpeg" style="width:8.36111in;height:0.45833in" /></p>
+<blockquote>
+<p>Solving for the critical point we obtain the Newton parameter update:</p>
+</blockquote>
+<p><img src="media/image146.jpeg" style="width:3.66319in;height:0.63194in" /></p>
+<blockquote>
+<p>Q: what is nice about this update?</p>
+</blockquote>
+<p><img src="media/image148.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 40 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image149.jpeg" style="width:9.28611in;height:0.61528in" /></p>
+</blockquote>
+<p><img src="media/image150.jpeg" style="width:8.72222in;height:1.31875in" /></p>
+<blockquote>
+<p>second-order Taylor expansion:</p>
+</blockquote>
+<p><img src="media/image151.jpeg" style="width:8.36111in;height:0.45833in" /></p>
+<blockquote>
+<p>Solving for the critical point we obtain the Newton parameter update:</p>
+</blockquote>
+<p><img src="media/image152.jpeg" style="width:8.84722in;height:0.64028in" /></p>
+<blockquote>
+<p>notice:</p>
+</blockquote>
+<p>no hyperparameters! (e.g. learning rate)</p>
+<p><img src="media/image153.jpeg" style="width:8.92986in;height:0.63194in" /></p>
+<p>Q2: why is this impractical for training Deep Neural Nets?</p>
+<p><img src="media/image154.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 41 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image155.jpeg" style="width:9.28611in;height:0.61528in" /></p>
+</blockquote>
+<p><img src="media/image156.jpeg" style="width:9.17083in;height:0.52708in" /></p>
+<ul>
+<li><blockquote>
+<p>Quasi-Newton methods (<strong>BGFS</strong> most popular): <em>instead of inverting the Hessian (O(n^3)), approximate inverse Hessian with rank 1 updates over time (O(n^2) each).</em></p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>L-BFGS</strong> (Limited memory BFGS):</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><em>Does not form/store the full inverse Hessian.</em></p>
+</blockquote>
+<p><img src="media/image158.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 42 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image159.jpeg" style="width:9.83611in;height:4.22917in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Usually works very well in full batch, deterministic mode</strong> i.e. if you have a single, deterministic f(x) then L-BFGS will probably work very nicely</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Does not transfer very well to mini-batch setting</strong>. Gives bad results. Adapting L-BFGS to large-scale, stochastic setting is an active area of research.</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image160.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 43 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image161.jpeg" style="width:5.58681in;height:0.52847in" /></p>
+</blockquote>
+<p><img src="media/image162.jpeg" style="width:8.40903in;height:2.81597in" /></p>
+<ul>
+<li><blockquote>
+<p><strong>Adam</strong> is a good default choice in most cases</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you can afford to do full batch updates then try out</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><strong>L-BFGS</strong> (and don’t forget to disable all sources of noise)</p>
+</blockquote>
+<p><img src="media/image163.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 44 25 Jan 2016</p>
+<p><img src="media/image164.jpeg" style="width:8.80417in;height:3.69931in" /></p>
+<blockquote>
+<p>Evaluation:</p>
+</blockquote>
+<p>Model Ensembles</p>
+<p><img src="media/image165.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 45 25 Jan 2016</p>
+<p><img src="media/image166.jpeg" style="width:8.08125in;height:2.45in" /></p>
+<ol type="1">
+<li><blockquote>
+<p>Train multiple independent models</p>
+</blockquote></li>
+<li><blockquote>
+<p>At test time average their results</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>Enjoy 2% extra performance</p>
+</blockquote>
+<p><img src="media/image167.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 46 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image168.jpeg" style="width:8.65972in;height:3.72708in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>can also get a small boost from averaging multiple model checkpoints of a single model.</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image169.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 47 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image170.jpeg" style="width:8.65972in;height:4.44861in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>can also get a small boost from averaging multiple model checkpoints of a single model.</p>
+</blockquote></li>
+<li><blockquote>
+<p>keep track of (and use at test time) a running average parameter vector:</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image171.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 48 25 Jan 2016</p>
+<p><img src="media/image172.jpeg" style="width:8.80417in;height:3.69931in" /></p>
+<blockquote>
+<p>Regularization <strong>(dropout)</strong></p>
+</blockquote>
+<p><img src="media/image173.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 49 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image174.jpeg" style="width:9.72292in;height:1.29514in" /><strong>Dropout</strong></p>
+<p>“randomly set some neurons to zero in the forward pass”</p>
+</blockquote>
+<p><img src="media/image175.jpeg" style="width:9.26458in;height:3.54583in" /></p>
+<p><em>[Srivastava et al., 2014]</em></p>
+<p><img src="media/image176.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 50 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image177.jpeg" style="width:9.75764in;height:4.31111in" /></p>
+</blockquote>
+<p><img src="media/image178.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 51 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image179.jpeg" style="width:9.49792in;height:0.85625in" /></p>
+<p>How could this possibly be a good idea?</p>
+</blockquote>
+<p><img src="media/image180.jpeg" style="width:10in;height:3.96597in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 52 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image181.jpeg" style="width:9.49792in;height:0.85625in" /></p>
+<p>How could this possibly be a good idea?</p>
+</blockquote>
+<p><img src="media/image182.jpeg" style="width:9.34514in;height:3.0625in" /></p>
+<p>Forces the network to have a redundant representation.</p>
+<p><img src="media/image183.jpeg" style="width:5.87847in;height:1.45417in" /></p>
+<blockquote>
+<p>has an ear</p>
+</blockquote>
+<p><img src="media/image184.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p>has a tail</p>
+</blockquote>
+<p><img src="media/image185.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p>is furry</p>
+</blockquote>
+<p><img src="media/image186.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p>has claws</p>
+</blockquote>
+<p><img src="media/image188.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p>mischievous</p>
+</blockquote>
+<p><img src="media/image189.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p>look</p>
+</blockquote>
+<p><img src="media/image190.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6</p>
+<blockquote>
+<p><strong>X</strong></p>
+</blockquote>
+<p><img src="media/image191.jpeg" style="width:0.77361in" /></p>
+<ul>
+<li><blockquote>
+<p><img src="media/image193.jpeg" style="width:0.90972in;height:0.12431in" /> cat</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><img src="media/image194.jpeg" style="width:0.92986in;height:0.23125in" /> score</p>
+</blockquote>
+<p><img src="media/image195.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p><strong>X</strong></p>
+</blockquote>
+<p><img src="media/image198.jpeg" style="width:0.77361in" /></p>
+<p>53 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image199.jpeg" style="width:9.49792in;height:0.85625in" /></p>
+<p>How could this possibly be a good idea?</p>
+</blockquote>
+<p><img src="media/image200.jpeg" style="width:9.2875in;height:3.05625in" /></p>
+<blockquote>
+<p>Another interpretation:</p>
+<p>Dropout is training a large ensemble of models (that share parameters).</p>
+<p>Each binary mask is one model, gets trained on only ~one datapoint.</p>
+</blockquote>
+<p><img src="media/image201.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 54 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image202.jpeg" style="width:7.95625in;height:0.70208in" /></p>
+</blockquote>
+<p><img src="media/image203.jpeg" style="width:5.70208in;height:3.38472in" /></p>
+<blockquote>
+<p><strong>Ideally</strong>:</p>
+</blockquote>
+<p><img src="media/image204.jpeg" style="width:2.67569in;height:3.05625in" /></p>
+<blockquote>
+<p>want to integrate out all the noise</p>
+<p><strong>Monte Carlo approximation:</strong> do many forward passes with different dropout masks, average all predictions</p>
+</blockquote>
+<p><img src="media/image205.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 55 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image206.jpeg" style="width:9.52708in;height:4.38264in" /></p>
+<p>Can in fact do this with a single forward pass! (approximately) Leave all input neurons turned on (no dropout).</p>
+</blockquote>
+<p><img src="media/image207.jpeg" style="height:0.74167in" /></p>
+<blockquote>
+<p>(this can be shown to be an</p>
+<p>approximation to evaluating the</p>
+<p>whole ensemble)</p>
+</blockquote>
+<p><img src="media/image208.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 56 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image209.jpeg" style="width:9.52708in;height:4.38264in" /></p>
+<p>Can in fact do this with a single forward pass! (approximately) Leave all input neurons turned on (no dropout).</p>
+</blockquote>
+<p><img src="media/image210.jpeg" style="height:0.74167in" /></p>
+<blockquote>
+<p>Q: Suppose that with all inputs present at test time the output of this neuron is x.</p>
+<p>What would its output be during training time, in expectation? (e.g. if p = 0.5)</p>
+</blockquote>
+<p><img src="media/image211.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 57 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image212.jpeg" style="width:9.52708in;height:4.69028in" /></p>
+<p>Can in fact do this with a single forward pass! (approximately)</p>
+<p>a</p>
+</blockquote>
+<p><img src="media/image213.jpeg" style="height:0.74167in" /></p>
+<blockquote>
+<p>w0 w1</p>
+<p>x y</p>
+</blockquote>
+<p>Leave all input neurons turned on (no dropout).</p>
+<blockquote>
+<p>during test: <strong>a = w0*x + w1*y</strong> during train:</p>
+</blockquote>
+<p>E[a] = ¼ * (w0*0 + w1*0</p>
+<p>w0*0 + w1*y</p>
+<ul>
+<li><blockquote>
+<p>¼ * (2 w0*x + 2 w1*y)</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>½ * (w0*x + w1*y)</strong> <img src="media/image214.jpeg" /></p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p><img src="media/image215.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 58 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image216.jpeg" style="width:9.57083in;height:4.65764in" /></p>
+<p>Can in fact do this with a single forward pass! (approximately) Leave all input neurons turned on (no dropout).</p>
+<p>a</p>
+</blockquote>
+<p><img src="media/image217.jpeg" style="height:0.74167in" /></p>
+<blockquote>
+<p>w0 w1</p>
+<p>x y</p>
+</blockquote>
+<p>during test: <strong>a = w0*x + w1*y</strong> during train:</p>
+<p>E[a] = ¼ * (w0*0 + w1*0 w0*0 + w1*y</p>
+<ul>
+<li><blockquote>
+<p>¼ * (2 w0*x + 2 w1*y)</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>½ * (w0*x + w1*y)</strong> <img src="media/image218.jpeg" /></p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p><img src="media/image219.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>With p=0.5, using all inputs in the forward pass would inflate the activations by 2x from what the network was “used to” during training! =&gt; Have to compensate by scaling the activations back down by ½</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 59 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image220.jpeg" style="width:9.75556in;height:0.86528in" /></p>
+</blockquote>
+<p><img src="media/image221.jpeg" style="width:9.01806in;height:3.49306in" /></p>
+<blockquote>
+<p>At test time all neurons are active always</p>
+<p>=&gt; We must scale the activations so that for each neuron:</p>
+<p><span class="underline">output at test time</span> = <span class="underline">expected output at training time</span></p>
+</blockquote>
+<p><img src="media/image222.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 60 25 Jan 2016</p>
+<p><img src="media/image223.jpeg" style="width:9.84375in;height:4.75694in" /></p>
+<blockquote>
+<p>drop in forward pass</p>
+<p>scale at test time</p>
+</blockquote>
+<p><img src="media/image224.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 61 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image225.jpeg" style="width:9.4625in;height:0.63472in" /></p>
+</blockquote>
+<p><img src="media/image226.jpeg" style="width:9.38889in;height:4.06042in" /></p>
+<p>test time is unchanged!</p>
+<p><img src="media/image227.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 62 25 Jan 2016</p>
+<p><img src="media/image228.jpeg" style="width:7.39792in;height:1.55972in" /></p>
+<blockquote>
+<p>&lt;fun story time&gt;</p>
+<p><em>(Deep Learning Summer School 2012)</em></p>
+</blockquote>
+<p><img src="media/image229.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 63 25 Jan 2016</p>
+<p><img src="media/image230.jpeg" style="width:9.90278in;height:4.89583in" /></p>
+<p>(see class notes...)</p>
+<p>fun guaranteed.</p>
+<p><img src="media/image231.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 64 25 Jan 2016</p>
+<p><img src="media/image232.jpeg" style="width:9.73125in;height:1.45347in" /></p>
+</blockquote>
+<p><img src="media/image233.jpeg" style="width:7.93403in;height:2.20486in" /></p>
+<blockquote>
+<p><em>[LeNet-5, LeCun 1980]</em></p>
+</blockquote>
+<p><img src="media/image235.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 65 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image236.jpeg" style="height:5.05in" /></p>
+<p><strong>Hubel &amp; Wiesel</strong>, 1959</p>
+<p>RECEPTIVE FIELDS OF SINGLE NEURONES IN</p>
+<p>THE CAT'S STRIATE CORTEX</p>
+<p>1962</p>
+<p>RECEPTIVE FIELDS, BINOCULAR INTERACTION</p>
+<p>AND FUNCTIONAL ARCHITECTURE IN THE CAT'S VISUAL CORTEX</p>
+<p>1968...</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 66 25 Jan 2016</p>
+<p><img src="media/image238.jpeg" style="width:9.23889in;height:0.52986in" /></p>
+<blockquote>
+<p>Video time <a href="https://youtu.be/8VdFf3egwfg?t=1m10s"><span class="underline">https://youtu.be/8VdFf3egwfg?</span></a></p>
+<p><a href="https://youtu.be/8VdFf3egwfg?t=1m10s"><span class="underline">t=1m10s</span></a></p>
+</blockquote>
+<p><img src="media/image239.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 67 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image240.jpeg" style="width:10in;height:4.67778in" /></p>
+</blockquote>
+<p><strong>Topographical mapping in the cortex:</strong> nearby cells in cortex represented nearby regions in the visual field</p>
+<p><img src="media/image241.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 68 25 Jan 2016</p>
+<p><img src="media/image242.jpeg" style="width:8.70486in;height:0.67361in" /></p>
+</blockquote>
+<p><img src="media/image243.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 69 25 Jan 2016</p>
+<blockquote>
+<p>A bit of history:</p>
+<p><strong>Neurocognitron</strong> <em>[Fukushima 1980]</em></p>
+</blockquote>
+<p>“sandwich” architecture (SCSCSC…) simple cells: modifiable parameters complex cells: perform pooling</p>
+<p><img src="media/image245.jpeg" style="width:10in;height:5.625in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 70 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image246.jpeg" style="width:5.16042in;height:0.67361in" /></p>
+</blockquote>
+<p><img src="media/image247.jpeg" style="width:2.86875in;height:4.50972in" /></p>
+<blockquote>
+<p><strong>Gradient-based learning applied to document recognition</strong></p>
+<p><em>[LeCun, Bottou, Bengio, Haffner 1998]</em></p>
+</blockquote>
+<p><img src="media/image248.jpeg" style="width:4.69792in;height:2.00069in" /></p>
+<blockquote>
+<p>LeNet-5</p>
+</blockquote>
+<p><img src="media/image249.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 71 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image250.jpeg" style="width:9.70625in;height:2.08125in" /></p>
+<p><strong>ImageNet Classification with Deep Convolutional Neural Networks</strong> <em>[Krizhevsky, Sutskever, Hinton, 2012]</em></p>
+</blockquote>
+<p><img src="media/image251.jpeg" style="width:5.75694in;height:2.21597in" /></p>
+<blockquote>
+<p>“AlexNet”</p>
+</blockquote>
+<p><img src="media/image252.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 72 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image253.jpeg" style="width:9.58958in;height:1.08819in" /></p>
+<p>Classification Retrieval</p>
+</blockquote>
+<p><img src="media/image254.jpeg" style="width:8.85069in;height:3.73819in" /></p>
+<p><em>[Krizhevsky 2012]</em></p>
+<p><img src="media/image255.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 73 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image256.jpeg" style="width:9.95347in;height:4.97361in" /></p>
+<p>Detection Segmentation</p>
+<p><em>[Faster R-CNN: Ren, He, Girshick, Sun 2015]</em> <em>[Farabet et al., 2012]</em></p>
+</blockquote>
+<p><img src="media/image257.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 74 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image258.jpeg" style="width:9.58958in;height:4.36875in" /></p>
+</blockquote>
+<p>NVIDIA Tegra X1</p>
+<p><img src="media/image259.jpeg" style="width:5.09722in;height:0.45833in" /></p>
+<blockquote>
+<p>self-driving cars</p>
+</blockquote>
+<p><img src="media/image260.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 75 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image261.jpeg" style="width:9.82639in;height:4.95625in" /></p>
+</blockquote>
+<p><em>[Taigman et al. 2014]</em></p>
+<blockquote>
+<p><em>[Simonyan et al. 2014]</em></p>
+</blockquote>
+<p><img src="media/image262.jpeg" style="width:10in;height:0.58889in" /></p>
+<p><em>[Goodfellow 2014]</em></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 76 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image263.jpeg" style="width:9.58958in;height:2.81875in" /></p>
+<p><em>[Toshev, Szegedy 2014]</em></p>
+</blockquote>
+<p><img src="media/image264.jpeg" style="width:9.29028in;height:1.70208in" /></p>
+<blockquote>
+<p><em>[Mnih 2013]</em></p>
+</blockquote>
+<p><img src="media/image265.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 77 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image266.jpeg" style="width:9.58958in;height:0.91042in" /></p>
+</blockquote>
+<p><img src="media/image267.jpeg" style="width:9.49306in;height:3.63681in" /></p>
+<blockquote>
+<p><em>[Ciresan et al. 2013]</em> <em>[Sermanet et al. 2011]</em></p>
+<p><em>[Ciresan et al.]</em></p>
+</blockquote>
+<p><img src="media/image268.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 78 25 Jan 2016</p>
+<blockquote>
+<p><img src="media/image269.jpeg" style="width:9.91667in;height:4.98333in" /></p>
+</blockquote>
+<p><em>[Denil et al. 2014]</em></p>
+<blockquote>
+<p><em>[Turaga et al., 2010]</em></p>
+</blockquote>
+<p><img src="media/image270.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 79 25 Jan 2016</p>
+<p><img src="media/image271.jpeg" style="width:9.08403in;height:4.09028in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><em>Whale recognition, Kaggle Challenge</em></p>
+</blockquote></td>
+<td><blockquote>
+<p><em>Mnih and Hinton, 2010</em></p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 6 80</p>
+</blockquote></td>
+<td><blockquote>
+<p>25 Jan 2016</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image272.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<blockquote>
+<p><img src="media/image273.jpeg" style="width:9.70833in;height:4.89792in" /></p>
+<p><em>[Vinyals et al., 2015]</em></p>
+</blockquote>
+<p><img src="media/image274.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 81 25 Jan 2016</p>
+<p><img src="media/image275.jpeg" style="width:9.91736in;height:4.88681in" /></p>
+<p><em>reddit.com/r/deepdream</em></p>
+<p><img src="media/image276.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 82 25 Jan 2016</p>
+</blockquote>
+<p><img src="media/image277.jpeg" style="width:10in;height:5.625in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 6 83</p>
+</blockquote></td>
+<td><blockquote>
+<p>25 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image278.jpeg" style="width:9.50139in;height:4.77778in" /></p>
+<blockquote>
+<p><em>Deep Neural Networks Rival the Representation of Primate IT Cortex for Core Visual Object Recognition [Cadieu et al., 2014]</em></p>
+</blockquote>
+<p><img src="media/image279.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 84 25 Jan 2016</p>
+<p><img src="media/image280.jpeg" style="width:9.79375in;height:4.90486in" /></p>
+<blockquote>
+<p><em>Deep Neural Networks Rival the Representation of Primate IT Cortex for Core Visual Object Recognition [Cadieu et al., 2014]</em></p>
+</blockquote>
+<p><img src="media/image281.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 6 85 25 Jan 2016</p>
+<p><img src="media/image282.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 6 86</p>
+</blockquote></td>
+<td><blockquote>
+<p>25 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>

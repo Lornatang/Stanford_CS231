@@ -1,0 +1,720 @@
+<p><img src="media/image1.jpeg" style="width:9.73125in;height:1.92431in" /></p>
+<p>Lecture 2:</p>
+<p>Image Classification pipeline</p>
+<p><img src="media/image2.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 1 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image3.jpeg" style="width:8.47222in;height:4.24306in" /></p>
+<p>First assignment will come out tonight (or tomorrow at worst)</p>
+<p>It is due <strong>January 20</strong> (i.e. in two weeks). Handed in through CourseWork It includes:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Write/train/evaluate a kNN classifier</p>
+</blockquote></li>
+<li><blockquote>
+<p>Write/train/evaluate a Linear Classifier (SVM and Softmax)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Write/train/evaluate a 2-layer Neural Network (backpropagation!)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Requires writing numpy/Python code</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><strong>Warning</strong>: don’t work on assignments from last year!</p>
+<p>Compute: Can use your own laptops, or Terminal.com</p>
+</blockquote>
+<p><img src="media/image4.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 2 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image5.jpeg" style="width:7.84097in;height:0.52847in" /></p>
+</blockquote>
+<p><img src="media/image6.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 3 6 Jan 2016</p>
+<p><img src="media/image9.jpeg" style="width:9.60278in;height:5.56806in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 2 4</p>
+</blockquote></td>
+<td><blockquote>
+<p>6 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image10.jpeg" style="width:9.60278in;height:5.55556in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 2 5</p>
+</blockquote></td>
+<td><blockquote>
+<p>6 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image11.jpeg" style="width:9.21042in;height:4.7625in" />: a core task in Computer Vision</p>
+<p>(assume given set of discrete labels)</p>
+<p>{dog, cat, truck, plane, ...}</p>
+<p>cat</p>
+</blockquote>
+<p><img src="media/image12.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 6 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image14.jpeg" style="width:9.84931in;height:4.21111in" /></p>
+<p><em>semantic gap</em></p>
+<p>Images are represented as 3D arrays of numbers, with integers between [0, 255].</p>
+<p>E.g.</p>
+<p>300 x 100 x 3</p>
+<p>(3 for 3 color channels RGB)</p>
+</blockquote>
+<p><img src="media/image15.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 7 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image16.jpeg" style="width:7.29653in;height:0.89583in" /></p>
+</blockquote>
+<p><img src="media/image17.jpeg" style="width:10in;height:4.57708in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 8 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image18.jpeg" style="width:7.45833in;height:4.72569in" /></p>
+</blockquote>
+<p><img src="media/image19.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 9 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image20.jpeg" style="width:7.29653in;height:0.89583in" /></p>
+</blockquote>
+<p><img src="media/image21.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 10 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image23.jpeg" style="width:9.36667in;height:4.70347in" /></p>
+</blockquote>
+<p><img src="media/image24.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 11 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image25.jpeg" style="width:7.38889in;height:4.57639in" /></p>
+</blockquote>
+<p><img src="media/image26.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 12 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image27.jpeg" style="width:7.53403in;height:4.90764in" /></p>
+</blockquote>
+<p><img src="media/image28.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 13 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image29.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image30.jpeg" style="width:5.50694in;height:0.87153in" /></p>
+<blockquote>
+<p>Unlike e.g. sorting a list of numbers,</p>
+<p><strong>no obvious way</strong> to hard-code the algorithm for recognizing a cat, or other classes.</p>
+</blockquote>
+<p><img src="media/image32.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 14 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image33.jpeg" style="width:5.86042in;height:0.58819in" /></p>
+</blockquote>
+<p><img src="media/image34.jpeg" style="width:2.03264in;height:0.31944in" /></p>
+<blockquote>
+<p>???</p>
+</blockquote>
+<p><img src="media/image35.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 15 6 Jan 2016</p>
+<blockquote>
+<p><strong>Data-driven approach:</strong></p>
+</blockquote>
+<p><img src="media/image37.jpeg" style="width:9.5625in;height:0.9375in" /></p>
+<ol type="1">
+<li><blockquote>
+<p>Collect a dataset of images and labels</p>
+</blockquote></li>
+<li><blockquote>
+<p>Use Machine Learning to train an image classifier</p>
+</blockquote></li>
+<li><blockquote>
+<p>Evaluate the classifier on a withheld set of test images</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image38.jpeg" style="width:4.6875in;height:0.36806in" /></p>
+<blockquote>
+<p><strong>Example training set</strong></p>
+</blockquote>
+<p><img src="media/image39.jpeg" style="width:10in;height:3.12708in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 16 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image40.jpeg" style="width:9.88125in;height:0.95139in" /><strong>Nearest Neighbor Classifier</strong></p>
+</blockquote>
+<p><img src="media/image41.jpeg" style="width:4.26944in;height:0.57708in" /></p>
+<blockquote>
+<p>Remember all training images and their labels</p>
+</blockquote>
+<p><img src="media/image42.jpeg" style="width:9.29375in;height:1.91528in" /></p>
+<blockquote>
+<p>Predict the label of the most similar training image</p>
+</blockquote>
+<p><img src="media/image43.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 17 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image44.jpeg" style="width:9.35486in;height:0.77014in" /><strong>CIFAR-10</strong></p>
+</blockquote>
+<ol start="10" type="1">
+<li><blockquote>
+<p>labels</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><strong>50,000</strong> training images, each image is tiny: 32x32</p>
+<p><strong>10,000</strong> test images.</p>
+</blockquote>
+<p><img src="media/image45.jpeg" style="width:10in;height:4.57778in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 18 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image46.jpeg" style="width:9.64653in;height:1.28194in" /><strong>CIFAR-10</strong></p>
+</blockquote>
+<ol start="10" type="1">
+<li><blockquote>
+<p>labels</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><strong>50,000</strong> training images</p>
+</blockquote>
+<p>examples of nearest neighbors in rows</p>
+<blockquote>
+<p><strong>10,000</strong> test images.</p>
+</blockquote>
+<p><img src="media/image47.jpeg" style="width:10in;height:4.33403in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 19 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image48.jpeg" style="width:9.5in;height:0.76389in" /><strong>distance metric</strong>?</p>
+</blockquote>
+<p><img src="media/image49.jpeg" style="width:5.33194in;height:0.76389in" /></p>
+<p><strong>L1 distance:</strong></p>
+<p><img src="media/image50.jpeg" style="width:9.67431in;height:2.77708in" /></p>
+<p>add</p>
+<p><img src="media/image51.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 20 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image52.jpeg" style="width:9.87986in;height:4.89583in" /></p>
+</blockquote>
+<p><img src="media/image53.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 21 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image54.jpeg" style="width:9.88681in;height:4.89583in" /></p>
+<p>remember the training data</p>
+</blockquote>
+<p><img src="media/image55.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 22 6 Jan 2016</p>
+<p><img src="media/image56.jpeg" style="width:9.88681in;height:4.89583in" /></p>
+<blockquote>
+<p>Nearest Neighbor classifier</p>
+<p>for every test image:</p>
+<p>- find nearest train image with L1 distance</p>
+<p>- predict the label of nearest training image</p>
+</blockquote>
+<p><img src="media/image57.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 2 23</p>
+</blockquote></td>
+<td><blockquote>
+<p>6 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image58.jpeg" style="width:9.88681in;height:4.89583in" /></p>
+</blockquote>
+<p><img src="media/image59.jpeg" style="width:2.96181in;height:3.42361in" /></p>
+<ol start="17" type="A">
+<li><blockquote>
+<p><strong>how does the classification speed depend on the size of the training data?</strong></p>
+</blockquote></li>
+</ol>
+<p><img src="media/image60.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 24 6 Jan 2016</p>
+<p><img src="media/image61.jpeg" style="width:9.88681in;height:4.89583in" /></p>
+<blockquote>
+<p>Nearest Neighbor classifier</p>
+</blockquote>
+<p><img src="media/image62.jpeg" style="width:2.96181in;height:3.42361in" /></p>
+<blockquote>
+<p>Q: how does the classification speed depend on the size of the training data? <strong>linearly :(</strong></p>
+<p>This is <strong>backwards</strong>:</p>
+<p>- test time performance is usually much more important in practice.</p>
+<p>- CNNs flip this: expensive training, cheap test evaluation</p>
+</blockquote>
+<p><img src="media/image63.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 2 25</p>
+</blockquote></td>
+<td><blockquote>
+<p>6 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image64.jpeg" style="width:9.34653in;height:0.9in" /></p>
+<p>find approximate nearest neighbors quickly</p>
+<p><img src="media/image65.jpeg" style="width:10in;height:4.52917in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 26 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image66.jpeg" style="width:9.52222in;height:0.65417in" /><strong>hyperparameter</strong> common choices:</p>
+</blockquote>
+<p><img src="media/image67.jpeg" style="width:9.03472in;height:0.59931in" /></p>
+<blockquote>
+<p>L1 (Manhattan) distance L2 (Euclidean) distance</p>
+</blockquote>
+<p><img src="media/image68.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 27 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image71.jpeg" style="width:8.99514in;height:0.97292in" /></p>
+<p>find the k nearest images, have them vote on the label</p>
+</blockquote>
+<p><img src="media/image72.jpeg" style="width:9.60903in;height:2.51944in" /></p>
+<blockquote>
+<p>the data NN classifier 5-NN classifier</p>
+</blockquote>
+<p><img src="media/image73.jpeg" style="width:6.58819in;height:0.39028in" /></p>
+<p>http://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm</p>
+<p><img src="media/image74.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 28 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image75.jpeg" style="width:9.64653in;height:1.28194in" /><strong>CIFAR-10</strong></p>
+</blockquote>
+<ol start="10" type="1">
+<li><blockquote>
+<p>labels</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><strong>50,000</strong> training images</p>
+</blockquote>
+<p>examples of nearest neighbors in rows</p>
+<blockquote>
+<p><strong>10,000</strong> test images.</p>
+</blockquote>
+<p><img src="media/image76.jpeg" style="width:10in;height:4.33403in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 29 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image77.jpeg" style="width:9.60903in;height:2.51944in" /> NN classifier 5-NN classifier</p>
+</blockquote>
+<p><img src="media/image78.jpeg" style="width:8.13403in;height:1.40139in" /></p>
+<ol start="17" type="A">
+<li><blockquote>
+<p>what is the accuracy of the nearest neighbor classifier on the training data, when using the Euclidean distance?</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image79.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 30 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image80.jpeg" style="width:9.60903in;height:2.51944in" /> NN classifier 5-NN classifier</p>
+</blockquote>
+<p><img src="media/image81.jpeg" style="width:8.13403in;height:1.40139in" /></p>
+<blockquote>
+<p>Q2: what is the accuracy of the <strong>k-</strong>nearest neighbor classifier on the training data?</p>
+</blockquote>
+<p><img src="media/image82.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 31 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image83.jpeg" style="width:8.5875in;height:3.59931in" /><strong>distance</strong> to use?</p>
+<p>What is the best value of <strong>k</strong> to use?</p>
+<p>i.e. how do we set the <strong>hyperparameters</strong>?</p>
+</blockquote>
+<p><img src="media/image84.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 32 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image85.jpeg" style="width:8.5875in;height:3.59931in" /><strong>distance</strong> to use?</p>
+<p>What is the best value of <strong>k</strong> to use?</p>
+<p>i.e. how do we set the <strong>hyperparameters</strong>?</p>
+<p>Very problem-dependent.</p>
+<p>Must try them all out and see what works best.</p>
+</blockquote>
+<p><img src="media/image86.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 33 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image87.jpeg" style="width:8.67014in;height:0.38472in" /></p>
+</blockquote>
+<p><img src="media/image88.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 34 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image90.jpeg" style="width:8.67014in;height:0.38472in" /></p>
+<p>Very bad idea. The test set is a proxy for the generalization performance! Use only <strong>VERY SPARINGLY,</strong> at the end.</p>
+</blockquote>
+<p><img src="media/image91.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 35 6 Jan 2016</p>
+<p><img src="media/image93.jpeg" style="width:8.98264in;height:2.78403in" /></p>
+<blockquote>
+<p>Validation data</p>
+<p>use to tune hyperparameters</p>
+</blockquote>
+<p><img src="media/image94.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 36 6 Jan 2016</p>
+<p><img src="media/image95.jpeg" style="width:8.98264in;height:2.78403in" /></p>
+<blockquote>
+<p><strong>Cross-validation</strong></p>
+<p>cycle through the choice of which fold</p>
+<p>is the validation fold, average results.</p>
+</blockquote>
+<p><img src="media/image96.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 2 37</p>
+</blockquote></td>
+<td><blockquote>
+<p>6 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image97.jpeg" style="width:9.51111in;height:4.71181in" /><strong>k.</strong></p>
+<p>Each point: single outcome.</p>
+<p>The line goes</p>
+<p>through the mean, bars indicated standard deviation</p>
+<p>(Seems that k ~= 7 works best for this data)</p>
+</blockquote>
+<p><img src="media/image98.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 38 6 Jan 2016</p>
+<p><img src="media/image99.jpeg" style="width:8.89931in;height:4.18333in" /></p>
+<blockquote>
+<p>k-Nearest Neighbor on images <strong>never used.</strong></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>terrible performance at test time</p>
+</blockquote></li>
+<li><blockquote>
+<p>distance metrics on level of whole images can be very unintuitive</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image100.jpeg" style="width:6.85694in;height:0.33542in" /></p>
+<p>(all 3 images have same L2 distance to the one on the left)</p>
+<p><img src="media/image101.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 2 39</p>
+</blockquote></td>
+<td><blockquote>
+<p>6 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image102.jpeg" style="width:9.79722in;height:0.80764in" /></p>
+<p><img src="media/image103.jpeg" style="width:9.42361in;height:3.78611in" /></p>
+<ul>
+<li><blockquote>
+<p><strong>Image Classification:</strong> We are given a <strong>Training Set</strong> of labeled images, asked to predict labels on <strong>Test Set</strong>. Common to report the <strong>Accuracy</strong> of predictions (fraction of correctly predicted images)</p>
+</blockquote></li>
+<li><blockquote>
+<p>We introduced the <strong>k-Nearest Neighbor Classifier</strong>, which predicts the labels based on nearest images in the training set</p>
+</blockquote></li>
+<li><blockquote>
+<p>We saw that the choice of distance and the value of k are <strong>hyperparameters</strong> that are tuned using a <strong>validation set</strong>, or through <strong>cross-validation</strong> if the size of the data is small.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Once the best set of hyperparameters is chosen, the classifier is evaluated once on the test set, and reported as the performance of kNN on that data.</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image104.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 40 6 Jan 2016</p>
+<p><img src="media/image105.jpeg" style="width:7.55764in;height:3.30833in" /></p>
+<p>Linear Classification</p>
+<p><img src="media/image106.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 41 6 Jan 2016</p>
+<p><img src="media/image107.jpeg" style="height:0.71389in" /></p>
+<blockquote>
+<p>language control</p>
+</blockquote>
+<p><img src="media/image109.jpeg" style="width:0.71389in" /></p>
+<blockquote>
+<p>see</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 42 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image110.jpeg" style="width:5.00208in;height:0.54444in" /></p>
+</blockquote>
+<p><img src="media/image111.jpeg" style="width:10in;height:4.81389in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 43 6 Jan 2016</p>
+<p><img src="media/image112.jpeg" style="width:9.60278in;height:5.52361in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 2 44</p>
+</blockquote></td>
+<td><blockquote>
+<p>6 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image113.jpeg" style="width:8.98819in;height:4.62639in" /></p>
+<blockquote>
+<p><strong>CNN</strong></p>
+</blockquote>
+<p><img src="media/image114.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 45 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image115.jpeg" style="width:10in;height:5.53056in" /><strong>CIFAR-10</strong></p>
+</blockquote>
+<ol start="10" type="1">
+<li><blockquote>
+<p>labels</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><strong>50,000</strong> training images each image is <strong>32x32x3</strong></p>
+<p><strong>10,000</strong> test images.</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 46 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image116.jpeg" style="width:4.35833in;height:0.81528in" /></p>
+</blockquote>
+<p><img src="media/image117.jpeg" style="width:3.39792in;height:0.36736in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>image parameters</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>f(<strong>x</strong>,<strong>W</strong>)</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>10</strong> numbers,</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>indicating class</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>scores</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image118.jpeg" style="width:9.23958in;height:1.74653in" /></p>
+<blockquote>
+<p><strong>[32x32x3]</strong></p>
+<p>array of numbers 0...1</p>
+<p>(3072 numbers total)</p>
+</blockquote>
+<p><img src="media/image119.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 47 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image120.jpeg" style="width:8.94514in;height:0.81528in" /><strong>Linear classifier</strong></p>
+</blockquote>
+<p><img src="media/image121.jpeg" style="width:8.96389in;height:1.97083in" /></p>
+<blockquote>
+<p><strong>10</strong> numbers,</p>
+</blockquote>
+<p><img src="media/image122.jpeg" style="width:3.74931in" /></p>
+<blockquote>
+<p>indicating class</p>
+<p>scores</p>
+</blockquote>
+<p><img src="media/image124.jpeg" style="width:3.66806in;height:0.36736in" /></p>
+<blockquote>
+<p><strong>[32x32x3]</strong></p>
+<p>array of numbers 0...1</p>
+</blockquote>
+<p><img src="media/image125.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 48 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image126.jpeg" style="width:8.94514in;height:0.81528in" /><strong>Linear classifier</strong></p>
+</blockquote>
+<p><img src="media/image127.jpeg" style="width:9.23958in;height:3.67778in" /></p>
+<blockquote>
+<p><strong>3072x1</strong></p>
+<p><strong>10x1</strong> <strong>10x3072</strong></p>
+<p><strong>10</strong> numbers,</p>
+</blockquote>
+<p><img src="media/image128.jpeg" style="width:3.74931in" /></p>
+<blockquote>
+<p>indicating class</p>
+<p>scores</p>
+<p><strong>[32x32x3]</strong></p>
+<p>array of numbers 0...1</p>
+<p>parameters, or “weights”</p>
+</blockquote>
+<p><img src="media/image129.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 49 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image130.jpeg" style="width:8.94514in;height:0.81528in" /><strong>Linear classifier</strong></p>
+</blockquote>
+<p><img src="media/image131.jpeg" style="width:9.39236in;height:3.67778in" /></p>
+<blockquote>
+<p><strong>3072x1</strong></p>
+</blockquote>
+<p><strong>10x1</strong></p>
+<blockquote>
+<p><strong>10x1</strong> <strong>10x3072</strong></p>
+<p><strong>10</strong> numbers,</p>
+</blockquote>
+<p><img src="media/image132.jpeg" style="width:3.74931in" /></p>
+<blockquote>
+<p>indicating class</p>
+<p>scores</p>
+<p><strong>[32x32x3]</strong></p>
+<p>array of numbers 0...1</p>
+<p>parameters, or “weights”</p>
+</blockquote>
+<p><img src="media/image133.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 50 6 Jan 2016</p>
+<p><img src="media/image134.jpeg" style="width:9.96875in;height:0.54444in" />cat/dog/ship)</p>
+<p><img src="media/image135.jpeg" style="width:10in;height:4.52986in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 51 6 Jan 2016</p>
+<p><img src="media/image136.jpeg" style="width:9.02778in;height:0.875in" /></p>
+</blockquote>
+<p><img src="media/image137.jpeg" style="width:9.40417in;height:3.81528in" /></p>
+<blockquote>
+<p>Q: what does the linear classifier do, in English?</p>
+</blockquote>
+<p><img src="media/image138.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 52 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image139.jpeg" style="width:9.02778in;height:0.875in" /></p>
+</blockquote>
+<p><img src="media/image140.jpeg" style="width:9.57986in;height:3.96944in" /></p>
+<blockquote>
+<p>Example trained weights of a linear classifier trained on CIFAR-10:</p>
+</blockquote>
+<p><img src="media/image141.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 53 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image142.jpeg" style="width:9.72014in;height:4.87847in" /></p>
+<p><strong>[32x32x3]</strong></p>
+<p>array of numbers 0...1 (3072 numbers total)</p>
+</blockquote>
+<p><img src="media/image143.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 54 6 Jan 2016</p>
+<blockquote>
+<p><img src="media/image144.jpeg" style="width:9.02778in;height:0.875in" /></p>
+</blockquote>
+<p><img src="media/image145.jpeg" style="width:9.72014in;height:3.81528in" /></p>
+<blockquote>
+<p>Q2: what would be a very hard set of classes for a linear classifier to distinguish?</p>
+</blockquote>
+<p><img src="media/image146.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 55 6 Jan 2016</p>
+<p><img src="media/image147.jpeg" style="width:9.02778in;height:2.13264in" />We defined a (linear) <strong><span class="underline">score function</span>:</strong><img src="media/image148.jpeg" style="width:2.44514in;height:0.5in" /></p>
+<p><img src="media/image149.jpeg" style="width:10in;height:3.48681in" /></p>
+<blockquote>
+<p>Example class scores for 3 images, with a random W:</p>
+<p>-3.45 -0.51 3.42</p>
+</blockquote>
+<p><sup>-8.87</sup> <strong>6.04</strong> 4.64</p>
+<blockquote>
+<p><sup>0.09</sup> 5.31 2.65</p>
+<p><strong><sup>2.9</sup></strong> -4.22 5.1</p>
+<p><sup>4.48</sup> -4.19 2.64</p>
+<p><sup>8.02</sup> 3.58 5.55</p>
+<p><sup>3.78</sup> 4.49 <strong>-4.34</strong></p>
+<p><sup>1.06</sup> -4.37 -1.5</p>
+</blockquote>
+<p><sup>-0.36</sup> -2.09 -4.79</p>
+<p><sup>-0.72</sup> -2.93 6.14</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 56 6 Jan 2016</p>
+<blockquote>
+<p>Coming up:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Loss function</p>
+</blockquote></li>
+<li><blockquote>
+<p>Optimization</p>
+</blockquote></li>
+<li><blockquote>
+<p>ConvNets!</p>
+</blockquote></li>
+</ul>
+<p>(quantifying what it means to have a “good” W)</p>
+<p><img src="media/image150.jpeg" style="width:9.66875in;height:4.72917in" /></p>
+<p>(start with random W and find a W that minimizes the loss)</p>
+<p>(tweak the functional form of f)</p>
+<p><img src="media/image151.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 2 57 6 Jan 2016</p>

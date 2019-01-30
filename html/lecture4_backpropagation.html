@@ -1,0 +1,1745 @@
+<p><img src="media/image1.jpeg" style="width:9.73125in;height:1.92431in" /></p>
+<p>Backpropagation</p>
+<p>and</p>
+<p>Neural Networks part 1</p>
+<p><img src="media/image2.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 1 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image3.jpeg" style="width:9.18333in;height:4.21528in" /></p>
+<p>A1 is due Jan 20 (Wednesday). ~150 hours left</p>
+<p>Warning: Jan 18 (Monday) is Holiday (no class/office hours)</p>
+<p>Also note:</p>
+<p>Lectures are non-exhaustive.</p>
+<p>Read course notes for completeness.</p>
+<p>I’ll hold make up office hours on Wed Jan20, 5pm @ Gates 259</p>
+</blockquote>
+<p><img src="media/image4.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 2 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image5.jpeg" style="width:7.65208in;height:0.64097in" /></p>
+</blockquote>
+<p><img src="media/image6.jpeg" style="width:2.87778in;height:0.49861in" /></p>
+<blockquote>
+<p>scores function</p>
+</blockquote>
+<p><img src="media/image8.jpeg" style="width:4.90486in;height:0.55069in" /></p>
+<blockquote>
+<p>SVM loss</p>
+</blockquote>
+<p><img src="media/image9.jpeg" style="width:8.78611in;height:0.64097in" /></p>
+<p>data loss + regularization</p>
+<p><img src="media/image11.jpeg" style="width:1.96667in;height:0.55278in" /></p>
+<blockquote>
+<p>want</p>
+</blockquote>
+<p><img src="media/image12.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 3 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image13.jpeg" style="width:9.91389in;height:4.58403in" /></p>
+<p>(image credits to Alec Radford)</p>
+</blockquote>
+<p><img src="media/image14.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 4 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image15.jpeg" style="width:4.88264in;height:0.89167in" /></p>
+</blockquote>
+<p><img src="media/image16.jpeg" style="width:4.00694in;height:0.96528in" /></p>
+<blockquote>
+<p><strong>Numerical gradient</strong>: slow :(, approximate :(, easy to write :)</p>
+<p><strong>Analytic gradient</strong>: fast :), exact :), error-prone :(</p>
+<p>In practice: Derive analytic gradient, check your implementation with numerical gradient</p>
+</blockquote>
+<p><img src="media/image18.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 5 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image19.jpeg" style="width:5.50764in;height:0.55833in" /></p>
+</blockquote>
+<p><img src="media/image20.jpeg" style="width:8.01181in;height:1.29931in" /></p>
+<blockquote>
+<p>x</p>
+</blockquote>
+<p><img src="media/image21.jpeg" style="width:5.56181in;height:2.23056in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>*</td>
+<td><blockquote>
+<p><strong>s</strong> (scores)</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>L</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>hinge</p>
+</blockquote></td>
+<td>+</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>loss</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image23.jpeg" style="width:1.04861in;height:1.075in" /></p>
+<blockquote>
+<p>W</p>
+</blockquote>
+<p>R</p>
+<p><img src="media/image28.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 6 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image29.jpeg" style="width:7.42778in;height:4.87361in" /></p>
+<p>input image</p>
+<p>weights</p>
+</blockquote>
+<p><img src="media/image30.jpeg" style="width:3.59653in;height:0.65694in" /></p>
+<blockquote>
+<p>loss</p>
+</blockquote>
+<p><img src="media/image31.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 7 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image33.jpeg" style="width:9.05139in;height:4.90556in" /></p>
+<p>input tape</p>
+</blockquote>
+<p>loss</p>
+<p><img src="media/image34.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 8 13 Jan 2016</p>
+<p><img src="media/image35.jpeg" style="width:10in;height:5.57778in" /></p>
+<blockquote>
+<p>9 13 Jan 2016</p>
+</blockquote>
+<p><img src="media/image36.jpeg" style="width:9.60556in;height:2.27708in" /></p>
+<blockquote>
+<p>e.g. x = -2, y = 5, z = -4</p>
+</blockquote>
+<p><img src="media/image37.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 10</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image38.jpeg" style="width:9.60556in;height:2.27708in" /></p>
+<blockquote>
+<p>e.g. x = -2, y = 5, z = -4</p>
+</blockquote>
+<p><img src="media/image39.jpeg" style="width:4.59514in;height:1.87917in" /></p>
+<blockquote>
+<p>Want:</p>
+</blockquote>
+<p><img src="media/image42.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 11</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image43.jpeg" style="width:9.60556in;height:3.17569in" /></p>
+<blockquote>
+<p>e.g. x = -2, y = 5, z = -4</p>
+</blockquote>
+<p><img src="media/image44.jpeg" style="width:4.59514in;height:1.87917in" /></p>
+<blockquote>
+<p>Want:</p>
+</blockquote>
+<p><img src="media/image47.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 12</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image48.jpeg" style="width:9.60556in;height:3.17569in" /></p>
+<blockquote>
+<p>e.g. x = -2, y = 5, z = -4</p>
+</blockquote>
+<p><img src="media/image49.jpeg" style="width:4.59514in;height:1.87917in" /></p>
+<blockquote>
+<p>Want:</p>
+</blockquote>
+<p><img src="media/image52.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 13</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image53.jpeg" style="width:9.60556in;height:3.21597in" /></p>
+<blockquote>
+<p>e.g. x = -2, y = 5, z = -4</p>
+</blockquote>
+<p><img src="media/image54.jpeg" style="width:4.59514in;height:1.87917in" /></p>
+<blockquote>
+<p>Want:</p>
+</blockquote>
+<p><img src="media/image57.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 14</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image58.jpeg" style="width:9.60556in;height:3.21597in" /></p>
+<blockquote>
+<p>e.g. x = -2, y = 5, z = -4</p>
+</blockquote>
+<p><img src="media/image59.jpeg" style="width:4.59514in;height:1.87917in" /></p>
+<blockquote>
+<p>Want:</p>
+</blockquote>
+<p><img src="media/image62.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 15</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image63.jpeg" style="width:9.60556in;height:3.34236in" /></p>
+<blockquote>
+<p>e.g. x = -2, y = 5, z = -4</p>
+</blockquote>
+<p><img src="media/image64.jpeg" style="width:4.59514in;height:1.87917in" /></p>
+<blockquote>
+<p>Want:</p>
+</blockquote>
+<p><img src="media/image67.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 16</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image68.jpeg" style="width:9.60556in;height:3.34236in" /></p>
+</blockquote>
+<p><img src="media/image69.jpeg" style="width:4.59514in;height:1.87917in" /></p>
+<p>Want:</p>
+<p><img src="media/image72.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 17 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image73.jpeg" style="width:9.60556in;height:3.20694in" /></p>
+</blockquote>
+<p><img src="media/image74.jpeg" style="width:4.59514in;height:1.87917in" /></p>
+<p>Want:</p>
+<p><img src="media/image77.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 18 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image78.jpeg" style="width:3.98958in;height:1.19931in" /></p>
+</blockquote>
+<p><img src="media/image79.jpeg" style="width:4.59514in;height:1.87917in" /></p>
+<p>Want:</p>
+<p>Chain rule:</p>
+<p><img src="media/image81.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 19 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image83.jpeg" style="width:9.60556in;height:3.20694in" /></p>
+</blockquote>
+<p><img src="media/image84.jpeg" style="width:4.59514in;height:1.87917in" /></p>
+<p>Want:</p>
+<p><img src="media/image87.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 20 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image88.jpeg" style="width:3.98958in;height:1.19931in" /></p>
+</blockquote>
+<p><img src="media/image89.jpeg" style="width:4.59514in;height:1.87917in" /></p>
+<p>Want:</p>
+<p>Chain rule:</p>
+<p><img src="media/image91.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 21 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image93.jpeg" style="width:8.81042in;height:4.40486in" /></p>
+</blockquote>
+<p>f</p>
+<p><img src="media/image94.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 22 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image96.jpeg" style="width:8.81042in;height:4.40486in" /></p>
+</blockquote>
+<p>“local gradient”</p>
+<blockquote>
+<p>f</p>
+</blockquote>
+<p><img src="media/image97.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 23 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image99.jpeg" style="width:9.23542in;height:4.40486in" /></p>
+<p>“local gradient”</p>
+<p>f</p>
+</blockquote>
+<p><img src="media/image100.jpeg" style="width:2.4875in" /></p>
+<blockquote>
+<p>gradients</p>
+</blockquote>
+<p><img src="media/image102.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 24 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image103.jpeg" style="width:9.23542in;height:4.40486in" /></p>
+<p>“local gradient”</p>
+<p>f</p>
+</blockquote>
+<p><img src="media/image104.jpeg" style="width:2.4875in" /></p>
+<blockquote>
+<p>gradients</p>
+</blockquote>
+<p><img src="media/image106.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 25 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image107.jpeg" style="width:9.23542in;height:4.94583in" /></p>
+<p>“local gradient”</p>
+<p>f</p>
+</blockquote>
+<p><img src="media/image108.jpeg" style="width:2.4875in" /></p>
+<blockquote>
+<p>gradients</p>
+</blockquote>
+<p><img src="media/image110.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 26 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image111.jpeg" style="width:10in;height:5.625in" /></p>
+<p>“local gradient”</p>
+<p>f</p>
+</blockquote>
+<p><img src="media/image112.jpeg" style="width:2.4875in" /></p>
+<blockquote>
+<p>gradients</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 27 13 Jan 2016</p>
+<p><img src="media/image114.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image115.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 28</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image117.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image118.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 29</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image120.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image121.jpeg" style="width:9.76875in;height:4.7in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 30</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image122.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image123.jpeg" style="width:9.76875in;height:4.7in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 31</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image124.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image125.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 32</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image127.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image128.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 33</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image130.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image131.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 34</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image133.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image134.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 35</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image136.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image137.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 36</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image139.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image140.jpeg" style="width:7.23194in;height:2.63611in" /></p>
+<blockquote>
+<p>(-1) * (-0.20) = 0.20</p>
+</blockquote>
+<p><img src="media/image141.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 37</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image143.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image144.jpeg" style="width:9.76875in;height:4.7in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 38</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image145.jpeg" style="width:6.64514in;height:0.80903in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image146.jpeg" style="width:9.55556in;height:3.87222in" /></p>
+<blockquote>
+<p>[local gradient] x [its gradient]</p>
+<p>[1] x [0.2] = 0.2</p>
+<p>[1] x [0.2] = 0.2 (both inputs!)</p>
+</blockquote>
+<p><img src="media/image147.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 39</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image149.jpeg" style="width:8.55972in;height:3.48681in" /></p>
+<blockquote>
+<p>Another example:</p>
+</blockquote>
+<p><img src="media/image150.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 40</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image152.jpeg" style="width:8.74653in;height:3.48681in" /></p>
+<blockquote>
+<p>Another example:</p>
+<p>[local gradient] x [its gradient]</p>
+<p>x0: [2] x [0.2] = 0.4</p>
+<p>w0: [-1] x [0.2] = -0.2</p>
+</blockquote>
+<p><img src="media/image153.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 41</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image155.jpeg" style="width:9.04097in;height:0.80903in" /></p>
+</blockquote>
+<p><img src="media/image156.jpeg" style="width:7.86111in;height:0.74653in" /></p>
+<blockquote>
+<p>sigmoid gate</p>
+</blockquote>
+<p><img src="media/image158.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 42 13 Jan 2016</p>
+<p><img src="media/image159.jpeg" style="width:9.04097in;height:0.80903in" /></p>
+<blockquote>
+<p>sigmoid function</p>
+</blockquote>
+<p><img src="media/image160.jpeg" style="width:7.86111in;height:0.74653in" /></p>
+<blockquote>
+<p>sigmoid gate</p>
+<p>(0.73) * (1 - 0.73) = 0.2</p>
+</blockquote>
+<p><img src="media/image162.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 43</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image163.jpeg" style="width:4.21736in;height:0.56875in" /></p>
+</blockquote>
+<p><img src="media/image164.jpeg" style="width:9.56875in;height:3.46528in" /></p>
+<p><strong>add</strong> gate: gradient distributor</p>
+<p><strong>max</strong> gate: gradient router</p>
+<p><strong>mul</strong> gate: gradient… “switcher”?</p>
+<p><img src="media/image165.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 44 13 Jan 2016</p>
+<p><img src="media/image166.jpeg" style="width:7.8375in;height:4.68958in" /></p>
+<p>+</p>
+</blockquote>
+<p><img src="media/image167.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 45 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image169.jpeg" style="width:9.17778in;height:0.67292in" />: forward/backward API</p>
+</blockquote>
+<p><img src="media/image170.jpeg" style="width:6.16319in;height:3.82639in" /></p>
+<p>Graph (or Net) object. <em>(Rough psuedo code)</em></p>
+<p><img src="media/image171.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 46 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image173.jpeg" style="width:9.17778in;height:0.67292in" />: forward/backward API</p>
+</blockquote>
+<p><img src="media/image174.jpeg" style="width:0.39306in;height:0.27708in" /></p>
+<blockquote>
+<p>x</p>
+</blockquote>
+<p><img src="media/image176.jpeg" style="width:1.73403in;height:1.16597in" /></p>
+<p>*</p>
+<blockquote>
+<p>y</p>
+</blockquote>
+<p>z</p>
+<p><img src="media/image177.jpeg" style="width:3.00417in;height:0.42431in" /></p>
+<blockquote>
+<p>(x,y,z are scalars)</p>
+</blockquote>
+<p><img src="media/image179.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 47 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image180.jpeg" style="width:9.61181in;height:4.86111in" />: forward/backward API</p>
+<p>x</p>
+</blockquote>
+<p>*</p>
+<blockquote>
+<p>y</p>
+</blockquote>
+<p>z</p>
+<p><img src="media/image181.jpeg" style="width:0.66736in" /></p>
+<blockquote>
+<p>(x,y,z are scalars)</p>
+</blockquote>
+<p><img src="media/image182.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 48 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image183.jpeg" style="width:9.17778in;height:0.56111in" /></p>
+</blockquote>
+<p><img src="media/image184.jpeg" style="width:10in;height:5.00764in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 49 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image185.jpeg" style="width:9.26111in;height:4.99028in" /></p>
+<p>=</p>
+</blockquote>
+<p><img src="media/image186.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 50 13 Jan 2016</p>
+<p><strong>Example: Torch MulConstant</strong></p>
+<p><img src="media/image187.jpeg" style="width:7.82569in;height:4.95in" /></p>
+<blockquote>
+<p>initialization</p>
+</blockquote>
+<p><img src="media/image188.jpeg" style="width:0.89236in;height:0.25972in" /> forward()</p>
+<blockquote>
+<p><img src="media/image189.jpeg" style="width:0.89097in;height:0.18681in" /> backward()</p>
+</blockquote>
+<p><img src="media/image190.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 51 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image191.jpeg" style="width:9.17778in;height:0.56111in" /></p>
+</blockquote>
+<p><img src="media/image192.jpeg" style="width:10in;height:5.00903in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 52 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image193.jpeg" style="width:9.90069in;height:4.90764in" /></p>
+<p><img src="media/image194.jpeg" style="width:3.33194in;height:0.74653in" /> *top_diff (chain rule)</p>
+</blockquote>
+<p><img src="media/image196.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 53 13 Jan 2016</p>
+<p><img src="media/image197.jpeg" style="width:9.23542in;height:4.90486in" /><sup>(x,y,z</sup> <sup>are now</sup></p>
+<blockquote>
+<p>vectors)</p>
+<p>“local gradient”</p>
+<p>f</p>
+</blockquote>
+<p><img src="media/image198.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>This is now the</p>
+<p><strong>Jacobian matrix</strong> (derivative of each element of z w.r.t. each element of x)</p>
+<p><img src="media/image199.jpeg" style="width:2.4875in" /></p>
+<blockquote>
+<p>gradients</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 54 13 Jan 2016</p>
+<p><img src="media/image200.jpeg" style="width:7.975in;height:0.64167in" /></p>
+</blockquote>
+<p><img src="media/image201.jpeg" style="width:0.73889in" /></p>
+<blockquote>
+<p>4096-d input vector</p>
+</blockquote>
+<p><img src="media/image204.jpeg" style="width:0.74444in;height:0.20417in" /> f(x) = max(0,x) <img src="media/image205.jpeg" style="width:0.75069in;height:0.20417in" /></p>
+<p><img src="media/image206.jpeg" style="width:0.73889in" /></p>
+<p><em>(elementwise)</em></p>
+<p><img src="media/image212.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>4096-d</p>
+<p>output vector</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 55 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image217.jpeg" style="width:8.64722in;height:0.925in" /></p>
+</blockquote>
+<p><img src="media/image218.jpeg" style="width:2.02153in;height:0.54028in" /></p>
+<p>Jacobian matrix</p>
+<p><img src="media/image219.jpeg" style="width:0.73889in" /></p>
+<blockquote>
+<p>4096-d</p>
+</blockquote>
+<p><img src="media/image222.jpeg" style="width:0.73889in" /></p>
+<blockquote>
+<p>input vector</p>
+</blockquote>
+<p><img src="media/image224.jpeg" style="width:0.73889in" /></p>
+<ol start="17" type="A">
+<li><blockquote>
+<p>what is the size of the Jacobian matrix?</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image227.jpeg" style="height:0.20417in" /> f(x) = max(0,x) <img src="media/image228.jpeg" style="width:0.75069in;height:0.20417in" /></p>
+<p><img src="media/image229.jpeg" style="width:0.73889in" /></p>
+<blockquote>
+<p><em>(elementwise)</em></p>
+</blockquote>
+<p><img src="media/image232.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>4096-d</p>
+<p>output vector</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 56 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image235.jpeg" style="width:8.64722in;height:0.925in" /></p>
+</blockquote>
+<p><img src="media/image236.jpeg" style="width:9.50278in;height:3.68611in" /></p>
+<blockquote>
+<p>4096-d</p>
+</blockquote>
+<p><img src="media/image237.jpeg" style="width:0.73889in" /></p>
+<blockquote>
+<p>input vector</p>
+</blockquote>
+<p><img src="media/image240.jpeg" style="width:0.73889in" /></p>
+<ol start="17" type="A">
+<li><blockquote>
+<p>what is the size of the Jacobian matrix? [4096 x 4096!]</p>
+</blockquote></li>
+</ol>
+<p>Jacobian matrix</p>
+<p><img src="media/image243.jpeg" style="width:0.73889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>f(x) = max(0,x)</td>
+<td><blockquote>
+<p>4096-d</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><em>(elementwise)</em></p>
+</blockquote></td>
+<td><blockquote>
+<p>output vector</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image244.jpeg" style="width:0.73889in" /></p>
+<blockquote>
+<p>Q2: what does it</p>
+<p>look like?</p>
+</blockquote>
+<p><img src="media/image249.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 57 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image250.jpeg" style="width:7.975in;height:0.64167in" /></p>
+</blockquote>
+<p><img src="media/image251.jpeg" style="width:9.85486in;height:3.73472in" /></p>
+<blockquote>
+<p>in practice we process an entire minibatch (e.g. 100) of examples at one time:</p>
+</blockquote>
+<p><img src="media/image252.jpeg" style="width:0.73889in" /></p>
+<ol start="100" type="1">
+<li><blockquote>
+<p>4096-d input vectors</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image253.jpeg" style="width:0.73889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>f(x) = max(0,x)</td>
+<td><blockquote>
+<p>100 4096-d</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><em>(elementwise)</em></p>
+</blockquote></td>
+<td><blockquote>
+<p>output vectors</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image258.jpeg" style="width:0.73889in" /></p>
+<blockquote>
+<p>i.e. Jacobian would technically be a [409,600 x 409,600] matrix :\</p>
+</blockquote>
+<p><img src="media/image264.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 58 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image265.jpeg" style="width:9.88194in;height:4.80208in" /></p>
+<p>Stage your forward/backward computation!</p>
+<p>margins</p>
+</blockquote>
+<p><img src="media/image266.jpeg" style="height:0.22778in" /></p>
+<blockquote>
+<p>E.g. for the SVM:</p>
+</blockquote>
+<p><img src="media/image267.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 59 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image269.jpeg" style="width:8.93889in;height:4.41944in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>neural nets will be very large: no hope of writing down gradient formula by hand for all parameters</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>backpropagation</strong> = recursive application of the chain rule along a computational graph to compute the gradients of all inputs/parameters/intermediates</p>
+</blockquote></li>
+<li><blockquote>
+<p>implementations maintain a graph structure, where the nodes implement the <strong>forward</strong>() / <strong>backward</strong>() API.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>forward</strong>: compute result of an operation and save any intermediates needed for gradient computation in memory</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>backward</strong>: apply the chain rule to compute the gradient of the loss function with respect to the inputs.</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image270.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 60 13 Jan 2016</p>
+<p><img src="media/image271.jpeg" style="width:9.60278in;height:5.48194in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 61</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image272.jpeg" style="width:7.29931in;height:0.85972in" />without the brain stuff</p>
+</blockquote>
+<p><img src="media/image273.jpeg" style="width:7.28333in;height:0.61111in" /></p>
+<blockquote>
+<p>(<strong>Before</strong>) Linear score function:</p>
+</blockquote>
+<p><img src="media/image274.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 62 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image275.jpeg" style="width:7.29931in;height:0.85972in" />without the brain stuff</p>
+</blockquote>
+<p><img src="media/image276.jpeg" style="width:7.28333in;height:0.61111in" /></p>
+<blockquote>
+<p>(<strong>Before</strong>) Linear score function:</p>
+</blockquote>
+<p><img src="media/image277.jpeg" style="width:9.23958in;height:0.56875in" /></p>
+<blockquote>
+<p>(<strong>Now</strong>) 2-layer Neural Network</p>
+</blockquote>
+<p><img src="media/image278.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 63 13 Jan 2016</p>
+<p><img src="media/image279.jpeg" style="width:7.29931in;height:0.85972in" /></p>
+<blockquote>
+<p>Neural Network: without the brain stuff</p>
+</blockquote>
+<p><img src="media/image280.jpeg" style="width:7.28333in;height:0.61111in" /></p>
+<blockquote>
+<p>(<strong>Before</strong>) Linear score function:</p>
+</blockquote>
+<p><img src="media/image281.jpeg" style="width:9.23958in;height:0.56875in" /></p>
+<blockquote>
+<p>(<strong>Now</strong>) 2-layer Neural Network</p>
+</blockquote>
+<p><img src="media/image282.jpeg" style="width:5.05208in;height:1.79861in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>x</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>h</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>W1</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>W2</p>
+</blockquote></td>
+<td>s</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3072</td>
+<td></td>
+<td></td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</td>
+<td><blockquote>
+<p>Lecture 4 64</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image283.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image284.jpeg" style="width:8.81181in;height:1.85625in" /></p>
+<blockquote>
+<p>Neural Network: without the brain stuff</p>
+<p>(<strong>Before</strong>) Linear score function:</p>
+</blockquote>
+<p><img src="media/image285.jpeg" style="width:9.23958in;height:0.56875in" /></p>
+<blockquote>
+<p>(<strong>Now</strong>) 2-layer Neural Network</p>
+</blockquote>
+<p><img src="media/image286.jpeg" style="width:5.05208in;height:1.79861in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>x</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>h</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>W1</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>W2</p>
+</blockquote></td>
+<td>s</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3072</td>
+<td></td>
+<td></td>
+<td>100</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</td>
+<td><blockquote>
+<p>Lecture 4 65</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image287.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<blockquote>
+<p><img src="media/image288.jpeg" style="width:7.29931in;height:0.85972in" />without the brain stuff</p>
+</blockquote>
+<p><img src="media/image289.jpeg" style="width:7.28333in;height:0.61111in" /></p>
+<blockquote>
+<p>(<strong>Before</strong>) Linear score function:</p>
+</blockquote>
+<p><img src="media/image290.jpeg" style="width:9.23958in;height:0.56875in" /></p>
+<blockquote>
+<p>(<strong>Now</strong>) 2-layer Neural Network or 3-layer Neural Network</p>
+</blockquote>
+<p><img src="media/image291.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 66 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image293.jpeg" style="width:9.42083in;height:0.35417in" /></p>
+</blockquote>
+<p><img src="media/image294.jpeg" style="width:9.97569in;height:4.13333in" /></p>
+<blockquote>
+<p>from @iamtrask, http://iamtrask.github.io/2015/07/12/basic-python-network/</p>
+</blockquote>
+<p><img src="media/image295.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 67 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image296.jpeg" style="width:8.38403in;height:0.99306in" /></p>
+<p>Stage your forward/backward computation!</p>
+</blockquote>
+<p><img src="media/image297.jpeg" style="width:10in;height:4.48958in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 68 13 Jan 2016</p>
+<p><img src="media/image298.jpeg" style="width:9.60278in;height:5.48194in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 69</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image299.jpeg" style="width:9.60278in;height:5.50347in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 70</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image300.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 71</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image302.jpeg" style="width:9.87361in;height:5.56597in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 72</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image303.jpeg" style="width:9.74722in;height:4.87847in" /></p>
+<blockquote>
+<p><strong>sigmoid activation</strong></p>
+<p><strong>function</strong></p>
+</blockquote>
+<p><img src="media/image304.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 73 13 Jan 2016</p>
+<p><img src="media/image305.jpeg" style="width:9.93889in;height:5.56597in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 4 74</p>
+</blockquote></td>
+<td><blockquote>
+<p>13 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image306.jpeg" style="width:9.75139in;height:4.90556in" /></p>
+<p><strong>Biological Neurons:</strong></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Many different types</p>
+</blockquote></li>
+<li><blockquote>
+<p>Dendrites can perform complex non-linear computations</p>
+</blockquote></li>
+<li><blockquote>
+<p>Synapses are not a single weight but a complex non-linear dynamical system</p>
+</blockquote></li>
+<li><blockquote>
+<p>Rate code may not be adequate</p>
+</blockquote></li>
+</ul>
+<p><em>[Dendritic Computation. London and Hausser]</em></p>
+<p><img src="media/image307.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 75 13 Jan 2016</p>
+<p><img src="media/image308.jpeg" style="width:5.63125in;height:0.82986in" /></p>
+<blockquote>
+<p>Activation Functions</p>
+</blockquote>
+<p><img src="media/image309.jpeg" style="width:1.83264in;height:1.17847in" /></p>
+<p><strong>Leaky ReLU</strong></p>
+<p><img src="media/image311.jpeg" style="width:2.52778in;height:0.52292in" /></p>
+<p>max(0.1x, x)</p>
+<p><img src="media/image312.jpeg" style="width:2.4in;height:1.55278in" /></p>
+<blockquote>
+<p><strong>Sigmoid</strong></p>
+</blockquote>
+<p><img src="media/image313.jpeg" style="width:9.74028in;height:1.78264in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>tanh</strong> tanh(x)</td>
+<td><blockquote>
+<p><strong>Maxout</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>ELU</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image315.jpeg" style="width:9.16528in;height:1.87431in" /></p>
+<blockquote>
+<p><strong>ReLU</strong> max(0,x)</p>
+</blockquote>
+<p><img src="media/image317.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 76 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image318.jpeg" style="width:7.08403in;height:0.52014in" /></p>
+</blockquote>
+<p><img src="media/image319.jpeg" style="height:2.45208in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>“2-layer Neural Net”, or</td>
+<td><blockquote>
+<p>“3-layer Neural Net”, or</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>“2-hidden-layer Neural Net”</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“1-hidden-layer Neural Net”</td>
+<td><blockquote>
+<p><strong>“Fully-connected” layers</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image321.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 77 13 Jan 2016</p>
+<p><img src="media/image322.jpeg" style="width:8.98819in;height:0.72083in" /></p>
+</blockquote>
+<p><img src="media/image323.jpeg" style="width:8.56528in;height:2.65486in" /></p>
+<blockquote>
+<p>We can efficiently evaluate an entire layer of neurons.</p>
+</blockquote>
+<p><img src="media/image324.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 78 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image325.jpeg" style="width:8.98819in;height:3.11111in" /></p>
+</blockquote>
+<p><img src="media/image326.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 79 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image328.jpeg" style="width:9.20625in;height:0.85972in" /></p>
+</blockquote>
+<p><img src="media/image329.jpeg" style="width:9.20625in;height:3.67847in" /></p>
+<p>more neurons = more capacity</p>
+<p><img src="media/image330.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 80 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image331.jpeg" style="width:9.82986in;height:0.62222in" /></p>
+</blockquote>
+<p><img src="media/image332.jpeg" style="width:9.20625in;height:3.79514in" /></p>
+<blockquote>
+<p>(you can play with this demo over at ConvNetJS: <a href="http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html"><span class="underline">http://cs.stanford.</span></a></p>
+<p><a href="http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html"><span class="underline">edu/people/karpathy/convnetjs/demo/classify2d.html</span></a>)</p>
+</blockquote>
+<p><img src="media/image333.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 81 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image334.jpeg" style="width:8.90903in;height:4.46319in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>we arrange neurons into fully-connected layers</p>
+</blockquote></li>
+<li><blockquote>
+<p>the abstraction of a <strong>layer</strong> has the nice property that it allows us to use efficient vectorized code (e.g. matrix multiplies)</p>
+</blockquote></li>
+<li><blockquote>
+<p>neural networks are not really <em>neural</em></p>
+</blockquote></li>
+<li><blockquote>
+<p>neural networks: bigger = better (but might have to regularize more strongly)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image335.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 82 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image336.jpeg" style="width:8.23611in;height:2.97847in" /></p>
+<p>More than you ever wanted to know about Neural Networks and how to train them.</p>
+</blockquote>
+<p><img src="media/image337.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 83 13 Jan 2016</p>
+<blockquote>
+<p><img src="media/image338.jpeg" style="width:4.38958in;height:2.68819in" /></p>
+</blockquote>
+<p><img src="media/image339.jpeg" style="width:1.03125in;height:0.26875in" /></p>
+<blockquote>
+<p>outputs y</p>
+</blockquote>
+<p><img src="media/image340.jpeg" style="width:0.925in" /></p>
+<blockquote>
+<p><img src="media/image346.jpeg" style="width:0.22708in;height:0.41667in" />complex graph</p>
+</blockquote>
+<p><img src="media/image347.jpeg" style="width:6.95208in" /></p>
+<blockquote>
+<p>reverse-mode differentiation (if you want effect of many things on one thing)</p>
+<p>for many different x</p>
+</blockquote>
+<p><img src="media/image361.jpeg" style="width:6.95208in" /></p>
+<blockquote>
+<p>forward-mode differentiation (if you want effect of one thing on many things)</p>
+<p>for many different y</p>
+</blockquote>
+<p><img src="media/image363.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 4 84 13 Jan 2016</p>

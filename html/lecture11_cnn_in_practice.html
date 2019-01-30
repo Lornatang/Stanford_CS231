@@ -1,0 +1,3274 @@
+<p><img src="media/image1.jpeg" style="width:9.73125in;height:4.50625in" /></p>
+<p>CNNs in Practice</p>
+<p><img src="media/image2.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 1 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image3.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image4.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>Midterms are graded!</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Pick up now</p>
+</blockquote></li>
+<li><blockquote>
+<p>Or in Andrej, Justin, Albert, or Serena’s OH</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>Project milestone due today, 2/17 by midnight</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Turn in to Assignments tab on Coursework!</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>Assignment 2 grades soon</p>
+</blockquote></li>
+<li><blockquote>
+<p>Assignment 3 released, due 2/24</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image5.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 2 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image6.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image7.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p><strong>Mean:</strong> 75.0 <strong>Median:</strong> 76.3 <strong>Standard Deviation:</strong> 13.2</p>
+<p><strong>N:</strong> 311 <strong>Max:</strong> 103.0</p>
+</blockquote>
+<p><img src="media/image8.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 3 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image9.jpeg" style="width:9.37708in;height:3.44792in" /></p>
+</blockquote>
+<p>[We threw out TF3 and TF8]</p>
+<p><img src="media/image10.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 4 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image11.jpeg" style="width:9.69028in;height:4.65764in" /></p>
+</blockquote>
+<p><img src="media/image12.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 5 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image13.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image14.jpeg" style="width:9.94653in;height:3.68333in" /></p>
+<blockquote>
+<p><strong>Bonus mean:</strong> 0.8</p>
+</blockquote>
+<p><img src="media/image15.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 6 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image16.jpeg" style="width:9.02778in;height:1.14097in" /></p>
+</blockquote>
+<p>Vanilla RNNs</p>
+<p><img src="media/image17.jpeg" style="width:8.30903in;height:2.76667in" /></p>
+<blockquote>
+<p>LSTMs</p>
+</blockquote>
+<p><img src="media/image18.jpeg" style="width:2.31042in;height:1.46042in" /></p>
+<blockquote>
+<p>Recurrent neural networks</p>
+<p>for modeling sequences</p>
+</blockquote>
+<p><img src="media/image20.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 7 17 Feb 2016</p>
+<p><img src="media/image21.jpeg" style="width:9.02778in;height:4.18056in" /></p>
+<blockquote>
+<p>Last Time</p>
+</blockquote>
+<p><img src="media/image22.jpeg" style="width:6.99653in;height:0.51944in" /></p>
+<p>Sampling from RNN language models to generate text</p>
+<p><img src="media/image23.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11 8</p>
+</blockquote></td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image24.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image25.jpeg" style="width:8.97014in;height:2.69167in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>CNN + RNN for</td>
+<td><blockquote>
+<p>Interpretable RNN cells</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>image captioning</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image26.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 9 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image27.jpeg" style="width:9.02778in;height:4.61458in" /></p>
+<p>Working with CNNs in practice:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Making the most of your data</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Data augmentation</p>
+</blockquote></li>
+<li><blockquote>
+<p>Transfer learning</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>All about convolutions:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>How to arrange them</p>
+</blockquote></li>
+<li><blockquote>
+<p>How to compute them fast</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>“Implementation details”</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>GPU / CPU, bottlenecks, distributed training</p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p><img src="media/image28.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 10 17 Feb 2016</p>
+<blockquote>
+<p>Data Augmentation</p>
+</blockquote>
+<p><img src="media/image29.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 11 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image30.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image31.jpeg" style="width:7.93264in;height:2.54375in" /></p>
+<blockquote>
+<p>Load image</p>
+<p>and label</p>
+</blockquote>
+<p><img src="media/image32.jpeg" style="width:0.82431in" /></p>
+<p><img src="media/image33.jpeg" style="width:0.27361in;height:0.24167in" /> “cat”</p>
+<p><img src="media/image34.jpeg" style="width:1.38403in;height:0.79792in" /></p>
+<blockquote>
+<p>Compute</p>
+<p>loss</p>
+</blockquote>
+<p>CNN</p>
+<p><img src="media/image35.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 12 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image37.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image38.jpeg" style="width:7.93264in;height:2.97222in" /></p>
+<blockquote>
+<p>Load image</p>
+<p>and label</p>
+</blockquote>
+<p><img src="media/image39.jpeg" style="width:0.82431in" /></p>
+<p><img src="media/image40.jpeg" style="width:0.27361in;height:0.24167in" /> “cat”</p>
+<p><img src="media/image41.jpeg" style="width:1.38403in;height:0.79792in" /></p>
+<blockquote>
+<p>Compute</p>
+<p>loss</p>
+<p>CNN</p>
+</blockquote>
+<p><img src="media/image42.jpeg" style="width:0.53194in" /></p>
+<blockquote>
+<p>Transform image</p>
+</blockquote>
+<p><img src="media/image44.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 13 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image45.jpeg" style="width:4.97917in;height:0.85625in" /></p>
+</blockquote>
+<p><img src="media/image46.jpeg" style="width:4.78403in;height:3.625in" /></p>
+<blockquote>
+<p>- Change the pixels without changing the label</p>
+</blockquote>
+<p>What the computer sees</p>
+<ul>
+<li><blockquote>
+<p>Train on transformed data</p>
+</blockquote></li>
+<li><blockquote>
+<p>VERY widely used</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image47.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 14 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image48.jpeg" style="width:6.99375in;height:1.73125in" /></p>
+</blockquote>
+<p>1. Horizontal flips</p>
+<p><img src="media/image49.jpeg" style="width:10in;height:3.55972in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 15 17 Feb 2016</p>
+<p><img src="media/image50.jpeg" style="width:10in;height:5.56042in" /></p>
+<p>2. Random crops/scales</p>
+<p><strong>Training</strong>: sample random crops / scales</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 16 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image51.jpeg" style="width:10in;height:5.56042in" /></p>
+<p>2. Random crops/scales</p>
+<p><strong>Training</strong>: sample random crops / scales</p>
+<p>ResNet:</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Pick random L in range [256, 480]</p>
+</blockquote></li>
+<li><blockquote>
+<p>Resize training image, short side = L</p>
+</blockquote></li>
+<li><blockquote>
+<p>Sample random 224 x 224 patch</p>
+</blockquote></li>
+</ol>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 17 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image52.jpeg" style="width:10in;height:5.56042in" /></p>
+<p>2. Random crops/scales</p>
+<p><strong>Training</strong>: sample random crops / scales</p>
+<p>ResNet:</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Pick random L in range [256, 480]</p>
+</blockquote></li>
+<li><blockquote>
+<p>Resize training image, short side = L</p>
+</blockquote></li>
+<li><blockquote>
+<p>Sample random 224 x 224 patch</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><strong>Testing</strong>: average a fixed set of crops</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 18 17 Feb 2016</p>
+<p><img src="media/image53.jpeg" style="width:9.77361in;height:5.56042in" /></p>
+<blockquote>
+<p><strong>Data Augmentation</strong></p>
+<p>2. Random crops/scales</p>
+<p><strong>Training</strong>: sample random crops / scales</p>
+<p>ResNet:</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Pick random L in range [256, 480]</p>
+</blockquote></li>
+<li><blockquote>
+<p>Resize training image, short side = L</p>
+</blockquote></li>
+<li><blockquote>
+<p>Sample random 224 x 224 patch</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><strong>Testing</strong>: average a fixed set of crops</p>
+<p>ResNet:</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Resize image at 5 scales: {224, 256, 384, 480, 640}</p>
+</blockquote></li>
+<li><blockquote>
+<p>For each size, use 10 224 x 224 crops: 4 corners + center, + flips</p>
+</blockquote></li>
+</ol>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11 19</p>
+</blockquote></td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image54.jpeg" style="width:10in;height:5.56042in" /></p>
+<p>3. Color jitter</p>
+<p><strong>Simple</strong>:</p>
+<p>Randomly jitter contrast</p>
+</blockquote>
+<p><img src="media/image55.jpeg" style="width:0.76111in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 20 17 Feb 2016</p>
+<blockquote>
+<p><strong>Data Augmentation</strong> 3. Color jitter</p>
+<p><strong>Simple</strong>:</p>
+<p>Randomly jitter contrast</p>
+</blockquote>
+<p><img src="media/image56.jpeg" style="width:0.76111in" /></p>
+<blockquote>
+<p><strong>Complex</strong>:</p>
+</blockquote>
+<p><img src="media/image57.jpeg" style="width:10in;height:5.56042in" /></p>
+<ol type="1">
+<li><p>Apply PCA to all [R, G, B] pixels in training set</p></li>
+<li><p>Sample a “color offset” along principal component directions</p></li>
+<li><p>Add offset to all pixels of a training image</p></li>
+</ol>
+<blockquote>
+<p>(As seen in <em>[Krizhevsky et al. 2012],</em> ResNet, etc)</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 21 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image58.jpeg" style="width:6.99375in;height:1.275in" /></p>
+<p>4. Get creative!</p>
+</blockquote>
+<p><img src="media/image59.jpeg" style="width:8.71667in;height:3.30833in" /></p>
+<blockquote>
+<p>Random mix/combinations of :</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>translation</p>
+</blockquote></li>
+<li><blockquote>
+<p>rotation</p>
+</blockquote></li>
+<li><blockquote>
+<p>stretching</p>
+</blockquote></li>
+<li><blockquote>
+<p>shearing,</p>
+</blockquote></li>
+<li><blockquote>
+<p>lens distortions, … (go crazy)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image60.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 22 17 Feb 2016</p>
+<p><img src="media/image61.jpeg" style="width:6.94167in;height:1.68819in" /></p>
+<blockquote>
+<p><strong>A general theme:</strong></p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p><strong>Training</strong>: Add random noise</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Testing</strong>: Marginalize over the noise</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image62.jpeg" style="width:9.17222in;height:2.11736in" /></p>
+<blockquote>
+<p>Dropout DropConnect</p>
+</blockquote>
+<p><img src="media/image63.jpeg" style="width:2.51875in;height:0.5125in" /></p>
+<blockquote>
+<p>Data Augmentation</p>
+</blockquote>
+<p><img src="media/image64.jpeg" style="width:7.2375in;height:0.54653in" /></p>
+<blockquote>
+<p>Batch normalization, Model ensembles</p>
+</blockquote>
+<p><img src="media/image65.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11 23</p>
+</blockquote></td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image66.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image67.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>Simple to implement, use it</p>
+</blockquote></li>
+<li><blockquote>
+<p>Especially useful for small datasets</p>
+</blockquote></li>
+<li><blockquote>
+<p>Fits into framework of noise / marginalization</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image68.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 24 17 Feb 2016</p>
+<p><img src="media/image69.jpeg" style="width:8.53125in;height:4.20972in" /></p>
+<p>“You need a lot of a data if you want to</p>
+<p>train/use CNNs”</p>
+<p><img src="media/image70.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 25 17 Feb 2016</p>
+<p><img src="media/image71.jpeg" style="width:8.53125in;height:4.52431in" /></p>
+<blockquote>
+<p>“You need a lot want to</p>
+</blockquote>
+<p><img src="media/image72.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 26 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image73.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image74.jpeg" style="width:3.0375in;height:3.93264in" /></p>
+<ol type="1">
+<li><blockquote>
+<p>Train on Imagenet</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image75.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 27 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image76.jpeg" style="width:8.92639in;height:4.67986in" /></p>
+<p>2. Small dataset:</p>
+<p>1. Train on feature extractor</p>
+<p>Imagenet</p>
+<p>Freeze these</p>
+<p><img src="media/image77.jpeg" style="width:1.14861in;height:0.41806in" /> Train this</p>
+</blockquote>
+<p><img src="media/image79.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 28 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image81.jpeg" style="width:9.81875in;height:4.69167in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>2. Small dataset:</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td>1. Train on</td>
+<td><blockquote>
+<p><strong>feature extractor</strong></p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td>Imagenet</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Freeze these</p>
+<p><img src="media/image82.jpeg" style="width:1.14861in;height:0.41806in" /> Train this</p>
+</blockquote>
+<p><img src="media/image84.jpeg" style="width:10in;height:0.58889in" /></p>
+<ol start="3" type="1">
+<li><blockquote>
+<p>Medium dataset: <strong>finetuning</strong></p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>more data = retrain more of the network (or all of it)</p>
+<p>Freeze these</p>
+</blockquote>
+<p><img src="media/image86.jpeg" style="width:0.66181in;height:0.15208in" /> Train this</p>
+<p><img src="media/image87.jpeg" style="width:0.65069in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 29 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image88.jpeg" style="width:9.81875in;height:4.69167in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>2. Small dataset:</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td>1. Train on</td>
+<td><blockquote>
+<p><strong>feature extractor</strong></p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td>Imagenet</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Freeze these</p>
+<p><img src="media/image89.jpeg" style="width:1.14861in;height:0.41806in" /> Train this</p>
+</blockquote>
+<p><img src="media/image91.jpeg" style="width:10in;height:0.58889in" /></p>
+<ol start="3" type="1">
+<li><blockquote>
+<p>Medium dataset: <strong>finetuning</strong></p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>more data = retrain more of the network (or all of it)</p>
+<p>Freeze these</p>
+<p>tip: use only ~1/10th of the original learning rate in finetuning top layer, and ~1/100th on intermediate layers</p>
+</blockquote>
+<p><img src="media/image93.jpeg" style="width:0.66181in;height:0.15208in" /> Train this</p>
+<p><img src="media/image94.jpeg" style="width:0.65069in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 30 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image95.jpeg" style="width:10in;height:5.53681in" /></p>
+</blockquote>
+<p><img src="media/image96.jpeg" style="height:4.12639in" /></p>
+<p><em>DeCAF: A Deep</em></p>
+<p><em>Convolutional Activation</em></p>
+<p><em>Feature for Generic Visual</em></p>
+<p><em>Recognition</em></p>
+<p><em>[Donahue*, Jia*, et al.,</em></p>
+<p><em>2013]</em></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 31 17 Feb 2016</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>very similar</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>very different</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>more generic</td>
+<td></td>
+<td><blockquote>
+<p><strong>dataset</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>dataset</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>very little data</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>?</p>
+</blockquote></td>
+<td><blockquote>
+<p>?</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>more specific</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>quite a lot of</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>?</p>
+</blockquote></td>
+<td><blockquote>
+<p>?</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>data</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image97.jpeg" style="width:3.22292in;height:4.87639in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 32 17 Feb 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>very similar</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>very different</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>more generic</td>
+<td></td>
+<td><blockquote>
+<p><strong>dataset</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>dataset</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>very little data</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>Use Linear</p>
+</blockquote></td>
+<td><blockquote>
+<p>?</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>more specific</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>Classifier on top</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>layer</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>quite a lot of</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>Finetune a few</p>
+</blockquote></td>
+<td><blockquote>
+<p>?</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>data</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>layers</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image99.jpeg" style="width:3.22292in;height:4.87639in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 33 17 Feb 2016</p>
+<p><img src="media/image101.jpeg" style="width:3.22292in;height:4.87639in" /></p>
+<blockquote>
+<p>more generic</p>
+<p>more specific</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>very similar</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>very different</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>dataset</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>dataset</strong></p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><strong>very little data</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>Use Linear</p>
+</blockquote></td>
+<td><blockquote>
+<p>You’re in</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Classifier on top</p>
+</blockquote></td>
+<td><blockquote>
+<p>trouble… Try</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>layer</p>
+</blockquote></td>
+<td><blockquote>
+<p>linear classifier</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>from different</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>stages</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><strong>quite a lot of</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>Finetune a few</p>
+</blockquote></td>
+<td><blockquote>
+<p>Finetune a</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><strong>data</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>layers</p>
+</blockquote></td>
+<td><blockquote>
+<p>larger number of</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>layers</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image102.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 34 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image103.jpeg" style="width:9.65625in;height:3.98819in" /></p>
+<p>(it’s the norm, not an exception)</p>
+</blockquote>
+<p>Image Captioning: CNN + RNN</p>
+<blockquote>
+<p>Object Detection</p>
+<p>(Faster R-CNN)</p>
+</blockquote>
+<p><img src="media/image104.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 35 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image105.jpeg" style="width:9.65625in;height:3.98819in" /></p>
+<p>(it’s the norm, not an exception)</p>
+</blockquote>
+<p>Image Captioning: CNN + RNN</p>
+<blockquote>
+<p>CNN pretrained on ImageNet</p>
+<p>Object Detection</p>
+<p>(Faster R-CNN)</p>
+</blockquote>
+<p><img src="media/image106.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 36 17 Feb 2016</p>
+<p><img src="media/image107.jpeg" style="width:9.65625in;height:4.8in" /></p>
+<blockquote>
+<p>Transfer learning with CNNs is pervasive…</p>
+<p>(it’s the norm, not an exception)</p>
+</blockquote>
+<p>Image Captioning: CNN + RNN</p>
+<blockquote>
+<p>CNN pretrained on ImageNet</p>
+<p>Object Detection</p>
+<p>(Faster R-CNN)</p>
+<p>Word vectors pretrained <img src="media/image108.jpeg" style="width:0.63681in;height:0.5in" /> from word2vec</p>
+</blockquote>
+<p><img src="media/image109.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11 37</p>
+</blockquote></td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image110.jpeg" style="width:9.74931in;height:4.37778in" /></p>
+<p>Have some dataset of interest but it has &lt; ~1M images?</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Find a very large dataset that has similar data, train a big ConvNet there.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Transfer learn to your dataset</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>Caffe ConvNet library has a <strong>“Model Zoo”</strong> of pretrained models:</p>
+<p><a href="https://github.com/BVLC/caffe/wiki/Model-Zoo"><span class="underline">https://github.com/BVLC/caffe/wiki/Model-Zoo</span></a></p>
+</blockquote>
+<p><img src="media/image111.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 38 17 Feb 2016</p>
+<p><img src="media/image112.jpeg" style="width:5.92639in;height:1.50417in" /></p>
+<p>All About Convolutions</p>
+<p><img src="media/image113.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 39 17 Feb 2016</p>
+<p><img src="media/image114.jpeg" style="width:5.92639in;height:1.50417in" /></p>
+<p>All About Convolutions</p>
+<p>Part I: How to stack them</p>
+<p><img src="media/image115.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 40 17 Feb 2016</p>
+<p><img src="media/image116.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+<blockquote>
+<p><strong>The power of small filters</strong></p>
+</blockquote>
+<p><img src="media/image117.jpeg" style="width:9.28681in;height:1.33403in" /></p>
+<blockquote>
+<p>Suppose we stack two 3x3 conv layers (stride 1)</p>
+<p>Each neuron sees 3x3 region of previous activation map</p>
+</blockquote>
+<p><img src="media/image118.jpeg" style="width:8.32917in;height:2.53819in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Input</p>
+</blockquote></td>
+<td><blockquote>
+<p>First Conv</p>
+</blockquote></td>
+<td><blockquote>
+<p>Second Conv</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11 41</p>
+</blockquote></td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image119.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image120.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+<blockquote>
+<p><strong>The power of small filters</strong></p>
+</blockquote>
+<p><img src="media/image121.jpeg" style="width:9.28681in;height:1.33403in" /></p>
+<blockquote>
+<p><strong>Question</strong>: How big of a region in the input does a neuron on the second conv layer see?</p>
+</blockquote>
+<p><img src="media/image122.jpeg" style="width:8.32917in;height:2.53819in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Input</p>
+</blockquote></td>
+<td><blockquote>
+<p>First Conv</p>
+</blockquote></td>
+<td><blockquote>
+<p>Second Conv</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11 42</p>
+</blockquote></td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image123.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image124.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+<blockquote>
+<p><strong>The power of small filters</strong></p>
+</blockquote>
+<p><img src="media/image125.jpeg" style="width:9.28681in;height:1.33403in" /></p>
+<blockquote>
+<p><strong>Question</strong>: How big of a region in the input does a neuron on the second conv layer see?</p>
+<p><strong>Answer</strong>: 5 x 5</p>
+</blockquote>
+<p><img src="media/image126.jpeg" style="width:8.32917in;height:2.53819in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Input</p>
+</blockquote></td>
+<td><blockquote>
+<p>First Conv</p>
+</blockquote></td>
+<td><blockquote>
+<p>Second Conv</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11 43</p>
+</blockquote></td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image127.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<blockquote>
+<p><img src="media/image128.jpeg" style="width:9.45208in;height:1.99722in" /></p>
+<p><strong>Question</strong>: If we stack <strong>three</strong> 3x3 conv layers, how big of an input region does a neuron in the third layer see?</p>
+</blockquote>
+<p><img src="media/image129.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 44 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image130.jpeg" style="width:9.45208in;height:4.77222in" /></p>
+<p><strong>Question</strong>: If we stack <strong>three</strong> 3x3 conv layers, how big of an input region does a neuron in the third layer see?</p>
+<p><strong>Answer: 7 x 7</strong></p>
+</blockquote>
+<p>X</p>
+<p><img src="media/image131.jpeg" style="width:0.86528in;height:0.45694in" /> X</p>
+<p><img src="media/image132.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 45 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image133.jpeg" style="width:9.45208in;height:4.77222in" /></p>
+<p><strong>Question</strong>: If we stack <strong>three</strong> 3x3 conv layers, how big of an input region does a neuron in the third layer see?</p>
+<p><strong>Answer: 7 x 7</strong></p>
+</blockquote>
+<p>X</p>
+<p><img src="media/image134.jpeg" style="width:0.86528in;height:0.45694in" /> X</p>
+<p><img src="media/image135.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Three 3 x 3 conv</p>
+<p>gives similar</p>
+<p>representational</p>
+<p>power as a single</p>
+<p>7 x 7 convolution</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 46 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image136.jpeg" style="width:9.45208in;height:1.74931in" /></p>
+<p>Suppose input is H x W x C and we use convolutions with C filters to preserve depth (stride 1, padding to preserve H, W)</p>
+</blockquote>
+<p><img src="media/image137.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 47 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image138.jpeg" style="width:9.67639in;height:4.71806in" /></p>
+<p>Suppose input is H x W x C and we use convolutions with C filters to preserve depth (stride 1, padding to preserve H, W)</p>
+<p>one CONV with 7 x 7 filters three CONV with 3 x 3 filters</p>
+<p>Number of weights: Number of weights:</p>
+</blockquote>
+<p><img src="media/image139.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 48 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image140.jpeg" style="width:9.67639in;height:4.71806in" /></p>
+<p>Suppose input is H x W x C and we use convolutions with C filters to preserve depth (stride 1, padding to preserve H, W)</p>
+<p>one CONV with 7 x 7 filters three CONV with 3 x 3 filters</p>
+<p>Number of weights: Number of weights:</p>
+<p>= C x (7 x 7 x C) = <strong>49 C<sup>2</sup></strong> = 3 x C x (3 x 3 x C) = <strong>27 C<sup>2</sup></strong></p>
+</blockquote>
+<p><img src="media/image141.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 49 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image142.jpeg" style="width:9.67639in;height:4.90347in" /></p>
+<p>Suppose input is H x W x C and we use convolutions with C filters to preserve depth (stride 1, padding to preserve H, W)</p>
+<p>one CONV with 7 x 7 filters three CONV with 3 x 3 filters</p>
+<p>Number of weights: Number of weights:</p>
+<p>= C x (7 x 7 x C) = <strong>49 C<sup>2</sup></strong> = 3 x C x (3 x 3 x C) = <strong>27 C<sup>2</sup></strong></p>
+<p>Fewer parameters, more nonlinearity = GOOD</p>
+</blockquote>
+<p><img src="media/image143.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 50 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image144.jpeg" style="width:9.67639in;height:4.71806in" /></p>
+<p>Suppose input is H x W x C and we use convolutions with C filters to preserve depth (stride 1, padding to preserve H, W)</p>
+<p>one CONV with 7 x 7 filters three CONV with 3 x 3 filters</p>
+<p>Number of weights: Number of weights:</p>
+<p>= C x (7 x 7 x C) = 49 C<sup>2</sup> = 3 x C x (3 x 3 x C) = 27 C<sup>2</sup></p>
+<p>Number of multiply-adds: Number of multiply-adds:</p>
+</blockquote>
+<p><img src="media/image145.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 51 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image146.jpeg" style="width:9.67639in;height:4.71806in" /></p>
+<p>Suppose input is H x W x C and we use convolutions with C filters to preserve depth (stride 1, padding to preserve H, W)</p>
+<p>one CONV with 7 x 7 filters</p>
+<p>Number of weights:</p>
+<p>= C x (7 x 7 x C) = 49 C<sup>2</sup></p>
+<p>Number of multiply-adds:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>(H x W x C) x (7 x 7 x C)</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>49 HWC<sup>2</sup></strong></p>
+</blockquote></li>
+</ul>
+<p>three CONV with 3 x 3 filters</p>
+<p>Number of weights:</p>
+<p>= 3 x C x (3 x 3 x C) = 27 C<sup>2</sup></p>
+<p>Number of multiply-adds:</p>
+<ul>
+<li><blockquote>
+<p>3 x (H x W x C) x (3 x 3 x C)</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>27 HWC<sup>2</sup></strong></p>
+</blockquote></li>
+</ul>
+<p><img src="media/image147.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 52 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image148.jpeg" style="width:9.67639in;height:4.90347in" /></p>
+<p>Suppose input is H x W x C and we use convolutions with C filters to preserve depth (stride 1, padding to preserve H, W)</p>
+<p>one CONV with 7 x 7 filters three CONV with 3 x 3 filters</p>
+<p>Number of weights: Number of weights:</p>
+<p>= C x (7 x 7 x C) = 49 C<sup>2</sup> = 3 x C x (3 x 3 x C) = 27 C<sup>2</sup></p>
+<p>Number of multiply-adds: Number of multiply-adds:</p>
+<p>= <strong>49 HWC<sup>2</sup></strong> = <strong>27 HWC<sup>2 </sup></strong><img src="media/image149.jpeg" style="width:0.62361in;height:0.54861in" /></p>
+<p>Less compute, more nonlinearity = GOOD</p>
+</blockquote>
+<p><img src="media/image150.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 53 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image151.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image152.jpeg" style="width:9.60972in;height:0.67292in" /></p>
+<blockquote>
+<p>Why stop at 3 x 3 filters? Why not try 1 x 1?</p>
+</blockquote>
+<p><img src="media/image153.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 54 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image154.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image155.jpeg" style="width:9.60972in;height:0.67292in" /></p>
+<blockquote>
+<p>Why stop at 3 x 3 filters? Why not try 1 x 1?</p>
+</blockquote>
+<p><img src="media/image156.jpeg" style="width:10in;height:4.06042in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>H x W x C</td>
+<td><blockquote>
+<p>1. “bottleneck” 1 x 1 conv</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>to reduce dimension</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Conv 1x1, C/2 filters</p>
+<p>H x W x (C / 2)</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 55 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image157.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image158.jpeg" style="width:9.60972in;height:0.67292in" /></p>
+<blockquote>
+<p>Why stop at 3 x 3 filters? Why not try 1 x 1?</p>
+</blockquote>
+<p><img src="media/image159.jpeg" style="width:10in;height:4.06042in" /></p>
+<blockquote>
+<p>H x W x C</p>
+<p>Conv 1x1, C/2 filters</p>
+<p>H x W x (C / 2)</p>
+<p>Conv 3x3, C/2 filters</p>
+</blockquote>
+<ol type="1">
+<li><p>“bottleneck” 1 x 1 conv to reduce dimension</p></li>
+<li><p>3 x 3 conv at reduced dimension</p></li>
+</ol>
+<blockquote>
+<p>H x W x (C / 2)</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 56 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image160.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image161.jpeg" style="width:9.60972in;height:0.67292in" /></p>
+<blockquote>
+<p>Why stop at 3 x 3 filters? Why not try 1 x 1?</p>
+</blockquote>
+<p><img src="media/image162.jpeg" style="width:10in;height:4.06042in" /></p>
+<blockquote>
+<p>H x W x C</p>
+<p>Conv 1x1, C/2 filters</p>
+<p>H x W x (C / 2)</p>
+<p>Conv 3x3, C/2 filters</p>
+<p>H x W x (C / 2)</p>
+</blockquote>
+<p><img src="media/image163.jpeg" style="height:0.49514in" /></p>
+<blockquote>
+<p>Conv 1x1, C filters</p>
+<p>H x W x C</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>“bottleneck” 1 x 1 conv to reduce dimension</p>
+</blockquote></li>
+<li><blockquote>
+<p>3 x 3 conv at reduced dimension</p>
+</blockquote></li>
+<li><blockquote>
+<p>Restore dimension with another 1 x 1 conv</p>
+</blockquote></li>
+</ol>
+<p>[Seen in Lin et al, “Network in Network”, GoogLeNet, ResNet]</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 57 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image164.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image165.jpeg" style="width:9.60972in;height:0.67292in" /></p>
+<blockquote>
+<p>Why stop at 3 x 3 filters? Why not try 1 x 1?</p>
+</blockquote>
+<p><img src="media/image166.jpeg" style="width:10in;height:3.95278in" /></p>
+<blockquote>
+<p>H x W x C</p>
+<p>Conv 1x1, C/2 filters</p>
+<p>H x W x (C / 2)</p>
+<p>Conv 3x3, C/2 filters</p>
+<p>H x W x (C / 2)</p>
+</blockquote>
+<p><img src="media/image167.jpeg" style="height:0.49514in" /></p>
+<blockquote>
+<p>Conv 1x1, C filters</p>
+<p>H x W x C</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Bottleneck</strong></td>
+<td><blockquote>
+<p>H x W x C</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>sandwich</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Conv 3x3, C filters</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Single</strong></td>
+<td><blockquote>
+<p>H x W x C</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>3 x 3 conv</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 58 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image168.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image169.jpeg" style="width:10in;height:4.74931in" /></p>
+<blockquote>
+<p>Why stop at 3 x 3 filters? Why not try 1 x 1?</p>
+<p>H x W x C</p>
+</blockquote>
+<p>More nonlinearity,</p>
+<blockquote>
+<p>fewer params, less compute!</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Conv 1x1, C/2 filters</td>
+<td><blockquote>
+<p><strong>3.25 C<sup>2</sup></strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>H x W x C</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>parameters</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>H x W x (C / 2)</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Conv 3x3, C/2 filters</td>
+<td><blockquote>
+<p>Conv 3x3, C filters</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>H x W x (C / 2)</p>
+</blockquote></td>
+<td><strong>9 C<sup>2</sup></strong></td>
+<td><blockquote>
+<p>H x W x C</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Conv 1x1, C filters</td>
+<td></td>
+<td></td>
+<td><strong>parameters</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image170.jpeg" style="height:0.49514in" /></p>
+<blockquote>
+<p>H x W x C</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 59 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image171.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image172.jpeg" style="width:9.60972in;height:0.67292in" /></p>
+<blockquote>
+<p>Still using 3 x 3 filters … can we break it up?</p>
+</blockquote>
+<p><img src="media/image173.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 60 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image174.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image175.jpeg" style="width:9.60972in;height:0.67292in" /></p>
+<blockquote>
+<p>Still using 3 x 3 filters … can we break it up?</p>
+</blockquote>
+<p><img src="media/image176.jpeg" style="width:3.69306in;height:2.38681in" /></p>
+<blockquote>
+<p>H x W x C</p>
+<p>Conv 1x3, C filters</p>
+<p>H x W x C</p>
+<p>Conv 3x1, C filters</p>
+<p>H x W x C</p>
+</blockquote>
+<p><img src="media/image177.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 61 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image178.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image179.jpeg" style="width:9.60972in;height:1.19167in" /></p>
+<blockquote>
+<p>Still using 3 x 3 filters … can we break it up?</p>
+</blockquote>
+<p><img src="media/image180.jpeg" style="width:9.82708in;height:2.62083in" /></p>
+<p>More nonlinearity,</p>
+<blockquote>
+<p>fewer params, less compute!</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>H x W x C</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>6 C<sup>2</sup></strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>H x W x C</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Conv 1x3, C filters</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>parameters</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>H x W x C</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Conv 3x3, C filters</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Conv 3x1, C filters</td>
+<td></td>
+<td><strong>9 C<sup>2</sup></strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>H x W x C</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>H x W x C</p>
+</blockquote></td>
+<td><strong>parameters</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image181.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 62 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image182.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image183.jpeg" style="width:9.60972in;height:3.58681in" /></p>
+<blockquote>
+<p>Latest version of GoogLeNet incorporates all these ideas</p>
+</blockquote>
+<p><img src="media/image184.jpeg" style="width:10in;height:1.03889in" /></p>
+<blockquote>
+<p>Szegedy et al, “Rethinking the Inception Architecture for Computer Vision”</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 63 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image185.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image186.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>Replace large convolutions (5 x 5, 7 x 7) with stacks of 3 x 3 convolutions</p>
+</blockquote></li>
+<li><blockquote>
+<p>1 x 1 “bottleneck” convolutions are very efficient</p>
+</blockquote></li>
+<li><blockquote>
+<p>Can factor N x N convolutions into 1 x N and N x 1</p>
+</blockquote></li>
+<li><blockquote>
+<p>All of the above give fewer parameters, less compute, more nonlinearity</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image187.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 64 17 Feb 2016</p>
+<p><img src="media/image188.jpeg" style="width:6.96667in;height:1.50417in" /></p>
+<p>All About Convolutions</p>
+<p>Part II: How to compute them</p>
+<p><img src="media/image189.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 65 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image190.jpeg" style="width:9.02778in;height:4.29097in" /></p>
+<p>There are highly optimized matrix multiplication routines for just about every platform</p>
+<p>Can we turn convolution into matrix multiplication?</p>
+</blockquote>
+<p><img src="media/image191.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 66 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image192.jpeg" style="width:9.16181in;height:2.64583in" /></p>
+<p>Feature map: H x W x C Conv weights: D filters, each K x K x C</p>
+</blockquote>
+<p><img src="media/image193.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 - 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image195.jpeg" style="width:9.27431in;height:4.16181in" /></p>
+<p>Feature map: H x W x C Conv weights: D filters, each K x K x C</p>
+</blockquote>
+<p><img src="media/image196.jpeg" style="height:0.40139in" /></p>
+<blockquote>
+<p>Reshape K x K x C</p>
+<p>receptive field to column</p>
+<p>with K<sup>2</sup>C elements</p>
+</blockquote>
+<p><img src="media/image197.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 - 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image198.jpeg" style="width:9.27431in;height:4.16181in" /></p>
+<p>Feature map: H x W x C Conv weights: D filters, each K x K x C</p>
+</blockquote>
+<p><img src="media/image199.jpeg" style="width:4.38403in;height:0.55764in" /></p>
+<blockquote>
+<p>Repeat for all columns to get (K<sup>2</sup>C) x N matrix</p>
+<p>(N receptive field locations)</p>
+</blockquote>
+<p><img src="media/image201.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 - 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image202.jpeg" style="width:9.27431in;height:4.16181in" /></p>
+<p>Feature map: H x W x C Conv weights: D filters, each K x K x C</p>
+</blockquote>
+<p><img src="media/image203.jpeg" style="height:0.40139in" /></p>
+<blockquote>
+<p>Elements appearing in multiple</p>
+<p>receptive fields are duplicated; this</p>
+<p>uses a lot of memory</p>
+</blockquote>
+<p><img src="media/image204.jpeg" style="width:4.38403in;height:0.55764in" /></p>
+<blockquote>
+<p>Repeat for all columns to get (K<sup>2</sup>C) x N matrix</p>
+<p>(N receptive field locations)</p>
+</blockquote>
+<p><img src="media/image205.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 - 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image206.jpeg" style="width:9.27431in;height:4.7375in" /></p>
+<p>Feature map: H x W x C Conv weights: D filters, each K x K x C</p>
+</blockquote>
+<p><img src="media/image207.jpeg" style="height:0.40139in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Reshape each filter to K<sup>2</sup>C row,</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>(K<sup>2</sup>C) x N matrix</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>making D x (K<sup>2</sup>C) matrix</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image208.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 - 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image209.jpeg" style="width:9.32153in;height:4.7375in" /></p>
+<p>Feature map: H x W x C Conv weights: D filters, each K x K x C</p>
+</blockquote>
+<p><img src="media/image210.jpeg" style="height:0.40139in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Matrix multiply</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>D x (K<sup>2</sup>C) matrix</td>
+<td></td>
+<td></td>
+<td></td>
+<td>D x N result;</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>(K<sup>2</sup>C) x N matrix</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>reshape to output tensor</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image211.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 - 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image213.jpeg" style="width:9.74792in;height:4.98542in" /></p>
+<p><strong>CONV forward in Caffe library</strong></p>
+<p>im2col</p>
+<p>matrix multiply: call to cuBLAS</p>
+<p><img src="media/image214.jpeg" style="width:5.15347in;height:0.65625in" /> bias offset</p>
+</blockquote>
+<p><img src="media/image216.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 73 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image217.jpeg" style="width:8.7125in;height:4.90486in" /></p>
+<p><strong>fast_layers.py from HW</strong></p>
+<p>im2col</p>
+<p>matrix multiply:</p>
+<p>call np.dot</p>
+<p>(which calls BLAS)</p>
+</blockquote>
+<p><img src="media/image218.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 74 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image219.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image220.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p><strong>Convolution Theorem:</strong> The convolution of f and g is equal to the elementwise product of their Fourier Transforms:</p>
+<p>Using the <strong>Fast Fourier Transform</strong>, we can compute the Discrete Fourier transform of an N-dimensional vector in O (N log N) time (also extends to 2D images)</p>
+</blockquote>
+<p><img src="media/image221.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 75 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image222.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image223.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ol type="1">
+<li><blockquote>
+<p>Compute FFT of weights: F(W)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Compute FFT of image: F(X)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Compute elementwise product: F(W) ○ F(X)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Compute inverse FFT: Y = F<sup>-1</sup>(F(W) ○ F(X))</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image224.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 76 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image225.jpeg" style="width:9.63056in;height:4.51458in" /></p>
+<p>FFT convolutions get a big speedup for larger filters Not much speedup for 3x3 filters =(</p>
+<p>Vasilache et al, Fast Convolutional Nets With fbfft: A GPU Performance Evaluation</p>
+</blockquote>
+<p><img src="media/image226.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 77 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image227.jpeg" style="width:9.55417in;height:4.79722in" /></p>
+<p><strong>Naive matrix multiplication</strong>: Computing product of two N x N matrices takes O(N<sup>3</sup>) operations</p>
+<p><strong>Strassen’s Algorithm</strong>: Use clever arithmetic to reduce complexity to O(N<sup>log2(7)</sup>) ~ O(N<sup>2.81</sup>)</p>
+<p>From Wikipedia</p>
+</blockquote>
+<p><img src="media/image228.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 78 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image229.jpeg" style="width:9.93264in;height:4.775in" /></p>
+<p>Similar cleverness can be applied to convolutions</p>
+<p>Lavin and Gray (2015) work out special cases for 3x3 convolutions:</p>
+<p>Lavin and Gray, “Fast Algorithms for Convolutional Neural Networks”, 2015</p>
+</blockquote>
+<p><img src="media/image230.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 79 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image231.jpeg" style="width:9.5in;height:0.9375in" /></p>
+</blockquote>
+<p><img src="media/image232.jpeg" style="width:8.99236in;height:3.21458in" /></p>
+<blockquote>
+<p>Huge speedups on VGG for small batches:</p>
+</blockquote>
+<p><img src="media/image233.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 80 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image234.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image235.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>im2col: Easy to implement, but big memory overhead</p>
+</blockquote></li>
+<li><blockquote>
+<p>FFT: Big speedups for small kernels</p>
+</blockquote></li>
+<li><blockquote>
+<p>“Fast Algorithms” seem promising, not widely used yet</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image236.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 81 17 Feb 2016</p>
+<p><img src="media/image237.jpeg" style="width:5.66875in;height:0.77917in" /></p>
+<blockquote>
+<p>Implementation Details</p>
+</blockquote>
+<p><img src="media/image238.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 82 17 Feb 2016</p>
+<p><img src="media/image239.jpeg" style="width:9.64653in;height:5.51458in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11 83</p>
+</blockquote></td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image240.jpeg" style="width:9.46875in;height:4.87292in" /></p>
+</blockquote>
+<p><img src="media/image241.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 84 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image242.jpeg" style="width:9.46875in;height:4.87292in" /></p>
+<p>“central processing unit”</p>
+</blockquote>
+<p><img src="media/image243.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 85 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image244.jpeg" style="width:9.46875in;height:4.87292in" /></p>
+<p>“graphics processing unit”</p>
+</blockquote>
+<p><img src="media/image245.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 86 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image246.jpeg" style="width:9.46875in;height:4.87292in" /></p>
+<p>“graphics processing unit”</p>
+</blockquote>
+<p><img src="media/image247.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 87 17 Feb 2016</p>
+<p><img src="media/image250.jpeg" style="width:9.42639in;height:3.05347in" /></p>
+<p>VS</p>
+<p><img src="media/image251.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 88 17 Feb 2016</p>
+<p><img src="media/image252.jpeg" style="width:9.56528in;height:3.10903in" /></p>
+<blockquote>
+<p>VS</p>
+</blockquote>
+<p><img src="media/image253.jpeg" style="width:5.22847in;height:1.26389in" /></p>
+<blockquote>
+<p>NVIDIA is much more</p>
+<p>common for deep learning</p>
+</blockquote>
+<p><img src="media/image254.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 89 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image255.jpeg" style="width:9.50417in;height:4.56528in" /></p>
+<p>Jen-Hsun Huang</p>
+<p>(Stanford EE Masters 1992)</p>
+<p><strong>GTC 2015:</strong></p>
+<p>Introduced new Titan X GPU by bragging about AlexNet benchmarks</p>
+</blockquote>
+<p><img src="media/image256.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 90 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image257.jpeg" style="width:8.99167in;height:4.55278in" /></p>
+<p>Few, fast cores (1 - 16)</p>
+<p>Good at sequential processing</p>
+<p><strong>GPU</strong></p>
+<p>Many, slower cores (thousands)</p>
+<p>Originally for graphics</p>
+<p>Good at parallel computation</p>
+</blockquote>
+<p><img src="media/image258.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 91 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image259.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image260.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>CUDA (NVIDIA only)</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Write C code that runs directly on the GPU</p>
+</blockquote></li>
+<li><blockquote>
+<p>Higher-level APIs: cuBLAS, cuFFT, cuDNN, etc</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>OpenCL</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Similar to CUDA, but runs on anything</p>
+</blockquote></li>
+<li><blockquote>
+<p>Usually slower :(</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>Udacity: Intro to Parallel Programming <a href="https://www.udacity.com/course/cs344"><span class="underline">https://www.udacity.</span></a> <a href="https://www.udacity.com/course/cs344"><span class="underline">com/course/cs344</span></a></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>For deep learning just use existing libraries</p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p><img src="media/image261.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 92 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image262.jpeg" style="width:3.75833in;height:1.03472in" /></p>
+<p>at matrix multiplication:</p>
+</blockquote>
+<p><img src="media/image263.jpeg" style="width:8.32708in;height:2.83403in" /></p>
+<blockquote>
+<p><img src="media/image264.jpeg" style="width:0.62083in;height:0.22847in" /> <strong>GPU</strong>: NVIDA Tesla K40</p>
+</blockquote>
+<p><img src="media/image265.jpeg" style="width:0.60417in" /></p>
+<blockquote>
+<p>with cuBLAS</p>
+</blockquote>
+<p><img src="media/image266.jpeg" style="width:3.00139in;height:1.09306in" /></p>
+<blockquote>
+<p><strong>CPU</strong>: Intel E5-2697 v2</p>
+<p>12 core @ 2.7 Ghz</p>
+</blockquote>
+<p><img src="media/image267.jpeg" style="width:0.60417in" /></p>
+<blockquote>
+<p>with MKL</p>
+</blockquote>
+<p><img src="media/image268.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 93 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image269.jpeg" style="width:9.09236in;height:0.57778in" /></p>
+</blockquote>
+<p><img src="media/image270.jpeg" style="width:9.25556in;height:2.55625in" /></p>
+<blockquote>
+<p>All comparisons are against a 12-core Intel E5-2679v2 CPU @ 2.4GHz running Caffe with Intel MKL 11.1.3.</p>
+</blockquote>
+<p><img src="media/image272.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 94 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image273.jpeg" style="width:9.37708in;height:4.97292in" /></p>
+<p><strong>VGG: ~</strong>2-3 weeks training with 4 GPUs</p>
+<p><strong>ResNet 101:</strong> 2-3 weeks with 4 GPUs</p>
+<p>NVIDIA Titan Blacks</p>
+<p>~$1K each</p>
+<p>ResNet reimplemented in Torch: <a href="http://torch.ch/blog/2016/02/04/resnets.html"><span class="underline">http://torch.ch/blog/2016/02/04/resnets.html</span></a></p>
+</blockquote>
+<p><img src="media/image274.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 95 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image275.jpeg" style="width:9.02778in;height:4.13958in" /></p>
+</blockquote>
+<p><img src="media/image276.jpeg" style="width:7.31806in;height:0.45833in" /></p>
+<p>Alex Krizhevsky, “One weird trick for parallelizing convolutional neural networks”</p>
+<p><img src="media/image277.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 96 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image278.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image279.jpeg" style="width:3.49514in;height:2.8375in" /></p>
+<blockquote>
+<p><strong>Data parallelism</strong></p>
+</blockquote>
+<p><img src="media/image280.jpeg" style="width:5.82222in;height:0.45833in" /></p>
+<p><em>[Large Scale Distributed Deep Networks, Jeff Dean et al., 2013]</em></p>
+<p><img src="media/image281.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 97 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image282.jpeg" style="width:9.02778in;height:4.17153in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Data parallelism</strong></td>
+<td><blockquote>
+<p><strong>Model parallelism</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image283.jpeg" style="width:5.82222in;height:0.45833in" /></p>
+<p><em>[Large Scale Distributed Deep Networks, Jeff Dean et al., 2013]</em></p>
+<p><img src="media/image284.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 98 17 Feb 2016</p>
+<blockquote>
+<p><img src="media/image285.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image286.jpeg" style="width:9.63819in;height:3.00694in" /></p>
+<blockquote>
+<p><em>Abadi et al, “TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems”</em></p>
+</blockquote>
+<p><img src="media/image287.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 11 99 17 Feb 2016</p>
+<p><img src="media/image288.jpeg" style="width:4.50833in;height:0.53958in" /></p>
+<blockquote>
+<p>Bottlenecks</p>
+<p>to be aware of</p>
+</blockquote>
+<p><img src="media/image289.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image291.jpeg" style="width:9.12292in;height:4.39583in" /></p>
+<blockquote>
+<p><strong>GPU - CPU communication is a bottleneck.</strong> =&gt;</p>
+<p><strong>CPU</strong> data prefetch+augment thread running</p>
+<p>while</p>
+<p><strong>GPU</strong> performs forward/backward pass</p>
+</blockquote>
+<p><img src="media/image292.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image293.jpeg" style="width:9.43889in;height:4.98542in" /></p>
+<p>Moving parts lol</p>
+<blockquote>
+<p><strong>CPU - disk bottleneck</strong></p>
+<p>Hard disk is slow to read from</p>
+<p>=&gt; Pre-processed images</p>
+<p>stored contiguously in files, read as raw byte stream from SSD disk</p>
+</blockquote>
+<p><img src="media/image294.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image295.jpeg" style="width:9.12292in;height:4.39583in" /></p>
+<blockquote>
+<p><strong>GPU memory bottleneck</strong></p>
+<p>Titan X: 12 GB &lt;- currently the max</p>
+<p>GTX 980 Ti: 6 GB</p>
+<p>e.g.</p>
+<p>AlexNet: ~3GB needed with batch size 256</p>
+</blockquote>
+<p><img src="media/image296.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image297.jpeg" style="width:6.51875in;height:1.26528in" /></p>
+<p>Floating Point Precision</p>
+<p><img src="media/image298.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image299.jpeg" style="width:9.02778in;height:4.63542in" /></p>
+<blockquote>
+<p>Floating point precision</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>64 bit “double” precision is default in a lot of programming</p>
+</blockquote></li>
+<li><blockquote>
+<p>32 bit “single” precision is typically used for CNNs for performance</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image300.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image301.jpeg" style="width:9.44792in;height:4.63542in" /></p>
+<blockquote>
+<p>Floating point precision</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>64 bit “double” precision is default in a lot of programming</p>
+</blockquote></li>
+<li><blockquote>
+<p>32 bit “single” precision is typically used for CNNs for performance</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Including cs231n homework!</p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p><img src="media/image302.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>6</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image303.jpeg" style="width:9.37083in;height:4.76111in" /></p>
+<blockquote>
+<p>Floating point precision</p>
+<p><strong>Prediction</strong>: 16 bit “half” precision will be the new standard</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Already supported in cuDNN</p>
+</blockquote></li>
+<li><blockquote>
+<p>Nervana fp16 kernels are the fastest right now</p>
+</blockquote></li>
+<li><blockquote>
+<p>Hardware support in next-gen NVIDIA cards (Pascal)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Not yet supported in torch =(</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image304.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p>Benchmarks on Titan X, from <a href="https://github.com/soumith/convnet-benchmarks"><span class="underline">https://github.</span></a></p>
+<p><a href="https://github.com/soumith/convnet-benchmarks"><span class="underline">com/soumith/convnet-benchmarks</span></a></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>7</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image305.jpeg" style="width:9.45069in;height:4.8125in" /></p>
+<blockquote>
+<p>Floating point precision</p>
+<p>How low can we go?</p>
+<p>Gupta et al, 2015:</p>
+<p>Train with <strong>16-bit fixed point</strong> with stochastic rounding</p>
+<p>CNNs on MNIST</p>
+</blockquote>
+<p>Gupta et al, “Deep Learning with Limited Numerical Precision”, ICML 2015</p>
+<p><img src="media/image306.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>8</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image307.jpeg" style="width:9.28542in;height:4.63542in" /></p>
+<blockquote>
+<p>Floating point precision</p>
+<p>How low can we go?</p>
+<p>Courbariaux et al, 2015:</p>
+<p>Train with <strong>10-bit activations</strong>, <strong>12-bit parameter updates</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Courbariaux et al, “Training Deep Neural Networks with Low Precision Multiplications”, ICLR 2015</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>9</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image308.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image309.jpeg" style="width:9.75208in;height:4.77917in" /></p>
+<blockquote>
+<p>Floating point precision</p>
+<p>How low can we go?</p>
+<p>Courbariaux and Bengio, February 9 2016:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Train with <strong>1-bit activations and weights</strong>!</p>
+</blockquote></li>
+<li><blockquote>
+<p>All activations and weights are +1 or -1</p>
+</blockquote></li>
+<li><blockquote>
+<p>Fast multiplication with bitwise XNOR</p>
+</blockquote></li>
+<li><blockquote>
+<p>(Gradients use higher precision)</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Courbariaux et al, “BinaryNet: Training Deep Neural Networks with Weights and Activations Constrained to +1 or -1”, arXiv 2016</p>
+</blockquote>
+<p><img src="media/image310.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>11</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image311.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<blockquote>
+<p>Implementation details: Recap</p>
+</blockquote>
+<p><img src="media/image312.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>GPUs much faster than CPUs</p>
+</blockquote></li>
+<li><blockquote>
+<p>Distributed training is sometimes used</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Not needed for small problems</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>Be aware of bottlenecks: CPU / GPU, CPU / disk</p>
+</blockquote></li>
+<li><blockquote>
+<p>Low precison makes things faster and still works</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>32 bit is standard now, 16 bit soon</p>
+</blockquote></li>
+<li><blockquote>
+<p>In the future: binary nets?</p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p><img src="media/image313.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>11</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image314.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<blockquote>
+<p>Recap</p>
+</blockquote>
+<p><img src="media/image315.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>Data augmentation: artificially expand your data</p>
+</blockquote></li>
+<li><blockquote>
+<p>Transfer learning: CNNs without huge data</p>
+</blockquote></li>
+<li><blockquote>
+<p>All about convolutions</p>
+</blockquote></li>
+<li><blockquote>
+<p>Implementation details</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image316.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 11</p>
+</blockquote></td>
+<td>11</td>
+<td><blockquote>
+<p>17 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>

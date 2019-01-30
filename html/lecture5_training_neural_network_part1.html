@@ -1,0 +1,2083 @@
+<p><img src="media/image1.jpeg" style="width:9.73125in;height:1.92431in" /></p>
+<p>Training Neural Networks,</p>
+<p>Part I</p>
+<p><img src="media/image2.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 1 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image3.jpeg" style="width:9.7625in;height:4.21528in" /></p>
+<p>A1 is due <strong><span class="underline">today</span></strong> (midnight)</p>
+<p>I’m holding make up office hours on today: 5pm @ Gates 259</p>
+<p>A2 will be released ~tomorrow. It’s meaty, but educational!</p>
+<p>Also:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>We are shuffling the course schedule around a bit</p>
+</blockquote></li>
+<li><blockquote>
+<p>the grading scheme is subject to few % changes</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image4.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 2 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image5.jpeg" style="width:9.48194in;height:0.85764in" /></p>
+</blockquote>
+<p><img src="media/image6.jpeg" style="width:5.35625in;height:1.30278in" /></p>
+<blockquote>
+<p>“ConvNets need a lot</p>
+<p>of data to train”</p>
+</blockquote>
+<p><img src="media/image7.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 3 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image8.jpeg" style="width:9.48194in;height:0.85764in" /></p>
+</blockquote>
+<p><img src="media/image9.jpeg" style="width:7.96042in;height:1.78819in" /></p>
+<blockquote>
+<p>“ConvNets need a lot of data to train”</p>
+</blockquote>
+<p><img src="media/image10.jpeg" style="width:6.17292in;height:0.74514in" /></p>
+<blockquote>
+<p><strong>finetuning!</strong> we rarely ever train ConvNets from scratch.</p>
+</blockquote>
+<p><img src="media/image11.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 4 20 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>1. Train on ImageNet</td>
+<td><blockquote>
+<p>2. Finetune network on</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>your own data</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image12.jpeg" style="width:9.12222in;height:0.38056in" /></p>
+<blockquote>
+<p>ImageNet data</p>
+</blockquote>
+<p><img src="media/image14.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>your</p>
+<p><img src="media/image15.jpeg" style="width:1.1625in;height:0.54236in" /></p>
+<p>data</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 5 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image16.jpeg" style="width:8.92639in;height:0.69653in" /></p>
+</blockquote>
+<p><img src="media/image17.jpeg" style="width:5.64861in;height:3.95417in" /></p>
+<blockquote>
+<p>1. Train on 2. If small dataset: fix</p>
+<p>ImageNet all weights (treat CNN</p>
+<p>as fixed feature extractor), retrain only the classifier</p>
+<p>i.e. swap the Softmax layer at the end</p>
+</blockquote>
+<p><img src="media/image18.jpeg" style="width:10in;height:0.58889in" /></p>
+<ol start="3" type="1">
+<li><p>If you have medium sized dataset, <strong>“finetune”</strong> instead: use the old weights as initialization, train the full network or only some of the higher layers</p></li>
+</ol>
+<p><img src="media/image19.jpeg" style="width:3.61597in;height:3.99097in" /></p>
+<p>retrain bigger portion of the network, or even all of it.</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 6 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image20.jpeg" style="width:8.27361in;height:0.89514in" /></p>
+<p>https://github.com/BVLC/caffe/wiki/Model-Zoo</p>
+</blockquote>
+<p><img src="media/image21.jpeg" style="width:9.22292in;height:3.88819in" /></p>
+<p>...</p>
+<p><img src="media/image22.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 7 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image23.jpeg" style="width:9.48194in;height:0.85764in" /></p>
+</blockquote>
+<p><img src="media/image24.jpeg" style="width:5.35625in;height:1.30278in" /></p>
+<blockquote>
+<p>“We have infinite</p>
+<p>compute available</p>
+<p>because Terminal.”</p>
+</blockquote>
+<p><img src="media/image25.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 8 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image26.jpeg" style="width:9.48194in;height:0.85764in" /></p>
+</blockquote>
+<p><img src="media/image27.jpeg" style="width:7.08403in;height:1.78819in" /></p>
+<blockquote>
+<p>“We have infinite compute available because Terminal.”</p>
+</blockquote>
+<p><img src="media/image28.jpeg" style="width:5.20903in;height:0.71736in" /></p>
+<blockquote>
+<p>You have finite compute.</p>
+<p>Don’t be overly ambitious.</p>
+</blockquote>
+<p><img src="media/image29.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 9 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image30.jpeg" style="width:8.27847in;height:0.69097in" /></p>
+</blockquote>
+<p><img src="media/image31.jpeg" style="width:7.47431in;height:0.8in" /></p>
+<blockquote>
+<p><strong>Mini-batch SGD</strong></p>
+</blockquote>
+<p><img src="media/image32.jpeg" style="width:10in;height:3.75139in" /></p>
+<blockquote>
+<p>Loop:</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p><strong>Sample</strong> a batch of data</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Forward</strong> prop it through the graph, get loss</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Backprop</strong> to calculate the gradients</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Update</strong> the parameters using the gradient</p>
+</blockquote></li>
+</ol>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 10 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image33.jpeg" style="width:8.27847in;height:0.96597in" /></p>
+</blockquote>
+<p><img src="media/image34.jpeg" style="width:9.64653in;height:3.39167in" /></p>
+<blockquote>
+<p>(image credits</p>
+<p>to Alec Radford)</p>
+</blockquote>
+<p><img src="media/image35.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 11 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image36.jpeg" style="width:9.05139in;height:4.90556in" /></p>
+<p>input tape</p>
+</blockquote>
+<p>loss</p>
+<p><img src="media/image37.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 12 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image38.jpeg" style="width:10in;height:5.625in" /></p>
+<p>“local gradient”</p>
+<p>f</p>
+</blockquote>
+<p><img src="media/image39.jpeg" style="width:2.4875in" /></p>
+<blockquote>
+<p>gradients</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 13 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image41.jpeg" style="width:9.17778in;height:0.67292in" />: forward/backward API</p>
+</blockquote>
+<p><img src="media/image42.jpeg" style="width:6.16319in;height:3.82639in" /></p>
+<p>Graph (or Net) object. <em>(Rough psuedo code)</em></p>
+<p><img src="media/image43.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 14 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image45.jpeg" style="width:9.61181in;height:4.86111in" />: forward/backward API</p>
+<p>x</p>
+</blockquote>
+<p>*</p>
+<blockquote>
+<p>y</p>
+</blockquote>
+<p>z</p>
+<p><img src="media/image46.jpeg" style="width:0.66736in" /></p>
+<blockquote>
+<p>(x,y,z are scalars)</p>
+</blockquote>
+<p><img src="media/image47.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 15 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image48.jpeg" style="width:9.26111in;height:4.99028in" /></p>
+<p>=</p>
+</blockquote>
+<p><img src="media/image49.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 16 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image50.jpeg" style="width:7.29931in;height:0.85972in" />without the brain stuff</p>
+</blockquote>
+<p><img src="media/image51.jpeg" style="width:7.28333in;height:0.61111in" /></p>
+<blockquote>
+<p>(<strong>Before</strong>) Linear score function:</p>
+</blockquote>
+<p><img src="media/image52.jpeg" style="width:9.23958in;height:0.56875in" /></p>
+<blockquote>
+<p>(<strong>Now</strong>) 2-layer Neural Network or 3-layer Neural Network</p>
+</blockquote>
+<p><img src="media/image53.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 17 20 Jan 2016</p>
+<p><img src="media/image55.jpeg" style="width:9.93889in;height:5.56597in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 18</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image56.jpeg" style="width:7.08403in;height:0.52014in" /></p>
+</blockquote>
+<p><img src="media/image57.jpeg" style="height:2.45208in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>“2-layer Neural Net”, or</td>
+<td><blockquote>
+<p>“3-layer Neural Net”, or</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>“2-hidden-layer Neural Net”</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>“1-hidden-layer Neural Net”</td>
+<td><blockquote>
+<p><strong>“Fully-connected” layers</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image59.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 19 20 Jan 2016</p>
+</blockquote>
+<p><img src="media/image60.jpeg" style="width:8.80417in;height:3.83264in" /></p>
+<blockquote>
+<p>Training Neural Networks</p>
+<p>A bit of history...</p>
+</blockquote>
+<p><img src="media/image61.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 20 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image62.jpeg" style="width:9.77153in;height:4.63889in" /></p>
+<p>The <strong>Mark I Perceptron</strong> machine was the first implementation of the perceptron algorithm.</p>
+<p>The machine was connected to a camera that used 20×20 cadmium sulfide photocells to produce a 400-pixel image.</p>
+<p>recognized</p>
+<p>letters of the alphabet</p>
+<p>update rule:</p>
+<p><em>Frank Rosenblatt, ~1957: Perceptron</em></p>
+</blockquote>
+<p><img src="media/image63.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 21 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image64.jpeg" style="width:9.76528in;height:4.63889in" /></p>
+<p><em>Widrow and Hoff, ~1960: Adaline/Madaline</em></p>
+</blockquote>
+<p><img src="media/image65.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 22 20 Jan 2016</p>
+<p><img src="media/image66.jpeg" style="width:7.1875in;height:4.41528in" /></p>
+<blockquote>
+<p><strong>A bit of history</strong></p>
+</blockquote>
+<p><img src="media/image67.jpeg" style="width:3.09236in;height:3.1875in" /></p>
+<blockquote>
+<p>recognizable maths</p>
+</blockquote>
+<p><img src="media/image70.jpeg" style="width:8.36042in;height:0.45833in" /></p>
+<blockquote>
+<p><em>Rumelhart et al. 1986: First time back-propagation became popular</em></p>
+</blockquote>
+<p><img src="media/image71.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 23</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image72.jpeg" style="width:9.96042in;height:4.875in" /></p>
+<p><em>[Hinton and Salakhutdinov 2006]</em></p>
+<p>Reinvigorated research in Deep Learning</p>
+<p><img src="media/image73.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 24 20 Jan 2016</p>
+<p><img src="media/image74.jpeg" style="width:9.48681in;height:2.88403in" /></p>
+<p><em><strong>Context-Dependent Pre-trained Deep Neural Networks for Large Vocabulary Speech Recognition</strong></em></p>
+<p>George Dahl, Dong Yu, Li Deng, Alex Acero, 2010</p>
+<p><em><strong>Imagenet classification with deep convolutional neural networks</strong></em></p>
+<p>Alex Krizhevsky, Ilya Sutskever, Geoffrey E Hinton, 2012</p>
+</blockquote>
+<p><img src="media/image75.jpeg" style="width:10in;height:2.35139in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 25 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image76.jpeg" style="width:8.36458in;height:4.5in" /></p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p><strong>One time setup</strong></p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><em>activation functions, preprocessing, weight initialization, regularization, gradient checking</em></p>
+</blockquote>
+<ol start="2" type="1">
+<li><blockquote>
+<p><strong>Training dynamics</strong></p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><em>babysitting the learning process,</em></p>
+<p><em>parameter updates, hyperparameter optimization</em></p>
+</blockquote>
+<ol start="3" type="1">
+<li><blockquote>
+<p><strong>Evaluation</strong> <em>model ensembles</em></p>
+</blockquote></li>
+</ol>
+<p><img src="media/image77.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 26 20 Jan 2016</p>
+<p><img src="media/image78.jpeg" style="width:8.80417in;height:3.69931in" /></p>
+<blockquote>
+<p>Activation Functions</p>
+</blockquote>
+<p><img src="media/image79.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 27 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image80.jpeg" style="width:5.63125in;height:0.82986in" /></p>
+</blockquote>
+<p><img src="media/image81.jpeg" style="width:10in;height:4.58958in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 28 20 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Activation Functions</td>
+<td><blockquote>
+<p><strong>Leaky ReLU</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>max(0.1x, x)</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Sigmoid</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image82.jpeg" style="width:9.44931in;height:0.91319in" /></p>
+<blockquote>
+<p><strong>Maxout</strong></p>
+<p><strong>tanh</strong> tanh(x)</p>
+</blockquote>
+<p><img src="media/image84.jpeg" style="width:3.82778in;height:1.78611in" /></p>
+<blockquote>
+<p><strong>ELU</strong></p>
+</blockquote>
+<p><img src="media/image86.jpeg" style="width:4.85625in;height:1.17847in" /></p>
+<blockquote>
+<p><strong>ReLU</strong> max(0,x)</p>
+</blockquote>
+<p><img src="media/image87.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 29 20 Jan 2016</p>
+<p><img src="media/image88.jpeg" style="width:9.58194in;height:3.85556in" /></p>
+<blockquote>
+<p>Activation Functions</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Squashes numbers to range [0,1]</p>
+</blockquote></li>
+<li><blockquote>
+<p>Historically popular since they have nice interpretation as a saturating “firing rate” of a neuron</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><strong>Sigmoid</strong></p>
+</blockquote>
+<p><img src="media/image89.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 30</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Activation Functions</p>
+<p><strong>Sigmoid</strong></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Squashes numbers to range [0,1]</p>
+</blockquote></li>
+<li><blockquote>
+<p>Historically popular since they have nice interpretation as a saturating “firing rate” of a neuron</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image90.jpeg" style="width:9.69097in;height:4.72083in" /></p>
+<ul>
+<li><p>problems:</p>
+<ol type="1">
+<li><blockquote>
+<p>Saturated neurons “kill” the gradients</p>
+</blockquote></li>
+</ol></li>
+</ul>
+<p><img src="media/image91.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 31</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>x</p>
+</blockquote>
+<p><img src="media/image92.jpeg" style="width:1.70278in" /></p>
+<p>sigmoid</p>
+<p><img src="media/image94.jpeg" style="width:1.91181in" /></p>
+<p>gate</p>
+<p><img src="media/image96.jpeg" style="width:1.80278in" /></p>
+<blockquote>
+<p>What happens when x = -10?</p>
+<p>What happens when x = 0?</p>
+<p>What happens when x = 10?</p>
+</blockquote>
+<p><img src="media/image98.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 32</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Activation Functions</p>
+<p><strong>Sigmoid</strong></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Squashes numbers to range [0,1]</p>
+</blockquote></li>
+<li><blockquote>
+<p>Historically popular since they have nice interpretation as a saturating “firing rate” of a neuron</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image99.jpeg" style="width:9.69097in;height:4.72083in" /></p>
+<ul>
+<li><p>problems:</p>
+<ol type="1">
+<li><blockquote>
+<p>Saturated neurons “kill” the gradients</p>
+</blockquote></li>
+<li><blockquote>
+<p>Sigmoid outputs are not zero-centered</p>
+</blockquote></li>
+</ol></li>
+</ul>
+<p><img src="media/image100.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 33</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image101.jpeg" style="width:9.12708in;height:1.13681in" /></p>
+<p>is always positive:</p>
+</blockquote>
+<p><img src="media/image102.jpeg" style="width:8.32014in;height:3.05486in" /></p>
+<blockquote>
+<p>What can we say about the gradients on <strong>w</strong>?</p>
+</blockquote>
+<p><img src="media/image103.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 34 20 Jan 2016</p>
+<p>allowed gradient update directions</p>
+<blockquote>
+<p><img src="media/image104.jpeg" style="width:9.50556in;height:4.22222in" /></p>
+</blockquote>
+<p><img src="media/image105.jpeg" style="height:3.02708in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>allowed</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>zig zag path</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>gradient</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>update</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>directions</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>hypothetical</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>What can we say about the gradients on <strong>w</strong>?</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>optimal w</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Always all positive or all negative :(</td>
+<td><blockquote>
+<p>vector</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image108.jpeg" style="width:0.70486in" /></p>
+<blockquote>
+<p>(this is also why you want zero-mean data!)</p>
+</blockquote>
+<p><img src="media/image110.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 35 20 Jan 2016</p>
+<p><img src="media/image111.jpeg" style="width:9.69097in;height:4.72083in" /></p>
+<blockquote>
+<p>Activation Functions</p>
+<p><strong>Sigmoid</strong></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Squashes numbers to range [0,1]</p>
+</blockquote></li>
+<li><blockquote>
+<p>Historically popular since they have nice interpretation as a saturating “firing rate” of a neuron</p>
+</blockquote></li>
+</ul>
+<ul>
+<li><p>problems:</p>
+<ol type="1">
+<li><blockquote>
+<p>Saturated neurons “kill” the gradients</p>
+</blockquote></li>
+<li><blockquote>
+<p>Sigmoid outputs are not zero-centered</p>
+</blockquote></li>
+<li><blockquote>
+<p>exp() is a bit compute expensive</p>
+</blockquote></li>
+</ol></li>
+</ul>
+<p><img src="media/image112.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 36</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image113.jpeg" style="width:5.63125in;height:0.82986in" /></p>
+<blockquote>
+<p>Activation Functions</p>
+</blockquote>
+<p><img src="media/image114.jpeg" style="width:9.93472in;height:4.40486in" /></p>
+<ul>
+<li><blockquote>
+<p>Squashes numbers to range [-1,1]</p>
+</blockquote></li>
+<li><blockquote>
+<p>zero centered (nice)</p>
+</blockquote></li>
+<li><blockquote>
+<p>still kills gradients when saturated :(</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><strong>tanh(x)</strong></p>
+</blockquote>
+<p>[LeCun et al., 1991]</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 37</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Activation Functions</p>
+</blockquote>
+<p><img src="media/image115.jpeg" style="width:3.81667in;height:0.52292in" /></p>
+<blockquote>
+<p><strong>ReLU</strong></p>
+<p>(Rectified Linear Unit)</p>
+</blockquote>
+<ul>
+<li><p>Computes <strong>f(x) = max(0,x)</strong></p></li>
+<li><p>Does not saturate (in +region)</p></li>
+<li><p>Very computationally efficient</p></li>
+<li><p>Converges much faster than sigmoid/tanh in practice (e.g. 6x)</p></li>
+</ul>
+<p><img src="media/image116.jpeg" style="width:9.91458in;height:3.2in" /></p>
+<p>[Krizhevsky et al., 2012]</p>
+<p><img src="media/image118.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 38</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Activation Functions</p>
+</blockquote>
+<p><img src="media/image119.jpeg" style="width:3.81667in;height:0.52292in" /></p>
+<blockquote>
+<p><strong>ReLU</strong></p>
+<p>(Rectified Linear Unit)</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Computes <strong>f(x) = max(0,x)</strong></p>
+</blockquote></li>
+<li><blockquote>
+<p>Does not saturate (in +region)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Very computationally efficient</p>
+</blockquote></li>
+<li><blockquote>
+<p>Converges much faster than sigmoid/tanh in practice (e.g. 6x)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Not zero-centered output</p>
+</blockquote></li>
+<li><blockquote>
+<p>An annoyance:</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image120.jpeg" style="width:9.91458in;height:3.2in" /></p>
+<p>hint: what is the gradient when x &lt; 0?</p>
+<p><img src="media/image121.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 39 20 Jan 2016</p>
+<blockquote>
+<p>x</p>
+</blockquote>
+<p><img src="media/image122.jpeg" style="width:1.70278in" /></p>
+<p>ReLU</p>
+<p><img src="media/image124.jpeg" style="width:1.91181in" /></p>
+<blockquote>
+<p>gate</p>
+</blockquote>
+<p><img src="media/image126.jpeg" style="width:1.80278in" /></p>
+<blockquote>
+<p>What happens when x = -10?</p>
+<p>What happens when x = 0?</p>
+<p>What happens when x = 10?</p>
+</blockquote>
+<p><img src="media/image128.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 40</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image129.jpeg" style="height:4.74236in" /></p>
+<blockquote>
+<p>active ReLU</p>
+<p><strong>DATA CLOUD</strong></p>
+</blockquote>
+<p><img src="media/image131.jpeg" style="width:8.25764in" /></p>
+<blockquote>
+<p>dead ReLU</p>
+<p>will never activate</p>
+<p>=&gt; never update</p>
+</blockquote>
+<p><img src="media/image132.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 41 20 Jan 2016</p>
+<p><img src="media/image133.jpeg" style="height:4.74236in" /></p>
+<blockquote>
+<p>active ReLU</p>
+<p><strong>DATA CLOUD</strong></p>
+</blockquote>
+<p><img src="media/image135.jpeg" style="width:8.25764in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>=&gt; people like to initialize</p>
+</blockquote></td>
+<td><blockquote>
+<p>dead ReLU</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>ReLU neurons with slightly</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>positive biases (e.g. 0.01)</p>
+</blockquote></td>
+<td><blockquote>
+<p>will never activate</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>=&gt; never update</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image136.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 42 20 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Activation Functions</td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>[Mass et al., 2013]</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>[He et al., 2015]</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>-</p>
+</blockquote></td>
+<td><blockquote>
+<p>Does not saturate</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>-</p>
+</blockquote></td>
+<td><blockquote>
+<p>Computationally efficient</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>- Converges much faster than</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>sigmoid/tanh in practice! (e.g. 6x)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>-</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>will not “die”.</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image137.jpeg" style="width:5.63125in;height:4.43056in" /></p>
+<blockquote>
+<p><strong>Leaky ReLU</strong></p>
+</blockquote>
+<p><img src="media/image138.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 43 20 Jan 2016</p>
+<blockquote>
+<p>Activation Functions</p>
+<p><strong>Leaky ReLU</strong></p>
+<p>[Mass et al., 2013]</p>
+</blockquote>
+<p><img src="media/image139.jpeg" style="width:9.91458in;height:4.97986in" /></p>
+<blockquote>
+<p>[He et al., 2015]</p>
+</blockquote>
+<ul>
+<li><p>Does not saturate</p></li>
+<li><p>Computationally efficient</p></li>
+<li><p>Converges much faster than sigmoid/tanh in practice! (e.g. 6x)</p></li>
+<li><p><strong>will not “die”.</strong></p></li>
+</ul>
+<p><img src="media/image140.jpeg" style="height:2.17153in" /></p>
+<blockquote>
+<p><strong>Parametric Rectifier (PReLU)</strong></p>
+<p>backprop into \alpha</p>
+<p>(parameter)</p>
+</blockquote>
+<p><img src="media/image141.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 44</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image142.jpeg" style="width:9.79931in;height:1.43958in" /></p>
+</blockquote>
+<p>[Clevert et al., 2015]</p>
+<blockquote>
+<p><strong>Exponential Linear Units (ELU)</strong></p>
+</blockquote>
+<p><img src="media/image143.jpeg" style="width:9.77569in;height:3.01667in" /></p>
+<blockquote>
+<p><strong>-</strong> All benefits of ReLU - Does not die</p>
+</blockquote>
+<p>- Closer to zero mean outputs</p>
+<blockquote>
+<p>- Computation requires exp()</p>
+</blockquote>
+<p><img src="media/image144.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 45 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image145.jpeg" style="width:9.84931in;height:0.82986in" /></p>
+</blockquote>
+<p>[Goodfellow et al., 2013]</p>
+<ul>
+<li><blockquote>
+<p>Does not have the basic form of dot product -&gt; nonlinearity</p>
+</blockquote></li>
+<li><blockquote>
+<p>Generalizes ReLU and Leaky ReLU</p>
+</blockquote></li>
+<li><blockquote>
+<p>Linear Regime! Does not saturate! Does not die!</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image146.jpeg" style="width:9.0875in;height:1.78264in" /></p>
+<blockquote>
+<p>Problem: doubles the number of parameters/neuron :(</p>
+</blockquote>
+<p><img src="media/image147.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 46 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image148.jpeg" style="width:9.84931in;height:0.82986in" /></p>
+</blockquote>
+<p><img src="media/image149.jpeg" style="width:9.64375in;height:3.70278in" /></p>
+<ul>
+<li><blockquote>
+<p>Use ReLU. Be careful with your learning rates</p>
+</blockquote></li>
+<li><blockquote>
+<p>Try out Leaky ReLU / Maxout / ELU</p>
+</blockquote></li>
+<li><blockquote>
+<p>Try out tanh but don’t expect much</p>
+</blockquote></li>
+<li><blockquote>
+<p>Don’t use sigmoid</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image150.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 47 20 Jan 2016</p>
+<p><img src="media/image151.jpeg" style="width:8.80417in;height:3.69931in" /></p>
+<blockquote>
+<p>Data Preprocessing</p>
+</blockquote>
+<p><img src="media/image152.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 48 20 Jan 2016</p>
+<p><img src="media/image153.jpeg" style="width:8.73056in;height:3.59583in" /></p>
+<blockquote>
+<p><span class="underline">Step 1: Preprocess the data</span></p>
+</blockquote>
+<p><img src="media/image154.jpeg" style="width:6.05903in;height:0.36319in" /></p>
+<blockquote>
+<p>(Assume X [NxD] is data matrix,</p>
+<p>each example in a row)</p>
+</blockquote>
+<p><img src="media/image156.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 49</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image157.jpeg" style="width:9.67222in;height:1.3875in" /></p>
+<p>In practice, you may also see <strong>PCA</strong> and <strong>Whitening</strong> of the data</p>
+</blockquote>
+<p><img src="media/image158.jpeg" style="width:8.25347in;height:3.11111in" /></p>
+<blockquote>
+<p>(data has diagonal (covariance matrix is the</p>
+<p>covariance matrix) identity matrix)</p>
+</blockquote>
+<p><img src="media/image159.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 50 20 Jan 2016</p>
+<p><img src="media/image160.jpeg" style="width:9.84931in;height:0.82986in" /></p>
+<blockquote>
+<p><strong>TLDR: In practice for Images:</strong> center only</p>
+</blockquote>
+<p><img src="media/image161.jpeg" style="width:9.67153in;height:2.41181in" /></p>
+<blockquote>
+<p>e.g. consider CIFAR-10 example with [32,32,3] images</p>
+<p>- Subtract the mean image (e.g. AlexNet)</p>
+<p>(mean image = [32,32,3] array)</p>
+<p>- Subtract per-channel mean (e.g. VGGNet)</p>
+<p>(mean along each channel = 3 numbers)</p>
+</blockquote>
+<p><img src="media/image162.jpeg" style="width:3.39444in;height:1.09931in" /></p>
+<blockquote>
+<p>Not common to normalize</p>
+<p>variance, to do PCA or</p>
+<p>whitening</p>
+</blockquote>
+<p><img src="media/image163.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 51</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image164.jpeg" style="width:8.80417in;height:3.69931in" /></p>
+<blockquote>
+<p>Weight Initialization</p>
+</blockquote>
+<p><img src="media/image165.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 52 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image166.jpeg" style="width:8.95208in;height:4.47986in" /></p>
+</blockquote>
+<p><img src="media/image167.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 53 20 Jan 2016</p>
+<ul>
+<li><blockquote>
+<p><img src="media/image168.jpeg" style="width:8.38472in;height:4.36042in" /><strong>Small random numbers</strong></p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>(gaussian with zero mean and 1e-2 standard deviation)</p>
+</blockquote>
+<p><img src="media/image169.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 54 20 Jan 2016</p>
+<ul>
+<li><blockquote>
+<p><img src="media/image170.jpeg" style="width:8.38472in;height:4.36042in" /><strong>Small random numbers</strong></p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>(gaussian with zero mean and 1e-2 standard deviation)</p>
+<p>Works ~okay for small networks, but can lead to non-homogeneous distributions of activations across the layers of a network.</p>
+</blockquote>
+<p><img src="media/image171.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 55 20 Jan 2016</p>
+<p><img src="media/image172.jpeg" style="width:9.50903in;height:4.80556in" /></p>
+<blockquote>
+<p>Lets look at</p>
+<p>some</p>
+<p>activation</p>
+<p>statistics</p>
+</blockquote>
+<p><img src="media/image173.jpeg" style="width:2.74722in;height:1.91667in" /></p>
+<blockquote>
+<p>E.g. 10-layer net with 500 neurons on each layer, using tanh non-linearities, and initializing as described in last slide.</p>
+</blockquote>
+<p><img src="media/image174.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 56</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image175.jpeg" style="width:9.61458in;height:5.625in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 57</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image176.jpeg" style="width:9.94653in;height:4.97917in" /></p>
+</blockquote>
+<ol start="17" type="A">
+<li><blockquote>
+<p>think about the backward pass. What do the gradients look like?</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image177.jpeg" style="width:3.17917in;height:0.86667in" /></p>
+<blockquote>
+<p>Hint: think about backward pass for a W*X gate.</p>
+</blockquote>
+<p><img src="media/image178.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 58 20 Jan 2016</p>
+<p><img src="media/image179.jpeg" style="width:9.6625in;height:4.92014in" /></p>
+<blockquote>
+<p>*1.0 instead of *0.01</p>
+</blockquote>
+<p><img src="media/image180.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Almost all neurons completely saturated, either -1 and 1. Gradients will be all zero.</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 59 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image181.jpeg" style="width:9.96042in;height:4.90903in" /></p>
+<p><strong>Reasonable initialization.</strong> (Mathematical derivation assumes linear activations)</p>
+</blockquote>
+<p><img src="media/image182.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 60 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image183.jpeg" style="width:9.87847in;height:4.95833in" /></p>
+<p>nonlinearity it breaks.</p>
+</blockquote>
+<p><img src="media/image184.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 61 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image185.jpeg" style="width:9.86597in;height:4.84583in" /></p>
+</blockquote>
+<p><img src="media/image186.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 62 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image187.jpeg" style="width:9.86597in;height:4.84583in" /></p>
+</blockquote>
+<p><img src="media/image188.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 63 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image189.jpeg" style="width:9.85486in;height:0.43125in" /></p>
+<p><em><strong>Understanding the difficulty of training deep feedforward neural networks</strong></em> by Glorot and Bengio, 2010</p>
+<p><em><strong>Exact solutions to the nonlinear dynamics of learning in deep linear neural networks</strong></em> by Saxe et al, 2013</p>
+<p><em><strong>Random walk initialization for training very deep feedforward networks</strong></em> by Sussillo and Abbott, 2014</p>
+<p><em><strong>Delving deep into rectifiers: Surpassing human-level performance on ImageNet classification</strong></em> by He et al., 2015</p>
+<p><em><strong>Data-dependent Initializations of Convolutional Neural Networks</strong></em> by Krähenbühl et al., 2015 <em><strong>All you need is a good init</strong></em>, Mishkin and Matas, 2015</p>
+<p>…</p>
+</blockquote>
+<p><img src="media/image190.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 64 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image191.jpeg" style="width:9.72986in;height:0.75486in" /></p>
+</blockquote>
+<p><img src="media/image192.jpeg" style="width:9.28056in;height:0.57569in" /></p>
+<p>[Ioffe and Szegedy, 2015]</p>
+<blockquote>
+<p>“you want unit gaussian activations? just make them so.”</p>
+</blockquote>
+<p><img src="media/image193.jpeg" style="width:7.27847in;height:0.88472in" /></p>
+<blockquote>
+<p>consider a batch of activations at some layer.</p>
+<p>To make each dimension unit gaussian, apply:</p>
+</blockquote>
+<p><img src="media/image194.jpeg" style="width:8.14444in;height:1.32639in" /></p>
+<blockquote>
+<p>this is a vanilla differentiable function...</p>
+</blockquote>
+<p><img src="media/image195.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 65 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image196.jpeg" style="width:9.72986in;height:0.75486in" /></p>
+</blockquote>
+<p><img src="media/image197.jpeg" style="width:9.28056in;height:0.57569in" /></p>
+<p>[Ioffe and Szegedy, 2015]</p>
+<blockquote>
+<p>“you want unit gaussian activations?</p>
+<p>just make them so.”</p>
+</blockquote>
+<p><img src="media/image198.jpeg" style="width:5.80833in;height:0.86458in" /></p>
+<ol type="1">
+<li><blockquote>
+<p>compute the empirical mean and variance independently for each dimension.</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image199.jpeg" style="width:2.89653in;height:2.28889in" /></p>
+<blockquote>
+<p><sup>N</sup> X</p>
+</blockquote>
+<p><img src="media/image200.jpeg" style="width:3.74514in" /></p>
+<blockquote>
+<p>2. Normalize</p>
+</blockquote>
+<p><img src="media/image202.jpeg" style="width:3.17361in;height:1.05903in" /></p>
+<blockquote>
+<p>D</p>
+</blockquote>
+<p><img src="media/image204.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 66 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image205.jpeg" style="width:9.72986in;height:0.75486in" /></p>
+</blockquote>
+<p><img src="media/image206.jpeg" style="height:0.40556in" /></p>
+<p>[Ioffe and Szegedy, 2015]</p>
+<blockquote>
+<p>FC</p>
+</blockquote>
+<p><img src="media/image208.jpeg" style="height:0.19931in" /></p>
+<blockquote>
+<p>BN</p>
+</blockquote>
+<p><img src="media/image209.jpeg" style="height:0.19931in" /></p>
+<blockquote>
+<p>tanh</p>
+</blockquote>
+<p><img src="media/image210.jpeg" style="height:0.25208in" /></p>
+<blockquote>
+<p>FC</p>
+</blockquote>
+<p><img src="media/image211.jpeg" style="height:0.19931in" /></p>
+<blockquote>
+<p>BN</p>
+</blockquote>
+<p><img src="media/image212.jpeg" style="height:0.19931in" /></p>
+<blockquote>
+<p>tanh</p>
+</blockquote>
+<p><img src="media/image213.jpeg" style="height:0.26042in" /></p>
+<blockquote>
+<p>...</p>
+<p>Usually inserted after Fully Connected / (or Convolutional, as we’ll see soon) layers, and before nonlinearity.</p>
+</blockquote>
+<p><img src="media/image214.jpeg" style="width:0.47778in" /></p>
+<p>Problem: do we necessarily want a unit gaussian input to a tanh layer?</p>
+<p><img src="media/image215.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 67 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image216.jpeg" style="width:9.72986in;height:0.75486in" /></p>
+</blockquote>
+<p><img src="media/image217.jpeg" style="width:9.31181in;height:3.59514in" /></p>
+<p>[Ioffe and Szegedy, 2015]</p>
+<blockquote>
+<p>Normalize:</p>
+<p>And then allow the network to squash the range if it wants to:</p>
+</blockquote>
+<p><img src="media/image218.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 68 20 Jan 2016</p>
+<blockquote>
+<p>Batch Normalization</p>
+<p>[Ioffe and Szegedy, 2015]</p>
+</blockquote>
+<p><img src="media/image219.jpeg" style="width:9.81597in;height:4.81875in" /></p>
+<ul>
+<li><p>Improves gradient flow through the network</p></li>
+<li><p>Allows higher learning rates</p></li>
+<li><p>Reduces the strong dependence on initialization</p></li>
+<li><p>Acts as a form of regularization in a funny way, and slightly reduces the need for dropout, maybe</p></li>
+</ul>
+<p><img src="media/image220.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 69 20 Jan 2016</p>
+<blockquote>
+<p>Batch Normalization</p>
+<p>[Ioffe and Szegedy, 2015]</p>
+</blockquote>
+<p><img src="media/image221.jpeg" style="width:9.81597in;height:4.81875in" /></p>
+<p><strong>Note: at test time BatchNorm layer functions differently:</strong></p>
+<p>The mean/std are not computed based on the batch. Instead, a single fixed empirical mean of activations during training is used.</p>
+<p>(e.g. can be estimated during training with running averages)</p>
+<p><img src="media/image222.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 70 20 Jan 2016</p>
+<p><img src="media/image223.jpeg" style="width:8.80417in;height:3.95625in" /></p>
+<p>Babysitting the Learning Process</p>
+<p><img src="media/image224.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 71 20 Jan 2016</p>
+<p><img src="media/image225.jpeg" style="width:8.73056in;height:3.59583in" /></p>
+<blockquote>
+<p><span class="underline">Step 1: Preprocess the data</span></p>
+</blockquote>
+<p><img src="media/image226.jpeg" style="width:6.05903in;height:0.36319in" /></p>
+<blockquote>
+<p>(Assume X [NxD] is data matrix,</p>
+<p>each example in a row)</p>
+</blockquote>
+<p><img src="media/image228.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 72</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image229.jpeg" style="width:9.66181in;height:0.50903in" /></p>
+<blockquote>
+<p><strong>Step 2: Choose the architecture:</strong></p>
+<p>say we start with one hidden layer of 50 neurons:</p>
+</blockquote>
+<p><img src="media/image230.jpeg" style="width:3.25694in;height:0.58611in" /></p>
+<ol start="50" type="1">
+<li><blockquote>
+<p>hidden</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>neurons</p>
+</blockquote>
+<p><img src="media/image231.jpeg" style="width:0.92986in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>output layer</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>10</strong> output</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>CIFAR-10</p>
+</blockquote></td>
+<td><blockquote>
+<p>input</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>neurons, one</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>hidden layer</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>per class</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>images, <strong>3072</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>layer</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>numbers</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 73</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image234.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image235.jpeg" style="width:9.66181in;height:0.50903in" /></p>
+<blockquote>
+<p>Double check that the loss is reasonable:</p>
+</blockquote>
+<p><img src="media/image236.jpeg" style="width:6.94306in;height:1.89722in" /></p>
+<blockquote>
+<p>loss ~2.3.</p>
+<p>“correct “ for</p>
+<p>10 classes</p>
+</blockquote>
+<p>disable regularization</p>
+<p>returns the loss and the gradient for all parameters</p>
+<p><img src="media/image238.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 74</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image239.jpeg" style="width:9.66181in;height:0.50903in" /></p>
+</blockquote>
+<p><img src="media/image240.jpeg" style="width:6.94306in;height:1.89722in" /></p>
+<blockquote>
+<p>crank up regularization</p>
+<p><img src="media/image242.jpeg" style="width:1.59236in;height:0.26667in" /> loss went up, good. (sanity check)</p>
+</blockquote>
+<p><img src="media/image243.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 75 20 Jan 2016</p>
+<p>Lets try to train now…</p>
+<p><strong>Tip</strong>: Make sure that you can overfit very small portion of the training data</p>
+<p>The above code:</p>
+<p><img src="media/image244.jpeg" style="width:10in;height:4.51389in" /></p>
+<ul>
+<li><blockquote>
+<p>take the first 20 examples from CIFAR-10</p>
+</blockquote></li>
+<li><blockquote>
+<p>turn off regularization (reg = 0.0)</p>
+</blockquote></li>
+<li><blockquote>
+<p>use simple vanilla ‘sgd’</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image245.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 76 20 Jan 2016</p>
+</blockquote>
+<p><img src="media/image246.jpeg" style="width:9.94931in;height:4.94375in" /></p>
+<p><strong>Tip</strong>: Make sure that you can overfit very small portion of the training data</p>
+<blockquote>
+<p>Very small loss,</p>
+<p>train accuracy 1.00,</p>
+<p>nice!</p>
+</blockquote>
+<p><img src="media/image247.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 77 20 Jan 2016</p>
+</blockquote>
+<p><img src="media/image248.jpeg" style="width:10in;height:3.16528in" /></p>
+<p>I like to start with small regularization and find learning rate that makes the loss go down.</p>
+<p><img src="media/image249.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 78 20 Jan 2016</p>
+</blockquote>
+<p><img src="media/image250.jpeg" style="width:10in;height:4.3375in" /></p>
+<p>I like to start with small regularization and find learning rate that makes the loss go down.</p>
+<p>Loss barely changing</p>
+<p><img src="media/image251.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 79 20 Jan 2016</p>
+</blockquote>
+<p>Lets try to train now…</p>
+<p>I like to start with small regularization and find learning rate that makes the loss go down.</p>
+<p><strong>loss not going down:</strong></p>
+<p>learning rate too low</p>
+<p>Loss barely changing: Learning rate is probably too low</p>
+<p><img src="media/image252.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 80 20 Jan 2016</p>
+<p>Lets try to train now…</p>
+<p>I like to start with small regularization and find learning rate that makes the loss go down.</p>
+<p><strong>loss not going down:</strong></p>
+<p>learning rate too low</p>
+</blockquote>
+<p>Loss barely changing: Learning rate is probably too low</p>
+<p><img src="media/image254.jpeg" style="width:10in;height:4.3375in" /></p>
+<p>Notice train/val accuracy goes to 20% though, what’s up with that? (remember this is softmax)</p>
+<p><img src="media/image255.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5 81</p>
+</blockquote></td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Lets try to train now…</p>
+<p>I like to start with small regularization and find learning rate that makes the loss go down.</p>
+<p>Okay now lets try learning rate 1e6. What could possibly go wrong?</p>
+<p><img src="media/image256.jpeg" style="width:9.87917in;height:3.05in" /></p>
+<p><strong>loss not going down:</strong></p>
+<p>learning rate too low</p>
+<p><img src="media/image257.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 82 20 Jan 2016</p>
+</blockquote>
+<p>Lets try to train now…</p>
+<p>I like to start with small regularization and find learning rate that makes the loss go down.</p>
+<p><strong>loss not going down:</strong> learning rate too low <strong>loss exploding:</strong> learning rate too high</p>
+<p>cost: NaN almost</p>
+<p><img src="media/image258.jpeg" style="width:3.59236in;height:0.99028in" /></p>
+<p>always means high</p>
+<p>learning rate...</p>
+<p><img src="media/image260.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 83 20 Jan 2016</p>
+</blockquote>
+<p>Lets try to train now…</p>
+<p>I like to start with small regularization and find learning rate that makes the loss go down.</p>
+<p><strong>loss not going down:</strong></p>
+<p>learning rate too low <strong>loss exploding:</strong></p>
+<p>learning rate too high</p>
+<p>3e-3 is still too high. Cost explodes….</p>
+<p><img src="media/image261.jpeg" style="width:9.94583in;height:4.59583in" /></p>
+<p>=&gt; Rough range for learning rate we should be cross-validating is somewhere [1e-3 … 1e-5]</p>
+<p><img src="media/image262.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 84 20 Jan 2016</p>
+</blockquote>
+<p><img src="media/image263.jpeg" style="width:8.80417in;height:3.69931in" /></p>
+<blockquote>
+<p>Hyperparameter Optimization</p>
+</blockquote>
+<p><img src="media/image264.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 85 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image265.jpeg" style="width:9.7875in;height:4.66875in" /></p>
+<p>I like to do <strong>coarse -&gt; fine</strong> cross-validation in stages</p>
+<p><strong>First stage</strong>: only a few epochs to get rough idea of what params work</p>
+<p><strong>Second stage</strong>: longer running time, finer search … (repeat as necessary)</p>
+<p>Tip for detecting explosions in the solver:</p>
+<p>If the cost is ever &gt; 3 * original cost, break out early</p>
+</blockquote>
+<p><img src="media/image266.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 86 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image267.jpeg" style="width:9.89861in;height:2.66042in" /></p>
+<p>note it’s best to optimize</p>
+<p>in log space!</p>
+</blockquote>
+<p><img src="media/image268.jpeg" style="width:7.09097in;height:2.06944in" /></p>
+<blockquote>
+<p>nice</p>
+</blockquote>
+<p><img src="media/image270.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 87 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image272.jpeg" style="width:9.77708in;height:4.85833in" /></p>
+<p>adjust range</p>
+</blockquote>
+<p><img src="media/image273.jpeg" style="width:2.08333in" /></p>
+<blockquote>
+<p><strong>53%</strong> - relatively good for a 2-layer neural net with 50 hidden neurons.</p>
+</blockquote>
+<p><img src="media/image274.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 88 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image275.jpeg" style="width:9.77708in;height:4.85833in" /></p>
+<p>adjust range</p>
+</blockquote>
+<p><img src="media/image276.jpeg" style="width:2.08333in" /></p>
+<blockquote>
+<p><strong>53%</strong> - relatively good for a 2-layer neural net with 50 hidden neurons.</p>
+<p>But this best cross-validation result is <img src="media/image277.jpeg" style="height:0.15486in" /> worrying. Why?</p>
+</blockquote>
+<p><img src="media/image279.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 89 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image281.jpeg" style="width:9.36042in;height:3.93333in" /></p>
+</blockquote>
+<p><img src="media/image282.jpeg" style="width:4.93056in;height:0.29514in" /></p>
+<blockquote>
+<p><em>Random Search for Hyper-Parameter Optimization</em></p>
+<p>Bergstra and Bengio, 2012</p>
+</blockquote>
+<p><img src="media/image283.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 90 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image284.jpeg" style="width:9.56736in;height:4.85069in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>network architecture</p>
+</blockquote></li>
+<li><blockquote>
+<p>learning rate, its decay schedule, update type</p>
+</blockquote></li>
+<li><blockquote>
+<p>regularization (L2/Dropout strength)</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>neural networks practitioner music = loss function</p>
+</blockquote>
+<p><img src="media/image285.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 91 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image286.jpeg" style="width:9.43958in;height:4.90486in" /></p>
+</blockquote>
+<p><img src="media/image287.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 92 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image288.jpeg" style="width:9.03333in;height:0.58264in" /></p>
+</blockquote>
+<p><img src="media/image289.jpeg" style="width:10in;height:4.89028in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 93 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image290.jpeg" style="height:3.48889in" /></p>
+</blockquote>
+<p><img src="media/image292.jpeg" style="width:5.10972in" /></p>
+<p>time</p>
+<p><img src="media/image294.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 94 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image295.jpeg" style="height:3.48889in" /></p>
+<p>Bad initialization</p>
+<p>a prime suspect</p>
+</blockquote>
+<p><img src="media/image297.jpeg" style="width:5.10972in" /></p>
+<blockquote>
+<p>time</p>
+</blockquote>
+<p><img src="media/image299.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 95 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image300.jpeg" style="width:8.25486in;height:0.78056in" /> Loss function specimen</p>
+</blockquote>
+<p><img src="media/image301.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 96 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image303.jpeg" style="width:6.13819in;height:0.78056in" /></p>
+</blockquote>
+<p><img src="media/image304.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 97 20 Jan 2016</p>
+<p><img src="media/image306.jpeg" style="width:9.49167in;height:4.84792in" /></p>
+<blockquote>
+<p><span class="underline">lossfunctions.tumblr.com</span></p>
+</blockquote>
+<p><img src="media/image307.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 98 20 Jan 2016</p>
+<blockquote>
+<p><img src="media/image308.jpeg" style="width:9.03333in;height:0.58264in" /></p>
+</blockquote>
+<p><img src="media/image309.jpeg" style="height:1.90556in" /></p>
+<blockquote>
+<p>big gap = overfitting</p>
+</blockquote>
+<p>=&gt; increase regularization strength?</p>
+<blockquote>
+<p>no gap</p>
+<p>=&gt; increase model capacity?</p>
+</blockquote>
+<p><img src="media/image311.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 5 99 20 Jan 2016</p>
+<p><img src="media/image312.jpeg" style="width:9.03333in;height:0.58264in" /></p>
+<blockquote>
+<p>Track the ratio of weight updates / weight magnitudes:</p>
+</blockquote>
+<p><img src="media/image313.jpeg" style="width:8.81319in;height:0.45833in" /></p>
+<blockquote>
+<p>ratio between the values and updates: ~ 0.0002 / 0.02 = 0.01 (about okay) <strong>want this to be somewhere around 0.001 or so</strong></p>
+</blockquote>
+<p><img src="media/image315.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image316.jpeg" style="width:8.72292in;height:4.41042in" /></p>
+<blockquote>
+<p>Summary <sup>TLDRs</sup></p>
+<p>We looked in detail at:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Activation Functions (use ReLU)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Data Preprocessing (images: subtract mean)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Weight Initialization (use Xavier init)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Batch Normalization (use)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Babysitting the Learning process</p>
+</blockquote></li>
+<li><blockquote>
+<p>Hyperparameter Optimization</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>(random sample hyperparams, in log space when appropriate)</p>
+</blockquote>
+<p><img src="media/image317.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image318.jpeg" style="width:8.72292in;height:4.41042in" /></p>
+<blockquote>
+<p>TODO</p>
+<p>Look at:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Parameter update schemes</p>
+</blockquote></li>
+<li><blockquote>
+<p>Learning rate schedules</p>
+</blockquote></li>
+<li><blockquote>
+<p>Gradient Checking</p>
+</blockquote></li>
+<li><blockquote>
+<p>Regularization (Dropout etc)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Evaluation (Ensembles etc)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image319.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 5</p>
+</blockquote></td>
+<td>10</td>
+<td><blockquote>
+<p>20 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+</tr>
+</tbody>
+</table>

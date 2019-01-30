@@ -1,0 +1,2892 @@
+<p><img src="media/image1.jpeg" style="width:9.73125in;height:1.92431in" /></p>
+<blockquote>
+<p>Convolutional Neural Networks</p>
+</blockquote>
+<p><img src="media/image2.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 1 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image3.jpeg" style="width:9.7625in;height:4.21528in" /></p>
+<p><span class="underline">A2</span> is due Feb 5 (next Friday)</p>
+<p><span class="underline">Project proposal</span> due Jan 30 (Saturday)</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>ungraded, one paragraph</p>
+</blockquote></li>
+<li><blockquote>
+<p>feel free to give 2 options, we can try help you narrow it</p>
+</blockquote></li>
+</ul>
+<ul>
+<li><blockquote>
+<p>What is the problem that you will be investigating? Why is it interesting?</p>
+</blockquote></li>
+<li><blockquote>
+<p>What data will you use? If you are collecting new datasets, how do you plan to collect them?</p>
+</blockquote></li>
+<li><blockquote>
+<p>What method or algorithm are you proposing? If there are existing implementations, will you use them and how? How do you plan to improve or modify such implementations?</p>
+</blockquote></li>
+<li><blockquote>
+<p>What reading will you examine to provide context and background?</p>
+</blockquote></li>
+<li><blockquote>
+<p>How will you evaluate your results? Qualitatively, what kind of results do you expect (e.g. plots or figures)? Quantitatively, what kind of analysis will you use to evaluate and/or compare your results (e.g. what performance metrics or statistical tests)?</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image4.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 2 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image5.jpeg" style="width:9.77222in;height:4.76944in" /></p>
+<p>Loop:</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p><strong>Sample</strong> a batch of data</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Forward</strong> prop it through the graph, get loss</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Backprop</strong> to calculate the gradients</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Update</strong> the parameters using the gradient</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image6.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 3 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image7.jpeg" style="width:2.71528in;height:1.64167in" /></p>
+</blockquote>
+<p><strong>We covered:</strong></p>
+<p><img src="media/image8.jpeg" style="width:6.80694in;height:3.99722in" /></p>
+<p>sgd,</p>
+<p>momentum,</p>
+<p>nag,</p>
+<p>adagrad,</p>
+<p>rmsprop,</p>
+<p>adam (not in this vis),</p>
+<p>we did not cover adadelta</p>
+<p><img src="media/image9.jpeg" style="width:2.71181in;height:0.2in" /></p>
+<blockquote>
+<p>Image credits: Alec Radford</p>
+</blockquote>
+<p><img src="media/image10.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 4 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image11.jpeg" style="width:9.49792in;height:0.85625in" /></p>
+</blockquote>
+<p><img src="media/image12.jpeg" style="width:9.34514in;height:3.0625in" /></p>
+<p>Forces the network to have a redundant representation.</p>
+<p><img src="media/image13.jpeg" style="width:5.87847in;height:1.45417in" /></p>
+<blockquote>
+<p>has an ear</p>
+</blockquote>
+<p><img src="media/image14.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p>has a tail</p>
+</blockquote>
+<p><img src="media/image15.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p>is furry</p>
+</blockquote>
+<p><img src="media/image16.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p>has claws</p>
+</blockquote>
+<p><img src="media/image18.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p>mischievous</p>
+</blockquote>
+<p><img src="media/image19.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p>look</p>
+</blockquote>
+<p><img src="media/image20.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7</p>
+<blockquote>
+<p><strong>X</strong></p>
+</blockquote>
+<p><img src="media/image21.jpeg" style="width:0.77361in" /></p>
+<ul>
+<li><blockquote>
+<p><img src="media/image23.jpeg" style="width:0.90972in;height:0.12431in" /> cat</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><img src="media/image24.jpeg" style="width:0.92986in;height:0.23125in" /> score</p>
+</blockquote>
+<p><img src="media/image25.jpeg" style="width:0.77361in" /></p>
+<blockquote>
+<p><strong>X</strong></p>
+</blockquote>
+<p><img src="media/image27.jpeg" style="width:0.77361in" /></p>
+<ul>
+<li><p>27 Jan 2016</p></li>
+</ul>
+<blockquote>
+<p><img src="media/image28.jpeg" style="width:9.73125in;height:1.45347in" /></p>
+</blockquote>
+<p><img src="media/image29.jpeg" style="width:7.93403in;height:2.20486in" /></p>
+<blockquote>
+<p><em>[LeNet-5, LeCun 1980]</em></p>
+</blockquote>
+<p><img src="media/image31.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 6 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image32.jpeg" style="height:5.05in" /></p>
+<p><strong>Hubel &amp; Wiesel</strong>, 1959</p>
+<p>RECEPTIVE FIELDS OF SINGLE NEURONES IN</p>
+<p>THE CAT'S STRIATE CORTEX</p>
+<p>1962</p>
+<p>RECEPTIVE FIELDS, BINOCULAR INTERACTION</p>
+<p>AND FUNCTIONAL ARCHITECTURE IN THE CAT'S VISUAL CORTEX</p>
+<p>1968...</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 7 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image34.jpeg" style="width:8.70486in;height:0.67361in" /></p>
+</blockquote>
+<p><img src="media/image35.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 8 27 Jan 2016</p>
+<p><img src="media/image37.jpeg" style="width:9.68611in;height:1.72361in" /></p>
+<blockquote>
+<p>Convolutional Neural Networks</p>
+<p>(First without the brain stuff)</p>
+</blockquote>
+<p><img src="media/image38.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 9 27 Jan 2016</p>
+<p><img src="media/image39.jpeg" style="width:8.43681in;height:0.73264in" /></p>
+<blockquote>
+<p>Convolution Layer</p>
+</blockquote>
+<p><img src="media/image40.jpeg" style="width:3.69167in;height:0.54653in" /></p>
+<blockquote>
+<p>32x32x3 image</p>
+</blockquote>
+<p><img src="media/image41.jpeg" style="width:5.17222in;height:3.19861in" /></p>
+<ol start="32" type="1">
+<li><blockquote>
+<p>height</p>
+</blockquote></li>
+</ol>
+<ol start="32" type="1">
+<li><blockquote>
+<p>width</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><sub>3</sub> depth</p>
+</blockquote>
+<p><img src="media/image42.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 10</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image43.jpeg" style="width:8.43681in;height:0.73264in" /></p>
+<blockquote>
+<p>Convolution Layer</p>
+</blockquote>
+<p><img src="media/image44.jpeg" style="width:3.69167in;height:0.54653in" /></p>
+<blockquote>
+<p>32x32x3 image</p>
+</blockquote>
+<p><img src="media/image45.jpeg" style="width:1.675in;height:3.19861in" /></p>
+<blockquote>
+<p>5x5x3 filter</p>
+<p>32</p>
+</blockquote>
+<p><img src="media/image47.jpeg" style="width:5.50764in;height:1.26042in" /></p>
+<blockquote>
+<p><strong>Convolve</strong> the filter with the image</p>
+<p>i.e. “slide over the image spatially,</p>
+<p>computing dot products”</p>
+<p>32</p>
+<p>3</p>
+</blockquote>
+<p><img src="media/image48.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 11</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Convolution Layer</p>
+</blockquote>
+<p>Filters always extend the full depth of the input volume</p>
+<p><img src="media/image49.jpeg" style="width:10in;height:4.71597in" /></p>
+<blockquote>
+<p>32x32x3 image</p>
+<p>5x5x3 filter</p>
+<p>32</p>
+<p><strong>Convolve</strong> the filter with the image</p>
+<p>i.e. “slide over the image spatially,</p>
+<p>computing dot products”</p>
+<p>32</p>
+<p>3</p>
+</blockquote>
+<p><img src="media/image50.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 12</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image51.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image52.jpeg" style="width:8.69236in;height:4.03125in" /></p>
+<p>32</p>
+<blockquote>
+<p>32</p>
+<p>3</p>
+</blockquote>
+<p>32x32x3 image</p>
+<p>5x5x3 filter</p>
+<blockquote>
+<p><strong>1 number:</strong></p>
+<p>the result of taking a dot product between the filter and a small 5x5x3 chunk of the image (i.e. 5*5*3 = 75-dimensional dot product + bias)</p>
+</blockquote>
+<p><img src="media/image53.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 13 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image54.jpeg" style="width:9.6125in;height:4.55972in" /></p>
+</blockquote>
+<p><strong>activation map</strong></p>
+<blockquote>
+<p>32x32x3 image</p>
+<p>5x5x3 filter</p>
+<p>32</p>
+<p>28</p>
+</blockquote>
+<p><img src="media/image55.jpeg" style="width:2.5875in" /></p>
+<blockquote>
+<p>convolve (slide) over all</p>
+<p>spatial locations</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>32</td>
+<td>28</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image56.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 14 27 Jan 2016</p>
+<blockquote>
+<p>Convolution Layer</p>
+</blockquote>
+<p>consider a second, green filter</p>
+<p><img src="media/image57.jpeg" style="width:9.88194in;height:4.62222in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>32x32x3 image</td>
+<td><blockquote>
+<p><strong>activation maps</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td>5x5x3 filter</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>32</p>
+<p>28</p>
+</blockquote>
+<p><img src="media/image58.jpeg" style="width:2.5875in" /></p>
+<blockquote>
+<p>convolve (slide) over all</p>
+<p>spatial locations</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>32</td>
+<td>28</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image59.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 15 27 Jan 2016</p>
+<p><img src="media/image60.jpeg" style="width:9.56528in;height:0.45069in" /></p>
+<blockquote>
+<p>For example, if we had 6 5x5 filters, we’ll get 6 separate activation maps:</p>
+</blockquote>
+<p><img src="media/image61.jpeg" style="width:5.67431in;height:3.81319in" /></p>
+<blockquote>
+<p><strong>activation maps</strong></p>
+</blockquote>
+<p><img src="media/image62.jpeg" style="width:1.69722in;height:3.19861in" /></p>
+<blockquote>
+<p>32</p>
+</blockquote>
+<p>28</p>
+<p><img src="media/image63.jpeg" style="width:2.5875in" /></p>
+<blockquote>
+<p>Convolution Layer</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>32</td>
+<td>28</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image64.jpeg" style="width:9.10347in;height:0.30903in" /></p>
+<blockquote>
+<p>We stack these up to get a “new image” of size 28x28x6!</p>
+</blockquote>
+<p><img src="media/image65.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 16</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image66.jpeg" style="width:9.57986in;height:4.23264in" />ConvNet is a sequence of Convolution Layers, interspersed with activation functions</p>
+<p>32 28</p>
+</blockquote>
+<p><img src="media/image67.jpeg" style="width:1.07986in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>CONV,</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>ReLU</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>e.g. 6</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>32</td>
+<td><blockquote>
+<p>5x5x3</p>
+</blockquote></td>
+<td>28</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>filters</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>3 6</p>
+</blockquote>
+<p><img src="media/image68.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 17 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image69.jpeg" style="width:9.77083in;height:4.23264in" />ConvNet is a sequence of Convolutional Layers, interspersed with activation functions</p>
+<p>32 28 24</p>
+<p>….</p>
+</blockquote>
+<p><img src="media/image70.jpeg" style="width:1.07986in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>CONV,</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>CONV,</p>
+</blockquote></td>
+<td><blockquote>
+<p>CONV,</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>ReLU</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>ReLU</p>
+</blockquote></td>
+<td><blockquote>
+<p>ReLU</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>e.g. 6</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>e.g. 10</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>32</td>
+<td><blockquote>
+<p>5x5x3</p>
+</blockquote></td>
+<td>28</td>
+<td><blockquote>
+<p>5x5x<strong>6</strong></p>
+</blockquote></td>
+<td>24</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>filters</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>filters</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td>6</td>
+<td></td>
+<td>10</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image73.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 18 27 Jan 2016</p>
+<blockquote>
+<p><strong>Preview</strong></p>
+</blockquote>
+<p><em>[From recent Yann</em></p>
+<p><img src="media/image74.jpeg" style="width:9.80069in;height:4.97847in" /></p>
+<p><em>LeCun slides]</em></p>
+<p><img src="media/image75.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 19 27 Jan 2016</p>
+<blockquote>
+<p><strong>Preview</strong></p>
+</blockquote>
+<p><em>[From recent Yann LeCun slides]</em></p>
+<p><img src="media/image76.jpeg" style="width:10in;height:5.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 20 27 Jan 2016</p>
+<blockquote>
+<p>one filter =&gt;</p>
+<p>one activation map</p>
+</blockquote>
+<p><img src="media/image77.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>example 5x5 filters</p>
+</blockquote>
+<p><img src="media/image78.jpeg" style="width:9.55in;height:4.97083in" /></p>
+<blockquote>
+<p>(32 total)</p>
+</blockquote>
+<p>We call the layer convolutional because it is related to convolution of two signals:</p>
+<p><img src="media/image79.jpeg" style="height:0.49514in" /></p>
+<blockquote>
+<p>elementwise multiplication and sum of a filter and the signal (image)</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 21 27 Jan 2016</p>
+<p><img src="media/image80.jpeg" style="width:2.76597in;height:0.14097in" /></p>
+<p><img src="media/image81.jpeg" style="width:10in;height:5.37222in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 22 27 Jan 2016</p>
+<p><img src="media/image82.jpeg" style="width:9.1875in;height:4.72431in" /></p>
+<p>32x32x3 image</p>
+<p>5x5x3 filter</p>
+<p>32</p>
+</blockquote>
+<p><img src="media/image83.jpeg" style="width:2.5875in" /></p>
+<blockquote>
+<p>convolve (slide) over all</p>
+<p>spatial locations</p>
+<p>32</p>
+<p>3</p>
+</blockquote>
+<p><img src="media/image84.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7</p>
+<blockquote>
+<p><strong>activation map</strong></p>
+<p><strong>28</strong></p>
+<p><strong>28</strong></p>
+</blockquote>
+<p>1</p>
+<p>23 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image85.jpeg" style="width:9.1875in;height:0.68889in" /></p>
+</blockquote>
+<p><img src="media/image86.jpeg" style="width:0.62778in;height:0.52778in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image87.jpeg" style="width:9.37847in;height:3.0625in" /></p>
+<blockquote>
+<p>7x7 input (spatially)</p>
+<p>assume 3x3 filter</p>
+</blockquote>
+<p><img src="media/image88.jpeg" style="width:0.67014in;height:0.34028in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image89.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 24 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image90.jpeg" style="width:9.1875in;height:0.68889in" /></p>
+</blockquote>
+<p><img src="media/image91.jpeg" style="width:0.62778in;height:0.52778in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image92.jpeg" style="width:9.37847in;height:3.0625in" /></p>
+<blockquote>
+<p>7x7 input (spatially)</p>
+<p>assume 3x3 filter</p>
+</blockquote>
+<p><img src="media/image93.jpeg" style="width:0.67014in;height:0.34028in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image94.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 25 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image95.jpeg" style="width:9.1875in;height:0.68889in" /></p>
+</blockquote>
+<p><img src="media/image96.jpeg" style="width:0.62778in;height:0.52778in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image97.jpeg" style="width:9.37847in;height:3.0625in" /></p>
+<blockquote>
+<p>7x7 input (spatially)</p>
+<p>assume 3x3 filter</p>
+</blockquote>
+<p><img src="media/image98.jpeg" style="width:0.67014in;height:0.34028in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image99.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 26 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image100.jpeg" style="width:9.1875in;height:0.68889in" /></p>
+</blockquote>
+<p><img src="media/image101.jpeg" style="width:0.62778in;height:0.52778in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image102.jpeg" style="width:9.36944in;height:3.0625in" /></p>
+<blockquote>
+<p>7x7 input (spatially)</p>
+<p>assume 3x3 filter</p>
+</blockquote>
+<p><img src="media/image103.jpeg" style="width:0.67014in;height:0.34028in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image104.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 27 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image105.jpeg" style="width:9.1875in;height:0.68889in" /></p>
+</blockquote>
+<p><img src="media/image106.jpeg" style="width:0.62778in;height:0.52778in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image107.jpeg" style="width:9.36944in;height:3.0625in" /></p>
+<blockquote>
+<p>7x7 input (spatially)</p>
+<p>assume 3x3 filter</p>
+<p><strong>=&gt; 5x5 output</strong></p>
+</blockquote>
+<p><img src="media/image108.jpeg" style="width:0.67014in;height:0.34028in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image109.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 28 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image110.jpeg" style="width:9.1875in;height:0.68889in" /></p>
+</blockquote>
+<p><img src="media/image111.jpeg" style="width:0.62778in;height:0.52778in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image112.jpeg" style="width:5in;height:2.01181in" /></p>
+<blockquote>
+<p>7x7 input (spatially)</p>
+</blockquote>
+<p><img src="media/image113.jpeg" style="width:2.95833in;height:3.02292in" /></p>
+<blockquote>
+<p>assume 3x3 filter</p>
+<p>applied <strong>with stride 2</strong></p>
+</blockquote>
+<p><img src="media/image114.jpeg" style="width:0.67014in;height:0.34028in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image115.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 29 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image116.jpeg" style="width:9.1875in;height:0.68889in" /></p>
+</blockquote>
+<p><img src="media/image117.jpeg" style="width:0.62778in;height:0.52778in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image118.jpeg" style="width:5in;height:2.01181in" /></p>
+<blockquote>
+<p>7x7 input (spatially)</p>
+</blockquote>
+<p><img src="media/image119.jpeg" style="width:2.95833in;height:3.02292in" /></p>
+<blockquote>
+<p>assume 3x3 filter</p>
+<p>applied <strong>with stride 2</strong></p>
+</blockquote>
+<p><img src="media/image120.jpeg" style="width:0.67014in;height:0.34028in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image121.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 30 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image122.jpeg" style="width:9.1875in;height:0.68889in" /></p>
+</blockquote>
+<p><img src="media/image123.jpeg" style="width:0.62778in;height:0.52778in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image124.jpeg" style="width:5in;height:2.01181in" /></p>
+<blockquote>
+<p>7x7 input (spatially)</p>
+</blockquote>
+<p><img src="media/image125.jpeg" style="width:2.95in;height:3.02292in" /></p>
+<blockquote>
+<p>assume 3x3 filter</p>
+<p>applied <strong>with stride 2</strong></p>
+<p><strong>=&gt; 3x3 output!</strong></p>
+</blockquote>
+<p><img src="media/image126.jpeg" style="width:0.67014in;height:0.34028in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image127.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 31 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image128.jpeg" style="width:9.1875in;height:0.68889in" /></p>
+</blockquote>
+<p><img src="media/image129.jpeg" style="width:0.62778in;height:0.52778in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image130.jpeg" style="width:5in;height:2.01181in" /></p>
+<blockquote>
+<p>7x7 input (spatially)</p>
+</blockquote>
+<p><img src="media/image131.jpeg" style="width:2.95833in;height:3.02292in" /></p>
+<blockquote>
+<p>assume 3x3 filter</p>
+<p>applied <strong>with stride 3?</strong></p>
+</blockquote>
+<p><img src="media/image132.jpeg" style="width:0.67014in;height:0.34028in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image133.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 32 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image134.jpeg" style="width:9.1875in;height:0.68889in" /></p>
+</blockquote>
+<p><img src="media/image135.jpeg" style="width:0.62778in;height:0.52778in" /></p>
+<blockquote>
+<p>7</p>
+</blockquote>
+<p><img src="media/image136.jpeg" style="width:5in;height:3.11181in" /></p>
+<blockquote>
+<p>7x7 input (spatially)</p>
+</blockquote>
+<p><img src="media/image137.jpeg" style="width:2.95833in;height:3.02292in" /></p>
+<blockquote>
+<p>assume 3x3 filter</p>
+<p>applied <strong>with stride 3?</strong></p>
+</blockquote>
+<p><img src="media/image138.jpeg" style="width:0.67014in;height:0.34028in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>7</td>
+<td><blockquote>
+<p><strong>doesn’t fit!</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>cannot apply 3x3 filter on</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>7x7 input with stride 3.</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image139.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 33 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image140.jpeg" style="width:0.87431in;height:0.45833in" /></p>
+</blockquote>
+<p><img src="media/image141.jpeg" style="width:2.94792in" /></p>
+<blockquote>
+<p>Output size:</p>
+</blockquote>
+<p><img src="media/image143.jpeg" style="height:2.83819in" /></p>
+<blockquote>
+<p><strong>(N - F) / stride + 1</strong></p>
+<p>F</p>
+<p>e.g. N = 7, F = 3:</p>
+</blockquote>
+<p><img src="media/image145.jpeg" style="width:0.87431in;height:0.45833in" /></p>
+<blockquote>
+<p><sup>F</sup> <sup>N</sup> stride 1 =&gt; (7 - 3)/1 + 1 = 5</p>
+<p>stride 2 =&gt; (7 - 3)/2 + 1 = 3</p>
+<p>stride 3 =&gt; (7 - 3)/3 + 1 = 2.33 :\</p>
+</blockquote>
+<p><img src="media/image146.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 34 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image147.jpeg" style="width:9.725in;height:4.69653in" /></p>
+<p>0 0 0 0 0 0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+</blockquote>
+<p>e.g. input 7x7</p>
+<p><strong>3x3</strong> filter, applied with <strong>stride 1</strong></p>
+<p><strong>pad with 1 pixel</strong> border =&gt; what is the output?</p>
+<blockquote>
+<p>(recall:)</p>
+<p>(N - F) / stride + 1</p>
+</blockquote>
+<p><img src="media/image148.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 35 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image149.jpeg" style="width:9.725in;height:4.69653in" /></p>
+<p>0 0 0 0 0 0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+</blockquote>
+<p>e.g. input 7x7</p>
+<p><strong>3x3</strong> filter, applied with <strong>stride 1</strong></p>
+<p><strong>pad with 1 pixel</strong> border =&gt; what is the output?</p>
+<p><strong>7x7 output!</strong></p>
+<p><img src="media/image150.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 36 27 Jan 2016</p>
+<p><img src="media/image151.jpeg" style="width:9.725in;height:4.69653in" /></p>
+<blockquote>
+<p>In practice: Common to zero pad the border</p>
+<p>0 0 0 0 0 0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+<p>0</p>
+</blockquote>
+<p>e.g. input 7x7</p>
+<p><strong>3x3</strong> filter, applied with <strong>stride 1</strong></p>
+<p><strong>pad with 1 pixel</strong> border =&gt; what is the output?</p>
+<p><strong>7x7 output!</strong></p>
+<p>in general, common to see CONV layers with stride 1, filters of size FxF, and zero-padding with (F-1)/2. (will preserve size spatially)</p>
+<p>e.g. F = 3 =&gt; zero pad with 1</p>
+<blockquote>
+<p>F = 5 =&gt; zero pad with 2</p>
+<p>F = 7 =&gt; zero pad with 3</p>
+</blockquote>
+<p><img src="media/image152.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 37</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image153.jpeg" style="width:9.37639in;height:0.68542in" /></p>
+<blockquote>
+<p><strong>Remember back to…</strong></p>
+<p>E.g. 32x32 input convolved repeatedly with 5x5 filters shrinks volumes spatially! (32 -&gt; 28 -&gt; 24 ...). Shrinking too fast is not good, doesn’t work well.</p>
+</blockquote>
+<p><img src="media/image154.jpeg" style="width:8.47431in;height:3.19861in" /></p>
+<blockquote>
+<p>32 28 24</p>
+</blockquote>
+<p><img src="media/image155.jpeg" style="width:1.07361in;height:0.41458in" /></p>
+<blockquote>
+<p>….</p>
+</blockquote>
+<p><img src="media/image156.jpeg" style="width:1.07986in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>CONV,</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>CONV,</p>
+</blockquote></td>
+<td></td>
+<td>CONV,</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>ReLU</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>ReLU</p>
+</blockquote></td>
+<td></td>
+<td>ReLU</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>e.g. 6</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>e.g. 10</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>32</td>
+<td><blockquote>
+<p>5x5x3</p>
+</blockquote></td>
+<td>28</td>
+<td><blockquote>
+<p>5x5x<strong>6</strong></p>
+</blockquote></td>
+<td>24</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>filters</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>filters</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td></td>
+<td>6</td>
+<td></td>
+<td><blockquote>
+<p>10</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 38</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image159.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image160.jpeg" style="width:3.325in;height:0.83472in" /></p>
+<blockquote>
+<p>Examples time:</p>
+</blockquote>
+<p><img src="media/image163.jpeg" style="width:6.28472in;height:1.21319in" /></p>
+<blockquote>
+<p>Input volume: <strong>32x32x3</strong></p>
+<p>10 5x5 filters with stride 1, pad 2</p>
+<p>Output volume size: ?</p>
+</blockquote>
+<p><img src="media/image166.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 39</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image167.jpeg" style="width:9.67778in;height:2.50278in" /></p>
+<blockquote>
+<p>Examples time:</p>
+</blockquote>
+<p><img src="media/image168.jpeg" style="width:0.80556in" /></p>
+<blockquote>
+<p>Input volume: <strong>32x32x3</strong></p>
+<p>10 5x5 filters with stride 1, pad 2</p>
+<p>Output volume size:</p>
+<p>(32+2*2-5)/1+1 = 32 spatially, so <strong>32x32x10</strong></p>
+</blockquote>
+<p><img src="media/image170.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 40</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image171.jpeg" style="width:9.67778in;height:2.50278in" /></p>
+<blockquote>
+<p>Examples time:</p>
+</blockquote>
+<p><img src="media/image172.jpeg" style="width:0.80556in" /></p>
+<blockquote>
+<p>Input volume: <strong>32x32x3</strong></p>
+<p>10 5x5 filters with stride 1, pad 2</p>
+<p>Number of parameters in this layer?</p>
+</blockquote>
+<p><img src="media/image174.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 41</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image175.jpeg" style="width:9.67778in;height:2.50278in" /></p>
+<blockquote>
+<p>Examples time:</p>
+</blockquote>
+<p><img src="media/image176.jpeg" style="width:0.80556in" /></p>
+<blockquote>
+<p>Input volume: <strong>32x32x3</strong></p>
+<p>10 5x5 filters with stride 1, pad 2</p>
+<p>Number of parameters in this layer?</p>
+<p>each filter has 5*5*3 + 1 = 76 params (+1 for bias) =&gt; 76*10 = <strong>760</strong></p>
+</blockquote>
+<p><img src="media/image177.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 42</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image178.jpeg" style="width:9.60278in;height:5.08333in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 43</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image179.jpeg" style="width:9.00694in;height:4.53333in" /></p>
+<p>K = (powers of 2, e.g. 32, 64, 128, 512)</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>F = 3, S = 1, P = 1</p>
+</blockquote></li>
+<li><blockquote>
+<p>F = 5, S = 1, P = 2</p>
+</blockquote></li>
+<li><blockquote>
+<p>F = 5, S = 2, P = ? (whatever fits)</p>
+</blockquote></li>
+<li><blockquote>
+<p>F = 1, S = 1, P = 0</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image180.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 44 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image181.jpeg" style="width:9.32361in;height:4.32292in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>56</td>
+<td></td>
+<td><blockquote>
+<p>1x1 CONV</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>with 32 filters</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>(each filter has size</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>1x1x64, and performs a</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>64-dimensional dot</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>56</td>
+<td><blockquote>
+<p>product)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>64</td>
+<td><blockquote>
+<p>32</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image182.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>56</p>
+<p>56</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 45 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image184.jpeg" style="width:2.97639in;height:1.05139in" /></p>
+</blockquote>
+<p><img src="media/image185.jpeg" style="width:10in;height:5.45694in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 46 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image187.jpeg" style="width:2.97639in;height:1.05139in" /></p>
+</blockquote>
+<p><img src="media/image188.jpeg" style="width:10in;height:4.85417in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 47 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image190.jpeg" style="width:10in;height:5.60417in" /></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 48 27 Jan 2016</p>
+<p><img src="media/image191.jpeg" style="width:9.29306in;height:4.66944in" /></p>
+<blockquote>
+<p>The brain/neuron view of CONV Layer</p>
+<p>32x32x3 image</p>
+<p>5x5x3 filter</p>
+<p>32</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>1 number:</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>32</td>
+<td><blockquote>
+<p>the result of taking a dot product between</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><blockquote>
+<p>the filter and this part of the image</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>(i.e. 5*5*3 = 75-dimensional dot product)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 49</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image192.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image193.jpeg" style="width:9.39097in;height:4.66944in" /></p>
+<blockquote>
+<p>The brain/neuron view of CONV Layer</p>
+<p>32x32x3 image</p>
+<p>5x5x3 filter</p>
+<p>32</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>It’s just a neuron with local</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>1 number:</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>connectivity...</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>32</td>
+<td><blockquote>
+<p>the result of taking a dot product between</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><blockquote>
+<p>the filter and this part of the image</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>(i.e. 5*5*3 = 75-dimensional dot product)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 50</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image194.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image195.jpeg" style="width:9.80764in;height:4.44653in" /></p>
+<blockquote>
+<p>The brain/neuron view of CONV Layer</p>
+</blockquote>
+<p>32</p>
+<blockquote>
+<p>32</p>
+<p>3</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>28</td>
+<td><blockquote>
+<p>An activation map is a 28x28 sheet of neuron</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>outputs:</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li><blockquote>
+<p>Each is connected to a small region in the input</p>
+</blockquote></li>
+<li><blockquote>
+<p>All of them share parameters</p>
+</blockquote></li>
+</ol>
+<table>
+<tbody>
+<tr class="odd">
+<td>28</td>
+<td><blockquote>
+<p>“5x5 filter” -&gt; “5x5 receptive field for each neuron”</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image196.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 51</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image197.jpeg" style="width:9.80764in;height:4.57222in" /></p>
+<blockquote>
+<p>The brain/neuron view of CONV Layer</p>
+<p>32</p>
+<p>E.g. with 5 filters,</p>
+<p><sup>28</sup> CONV layer consists of</p>
+<p>neurons arranged in a 3D grid</p>
+<p>(28x28x5)</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>32</td>
+<td>28</td>
+<td><blockquote>
+<p>There will be 5 different</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>neurons all looking at the same</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>5</td>
+<td><blockquote>
+<p>region in the input volume</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</td>
+<td><blockquote>
+<p>Lecture 7 52</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image198.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p><img src="media/image199.jpeg" style="width:4.32847in;height:0.14097in" /></p>
+<p><img src="media/image200.jpeg" style="width:10in;height:5.37222in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 53 27 Jan 2016</p>
+<p><img src="media/image201.jpeg" style="width:9.66319in;height:1.39236in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>makes the representations smaller and more manageable</p>
+</blockquote></li>
+<li><blockquote>
+<p>operates over each activation map independently:</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image202.jpeg" style="width:10in;height:4.15556in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 54 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image203.jpeg" style="width:4.69444in;height:0.75208in" /></p>
+</blockquote>
+<p><img src="media/image204.jpeg" style="width:2.89028in;height:3.23542in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Single depth slice</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>x</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image205.jpeg" style="height:2.58542in" /></p>
+<p>max pool with 2x2 filters and stride 2</p>
+<p><img src="media/image209.jpeg" style="width:2.22292in" /></p>
+<ul>
+<li><p>8</p></li>
+</ul>
+<blockquote>
+<p>3 4</p>
+</blockquote>
+<p><img src="media/image211.jpeg" style="width:1.35278in;height:1.35278in" /></p>
+<blockquote>
+<p>y</p>
+</blockquote>
+<p><img src="media/image212.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 55 27 Jan 2016</p>
+<p><img src="media/image213.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 56</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image215.jpeg" style="width:3.34097in;height:3.45347in" /></p>
+</blockquote>
+<p><img src="media/image216.jpeg" style="width:5.87153in;height:2.61111in" /></p>
+<blockquote>
+<p>F = 2, S = 2</p>
+<p>F = 3, S = 2</p>
+</blockquote>
+<p><img src="media/image217.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 57 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image218.jpeg" style="width:9.66319in;height:1.39236in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Contains neurons that connect to the entire input volume, as in ordinary Neural Networks</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image219.jpeg" style="width:10in;height:4.0625in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 58 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image220.jpeg" style="width:8.92847in;height:2.59444in" /></p>
+<p><a href="http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html"><span class="underline">http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html</span></a></p>
+</blockquote>
+<p><img src="media/image221.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 59 27 Jan 2016</p>
+<p><img src="media/image222.jpeg" style="width:8.62778in;height:1.14306in" /></p>
+<blockquote>
+<p>[LeCun et al., 1998]</p>
+</blockquote>
+<p><img src="media/image223.jpeg" style="width:9.48264in;height:3.02153in" /></p>
+<blockquote>
+<p>Conv filters were 5x5, applied at stride 1</p>
+<p>Subsampling (Pooling) layers were 2x2 applied at stride 2 i.e. architecture is [CONV-POOL-CONV-POOL-CONV-FC]</p>
+</blockquote>
+<p><img src="media/image224.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 60 27 Jan 2016</p>
+<p><img src="media/image225.jpeg" style="width:9.76597in;height:1.90972in" /></p>
+<p><em>[Krizhevsky et al. 2012]</em></p>
+</blockquote>
+<p><img src="media/image226.jpeg" style="width:9.24514in;height:1.17986in" /></p>
+<blockquote>
+<p>Input: 227x227x3 images</p>
+<p><strong>First layer</strong> (CONV1): 96 11x11 filters applied at stride 4 =&gt;</p>
+<p>Q: what is the output volume size? Hint: (227-11)/4+1 = 55</p>
+</blockquote>
+<p><img src="media/image227.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 61 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image228.jpeg" style="width:9.76597in;height:1.90972in" /></p>
+<p><em>[Krizhevsky et al. 2012]</em></p>
+</blockquote>
+<p><img src="media/image229.jpeg" style="width:9.24514in;height:1.17986in" /></p>
+<blockquote>
+<p>Input: 227x227x3 images</p>
+<p><strong>First layer</strong> (CONV1): 96 11x11 filters applied at stride 4 =&gt;</p>
+<p>Output volume <strong>[55x55x96]</strong></p>
+<p>Q: What is the total number of parameters in this layer?</p>
+</blockquote>
+<p><img src="media/image230.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 62 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image231.jpeg" style="width:9.76597in;height:1.90972in" /></p>
+<p><em>[Krizhevsky et al. 2012]</em></p>
+</blockquote>
+<p><img src="media/image232.jpeg" style="width:9.24514in;height:1.17986in" /></p>
+<blockquote>
+<p>Input: 227x227x3 images</p>
+<p><strong>First layer</strong> (CONV1): 96 11x11 filters applied at stride 4 =&gt;</p>
+<p>Output volume <strong>[55x55x96]</strong></p>
+<p>Parameters: (11*11*3)*96 = <strong>35K</strong></p>
+</blockquote>
+<p><img src="media/image233.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 63 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image234.jpeg" style="width:9.76597in;height:1.90972in" /></p>
+<p><em>[Krizhevsky et al. 2012]</em></p>
+</blockquote>
+<p><img src="media/image235.jpeg" style="width:9.24514in;height:1.17986in" /></p>
+<blockquote>
+<p>Input: 227x227x3 images</p>
+<p>After CONV1: 55x55x96</p>
+<p><strong>Second layer</strong> (POOL1): 3x3 filters applied at stride 2</p>
+<p>Q: what is the output volume size? Hint: (55-3)/2+1 = 27</p>
+</blockquote>
+<p><img src="media/image236.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 64 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image237.jpeg" style="width:9.76597in;height:1.90972in" /></p>
+<p><em>[Krizhevsky et al. 2012]</em></p>
+</blockquote>
+<p><img src="media/image238.jpeg" style="width:9.24514in;height:1.17986in" /></p>
+<blockquote>
+<p>Input: 227x227x3 images</p>
+<p>After CONV1: 55x55x96</p>
+<p><strong>Second layer</strong> (POOL1): 3x3 filters applied at stride 2</p>
+<p>Output volume: 27x27x96</p>
+<p>Q: what is the number of parameters in this layer?</p>
+</blockquote>
+<p><img src="media/image239.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 65 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image240.jpeg" style="width:9.76597in;height:1.90972in" /></p>
+<p><em>[Krizhevsky et al. 2012]</em></p>
+</blockquote>
+<p><img src="media/image241.jpeg" style="width:9.24514in;height:1.17986in" /></p>
+<blockquote>
+<p>Input: 227x227x3 images</p>
+<p>After CONV1: 55x55x96</p>
+<p><strong>Second layer</strong> (POOL1): 3x3 filters applied at stride 2</p>
+<p>Output volume: 27x27x96</p>
+<p>Parameters: 0!</p>
+</blockquote>
+<p><img src="media/image242.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 66 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image243.jpeg" style="width:9.76597in;height:1.90972in" /></p>
+<p><em>[Krizhevsky et al. 2012]</em></p>
+</blockquote>
+<p><img src="media/image244.jpeg" style="width:9.24514in;height:1.17986in" /></p>
+<blockquote>
+<p>Input: 227x227x3 images</p>
+<p>After CONV1: 55x55x96</p>
+<p>After POOL1: 27x27x96</p>
+<p>...</p>
+</blockquote>
+<p><img src="media/image245.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 67 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image246.jpeg" style="width:9.83056in;height:2.45139in" /></p>
+<p><em>[Krizhevsky et al. 2012]</em></p>
+<p>Full (simplified) AlexNet architecture:</p>
+<p>[227x227x3] INPUT</p>
+<p>[55x55x96] CONV1: 96 11x11 filters at stride 4, pad 0</p>
+<p>[27x27x96] MAX POOL1: 3x3 filters at stride 2</p>
+<p>[27x27x96] NORM1: Normalization layer</p>
+<p>[27x27x256] CONV2: 256 5x5 filters at stride 1, pad 2</p>
+<p>[13x13x256] MAX POOL2: 3x3 filters at stride 2</p>
+<p>[13x13x256] NORM2: Normalization layer</p>
+<p>[13x13x384] CONV3: 384 3x3 filters at stride 1, pad 1</p>
+<p>[13x13x384] CONV4: 384 3x3 filters at stride 1, pad 1</p>
+<p>[13x13x256] CONV5: 256 3x3 filters at stride 1, pad 1</p>
+<p>[6x6x256] MAX POOL3: 3x3 filters at stride 2</p>
+<p>[4096] FC6: 4096 neurons</p>
+<p>[4096] FC7: 4096 neurons</p>
+<p>[1000] FC8: 1000 neurons (class scores)</p>
+</blockquote>
+<p><img src="media/image247.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 68 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image248.jpeg" style="width:9.91181in;height:4.4125in" /></p>
+<p><em>[Krizhevsky et al. 2012]</em></p>
+<p>Full (simplified) AlexNet architecture:</p>
+<p>[227x227x3] INPUT</p>
+<p>[55x55x96] CONV1: 96 11x11 filters at stride 4, pad 0</p>
+<p>[27x27x96] MAX POOL1: 3x3 filters at stride 2</p>
+<p>[27x27x96] NORM1: Normalization layer</p>
+<p>[27x27x256] CONV2: 256 5x5 filters at stride 1, pad 2</p>
+<p>[13x13x256] MAX POOL2: 3x3 filters at stride 2</p>
+<p>[13x13x256] NORM2: Normalization layer</p>
+<p>[13x13x384] CONV3: 384 3x3 filters at stride 1, pad 1</p>
+<p>[13x13x384] CONV4: 384 3x3 filters at stride 1, pad 1</p>
+<p>[13x13x256] CONV5: 256 3x3 filters at stride 1, pad 1</p>
+<p>[6x6x256] MAX POOL3: 3x3 filters at stride 2</p>
+<p>[4096] FC6: 4096 neurons</p>
+<p>[4096] FC7: 4096 neurons</p>
+<p>[1000] FC8: 1000 neurons (class scores)</p>
+</blockquote>
+<p><img src="media/image249.jpeg" style="width:10in;height:0.58889in" /></p>
+<p><strong>Details/Retrospectives:</strong></p>
+<ul>
+<li><p>first use of ReLU</p></li>
+<li><p>used Norm layers (not common anymore)</p></li>
+<li><p>heavy data augmentation</p></li>
+<li><p>dropout 0.5</p></li>
+<li><p>batch size 128</p></li>
+<li><p>SGD Momentum 0.9</p></li>
+<li><p>Learning rate 1e-2, reduced by 10 manually when val accuracy plateaus</p></li>
+<li><p>L2 weight decay 5e-4</p></li>
+<li><p>7 CNN ensemble: 18.2% -&gt; 15.4%</p></li>
+</ul>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 69 27 Jan 2016</p>
+<p><img src="media/image250.jpeg" style="width:9.76875in;height:3.03681in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Case Study: ZFNet</td>
+<td><blockquote>
+<p><em>[Zeiler and Fergus, 2013]</em></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image251.jpeg" style="width:9.50625in;height:1.45903in" /></p>
+<blockquote>
+<p>AlexNet but:</p>
+<p>CONV1: change from (11x11 stride 4) to (7x7 stride 2)</p>
+<p>CONV3,4,5: instead of 384, 384, 256 filters use 512, 1024, 512</p>
+<p>ImageNet top 5 error: 15.4% -&gt; 14.8%</p>
+</blockquote>
+<p><img src="media/image252.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 70</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image253.jpeg" style="width:9.82708in;height:5.625in" /></p>
+<blockquote>
+<p>Case Study: VGGNet</p>
+<p><em>[Simonyan and Zisserman, 2014]</em></p>
+<p>Only 3x3 CONV stride 1, pad 1 and 2x2 MAX POOL stride 2</p>
+<p>best model</p>
+<p>11.2% top 5 error in ILSVRC 2013 -&gt;</p>
+<p>7.3% top 5 error</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 71</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image254.jpeg" style="width:9.71944in;height:4.96806in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>INPUT: [224x224x3]</td>
+<td><blockquote>
+<p>memory: 224*224*3=150K</p>
+</blockquote></td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td>(not counting biases)</td>
+</tr>
+<tr class="even">
+<td>CONV3-64: [224x224x64] memory: 224*224*64=3.2M</td>
+<td><blockquote>
+<p>params: (3*3*3)*64 = 1,728</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-64: [224x224x64] memory: 224*224*64=3.2M</td>
+<td><blockquote>
+<p>params: (3*3*64)*64 = 36,864</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>POOL2: [112x112x64] memory: 112*112*64=800K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-128: [112x112x128] memory: 112*112*128=1.6M</td>
+<td>params: (3*3*64)*128 = 73,728</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-128: [112x112x128] memory: 112*112*128=1.6M</td>
+<td>params: (3*3*128)*128 = 147,456</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [56x56x128] memory: 56*56*128=400K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-256: [56x56x256] memory: 56*56*256=800K</td>
+<td><blockquote>
+<p>params: (3*3*128)*256 = 294,912</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-256: [56x56x256] memory: 56*56*256=800K</td>
+<td><blockquote>
+<p>params: (3*3*256)*256 = 589,824</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-256: [56x56x256] memory: 56*56*256=800K</td>
+<td><blockquote>
+<p>params: (3*3*256)*256 = 589,824</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [28x28x256] memory: 28*28*256=200K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [28x28x512] memory: 28*28*512=400K</td>
+<td><blockquote>
+<p>params: (3*3*256)*512 = 1,179,648</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-512: [28x28x512] memory: 28*28*512=400K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [28x28x512] memory: 28*28*512=400K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-512: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [7x7x512] memory: 7*7*512=25K params: 0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>FC: [1x1x4096] memory: 4096 params: 7*7*512*4096 = 102,760,448</p>
+<p>FC: [1x1x4096] memory: 4096 params: 4096*4096 = 16,777,216</p>
+<p>FC: [1x1x1000] memory: 1000 params: 4096*1000 = 4,096,000</p>
+</blockquote>
+<p><img src="media/image255.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 72 27 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>INPUT: [224x224x3]</td>
+<td><blockquote>
+<p>memory: 224*224*3=150K</p>
+</blockquote></td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td>(not counting biases)</td>
+</tr>
+<tr class="even">
+<td>CONV3-64: [224x224x64] memory: 224*224*64=3.2M</td>
+<td><blockquote>
+<p>params: (3*3*3)*64 = 1,728</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-64: [224x224x64] memory: 224*224*64=3.2M</td>
+<td><blockquote>
+<p>params: (3*3*64)*64 = 36,864</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>POOL2: [112x112x64] memory: 112*112*64=800K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-128: [112x112x128] memory: 112*112*128=1.6M</td>
+<td>params: (3*3*64)*128 = 73,728</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-128: [112x112x128] memory: 112*112*128=1.6M</td>
+<td>params: (3*3*128)*128 = 147,456</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [56x56x128] memory: 56*56*128=400K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-256: [56x56x256] memory: 56*56*256=800K</td>
+<td><blockquote>
+<p>params: (3*3*128)*256 = 294,912</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-256: [56x56x256] memory: 56*56*256=800K</td>
+<td><blockquote>
+<p>params: (3*3*256)*256 = 589,824</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-256: [56x56x256] memory: 56*56*256=800K</td>
+<td><blockquote>
+<p>params: (3*3*256)*256 = 589,824</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [28x28x256] memory: 28*28*256=200K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [28x28x512] memory: 28*28*512=400K</td>
+<td><blockquote>
+<p>params: (3*3*256)*512 = 1,179,648</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-512: [28x28x512] memory: 28*28*512=400K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [28x28x512] memory: 28*28*512=400K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-512: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [7x7x512] memory: 7*7*512=25K params: 0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image256.jpeg" style="width:9.71944in;height:4.96806in" />memory: 4096 params: 7*7*512*4096 = 102,760,448</p>
+<p>FC: [1x1x4096] memory: 4096 params: 4096*4096 = 16,777,216</p>
+<p>FC: [1x1x1000] memory: 1000 params: 4096*1000 = 4,096,000</p>
+<p>TOTAL memory: 24M * 4 bytes ~= 93MB / image (only forward! ~*2 for bwd)</p>
+<p>TOTAL params: 138M parameters</p>
+</blockquote>
+<p><img src="media/image257.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 73 27 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>INPUT: [224x224x3]</td>
+<td><blockquote>
+<p>memory: 224*224*3=150K</p>
+</blockquote></td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td>(not counting biases)</td>
+</tr>
+<tr class="even">
+<td>CONV3-64: [224x224x64] memory: <strong>224*224*64=3.2M</strong></td>
+<td><blockquote>
+<p>params: (3*3*3)*64 = 1,728</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-64: [224x224x64] memory: <strong>224*224*64=3.2M</strong></td>
+<td><blockquote>
+<p>params: (3*3*64)*64 = 36,864</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>POOL2: [112x112x64] memory: 112*112*64=800K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-128: [112x112x128] memory: 112*112*128=1.6M</td>
+<td>params: (3*3*64)*128 = 73,728</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-128: [112x112x128] memory: 112*112*128=1.6M</td>
+<td>params: (3*3*128)*128 = 147,456</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [56x56x128] memory: 56*56*128=400K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-256: [56x56x256] memory: 56*56*256=800K</td>
+<td><blockquote>
+<p>params: (3*3*128)*256 = 294,912</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-256: [56x56x256] memory: 56*56*256=800K</td>
+<td><blockquote>
+<p>params: (3*3*256)*256 = 589,824</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-256: [56x56x256] memory: 56*56*256=800K</td>
+<td><blockquote>
+<p>params: (3*3*256)*256 = 589,824</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [28x28x256] memory: 28*28*256=200K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [28x28x512] memory: 28*28*512=400K</td>
+<td><blockquote>
+<p>params: (3*3*256)*512 = 1,179,648</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-512: [28x28x512] memory: 28*28*512=400K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [28x28x512] memory: 28*28*512=400K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: 0</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>CONV3-512: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>CONV3-512: [14x14x512] memory: 14*14*512=100K</td>
+<td><blockquote>
+<p>params: (3*3*512)*512 = 2,359,296</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>POOL2: [7x7x512] memory: 7*7*512=25K params: 0</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image258.jpeg" style="width:9.8875in;height:4.96806in" />memory: 4096 params: 7*7*512*4096 = <strong>102,760,448</strong></p>
+<p>FC: [1x1x4096] memory: 4096 params: 4096*4096 = 16,777,216</p>
+<p>FC: [1x1x1000] memory: 1000 params: 4096*1000 = 4,096,000</p>
+<p>TOTAL memory: 24M * 4 bytes ~= 93MB / image (only forward! ~*2 for bwd)</p>
+<p>TOTAL params: 138M parameters</p>
+</blockquote>
+<p><img src="media/image259.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Note:</p>
+<p>Most memory is in early CONV</p>
+<p>Most params are in late FC</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 74 27 Jan 2016</p>
+<p><img src="media/image260.jpeg" style="width:10in;height:5.55208in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Case Study: GoogLeNet</td>
+<td><blockquote>
+<p><em>[Szegedy et al., 2014]</em></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Inception module</p>
+<p>ILSVRC 2014 winner (6.7% top 5 error)</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 75</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image261.jpeg" style="width:9.84028in;height:4.61806in" /></p>
+<p>Fun features:</p>
+<p>- Only 5 million params! (Removes FC layers completely)</p>
+<p><strong>Compared to AlexNet:</strong></p>
+<p>- 12X less params</p>
+<p>- 2x more compute - 6.67% (vs. 16.4%)</p>
+</blockquote>
+<p><img src="media/image262.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 76 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image263.jpeg" style="width:8.84792in;height:4.43194in" /><em>[He et al., 2015]</em></p>
+</blockquote>
+<p>ILSVRC 2015 winner (3.6% top 5 error)</p>
+<p><img src="media/image264.jpeg" style="width:8.675in;height:0.45833in" /></p>
+<blockquote>
+<p>Slide from Kaiming He’s recent presentation <a href="https://www.youtube.com/watch?v=1PGLj-uKT1w"><span class="underline">https://www.youtube.com/watch?v=1PGLj-uKT1w</span></a></p>
+</blockquote>
+<p><img src="media/image265.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 77 27 Jan 2016</p>
+<p><img src="media/image266.jpeg" style="width:8.90972in;height:4.82569in" /></p>
+<blockquote>
+<p>(slide from Kaiming He’s recent presentation)</p>
+</blockquote>
+<p><img src="media/image267.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 78 27 Jan 2016</p>
+<p><img src="media/image268.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 7 79</p>
+</blockquote></td>
+<td><blockquote>
+<p>27 Jan 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image270.jpeg" style="width:9.13681in;height:4.92431in" /><em>[He et al., 2015]</em></p>
+<p>ILSVRC 2015 winner (3.6% top 5 error)</p>
+<p>2-3 weeks of training on 8 GPU machine</p>
+<p>at runtime: faster than a VGGNet! (even though it has 8x more layers)</p>
+<p>(slide from Kaiming He’s recent presentation)</p>
+</blockquote>
+<p><img src="media/image271.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 80 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image272.jpeg" style="width:9.87014in;height:4.81389in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>ResNet</td>
+<td><blockquote>
+<p>224x224x3</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>spatial dimension</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><em>[He et al., 2015]</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>only 56x56!</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image273.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 81 27 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Case Study: ResNet</td>
+<td><blockquote>
+<p><em>[He et al., 2015]</em></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image274.jpeg" style="width:8.675in;height:1.11181in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 82 27 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Case Study: ResNet</td>
+<td><blockquote>
+<p><em>[He et al., 2015]</em></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image277.jpeg" style="width:9.63958in;height:4.45833in" /></p>
+<ul>
+<li><blockquote>
+<p>Batch Normalization after every CONV layer</p>
+</blockquote></li>
+<li><blockquote>
+<p>Xavier/2 initialization from He et al.</p>
+</blockquote></li>
+<li><blockquote>
+<p>SGD + Momentum (0.9)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Learning rate: 0.1, divided by 10 when validation error plateaus</p>
+</blockquote></li>
+<li><blockquote>
+<p>Mini-batch size 256</p>
+</blockquote></li>
+<li><blockquote>
+<p>Weight decay of 1e-5</p>
+</blockquote></li>
+<li><blockquote>
+<p>No dropout used</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image278.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 83 27 Jan 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Case Study: ResNet</td>
+<td><blockquote>
+<p><em>[He et al., 2015]</em></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image279.jpeg" style="width:8.675in;height:4.10486in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 84 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image281.jpeg" style="width:8.675in;height:1.11181in" /> <em>[He et al., 2015]</em></p>
+</blockquote>
+<p><img src="media/image282.jpeg" style="width:7.83264in;height:3.23472in" /></p>
+<blockquote>
+<p>(this trick is also used in GoogLeNet)</p>
+</blockquote>
+<p><img src="media/image283.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 85 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image284.jpeg" style="width:10in;height:5.625in" /><em>[He et al., 2015]</em></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 86 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image285.jpeg" style="width:8.675in;height:1.11181in" /></p>
+</blockquote>
+<p><img src="media/image286.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 87 27 Jan 2016</p>
+<p><img src="media/image288.jpeg" style="width:9.52778in;height:4.73889in" /></p>
+<blockquote>
+<p><strong>policy network:</strong></p>
+<p>[19x19x48] Input</p>
+<p>CONV1: 192 5x5 filters , stride 1, pad 2 =&gt; [19x19x192]</p>
+<p>CONV2..12: 192 3x3 filters, stride 1, pad 1 =&gt; [19x19x192]</p>
+<p>CONV: 1 1x1 filter, stride 1, pad 0 =&gt; [19x19] <em>(probability map of promising moves)</em></p>
+</blockquote>
+<p><img src="media/image289.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 88 27 Jan 2016</p>
+<blockquote>
+<p><img src="media/image290.jpeg" style="width:9.26458in;height:4.40139in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>ConvNets stack CONV,POOL,FC layers</p>
+</blockquote></li>
+<li><blockquote>
+<p>Trend towards smaller filters and deeper architectures</p>
+</blockquote></li>
+<li><blockquote>
+<p>Trend towards getting rid of POOL/FC layers (just CONV)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Typical architectures look like</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><strong>[(CONV-RELU)*N-POOL?]*M-(FC-RELU)*K,SOFTMAX</strong> where N is usually up to ~5, M is large, 0 &lt;= K &lt;= 2.</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>but recent advances such as ResNet/GoogLeNet challenge this paradigm</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image291.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 7 89 27 Jan 2016</p>

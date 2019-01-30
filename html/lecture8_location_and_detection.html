@@ -1,0 +1,5610 @@
+<p><img src="media/image1.jpeg" style="width:9.73125in;height:1.92431in" /></p>
+<p>Spatial Localization and</p>
+<p>Detection</p>
+<p><img src="media/image2.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 1 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image3.jpeg" style="width:9.7625in;height:4.21528in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Project Proposals were due on Saturday</p>
+</blockquote></li>
+<li><blockquote>
+<p>Homework 2 due Friday 2/5</p>
+</blockquote></li>
+<li><blockquote>
+<p>Homework 1 grades out this week</p>
+</blockquote></li>
+<li><blockquote>
+<p>Midterm will be in-class on Wednesday 2/10</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image4.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 2 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image5.jpeg" style="width:8.68958in;height:4.77083in" /></p>
+<p>32</p>
+<p>32</p>
+<p>3</p>
+</blockquote>
+<p><img src="media/image6.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 3 1 Feb 2016</p>
+<blockquote>
+<p><strong>Pooling</strong></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><strong>6</strong></td>
+<td>7</td>
+<td><strong>8</strong></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>3</strong></td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td><strong>4</strong></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image7.jpeg" style="height:1.33333in" /></p>
+<blockquote>
+<p>2x2 max</p>
+<p>pooling</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>8</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>3 4</p>
+</blockquote>
+<p><img src="media/image9.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 4 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image10.jpeg" style="width:7.47431in;height:1.96319in" /></p>
+<p>LeNet</p>
+<p>(1998)</p>
+</blockquote>
+<p><img src="media/image11.jpeg" style="width:6.38472in;height:1.40486in" /></p>
+<blockquote>
+<p>AlexNet</p>
+<p>(2012)</p>
+</blockquote>
+<p><img src="media/image12.jpeg" style="width:1.34236in;height:1.0625in" /></p>
+<blockquote>
+<p>ZFNet</p>
+</blockquote>
+<p><img src="media/image13.jpeg" style="width:4.89375in;height:1.175in" /></p>
+<blockquote>
+<p>(2013)</p>
+</blockquote>
+<p><img src="media/image14.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 5 1 Feb 2016</p>
+<p><img src="media/image15.jpeg" style="width:9.62153in;height:4.93403in" /></p>
+<blockquote>
+<p><strong>Case Studies</strong></p>
+<p><sup>VGG</sup> GoogLeNet ResNet</p>
+<p><sup>(2014)</sup> (2014) (2015)</p>
+</blockquote>
+<p><img src="media/image16.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 6 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image17.jpeg" style="width:10in;height:5.625in" /></p>
+</blockquote>
+<p>Results from Faster R-CNN, Ren et al 2015</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 7 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image18.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image19.jpeg" style="width:9.58681in;height:2.80903in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Classification</strong></td>
+<td><blockquote>
+<p><strong>Classification</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Object Detection</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Instance</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>+ Localization</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p><strong>Segmentation</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image20.jpeg" style="width:9.58264in;height:0.45833in" /></p>
+<blockquote>
+<p>CAT CAT CAT, DOG, DUCK CAT, DOG, DUCK</p>
+</blockquote>
+<p><img src="media/image21.jpeg" style="width:10in;height:1.44861in" /></p>
+<blockquote>
+<p>Single object Multiple objects</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 8 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image22.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image23.jpeg" style="width:9.58681in;height:2.80903in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Classification</strong></td>
+<td><blockquote>
+<p><strong>Classification</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Object Detection</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Instance</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>+ Localization</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p><strong>Segmentation</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image24.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 9 1 Feb 2016</p>
+<p><img src="media/image25.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+<blockquote>
+<p>Classification + Localization: Task</p>
+</blockquote>
+<p><img src="media/image26.jpeg" style="width:9.625in;height:4.01806in" /></p>
+<blockquote>
+<p><strong>Classification</strong>: C classes</p>
+<p><strong>Input:</strong> Image</p>
+<p><strong>Output:</strong> Class label</p>
+<p><strong>Evaluation metric:</strong> Accuracy</p>
+<p><strong>Localization</strong>:</p>
+<p><strong>Input:</strong> Image</p>
+<p><strong>Output</strong>: Box in the image (x, y, w, h)</p>
+<p><strong>Evaluation metric:</strong> Intersection over Union</p>
+<p><strong>Classification + Localization</strong>: Do both</p>
+</blockquote>
+<p><img src="media/image27.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p>CAT</p>
+<p><img src="media/image28.jpeg" style="width:1.00486in" /></p>
+<blockquote>
+<p><img src="media/image29.jpeg" style="width:1.02153in;height:0.22847in" /> (x, y, w, h)</p>
+</blockquote>
+<p><img src="media/image30.jpeg" style="width:1.00486in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 8 10</p>
+</blockquote></td>
+<td><blockquote>
+<p>1 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image31.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image32.jpeg" style="width:10in;height:4.78958in" /></p>
+<blockquote>
+<p>1000 classes (same as classification)</p>
+<p>Each image has 1 class, at least one bounding box</p>
+<p>~800 training images per class</p>
+<p>Algorithm produces 5 (class, box) guesses</p>
+<p>Example is correct if at least one one guess has correct class AND bounding box at least 0.5 intersection over union (IoU)</p>
+</blockquote>
+<p>Krizhevsky et. al. 2012</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 11 1 Feb 2016</p>
+</blockquote>
+<p><img src="media/image33.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+<blockquote>
+<p>Idea #1: Localization as Regression</p>
+</blockquote>
+<p><img src="media/image34.jpeg" style="width:2.22292in;height:0.42222in" /></p>
+<blockquote>
+<p><strong>Input</strong>: image</p>
+</blockquote>
+<p><img src="media/image35.jpeg" style="width:7.56111in;height:1.84931in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Neural Net</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Output</strong>:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Box coordinates</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>(4 numbers)</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image36.jpeg" style="width:1.39444in" /></p>
+<blockquote>
+<p><strong>Correct output</strong>:</p>
+<p>box coordinates</p>
+</blockquote>
+<p><img src="media/image39.jpeg" style="width:2.91111in;height:0.82639in" /></p>
+<blockquote>
+<p>Only one object, (4 numbers)</p>
+<p>simpler than detection</p>
+</blockquote>
+<p><img src="media/image40.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<blockquote>
+<p><strong>Loss</strong>:</p>
+</blockquote>
+<p><img src="media/image41.jpeg" style="width:1.78125in;height:0.87083in" /></p>
+<p>L2 distance</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 8 12</p>
+</blockquote></td>
+<td><blockquote>
+<p>1 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image42.jpeg" style="width:9.77361in;height:1.60417in" /></p>
+<p><strong>Step 1</strong>: Train (or download) a classification model (AlexNet, VGG, GoogLeNet)</p>
+</blockquote>
+<p><img src="media/image43.jpeg" style="width:7.97778in;height:2.44306in" /></p>
+<blockquote>
+<p>Convolution</p>
+<p><sub>and Pooling</sub> Fully-connected</p>
+<p>layers</p>
+<p>Softmax loss</p>
+</blockquote>
+<p><img src="media/image44.jpeg" style="width:0.32847in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Final conv</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Class scores</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Image</td>
+<td><blockquote>
+<p>feature map</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image49.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 13 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image50.jpeg" style="width:9.77361in;height:4.82431in" /></p>
+<p><strong>Step 2</strong>: Attach new fully-connected “regression head” to the network</p>
+<p>Convolution</p>
+<p>and Pooling</p>
+</blockquote>
+<p><img src="media/image51.jpeg" style="width:0.32847in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Final conv</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Image</td>
+<td><blockquote>
+<p>feature map</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Fully-connected</p>
+<p>layers</p>
+<blockquote>
+<p>“Classification head”</p>
+</blockquote>
+<p><img src="media/image53.jpeg" style="width:0.25278in" /></p>
+<blockquote>
+<p>Class scores</p>
+</blockquote>
+<p>Fully-connected</p>
+<p>layers</p>
+<p>“Regression head”</p>
+<p><img src="media/image54.jpeg" style="width:0.25278in" /></p>
+<blockquote>
+<p>Box coordinates</p>
+</blockquote>
+<p><img src="media/image55.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 14 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image56.jpeg" style="width:9.77361in;height:3.00764in" /></p>
+<p><strong>Step 3</strong>: Train the regression head only with SGD and L2 loss</p>
+<p>Fully-connected</p>
+<p>layers</p>
+</blockquote>
+<p><img src="media/image57.jpeg" style="width:0.25278in" /></p>
+<blockquote>
+<p>Convolution</p>
+<p>and Pooling</p>
+</blockquote>
+<p><img src="media/image58.jpeg" style="width:7.66042in;height:1.79722in" /></p>
+<p>Class scores</p>
+<blockquote>
+<p>Fully-connected</p>
+<p>layers</p>
+</blockquote>
+<p><img src="media/image59.jpeg" style="width:0.32847in" /></p>
+<p>L2 loss</p>
+<p><img src="media/image61.jpeg" style="width:0.25278in" /></p>
+<blockquote>
+<p>Final conv</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Image</td>
+<td><blockquote>
+<p>feature map</p>
+</blockquote></td>
+<td><blockquote>
+<p>Box coordinates</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image63.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 15 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image64.jpeg" style="width:9.77361in;height:1.65556in" /></p>
+<p><strong>Step 4</strong>: At test time use both heads</p>
+</blockquote>
+<p><img src="media/image65.jpeg" style="width:6.95069in;height:3.04167in" /></p>
+<blockquote>
+<p>Convolution</p>
+<p>and Pooling</p>
+</blockquote>
+<p><img src="media/image66.jpeg" style="width:0.32847in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Final conv</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Image</td>
+<td><blockquote>
+<p>feature map</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Fully-connected</p>
+<p>layers</p>
+<p><img src="media/image68.jpeg" style="width:0.25278in" /></p>
+<blockquote>
+<p>Class scores</p>
+</blockquote>
+<p>Fully-connected</p>
+<p>layers</p>
+<p><img src="media/image69.jpeg" style="width:0.25278in" /></p>
+<p>Box coordinates</p>
+<p><img src="media/image70.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 16 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image71.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image72.jpeg" style="width:9.44653in;height:3.82361in" /></p>
+<blockquote>
+<p>Assume classification</p>
+<p>over C classes:</p>
+<p>Convolution</p>
+</blockquote>
+<p>and Pooling</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Fully-connected</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>layers</td>
+<td><blockquote>
+<p><strong>Classification head</strong>:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>C numbers</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>(one per class)</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Class</p>
+</blockquote></td>
+<td></td>
+<td>scores</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image73.jpeg" style="width:0.25278in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Final conv</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Image</td>
+<td><blockquote>
+<p>feature map</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image74.jpeg" style="width:0.32847in" /></p>
+<p>Fully-connected</p>
+<p>layers</p>
+<p><img src="media/image76.jpeg" style="width:0.25278in" /></p>
+<p>Box coordinates</p>
+<p><img src="media/image77.jpeg" style="width:10in;height:0.58889in" /></p>
+<p><strong>Class agnostic:</strong></p>
+<ul>
+<li><p>numbers (one box)</p></li>
+</ul>
+<p><strong>Class specific:</strong> C x 4 numbers (one box per class)</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 17 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image78.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image79.jpeg" style="width:8.63125in;height:3.7in" /></p>
+<p><strong>After conv layers</strong>: <strong>After last FC layer</strong>:</p>
+<blockquote>
+<p><img src="media/image80.jpeg" style="width:0.26597in;height:0.23958in" /> Overfeat, VGG <img src="media/image81.jpeg" style="width:0.27569in;height:0.22431in" /> DeepPose, R-CNN</p>
+<p>Convolution</p>
+<p><sub>and Pooling</sub> Fully-connected</p>
+<p>layers</p>
+<p>Softmax loss</p>
+</blockquote>
+<p><img src="media/image82.jpeg" style="width:0.32847in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Final conv</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Class scores</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Image</td>
+<td><blockquote>
+<p>feature map</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image87.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 18 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image88.jpeg" style="width:9.62153in;height:4.82431in" /></p>
+<p>Want to localize <strong>exactly</strong> K objects in each image</p>
+<p>(e.g. whole cat, cat head, cat left ear, cat right ear for K=4)</p>
+<p>Convolution</p>
+<p>and Pooling</p>
+</blockquote>
+<p><img src="media/image89.jpeg" style="width:0.32847in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Final conv</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Image</td>
+<td><blockquote>
+<p>feature map</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Fully-connected</p>
+<p>layers</p>
+<p><img src="media/image91.jpeg" style="width:0.25278in" /></p>
+<blockquote>
+<p>Class scores</p>
+</blockquote>
+<p>Fully-connected</p>
+<p>layers</p>
+<blockquote>
+<p>K x 4 numbers</p>
+</blockquote>
+<p><img src="media/image92.jpeg" style="width:0.25278in" /></p>
+<blockquote>
+<p>(one box per object)</p>
+<p>Box coordinates</p>
+</blockquote>
+<p><img src="media/image93.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 19 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image94.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image95.jpeg" style="width:10in;height:4.83056in" /></p>
+<blockquote>
+<p>Represent a person by K joints</p>
+<p>Regress (x, y) for each joint from last fully-connected layer of AlexNet</p>
+<p>(Details: Normalized coordinates, iterative refinement)</p>
+</blockquote>
+<p>Toshev and Szegedy, “DeepPose: Human Pose Estimation via Deep Neural Networks”, CVPR 2014</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 20 1 Feb 2016</p>
+<p><img src="media/image96.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image97.jpeg" style="width:8.45069in;height:2.10486in" /></p>
+<blockquote>
+<p>Very simple</p>
+<p>Think if you can use this for projects</p>
+</blockquote>
+<p><img src="media/image98.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 21 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image99.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image100.jpeg" style="width:4.15903in;height:3.72222in" /></p>
+<ul>
+<li><blockquote>
+<p>Run classification + regression network at multiple locations on a high-resolution image</p>
+</blockquote></li>
+<li><blockquote>
+<p>Convert fully-connected layers into convolutional layers for efficient computation</p>
+</blockquote></li>
+<li><blockquote>
+<p>Combine classifier and</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>regressor predictions across all scales for final prediction</p>
+</blockquote>
+<p><img src="media/image101.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 22 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image102.jpeg" style="width:10in;height:5.5625in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Winner of ILSVRC 2013</td>
+<td>4096</td>
+<td>4096</td>
+<td>Class scores:</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>1000</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>localization challenge</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>FC</td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>FC</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>Softmax</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Convolution</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>loss</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>+ pooling</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>FC</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image103.jpeg" style="width:0.58194in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Feature map:</p>
+</blockquote></td>
+<td><blockquote>
+<p>FC</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>FC</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>FC</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>Euclidean</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Image:</td>
+<td><blockquote>
+<p>1024 x 5 x 5</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>loss</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3 x 221 x 221</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1024</td>
+<td></td>
+<td>Boxes:</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Sermanet et al, “Integrated Recognition, Localization and</td>
+<td>4096</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1000 x 4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image105.jpeg" style="width:0.58194in" /></p>
+<p>Detection using Convolutional Networks”, ICLR 2014</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 23 1 Feb 2016</p>
+<p><img src="media/image107.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image108.jpeg" style="width:4.83403in;height:2.27569in" /></p>
+<blockquote>
+<p>Network input:</p>
+</blockquote>
+<p><img src="media/image109.jpeg" style="width:1.75139in;height:0.59514in" /></p>
+<blockquote>
+<p>3 x 221 x 221 Larger image:</p>
+<p>3 x 257 x 257</p>
+</blockquote>
+<p><img src="media/image110.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 24 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image111.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image112.jpeg" style="width:7.75278in;height:1.84931in" /></p>
+<blockquote>
+<p>0.5</p>
+</blockquote>
+<p><img src="media/image113.jpeg" style="width:1.75139in;height:0.59514in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Network input:</td>
+<td><blockquote>
+<p>Larger image:</p>
+</blockquote></td>
+<td><blockquote>
+<p>Classification scores:</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3 x 221 x 221</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>3 x 257 x 257</p>
+</blockquote></td>
+<td><blockquote>
+<p>P(cat)</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image114.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 25 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image116.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image117.jpeg" style="width:7.75278in;height:1.84931in" /></p>
+<blockquote>
+<p>0.5 0.75</p>
+</blockquote>
+<p><img src="media/image118.jpeg" style="width:1.75139in;height:0.59514in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Network input:</td>
+<td><blockquote>
+<p>Larger image:</p>
+</blockquote></td>
+<td><blockquote>
+<p>Classification scores:</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3 x 221 x 221</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>3 x 257 x 257</p>
+</blockquote></td>
+<td><blockquote>
+<p>P(cat)</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image119.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 26 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image121.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image122.jpeg" style="width:1.99167in;height:1.84236in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.5</td>
+<td>0.75</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Network input:</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Classification scores:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Larger image:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3 x 221 x 221</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>3 x 257 x 257</p>
+</blockquote></td>
+<td></td>
+<td>P(cat)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image123.jpeg" style="width:10in;height:3.55764in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 27 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image124.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image125.jpeg" style="width:2.00208in;height:1.84236in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.5</td>
+<td>0.75</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.6</td>
+<td>0.8</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Network input:</td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Classification scores:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Larger image:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>3 x 221 x 221</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>3 x 257 x 257</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td>P(cat)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image126.jpeg" style="width:10in;height:3.55764in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 28 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image127.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image128.jpeg" style="width:1.99167in;height:1.84236in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.5</td>
+<td>0.75</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.6</td>
+<td>0.8</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Network input:</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Classification scores:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>Larger image:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3 x 221 x 221</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>3 x 257 x 257</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td>P(cat)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image129.jpeg" style="width:10in;height:3.55764in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 29 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image130.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image131.jpeg" style="width:2.5875in;height:0.71736in" /></p>
+<blockquote>
+<p>Greedily merge boxes and</p>
+<p>scores (details in paper)</p>
+</blockquote>
+<p><img src="media/image132.jpeg" style="width:7.50903in;height:1.84931in" /></p>
+<blockquote>
+<p>0.8</p>
+</blockquote>
+<p><img src="media/image133.jpeg" style="width:1.75139in;height:0.59514in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Network input:</td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Classification score: P</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>Larger image:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>3 x 221 x 221</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>3 x 257 x 257</p>
+</blockquote></td>
+<td><blockquote>
+<p>(cat)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image134.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 30 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image136.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image137.jpeg" style="width:4.45in;height:0.91458in" /></p>
+<blockquote>
+<p>In practice use many sliding window locations and multiple scales</p>
+<p>Window positions + score maps <sub>Box regression outputs</sub> Final Predictions</p>
+</blockquote>
+<p><img src="media/image138.jpeg" style="width:9.28056in;height:1.93264in" /></p>
+<p>Sermanet et al, “Integrated Recognition, Localization and Detection using Convolutional Networks”, ICLR 2014</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 31 1 Feb 2016</p>
+<p><img src="media/image140.jpeg" style="width:8.45069in;height:0.96597in" /></p>
+<p>Image:</p>
+<p>3 x 221 x 221</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>4096</td>
+<td>4096</td>
+<td><blockquote>
+<p>Class scores:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>1000</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>FC</td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>FC</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image141.jpeg" style="width:7.17431in;height:3.05625in" /></p>
+<p>Convolution</p>
+<p><img src="media/image142.jpeg" style="width:0.58194in" /></p>
+<p>+ pooling</p>
+<blockquote>
+<p>FC</p>
+</blockquote>
+<p><img src="media/image144.jpeg" style="width:0.14444in;height:1.38403in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>FC</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Feature map:</td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>FC</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>FC</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1024 x 5 x 5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image145.jpeg" style="width:2.54583in;height:1.70278in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>4096</td>
+<td>1024</td>
+<td><blockquote>
+<p>Boxes:</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>1000 x 4</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image147.jpeg" style="width:10in;height:1.13056in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 32 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image148.jpeg" style="width:9.17569in;height:4.35972in" /></p>
+<p>Efficient sliding window by converting fully-connected layers into convolutions</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>4096 x 1 x 1</td>
+<td><blockquote>
+<p>1024 x 1 x 1</p>
+</blockquote></td>
+<td><blockquote>
+<p>Class scores:</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>1000 x 1 x 1</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Convolution</p>
+<p>+ pooling</p>
+<p>Feature map:</p>
+<p><sub>Image:</sub> 1024 x 5 x 5 3 x 221 x 221</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>1 x 1 conv</p>
+</blockquote></td>
+<td><blockquote>
+<p>1 x 1 conv</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>5 x 5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>conv</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>5 x 5</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>conv</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>1 x 1 conv</p>
+</blockquote></td>
+<td><blockquote>
+<p>1 x 1 conv</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>4096 x 1 x 1</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>1024 x 1 x 1 Box coordinates:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>(4 x 1000) x 1 x 1</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image149.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 33 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image154.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image155.jpeg" style="width:8.65486in;height:3.68889in" /></p>
+<blockquote>
+<p><strong>Training time:</strong> Small image, 1 x 1 classifier output</p>
+<p><strong>Test time:</strong> Larger image, 2 x 2 classifier output, only extra compute at yellow regions</p>
+</blockquote>
+<p><img src="media/image156.jpeg" style="width:10in;height:0.93958in" /></p>
+<p>Sermanet et al, “Integrated Recognition, Localization and Detection using Convolutional Networks”, ICLR 2014</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 34 1 Feb 2016</p>
+<p><img src="media/image157.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image158.jpeg" style="width:9.20903in;height:3.89236in" /></p>
+<blockquote>
+<p><strong>AlexNet</strong>: Localization method not published</p>
+<p><strong>Overfeat</strong>: Multiscale convolutional regression</p>
+<p>with box merging</p>
+<p><strong>VGG</strong>: Same as Overfeat, but fewer scales</p>
+<p>and locations; simpler method, gains all due</p>
+<p>to deeper features</p>
+<p><strong>ResNet:</strong> Different localization method (RPN)</p>
+<p>and much deeper features</p>
+</blockquote>
+<p><img src="media/image159.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 35 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image160.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image161.jpeg" style="width:9.58681in;height:2.80903in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Classification</strong></td>
+<td><blockquote>
+<p><strong>Classification</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Object Detection</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Instance</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>+ Localization</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p><strong>Segmentation</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image162.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 36 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image163.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image164.jpeg" style="width:9.58681in;height:2.80903in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Classification</strong></td>
+<td><blockquote>
+<p><strong>Classification</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Object Detection</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Instance</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>+ Localization</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p><strong>Segmentation</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image165.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 37 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image166.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image167.jpeg" style="width:2.81389in;height:2.65694in" /></p>
+<blockquote>
+<p>DOG, (x, y, w, h)</p>
+</blockquote>
+<p><img src="media/image168.jpeg" style="width:2.46389in;height:1.85486in" /></p>
+<blockquote>
+<p>CAT, (x, y, w, h)</p>
+<p>CAT, (x, y, w, h)</p>
+</blockquote>
+<p><img src="media/image169.jpeg" style="width:2.19306in;height:0.30417in" /></p>
+<p>DUCK (x, y, w, h)</p>
+<p><img src="media/image170.jpeg" style="width:2.17083in" /></p>
+<blockquote>
+<p>= 16 numbers</p>
+</blockquote>
+<p><img src="media/image171.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 38 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image172.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image173.jpeg" style="width:2.81389in;height:2.65694in" /></p>
+<p>DOG, (x, y, w, h)</p>
+<p><img src="media/image174.jpeg" style="width:2.94375in;height:1.96806in" /></p>
+<blockquote>
+<p>CAT, (x, y, w, h)</p>
+</blockquote>
+<p><img src="media/image175.jpeg" style="width:2.19306in;height:0.30417in" /></p>
+<blockquote>
+<p>= 8 numbers</p>
+</blockquote>
+<p><img src="media/image176.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 39 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image178.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image179.jpeg" style="width:2.81389in;height:2.65694in" /></p>
+<blockquote>
+<p>CAT, (x, y, w, h)</p>
+</blockquote>
+<p><img src="media/image180.jpeg" style="width:3.36458in;height:2.07083in" /></p>
+<blockquote>
+<p>CAT, (x, y, w, h)</p>
+<p>….</p>
+</blockquote>
+<p><img src="media/image181.jpeg" style="width:2.19306in;height:0.30417in" /></p>
+<blockquote>
+<p>CAT (x, y, w, h)</p>
+</blockquote>
+<p><img src="media/image182.jpeg" style="width:2.17083in" /></p>
+<p>= many numbers</p>
+<blockquote>
+<p>Need variable sized outputs</p>
+</blockquote>
+<p><img src="media/image183.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 40 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image184.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image185.jpeg" style="width:8.06111in;height:2.83056in" /></p>
+<blockquote>
+<p><strong>CAT? NO</strong></p>
+</blockquote>
+<p><strong>DOG? NO</strong></p>
+<p><img src="media/image186.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 41 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image187.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image188.jpeg" style="width:8.06111in;height:2.83056in" /></p>
+<p><strong>CAT? YES!</strong></p>
+<blockquote>
+<p><strong>DOG? NO</strong></p>
+</blockquote>
+<p><img src="media/image189.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 42 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image190.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image191.jpeg" style="width:8.06111in;height:2.83056in" /></p>
+<blockquote>
+<p><strong>CAT? NO</strong></p>
+</blockquote>
+<p><strong>DOG? NO</strong></p>
+<p><img src="media/image192.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 43 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image193.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image194.jpeg" style="width:8.19514in;height:3.54167in" /></p>
+<blockquote>
+<p><strong>Problem</strong>: Need to test many positions and scales</p>
+<p><strong>Solution:</strong> If your classifier is fast enough, just do it</p>
+</blockquote>
+<p><img src="media/image195.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 44 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image196.jpeg" style="width:8.45069in;height:4.57292in" /></p>
+</blockquote>
+<p><img src="media/image197.jpeg" style="width:10in;height:0.97569in" /></p>
+<p>Dalal and Triggs, “Histograms of Oriented Gradients for Human Detection”, CVPR 2005 Slide credit: Ross Girshick</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 45 1 Feb 2016</p>
+<p><img src="media/image198.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image199.jpeg" style="width:10in;height:4.59028in" /></p>
+<p>Felzenszwalb et al, “Object Detection with Discriminatively</p>
+<p>Trained Part Based Models”, PAMI 2010</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 46 1 Feb 2016</p>
+<p><img src="media/image200.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image201.jpeg" style="width:9.77778in;height:2.05694in" /></p>
+<p>Girschick et al, “Deformable Part Models are Convolutional Neural Networks”, CVPR 2015</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 47 1 Feb 2016</p>
+<p><img src="media/image203.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image204.jpeg" style="width:9.3875in;height:3.54167in" /></p>
+<blockquote>
+<p><strong>Problem</strong>: Need to test many positions and scales, and use a computationally demanding classifier (CNN)</p>
+<p><strong>Solution:</strong> Only look at a tiny subset of possible positions</p>
+</blockquote>
+<p><img src="media/image205.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 48 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image206.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image207.jpeg" style="width:7.73264in;height:1.06875in" /></p>
+<ul>
+<li><blockquote>
+<p>Find “blobby” image regions that are likely to contain objects</p>
+</blockquote></li>
+<li><blockquote>
+<p>“Class-agnostic” object detector</p>
+</blockquote></li>
+<li><blockquote>
+<p>Look for “blob-like” regions</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image208.jpeg" style="width:10in;height:3.12361in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 49 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image209.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image210.jpeg" style="width:7.13056in;height:0.41042in" /></p>
+<p>Bottom-up segmentation, merging regions at multiple scales</p>
+<p><img src="media/image211.jpeg" style="width:1.14306in" /></p>
+<blockquote>
+<p>Convert</p>
+</blockquote>
+<p><img src="media/image214.jpeg" style="height:0.32847in" /></p>
+<blockquote>
+<p>regions</p>
+<p>to boxes</p>
+</blockquote>
+<p><img src="media/image217.jpeg" style="width:10in;height:0.90486in" /></p>
+<blockquote>
+<p>Uijlings et al, “Selective Search for Object Recognition”, IJCV 2013</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 50 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image218.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image219.jpeg" style="width:9.26181in;height:3.15in" /></p>
+<blockquote>
+<p>Hosang et al, “What makes for effective detection proposals?”, PAMI 2015</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 51 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image221.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image222.jpeg" style="width:10in;height:0.90486in" /></p>
+<blockquote>
+<p>Hosang et al, “What makes for effective detection proposals?”, PAMI 2015</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 52 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image224.jpeg" style="width:9.76944in;height:4.94792in" /></p>
+<p>Girschick et al, “Rich feature hierarchies for accurate object detection and semantic segmentation”, CVPR 2014</p>
+<p>Slide credit: Ross Girschick</p>
+</blockquote>
+<p><img src="media/image225.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 53 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image226.jpeg" style="width:9.47222in;height:1.60417in" /></p>
+<p><strong>Step 1</strong>: Train (or download) a classification model for ImageNet (AlexNet)</p>
+</blockquote>
+<p><img src="media/image227.jpeg" style="width:7.97778in;height:2.47639in" /></p>
+<blockquote>
+<p>Convolution</p>
+<p><sub>and Pooling</sub> Fully-connected</p>
+<p>layers</p>
+<p>Softmax loss</p>
+</blockquote>
+<p><img src="media/image228.jpeg" style="width:0.32847in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Final conv</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Class scores</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Image</td>
+<td><blockquote>
+<p>feature map</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>1000 classes</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image233.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 54 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image234.jpeg" style="width:9.47222in;height:4.85833in" /></p>
+<p><strong>Step 2</strong>: Fine-tune model for detection</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Instead of 1000 ImageNet classes, want 20 object classes + background</p>
+</blockquote></li>
+<li><blockquote>
+<p>Throw away final fully-connected layer, reinitialize from scratch</p>
+</blockquote></li>
+<li><blockquote>
+<p>Keep training model using positive / negative regions from detection images</p>
+</blockquote></li>
+</ul>
+<table>
+<tbody>
+<tr class="odd">
+<td>Convolution</td>
+<td></td>
+<td><blockquote>
+<p>Re-initialize this layer:</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>Fully-connected</p>
+</blockquote></td>
+<td><blockquote>
+<p>was 4096 x 1000,</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>and Pooling</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>now will be 4096 x 21</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>layers</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Softmax loss</p>
+</blockquote>
+<p><img src="media/image235.jpeg" style="width:0.32847in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Final conv</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Class scores:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Image</td>
+<td><blockquote>
+<p>feature map</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>21 classes</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image240.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 55 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image241.jpeg" style="width:9.47222in;height:2.36111in" /></p>
+<p><strong>Step 3</strong>: Extract features</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Extract region proposals for all images</p>
+</blockquote></li>
+<li><blockquote>
+<p>For each region: warp to CNN input size, run forward through CNN, save pool5 features to disk</p>
+</blockquote></li>
+<li><blockquote>
+<p>Have a big hard drive: features are ~200GB for PASCAL dataset!</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image242.jpeg" style="width:1.59931in;height:0.62569in" /></p>
+<blockquote>
+<p>Convolution</p>
+<p>and Pooling</p>
+</blockquote>
+<p><img src="media/image243.jpeg" style="width:9.62014in;height:1.83681in" /></p>
+<blockquote>
+<p>pool5 features</p>
+</blockquote>
+<p><img src="media/image245.jpeg" style="width:5.47361in;height:0.43472in" /></p>
+<blockquote>
+<p><sup>Image</sup> Region Proposals Crop + Warp Forward pass Save to disk</p>
+</blockquote>
+<p><img src="media/image246.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 56 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image247.jpeg" style="width:9.47222in;height:1.23819in" /></p>
+<p><strong>Step 4</strong>: Train one binary SVM per class to classify region features</p>
+</blockquote>
+<p><img src="media/image248.jpeg" style="width:9.20139in;height:1.02569in" /></p>
+<blockquote>
+<p>Training image regions</p>
+</blockquote>
+<p><img src="media/image249.jpeg" style="width:8.7in;height:1.01319in" /></p>
+<blockquote>
+<p>Cached region features</p>
+</blockquote>
+<p><img src="media/image250.jpeg" style="width:7.00694in;height:1in" /></p>
+<p>Positive samples for cat SVM Negative samples for cat SVM</p>
+<p><img src="media/image251.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 57 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image252.jpeg" style="width:9.47222in;height:1.23819in" /></p>
+<p><strong>Step 4</strong>: Train one binary SVM per class to classify region features</p>
+</blockquote>
+<p><img src="media/image253.jpeg" style="width:9.20139in;height:1.02569in" /></p>
+<blockquote>
+<p>Training image regions</p>
+</blockquote>
+<p><img src="media/image254.jpeg" style="width:8.7in;height:1.01319in" /></p>
+<blockquote>
+<p>Cached region features</p>
+</blockquote>
+<p><img src="media/image255.jpeg" style="width:7.00625in;height:1in" /></p>
+<p>Negative samples for dog SVM Positive samples for dog SVM</p>
+<p><img src="media/image256.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 58 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image257.jpeg" style="width:9.88194in;height:1.39167in" /></p>
+<p><strong>Step 5</strong> (bbox regression): For each class, train a linear regression model to map from cached features to offsets to GT boxes to make up for “slightly wrong” proposals</p>
+</blockquote>
+<p><img src="media/image258.jpeg" style="width:8.28125in;height:1.02639in" /></p>
+<blockquote>
+<p>Training image regions</p>
+</blockquote>
+<p><img src="media/image259.jpeg" style="width:2.26181in;height:0.41806in" /></p>
+<blockquote>
+<p>Cached region features</p>
+</blockquote>
+<p><img src="media/image263.jpeg" style="width:8.70972in;height:0.93125in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Regression targets</td>
+<td>(0, 0, 0, 0)</td>
+<td>(.25, 0, 0, 0)</td>
+<td><blockquote>
+<p>(0, 0, -0.125, 0)</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td>(dx, dy, dw, dh)</td>
+<td>Proposal is good</td>
+<td>Proposal too</td>
+<td><blockquote>
+<p>Proposal too</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td>Normalized coordinates</td>
+<td></td>
+<td>far to left</td>
+<td><blockquote>
+<p>wide</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image264.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 59 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image265.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>PASCAL</td>
+<td>ImageNet</td>
+<td><blockquote>
+<p>MS-COCO</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>VOC</td>
+<td>Detection</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>(2014)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(2010)</td>
+<td>(ILSVRC 2014)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Number of</td>
+<td>20</td>
+<td><strong>200</strong></td>
+<td>80</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>classes</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Number of</td>
+<td></td>
+<td><strong>~470k</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>images (train +</td>
+<td>~20k</td>
+<td></td>
+<td>~120k</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>val)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Mean objects per</td>
+<td>2.4</td>
+<td>1.1</td>
+<td><strong>7.2</strong></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>image</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image266.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 60 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image267.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image268.jpeg" style="width:5.79028in;height:4.03958in" /></p>
+<blockquote>
+<p>We use a metric called “mean average precision” (mAP)</p>
+<p>Compute average precision (AP) separately for each class, then average over classes</p>
+<p>A detection is a true positive if it has IoU with a ground-truth box greater than some threshold (usually 0.5) (mAP@0.5)</p>
+<p>Combine all detections from all test images to draw a precision / recall curve for each class; AP is area under the curve</p>
+<p>TL;DR mAP is a number from 0 to 100; high is good</p>
+</blockquote>
+<p><img src="media/image269.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 61 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image270.jpeg" style="width:8.45069in;height:4.58056in" /></p>
+</blockquote>
+<p><img src="media/image271.jpeg" style="width:10in;height:0.90486in" /></p>
+<blockquote>
+<p>Wang et al, “Regionlets for Generic Object Detection”, ICCV 2013</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 62 1 Feb 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>R-CNN Results</td>
+<td><blockquote>
+<p>Big improvement compared</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>to pre-CNN methods</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image272.jpeg" style="width:8.45069in;height:4.58056in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 63 1 Feb 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>R-CNN Results</td>
+<td><blockquote>
+<p>Bounding box regression</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>helps a bit</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image274.jpeg" style="width:8.45069in;height:4.58056in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 64 1 Feb 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>R-CNN Results</td>
+<td><blockquote>
+<p>Features from a deeper</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>network help a lot</p>
+</blockquote></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image276.jpeg" style="width:8.45069in;height:4.58056in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 65 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image278.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image279.jpeg" style="width:8.52569in;height:3.91597in" /></p>
+<ol type="1">
+<li><blockquote>
+<p>Slow at test-time: need to run full forward pass of CNN for each region proposal</p>
+</blockquote></li>
+<li><blockquote>
+<p>SVMs and regressors are post-hoc: CNN features not updated in response to SVMs and regressors</p>
+</blockquote></li>
+<li><blockquote>
+<p>Complex multistage training pipeline</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image280.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 66 1 Feb 2016</p>
+<p><img src="media/image281.jpeg" style="width:9.85069in;height:4.97569in" /></p>
+<blockquote>
+<p>Girschick, “Fast R-CNN”, ICCV 2015</p>
+<p>Slide credit: Ross Girschick</p>
+</blockquote>
+<p><img src="media/image282.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 67 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image283.jpeg" style="width:9.89306in;height:4.97569in" />: Slow at test-time due to independent forward passes of the CNN</p>
+</blockquote>
+<p><img src="media/image284.jpeg" style="width:2.77917in;height:2.37292in" /></p>
+<blockquote>
+<p><strong>Solution:</strong></p>
+<p>Share computation of convolutional layers between proposals for an image</p>
+</blockquote>
+<p><img src="media/image285.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 68 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image286.jpeg" style="width:9.65486in;height:4.99097in" />: Post-hoc training: CNN not updated in response to final classifiers and regressors</p>
+<p><strong>R-CNN Problem #3:</strong></p>
+<p>Complex training pipeline</p>
+<p><strong>Solution:</strong></p>
+<p>Just train the whole system end-to-end all at once!</p>
+<p>Slide credit: Ross Girschick</p>
+</blockquote>
+<p><img src="media/image287.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 69 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image288.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image289.jpeg" style="width:4.48333in;height:2.07361in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Convolution</td>
+<td><blockquote>
+<p>Fully-connected</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>and Pooling</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>layers</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image291.jpeg" style="width:9.54028in;height:2.35556in" /></p>
+<p>Hi-res input image:</p>
+<p>3 x 800 x 600</p>
+<p>with region</p>
+<p>proposal</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Hi-res conv features:</td>
+<td><blockquote>
+<p><strong>Problem</strong>: Fully-connected</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td>C x H x W</td>
+<td><blockquote>
+<p>layers expect low-res conv</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td>with region proposal</td>
+<td><blockquote>
+<p>features: C x h x w</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image292.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 70 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image293.jpeg" style="width:9.34583in;height:3.12917in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Project region proposal</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Convolution</td>
+<td><blockquote>
+<p>onto conv feature map</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Fully-connected</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>and Pooling</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>layers</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image294.jpeg" style="width:9.54028in;height:1.05in" /></p>
+<p>Hi-res input image:</p>
+<p>3 x 800 x 600</p>
+<p>with region</p>
+<p>proposal</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Hi-res conv features:</td>
+<td><blockquote>
+<p><strong>Problem</strong>: Fully-connected</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td>C x H x W</td>
+<td><blockquote>
+<p>layers expect low-res conv</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td>with region proposal</td>
+<td><blockquote>
+<p>features: C x h x w</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image295.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 71 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image296.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image297.jpeg" style="width:6.79653in;height:2.16736in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Convolution</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>Divide projected</p>
+</blockquote></td>
+<td><blockquote>
+<p>Fully-connected</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>region into h x w grid</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>and Pooling</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>layers</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image298.jpeg" style="width:9.54028in;height:3.09028in" /></p>
+<p>Hi-res input image:</p>
+<p>3 x 800 x 600</p>
+<p>with region</p>
+<p>proposal</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Hi-res conv features:</td>
+<td><blockquote>
+<p><strong>Problem</strong>: Fully-connected</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td>C x H x W</td>
+<td><blockquote>
+<p>layers expect low-res conv</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td>with region proposal</td>
+<td><blockquote>
+<p>features: C x h x w</p>
+</blockquote></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image307.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 72 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image308.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image309.jpeg" style="width:6.60556in;height:2.33889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Max-pool within</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Convolution</td>
+<td><blockquote>
+<p>each grid cell</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>and Pooling</p>
+</blockquote></td>
+<td><blockquote>
+<p>Fully-connected</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>layers</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image310.jpeg" style="width:9.54028in;height:3.09028in" /></p>
+<p>Hi-res input image:</p>
+<p>3 x 800 x 600</p>
+<p>with region</p>
+<p>proposal</p>
+<p>Hi-res conv features:</p>
+<p>C x H x W</p>
+<p>with region proposal</p>
+<p>RoI conv features:</p>
+<p>C x h x w</p>
+<p>for region proposal</p>
+<p><img src="media/image312.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fully-connected layers expect low-res conv features: C x h x w</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 73 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image313.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image314.jpeg" style="width:6.95347in;height:2.33889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>Can back propagate</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Convolution</td>
+<td><blockquote>
+<p>similar to max pooling</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>and Pooling</p>
+</blockquote></td>
+<td><blockquote>
+<p>Fully-connected</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>layers</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image315.jpeg" style="width:9.54028in;height:3.09028in" /></p>
+<p>Hi-res input image:</p>
+<p>3 x 800 x 600</p>
+<p>with region</p>
+<p>proposal</p>
+<p>Hi-res conv features:</p>
+<p>C x H x W</p>
+<p>with region proposal</p>
+<p>RoI conv features:</p>
+<p>C x h x w</p>
+<p>for region proposal</p>
+<p><img src="media/image317.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fully-connected layers expect low-res conv features: C x h x w</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 74 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image318.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>R-CNN</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Fast R-CNN</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Faster!</td>
+<td><blockquote>
+<p>Training Time:</p>
+</blockquote></td>
+<td><blockquote>
+<p>84 hours</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>9.5 hours</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>(Speedup)</p>
+</blockquote></td>
+<td><blockquote>
+<p>1x</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>8.8x</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image319.jpeg" style="width:10in;height:0.99722in" /></p>
+<p>Using VGG-16 CNN on Pascal VOC 2007 dataset</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 75 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image321.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>R-CNN</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Fast R-CNN</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Faster!</p>
+</blockquote></td>
+<td><blockquote>
+<p>Training Time:</p>
+</blockquote></td>
+<td><blockquote>
+<p>84 hours</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>9.5 hours</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>(Speedup)</p>
+</blockquote></td>
+<td><blockquote>
+<p>1x</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>8.8x</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>FASTER!</td>
+<td><blockquote>
+<p>Test time per image</p>
+</blockquote></td>
+<td><blockquote>
+<p>47 seconds</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>0.32 seconds</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>(Speedup)</p>
+</blockquote></td>
+<td><blockquote>
+<p>1x</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>146x</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image322.jpeg" style="width:10in;height:0.99722in" /></p>
+<p>Using VGG-16 CNN on Pascal VOC 2007 dataset</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 76 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image325.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p><strong>R-CNN</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Fast R-CNN</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Faster!</p>
+</blockquote></td>
+<td><blockquote>
+<p>Training Time:</p>
+</blockquote></td>
+<td><blockquote>
+<p>84 hours</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>9.5 hours</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>(Speedup)</p>
+</blockquote></td>
+<td><blockquote>
+<p>1x</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>8.8x</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>FASTER!</td>
+<td><blockquote>
+<p>Test time per image</p>
+</blockquote></td>
+<td><blockquote>
+<p>47 seconds</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>0.32 seconds</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>(Speedup)</p>
+</blockquote></td>
+<td><blockquote>
+<p>1x</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>146x</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Better!</p>
+</blockquote></td>
+<td><blockquote>
+<p>mAP (VOC 2007)</p>
+</blockquote></td>
+<td><blockquote>
+<p>66.0</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>66.9</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image326.jpeg" style="width:10in;height:3.32847in" /></p>
+<p>Using VGG-16 CNN on Pascal VOC 2007 dataset</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 77 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image327.jpeg" style="width:8.45069in;height:1.14722in" /></p>
+<p>Test-time speeds don’t include region proposals</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>R-CNN</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Fast R-CNN</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Test time per image</p>
+</blockquote></td>
+<td><blockquote>
+<p>47 seconds</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>0.32 seconds</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>(Speedup)</p>
+</blockquote></td>
+<td><blockquote>
+<p>1x</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>146x</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Test time per image</p>
+</blockquote></td>
+<td><blockquote>
+<p>50 seconds</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>2 seconds</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>with Selective Search</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>(Speedup)</p>
+</blockquote></td>
+<td><blockquote>
+<p>1x</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>25x</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image328.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 78 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image329.jpeg" style="width:8.45069in;height:1.40625in" /><del>Problem</del> Solution:</p>
+<p>Test-time speeds don’t include region proposals Just make the CNN do region proposals too!</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>R-CNN</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Fast R-CNN</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Test time per image</p>
+</blockquote></td>
+<td><blockquote>
+<p>47 seconds</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>0.32 seconds</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>(Speedup)</p>
+</blockquote></td>
+<td><blockquote>
+<p>1x</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>146x</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Test time per image</p>
+</blockquote></td>
+<td><blockquote>
+<p>50 seconds</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>2 seconds</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>with Selective Search</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>(Speedup)</p>
+</blockquote></td>
+<td><blockquote>
+<p>1x</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>25x</strong></p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image330.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 79 1 Feb 2016</p>
+<blockquote>
+<p>Faster R-CNN:</p>
+<p>Insert a <strong>Region Proposal</strong> <strong>Network (RPN)</strong> after the last convolutional layer</p>
+</blockquote>
+<p><img src="media/image331.jpeg" style="width:9.83819in;height:4.94861in" /></p>
+<blockquote>
+<p>RPN trained to produce region proposals directly; no need for external region proposals!</p>
+<p>After RPN, use RoI Pooling and an upstream classifier and bbox regressor just like Fast R-CNN</p>
+</blockquote>
+<p>Ren et al, “Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks”, NIPS 2015</p>
+<p>Slide credit: Ross Girschick</p>
+<p><img src="media/image332.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 80 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image333.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image334.jpeg" style="width:9.33889in;height:3.80764in" /></p>
+<blockquote>
+<p>Slide a small window on the feature map</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>Build a small network for:</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>• classifying object or not-object, and</td>
+<td><blockquote>
+<p>1 x 1 conv</p>
+</blockquote></td>
+<td><blockquote>
+<p>1 x 1 conv</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>• regressing bbox locations</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Position of the sliding window provides localization</td>
+<td></td>
+<td><blockquote>
+<p>1 x 1 conv</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>information with reference to the image</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Box regression provides finer localization information</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>with reference to this sliding window</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image335.jpeg" style="width:10in;height:0.96319in" /></p>
+<p>Slide credit: Kaiming He</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 81 1 Feb 2016</p>
+<p><img src="media/image336.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image337.jpeg" style="width:9.26875in;height:3.73125in" /></p>
+<blockquote>
+<p>Use <strong>N anchor boxes</strong> at each location</p>
+<p>Anchors are <strong>translation invariant</strong>: use the same ones at every location</p>
+</blockquote>
+<p>Regression gives offsets from anchor boxes</p>
+<blockquote>
+<p>Classification gives the probability that each (regressed) anchor shows an object</p>
+</blockquote>
+<p><img src="media/image338.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 82 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image339.jpeg" style="width:10in;height:5.5625in" /></p>
+<p>In the paper: Ugly pipeline</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Use alternating optimization to train RPN, then Fast R-CNN with RPN proposals, etc.</p>
+</blockquote></li>
+<li><blockquote>
+<p>More complex than it has to be</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Since publication: Joint training!</p>
+<p>One network, four losses</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>RPN classification (anchor good / bad)</p>
+</blockquote></li>
+<li><blockquote>
+<p>RPN regression (anchor -&gt; proposal)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Fast R-CNN classification (over classes)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Fast R-CNN regression (proposal -&gt; box)</p>
+</blockquote></li>
+</ul>
+<p>Slide credit: Ross Girschick</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 83 1 Feb 2016</p>
+<p><img src="media/image340.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>R-CNN</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Fast R-CNN</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Faster R-CNN</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Test time per</p>
+</blockquote></td>
+<td><blockquote>
+<p>50 seconds</p>
+</blockquote></td>
+<td><blockquote>
+<p>2 seconds</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>0.2 seconds</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>image</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>(with proposals)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>(Speedup)</p>
+</blockquote></td>
+<td><blockquote>
+<p>1x</p>
+</blockquote></td>
+<td><blockquote>
+<p>25x</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>250x</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>mAP (VOC 2007)</p>
+</blockquote></td>
+<td><blockquote>
+<p>66.0</p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>66.9</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>66.9</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image341.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 84 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image342.jpeg" style="width:8.45069in;height:1.23125in" /></p>
+<p>ResNet 101 + Faster R-CNN + some extras</p>
+</blockquote>
+<p><img src="media/image343.jpeg" style="width:7.25417in;height:2.56181in" /></p>
+<p>He et. al, “Deep Residual Learning for Image Recognition”, arXiv 2015</p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 85 1 Feb 2016</p>
+<p><img src="media/image345.jpeg" style="width:8.45069in;height:4.85417in" /></p>
+</blockquote>
+<p><img src="media/image346.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 86 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image347.jpeg" style="width:9.87986in;height:4.88819in" /></p>
+<p>Divide image into S x S grid</p>
+<p>Within each grid cell predict:</p>
+<p>B Boxes: 4 coordinates + confidence</p>
+<p>Class scores: C numbers</p>
+<p>Regression from image to 7 x 7 x (5 * B + C) tensor</p>
+<p>Direct prediction using a CNN</p>
+<p>Redmon et al, “You Only Look Once:</p>
+<p>Unified, Real-Time Object Detection”, arXiv 2015</p>
+</blockquote>
+<p><img src="media/image348.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 87 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image349.jpeg" style="width:9.54792in;height:4.88819in" /></p>
+<p>Faster than Faster R-CNN, but not as good</p>
+<p>Redmon et al, “You Only Look Once:</p>
+<p>Unified, Real-Time Object Detection”, arXiv 2015</p>
+</blockquote>
+<p><img src="media/image350.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 88 1 Feb 2016</p>
+<blockquote>
+<p><img src="media/image351.jpeg" style="width:8.85417in;height:4.73056in" /></p>
+<p><strong>R-CNN</strong></p>
+<p>(Cafffe + MATLAB): <a href="https://github.com/rbgirshick/rcnn"><span class="underline">https://github.com/rbgirshick/rcnn</span></a> Probably don’t use this; too slow</p>
+<p><strong>Fast R-CNN</strong></p>
+<p>(Caffe + MATLAB): <a href="https://github.com/rbgirshick/fast-rcnn"><span class="underline">https://github.com/rbgirshick/fast-rcnn</span></a></p>
+<p><strong>Faster R-CNN</strong></p>
+<p>(Caffe + MATLAB): <a href="https://github.com/ShaoqingRen/faster_rcnn"><span class="underline">https://github.com/ShaoqingRen/faster_rcnn</span></a></p>
+<p>(Caffe + Python): <a href="https://github.com/rbgirshick/py-faster-rcnn"><span class="underline">https://github.com/rbgirshick/py-faster-rcnn</span></a></p>
+<p><strong>YOLO</strong></p>
+<p><a href="http://pjreddie.com/darknet/yolo/"><span class="underline">http://pjreddie.com/darknet/yolo/</span></a></p>
+<p>Maybe try this for projects?</p>
+</blockquote>
+<p><img src="media/image352.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 8 89 1 Feb 2016</p>
+<p><img src="media/image353.jpeg" style="width:9.65764in;height:4.93056in" /></p>
+<blockquote>
+<p>Recap</p>
+<p><strong>Localization</strong>:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Find a fixed number of objects (one or many)</p>
+</blockquote></li>
+<li><blockquote>
+<p>L2 regression from CNN features to box coordinates</p>
+</blockquote></li>
+<li><blockquote>
+<p>Much simpler than detection; consider it for your projects!</p>
+</blockquote></li>
+<li><blockquote>
+<p>Overfeat: Regression + efficient sliding window with FC -&gt; conv conversion</p>
+</blockquote></li>
+<li><blockquote>
+<p>Deeper networks do better</p>
+</blockquote></li>
+</ul>
+<ul>
+<li><blockquote>
+<p>Find a variable number of objects by classifying image regions</p>
+</blockquote></li>
+<li><blockquote>
+<p>Before CNNs: dense multiscale sliding window (HoG, DPM)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Avoid dense sliding window with region proposals</p>
+</blockquote></li>
+<li><blockquote>
+<p>R-CNN: Selective Search + CNN classification / regression</p>
+</blockquote></li>
+<li><blockquote>
+<p>Fast R-CNN: Swap order of convolutions and region extraction</p>
+</blockquote></li>
+<li><blockquote>
+<p>Faster R-CNN: Compute region proposals within the network</p>
+</blockquote></li>
+<li><blockquote>
+<p>Deeper networks do better</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image354.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 8 90</p>
+</blockquote></td>
+<td><blockquote>
+<p>1 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>

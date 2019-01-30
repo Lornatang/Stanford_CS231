@@ -1,0 +1,3110 @@
+<p><img src="media/image1.jpeg" style="width:9.73125in;height:4.50625in" /></p>
+<p>Software Packages</p>
+<p>Caffe / Torch / Theano / TensorFlow</p>
+<p><img src="media/image2.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 1 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image3.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image4.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>Milestones were due 2/17; looking at them this week</p>
+</blockquote></li>
+<li><blockquote>
+<p>Assignment 3 due Wednesday 2/22</p>
+</blockquote></li>
+<li><blockquote>
+<p>If you are using Terminal: BACK UP YOUR CODE!</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image5.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 2 22 Feb 2016</p>
+<p>Caffe</p>
+<p><img src="media/image6.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<p><a href="http://caffe.berkeleyvision.org"><span class="underline">http://caffe.berkeleyvision.org</span></a></p>
+<p><img src="media/image7.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 3 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image8.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image9.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>From U.C. Berkeley</p>
+</blockquote></li>
+<li><blockquote>
+<p>Written in C++</p>
+</blockquote></li>
+<li><blockquote>
+<p>Has Python and MATLAB bindings</p>
+</blockquote></li>
+<li><blockquote>
+<p>Good for training or finetuning feedforward models</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image10.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 4 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image11.jpeg" style="width:10in;height:5.41389in" /></p>
+</blockquote>
+<p>Don’t be afraid to read the code!</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 5 22 Feb 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Caffe: Main classes</strong></td>
+<td><blockquote>
+<p>SoftmaxLossLayer</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>data</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><strong>● Blob</strong>: Stores data and</p>
+</blockquote></td>
+<td><blockquote>
+<p><sup>fc1</sup> diffs</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>derivatives (<span class="underline"><a href="https://github.com/BVLC/caffe/blob/85bb397acfd383a676c125c75d877642d6b39ff6/include/caffe/blob.hpp">header</a> <a href="https://github.com/BVLC/caffe/blob/85bb397acfd383a676c125c75d877642d6b39ff6/src/caffe/blob.cpp">source</a></span>)</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image12.jpeg" style="width:10in;height:5.58125in" /></p>
+<ul>
+<li><blockquote>
+<p><strong>Layer</strong>: Transforms bottom blobs to top blobs (<a href="https://github.com/BVLC/caffe/blob/85bb397acfd383a676c125c75d877642d6b39ff6/include/caffe/layer.hpp"><span class="underline">header + source</span></a>)</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Net</strong>: Many layers; computes gradients via forward / backward (<span class="underline"><a href="https://github.com/BVLC/caffe/blob/85bb397acfd383a676c125c75d877642d6b39ff6/include/caffe/net.hpp">header</a> <a href="https://github.com/BVLC/caffe/blob/85bb397acfd383a676c125c75d877642d6b39ff6/src/caffe/net.cpp">source</a></span>)</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Solver</strong>: Uses gradients to update weights (<span class="underline"><a href="https://github.com/BVLC/caffe/blob/85bb397acfd383a676c125c75d877642d6b39ff6/include/caffe/solver.hpp">header</a> <a href="https://github.com/BVLC/caffe/blob/85bb397acfd383a676c125c75d877642d6b39ff6/src/caffe/solver.cpp">source</a></span>)</p>
+</blockquote></li>
+</ul>
+<p><strong><br />
+</strong></p>
+<blockquote>
+<p>InnerProductLayer</p>
+</blockquote>
+<p><img src="media/image13.jpeg" style="height:0.35972in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>W</p>
+</blockquote></td>
+<td><blockquote>
+<p>data</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>X</p>
+</blockquote></td>
+<td></td>
+<td>data</td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>y</p>
+</blockquote></td>
+<td><blockquote>
+<p>data</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>diffs</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>diffs</td>
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>diffs</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image14.jpeg" style="height:0.35972in" /></p>
+<blockquote>
+<p>DataLayer</p>
+</blockquote>
+<p>Fei Lecture 12 6 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image15.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image16.jpeg" style="width:10in;height:4.32639in" /></p>
+<ul>
+<li><blockquote>
+<p>“Typed JSON” from Google</p>
+</blockquote></li>
+<li><blockquote>
+<p>Define “message types” in .proto files</p>
+</blockquote></li>
+</ul>
+<p><strong>.proto file</strong></p>
+<p><a href="https://developers.google.com/protocol-buffers/"><span class="underline">https://developers.google.com/protocol-buffers/</span></a></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 7 22 Feb 2016</p>
+<p><img src="media/image17.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image18.jpeg" style="width:10in;height:4.32639in" /></p>
+<ul>
+<li><blockquote>
+<p>“Typed JSON” from Google</p>
+</blockquote></li>
+<li><blockquote>
+<p>Define “message types” in .proto files</p>
+</blockquote></li>
+<li><blockquote>
+<p>Serialize instances to text files (.prototxt)</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><strong>.proto file</strong></p>
+<p><strong>.prototxt file</strong></p>
+</blockquote>
+<p><strong>name: “John Doe”</strong></p>
+<p><strong>id: 1234</strong></p>
+<p><strong>email: “jdoe@example.com”</strong></p>
+<p><a href="https://developers.google.com/protocol-buffers/"><span class="underline">https://developers.google.com/protocol-buffers/</span></a></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 8 22 Feb 2016</p>
+<p><img src="media/image19.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image20.jpeg" style="width:10in;height:4.32639in" /></p>
+<blockquote>
+<p><strong>●</strong> “Typed JSON”</p>
+<p>from Google</p>
+<p>● Define “message</p>
+<p>types” in .proto files</p>
+<p>● Serialize instances to</p>
+</blockquote>
+<p><strong>.proto file</strong> <strong>Java class</strong></p>
+<blockquote>
+<p>text files (.prototxt)</p>
+<p>● Compile classes for</p>
+</blockquote>
+<p><strong>.prototxt file</strong></p>
+<p><strong>name: “John Doe”</strong></p>
+<p><strong>id: 1234</strong></p>
+<p><strong>C++ class</strong></p>
+<blockquote>
+<p>different languages</p>
+</blockquote>
+<p><strong>email: “jdoe@example.com”</strong></p>
+<p><a href="https://developers.google.com/protocol-buffers/"><span class="underline">https://developers.google.com/protocol-buffers/</span></a></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 9 22 Feb 2016</p>
+<p><img src="media/image21.jpeg" style="width:9.48958in;height:3.86528in" /></p>
+</blockquote>
+<p><img src="media/image22.jpeg" style="width:8.67639in;height:0.71528in" /></p>
+<blockquote>
+<p><span class="underline"><a href="https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto">https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto</a></span> &lt;- <strong>All Caffe proto types defined here, good documentation!</strong></p>
+</blockquote>
+<p><img src="media/image23.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 10 22 Feb 2016</p>
+<p><img src="media/image24.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<blockquote>
+<p><strong>Caffe: Training / Finetuning</strong></p>
+</blockquote>
+<p><img src="media/image25.jpeg" style="width:9.60278in;height:4.32639in" /></p>
+<blockquote>
+<p>No need to write code!</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Convert data (run a script)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Define net (edit prototxt)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Define solver (edit prototxt)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Train (with pretrained weights) (run a script)</p>
+</blockquote></li>
+</ol>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei</p>
+</blockquote></td>
+<td>2016</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image26.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<blockquote>
+<p><strong>Caffe Step 1: Convert Data</strong></p>
+</blockquote>
+<p><img src="media/image27.jpeg" style="width:9.60278in;height:4.32639in" /></p>
+<ul>
+<li><blockquote>
+<p>DataLayer reading from LMDB is the easiest</p>
+</blockquote></li>
+<li><blockquote>
+<p>Create LMDB using <a href="https://github.com/BVLC/caffe/blob/85bb397acfd383a676c125c75d877642d6b39ff6/tools/convert_imageset.cpp"><span class="underline">convert_imageset</span></a></p>
+</blockquote></li>
+<li><blockquote>
+<p>Need text file where each line is</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>“[path/to/image.jpeg] [label]”</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>Create HDF5 file yourself using h5py</p>
+</blockquote></li>
+</ul>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei</p>
+</blockquote></td>
+<td>2016</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image28.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image29.jpeg" style="width:8.18819in;height:2.85in" /></p>
+<ul>
+<li><blockquote>
+<p>ImageDataLayer: Read from image files</p>
+</blockquote></li>
+<li><blockquote>
+<p>WindowDataLayer: For detection</p>
+</blockquote></li>
+<li><blockquote>
+<p>HDF5Layer: Read from HDF5 file</p>
+</blockquote></li>
+<li><blockquote>
+<p>From memory, using Python interface</p>
+</blockquote></li>
+<li><blockquote>
+<p>All of these are harder to use (except Python)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image30.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 13 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image31.jpeg" style="width:9.07986in;height:4.95417in" /></p>
+</blockquote>
+<p><img src="media/image32.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 14 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image33.jpeg" style="width:9.07986in;height:4.95417in" /></p>
+<p><img src="media/image34.jpeg" style="width:1.04861in;height:0.22847in" />Layers and Blobs</p>
+</blockquote>
+<p><img src="media/image35.jpeg" style="width:1.03125in" /></p>
+<blockquote>
+<p>often have same</p>
+</blockquote>
+<p><img src="media/image36.jpeg" style="width:1.03125in" /></p>
+<blockquote>
+<p>name!</p>
+</blockquote>
+<p><img src="media/image37.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 15 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image38.jpeg" style="width:9.07986in;height:4.97569in" /></p>
+<p><img src="media/image39.jpeg" style="width:1.04861in;height:0.22847in" />Layers and Blobs</p>
+</blockquote>
+<p><img src="media/image40.jpeg" style="width:1.03125in" /></p>
+<blockquote>
+<p>often have same</p>
+</blockquote>
+<p><img src="media/image41.jpeg" style="width:1.03125in" /></p>
+<blockquote>
+<p>name!</p>
+</blockquote>
+<p>Learning rates</p>
+<p>(weight + bias)</p>
+<blockquote>
+<p>Regularization</p>
+<p>(weight + bias)</p>
+</blockquote>
+<p><img src="media/image42.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 16 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image43.jpeg" style="width:9.45486in;height:4.97569in" /></p>
+<p><img src="media/image44.jpeg" style="width:1.04861in;height:0.22847in" />Layers and Blobs <img src="media/image45.jpeg" style="width:1.04861in;height:0.22847in" />often have same name!</p>
+</blockquote>
+<p><img src="media/image46.jpeg" style="width:1.03125in" /></p>
+<p>Learning rates</p>
+<p>(weight + bias)</p>
+<blockquote>
+<p>Regularization</p>
+<p>(weight + bias)</p>
+</blockquote>
+<p><img src="media/image48.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+<blockquote>
+<p>Number of output</p>
+<p>classes</p>
+</blockquote>
+<p>Lecture 12 17 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image49.jpeg" style="width:9.45486in;height:4.97569in" /></p>
+<p><img src="media/image50.jpeg" style="width:1.04861in;height:0.22847in" />Layers and Blobs</p>
+</blockquote>
+<p><img src="media/image51.jpeg" style="width:1.03125in" /></p>
+<blockquote>
+<p>often have same</p>
+</blockquote>
+<p><img src="media/image52.jpeg" style="width:1.03125in" /></p>
+<blockquote>
+<p>name!</p>
+<p>Set these to 0 to</p>
+<p>freeze a layer</p>
+</blockquote>
+<p>Number of output</p>
+<p>classes</p>
+<p>Learning rates</p>
+<p>(weight + bias)</p>
+<blockquote>
+<p>Regularization</p>
+<p>(weight + bias)</p>
+</blockquote>
+<p><img src="media/image53.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 18 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image54.jpeg" style="width:10in;height:5.41389in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>.prototxt can get ugly for big models</p>
+</blockquote></li>
+<li><blockquote>
+<p>ResNet-152 prototxt is 6775 lines long!</p>
+</blockquote></li>
+<li><blockquote>
+<p>Not “compositional”; can’t easily define a residual block and reuse</p>
+</blockquote></li>
+</ul>
+<p><a href="https://github.com/KaimingHe/deep-residual-networks/blob/master/prototxt/ResNet-152-deploy.prototxt"><span class="underline">https://github.com/KaimingHe/deep-residual-networks/blob/master/prototxt/ResNet-152-deploy.prototxt</span></a></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 19 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image55.jpeg" style="width:10in;height:5.41389in" /></p>
+<p><strong>Original prototxt:</strong></p>
+<p><strong>layer {</strong></p>
+<p><strong>name: "fc7"</strong></p>
+<p><strong>type: "InnerProduct" inner_product_param { num_output: 4096</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>[... ReLU, Dropout] layer {</strong></p>
+<p><strong>name: "fc8"</strong></p>
+<p><strong>type: "InnerProduct" inner_product_param { num_output: 1000</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+</blockquote>
+<p><strong>Pretrained weights:</strong></p>
+<p><strong>“fc7.weight”: [values]</strong></p>
+<p><strong>“fc7.bias”: [values]</strong></p>
+<p><strong>“fc8.weight”: [values]</strong></p>
+<p><strong>“fc8.bias”: [values]</strong></p>
+<p><strong>Modified prototxt:</strong></p>
+<p><strong>layer {</strong></p>
+<blockquote>
+<p><strong>name: "fc7"</strong></p>
+</blockquote>
+<p><strong>type: "InnerProduct" inner_product_param { num_output: 4096</strong></p>
+<blockquote>
+<p><strong>}</strong></p>
+</blockquote>
+<p><strong>}</strong></p>
+<p><strong>[... ReLU, Dropout] layer {</strong></p>
+<blockquote>
+<p><strong>name: "my-fc8" type: "InnerProduct" inner_product_param {</strong></p>
+<p><strong>num_output: 10</strong></p>
+<p><strong>}</strong></p>
+</blockquote>
+<p><strong>}</strong></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 20 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image56.jpeg" style="width:10in;height:5.41389in" /></p>
+<p><strong>Original prototxt:</strong></p>
+</blockquote>
+<p><strong>layer {</strong></p>
+<p><strong>name:</strong></p>
+<blockquote>
+<p><strong>type: "InnerProduct" inner_product_param { num_output: 4096</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>[... ReLU, Dropout] layer {</strong></p>
+<p><strong>name: "fc8"</strong></p>
+<p><strong>type: "InnerProduct" inner_product_param { num_output: 1000</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p>Same name:</p>
+<p>weights copied</p>
+</blockquote>
+<p><strong>Pretrained weights:</strong></p>
+<p><strong>“fc8.weight”: [values]</strong></p>
+<p><strong>“fc8.bias”: [values]</strong></p>
+<p><strong>Modified prototxt:</strong></p>
+<p><strong>layer {</strong></p>
+<p><strong>name:</strong></p>
+<p><strong>type: "InnerProduct" inner_product_param { num_output: 4096</strong></p>
+<blockquote>
+<p><strong>}</strong></p>
+</blockquote>
+<p><strong>}</strong></p>
+<p><strong>[... ReLU, Dropout] layer {</strong></p>
+<blockquote>
+<p><strong>name: "my-fc8" type: "InnerProduct" inner_product_param {</strong></p>
+<p><strong>num_output: 10</strong></p>
+<p><strong>}</strong></p>
+</blockquote>
+<p><strong>}</strong></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 21 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image57.jpeg" style="width:10in;height:5.41389in" /></p>
+<p><strong>Original prototxt:</strong></p>
+<p><strong>layer {</strong></p>
+<p><strong>name: "fc7"</strong></p>
+<p><strong>type: "InnerProduct" inner_product_param { num_output: 4096</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p><strong>[... ReLU, Dropout] layer {</strong></p>
+<p><strong>name:</strong></p>
+<p><strong>type: "InnerProduct" inner_product_param { num_output: 1000</strong></p>
+<p><strong>}</strong></p>
+<p><strong>}</strong></p>
+<p>Same name:</p>
+<p>weights copied</p>
+<p><strong>Pretrained weights:</strong></p>
+<p><strong>“fc7.weight”: [values]</strong></p>
+<p><strong>“fc7.bias”: [values]</strong></p>
+</blockquote>
+<p>Different name:</p>
+<p>weights reinitialized</p>
+<p><strong>Modified prototxt:</strong></p>
+<p><strong>layer {</strong></p>
+<blockquote>
+<p><strong>name: "fc7"</strong></p>
+</blockquote>
+<p><strong>type: "InnerProduct" inner_product_param { num_output: 4096</strong></p>
+<blockquote>
+<p><strong>}</strong></p>
+</blockquote>
+<p><strong>}</strong></p>
+<p><strong>[... ReLU, Dropout] layer {</strong></p>
+<blockquote>
+<p><strong>name:</strong></p>
+<p><strong>type: "InnerProduct" inner_product_param {</strong></p>
+</blockquote>
+<p><strong>num_output: 10</strong></p>
+<blockquote>
+<p><strong>}</strong></p>
+</blockquote>
+<p><strong>}</strong></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 22 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image58.jpeg" style="width:10in;height:5.41389in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Write a prototxt file defining a <a href="https://github.com/BVLC/caffe/blob/85bb397acfd383a676c125c75d877642d6b39ff6/src/caffe/proto/caffe.proto#L92"><span class="underline">SolverParameter</span></a></p>
+</blockquote></li>
+<li><blockquote>
+<p>If finetuning, copy existing solver. prototxt file</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Change net to be your net</p>
+</blockquote></li>
+<li><blockquote>
+<p>Change snapshot_prefix to your output</p>
+</blockquote></li>
+<li><blockquote>
+<p>Reduce base learning rate (divide by 100)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Maybe change max_iter and snapshot</p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 23 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image59.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image60.jpeg" style="width:9.49375in;height:3.71458in" /></p>
+<blockquote>
+<p><strong>./build/tools/caffe train \ -gpu 0 \</strong></p>
+<p><strong>-model path/to/trainval.prototxt \ -solver path/to/solver.prototxt \</strong></p>
+<p><strong>-weights path/to/pretrained_weights.caffemodel</strong></p>
+</blockquote>
+<p><a href="https://github.com/BVLC/caffe/blob/master/tools/caffe.cpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/tools/caffe.cpp</span></a></p>
+<p><img src="media/image61.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 24 22 Feb 2016</p>
+<p><img src="media/image62.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image63.jpeg" style="width:9.49375in;height:3.71458in" /></p>
+<blockquote>
+<p><strong>./build/tools/caffe train \</strong></p>
+<p><strong>-model path/to/trainval.prototxt \ -solver path/to/solver.prototxt \</strong></p>
+</blockquote>
+<p><img src="media/image64.jpeg" style="height:1.37986in" /></p>
+<blockquote>
+<p><strong>-weights path/to/pretrained_weights.caffemodel</strong></p>
+<p><strong>-gpu -1</strong> <img src="media/image65.jpeg" style="width:1.73958in;height:0.23681in" /></p>
+</blockquote>
+<p><a href="https://github.com/BVLC/caffe/blob/master/tools/caffe.cpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/tools/caffe.cpp</span></a></p>
+<p><img src="media/image66.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 25 22 Feb 2016</p>
+<p><img src="media/image67.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image68.jpeg" style="width:9.49375in;height:3.71458in" /></p>
+<blockquote>
+<p><strong>./build/tools/caffe train \</strong></p>
+<p><strong>-model path/to/trainval.prototxt \ -solver path/to/solver.prototxt \</strong></p>
+</blockquote>
+<p><img src="media/image69.jpeg" style="height:1.37986in" /></p>
+<blockquote>
+<p><strong>-weights path/to/pretrained_weights.caffemodel</strong></p>
+<p><strong>-gpu all</strong> <img src="media/image70.jpeg" style="width:3.76389in;height:0.28819in" /></p>
+</blockquote>
+<p><a href="https://github.com/BVLC/caffe/blob/master/tools/caffe.cpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/tools/caffe.cpp</span></a></p>
+<p><img src="media/image71.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 26 22 Feb 2016</p>
+<p><img src="media/image72.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image73.jpeg" style="width:9.40069in;height:3.71458in" /></p>
+<blockquote>
+<p>AlexNet, VGG, GoogLeNet, ResNet, plus others</p>
+</blockquote>
+<p><a href="https://github.com/BVLC/caffe/wiki/Model-Zoo"><span class="underline">https://github.com/BVLC/caffe/wiki/Model-Zoo</span></a></p>
+<p><img src="media/image74.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 27 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image75.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image76.jpeg" style="width:9.02778in;height:3.40833in" /></p>
+<blockquote>
+<p>Not much documentation…</p>
+<p>Read the code! Two most important files:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><a href="https://github.com/BVLC/caffe/blob/master/python/caffe/_caffe.cpp"><span class="underline">caffe/python/caffe/_caffe.cpp</span></a>:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Exports Blob, Layer, Net, and Solver classes</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p><a href="https://github.com/BVLC/caffe/blob/master/python/caffe/pycaffe.py"><span class="underline">caffe/python/caffe/pycaffe.py</span></a></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Adds extra methods to Net class</p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p><img src="media/image77.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 28 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image78.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image79.jpeg" style="width:9.30764in;height:3.71458in" /></p>
+<blockquote>
+<p>Good for:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Interfacing with numpy</p>
+</blockquote></li>
+<li><blockquote>
+<p>Extract features: Run net forward</p>
+</blockquote></li>
+<li><blockquote>
+<p>Compute gradients: Run net backward (DeepDream, etc)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Define layers in Python with numpy (CPU only)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image80.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 29 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image81.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image82.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>(+) Good for feedforward networks</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) Good for finetuning existing networks</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) Train models without writing any code!</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) Python interface is pretty useful!</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Need to write C++ / CUDA for new GPU layers</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Not good for recurrent networks</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Cumbersome for big networks (GoogLeNet, ResNet)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image83.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 30 22 Feb 2016</p>
+<p>Torch</p>
+<p><img src="media/image84.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<p><a href="http://torch.ch"><span class="underline">http://torch.ch</span></a></p>
+<p><img src="media/image85.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 31 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image86.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image87.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>From NYU + IDIAP</p>
+</blockquote></li>
+<li><blockquote>
+<p>Written in C and Lua</p>
+</blockquote></li>
+<li><blockquote>
+<p>Used a lot a Facebook, DeepMind</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image88.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 32 22 Feb 2016</p>
+<p><img src="media/image89.jpeg" style="width:9.02778in;height:4.94444in" /></p>
+<blockquote>
+<p>Torch: Lua</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>● High level scripting language, easy to</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>interface with C</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>●</p>
+</blockquote></td>
+<td><blockquote>
+<p>Similar to Javascript:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>○</p>
+</blockquote></td>
+<td><blockquote>
+<p>One data structure:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>table == JS object</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>○</p>
+</blockquote></td>
+<td><blockquote>
+<p>Prototypical inheritance</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><blockquote>
+<p>metatable == JS prototype</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>○ First-class functions</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>●</p>
+</blockquote></td>
+<td><blockquote>
+<p>Some gotchas:</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>○</p>
+</blockquote></td>
+<td><blockquote>
+<p>1-indexed =(</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>○ Variables global by default =(</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>○</p>
+</blockquote></td>
+<td><blockquote>
+<p>Small standard library</p>
+</blockquote></td>
+<td></td>
+<td><a href="http://tylerneylon.com/a/learn-lua/">http://tylerneylon.com/a/learn-lua/</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 12 33</p>
+</blockquote></td>
+<td><blockquote>
+<p>22 Feb 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image90.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<blockquote>
+<p><img src="media/image91.jpeg" style="width:9.07431in;height:1.40069in" /></p>
+<p>Torch tensors are just like numpy arrays</p>
+</blockquote>
+<p><img src="media/image92.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 34 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image93.jpeg" style="width:9.07431in;height:1.40069in" /></p>
+<p>Torch tensors are just like numpy arrays</p>
+</blockquote>
+<p><img src="media/image94.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 35 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image96.jpeg" style="width:9.07431in;height:1.40069in" /></p>
+<p>Torch tensors are just like numpy arrays</p>
+</blockquote>
+<p><img src="media/image97.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 36 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image99.jpeg" style="width:9.07431in;height:1.40069in" /></p>
+<p>Like numpy, can easily change data type:</p>
+</blockquote>
+<p><img src="media/image100.jpeg" style="width:10in;height:3.85139in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 37 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image101.jpeg" style="width:9.07431in;height:1.40069in" /></p>
+<p>Unlike numpy, GPU is just a datatype away:</p>
+</blockquote>
+<p><img src="media/image102.jpeg" style="width:10in;height:3.85139in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 38 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image103.jpeg" style="width:9.07431in;height:1.40069in" /></p>
+<p>Documentation on GitHub:</p>
+</blockquote>
+<p><img src="media/image104.jpeg" style="width:8.00556in;height:3.30417in" /></p>
+<blockquote>
+<p><span class="underline">https://github.com/torch/torch7/blob/master/doc/tensor.md</span> <a href="https://github.com/torch/torch7/blob/master/doc/maths.md"><sub><span class="underline">https://github.com/torch/torch7/blob/master/doc/maths.md</span></sub></a></p>
+</blockquote>
+<p><img src="media/image105.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 39 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image106.jpeg" style="width:9.14236in;height:4.89028in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>nn module lets you easily build and train neural nets</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image107.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 40 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image108.jpeg" style="width:9.14236in;height:4.89028in" /></p>
+</blockquote>
+<ol start="40" type="a">
+<li><blockquote>
+<p>module lets you easily build and train neural nets</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>Build a two-layer ReLU net</p>
+</blockquote>
+<p><img src="media/image109.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 41 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image110.jpeg" style="width:9.14236in;height:4.89028in" /></p>
+</blockquote>
+<ol start="40" type="a">
+<li><blockquote>
+<p>module lets you easily build and train neural nets</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>Get weights and gradient for entire network</p>
+</blockquote>
+<p><img src="media/image111.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 42 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image112.jpeg" style="width:9.14236in;height:4.89028in" /></p>
+</blockquote>
+<ol start="40" type="a">
+<li><blockquote>
+<p>module lets you easily build and train neural nets</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>Use a softmax loss function</p>
+</blockquote>
+<p><img src="media/image113.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 43 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image114.jpeg" style="width:9.14236in;height:4.89028in" /></p>
+</blockquote>
+<ol start="40" type="a">
+<li><blockquote>
+<p>module lets you easily build and train neural nets</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>Generate random data <img src="media/image115.jpeg" style="width:1.63056in;height:0.30417in" /></p>
+</blockquote>
+<p><img src="media/image117.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 44 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image118.jpeg" style="width:9.14236in;height:4.89028in" /></p>
+</blockquote>
+<ol start="40" type="a">
+<li><blockquote>
+<p>module lets you easily build and train neural nets</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><strong>Forward pass</strong>: compute scores and loss</p>
+</blockquote>
+<p><img src="media/image119.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 45 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image120.jpeg" style="width:9.14236in;height:4.89028in" /></p>
+</blockquote>
+<ol start="40" type="a">
+<li><blockquote>
+<p>module lets you easily build and train neural nets</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><strong>Backward pass</strong>: Compute</p>
+<p>gradients. Remember to set</p>
+<p>weight gradients to zero!</p>
+</blockquote>
+<p><img src="media/image121.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 46 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image122.jpeg" style="width:9.14236in;height:4.89028in" /></p>
+</blockquote>
+<ol start="40" type="a">
+<li><blockquote>
+<p>module lets you easily build and train neural nets</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p><strong>Update</strong>: Make a gradient descent step</p>
+</blockquote>
+<p><img src="media/image123.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 47 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image124.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+<p>Running on GPU is easy:</p>
+</blockquote>
+<p><img src="media/image125.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 48 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image126.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+<p>Running on GPU is easy:</p>
+<p>Import a few new packages</p>
+</blockquote>
+<p><img src="media/image127.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 49 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image128.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+<p>Running on GPU is easy:</p>
+<p>Import a few new packages</p>
+<p>Cast network and criterion</p>
+</blockquote>
+<p><img src="media/image129.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 50 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image130.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+<p>Running on GPU is easy:</p>
+<p>Import a few new packages</p>
+<p>Cast network and criterion</p>
+<p>Cast data and labels</p>
+</blockquote>
+<p><img src="media/image131.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 51 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image132.jpeg" style="width:9.02778in;height:4.97153in" /></p>
+<p>optim package implements different update rules: momentum, Adam, etc</p>
+</blockquote>
+<p><img src="media/image133.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 52 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image134.jpeg" style="width:9.02778in;height:4.97153in" /></p>
+<p>optim package implements different update rules: momentum, Adam, etc</p>
+<p>Import optim package</p>
+</blockquote>
+<p><img src="media/image135.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 53 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image136.jpeg" style="width:9.02778in;height:4.97153in" /></p>
+<p>optim package implements different update rules: momentum, Adam, etc</p>
+<p>Import optim package</p>
+<p>Write a callback function that returns<img src="media/image137.jpeg" style="width:0.68542in;height:0.30694in" /> loss and gradients</p>
+</blockquote>
+<p><img src="media/image138.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 54 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image139.jpeg" style="width:9.02778in;height:4.97153in" /></p>
+<p>optim package implements different update rules: momentum, Adam, etc</p>
+<p>Import optim package</p>
+<p>Write a callback function that returns loss and gradients</p>
+<p>state variable holds hyperparameters, cached values, etc; pass it to adam <img src="media/image140.jpeg" style="width:0.73403in;height:0.30278in" /></p>
+</blockquote>
+<p><img src="media/image142.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 55 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image143.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image144.jpeg" style="width:4.52569in;height:3.71458in" /></p>
+<blockquote>
+<p>Caffe has Nets and Layers;</p>
+<p>Torch just has Modules</p>
+</blockquote>
+<p><img src="media/image145.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 56 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image146.jpeg" style="width:9.40139in;height:4.80208in" /></p>
+<p>Caffe has Nets and Layers; Torch just has Modules</p>
+<p>Modules are classes written in Lua; easy to read and write</p>
+<p>Forward / backward written in Lua</p>
+<p>using Tensor methods</p>
+<p>Same code runs on CPU / GPU</p>
+</blockquote>
+<p><a href="https://github.com/torch/nn/blob/master/Linear.lua"><span class="underline">https://github.com/torch/nn/blob/master/Linear.lua</span></a></p>
+<p><img src="media/image147.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 57 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image148.jpeg" style="width:9.40139in;height:4.80208in" /></p>
+<p>Caffe has Nets and Layers; Torch just has Modules</p>
+<p>Modules are classes written in Lua; easy to read and write</p>
+<p><strong>updateOutput</strong>: Forward pass; compute output</p>
+</blockquote>
+<p><a href="https://github.com/torch/nn/blob/master/Linear.lua"><span class="underline">https://github.com/torch/nn/blob/master/Linear.lua</span></a></p>
+<p><img src="media/image149.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 58 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image150.jpeg" style="width:9.34722in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image151.jpeg" style="width:9.34722in;height:3.8in" /></p>
+<blockquote>
+<p>Caffe has Nets and Layers; Torch just has Modules</p>
+<p>Modules are classes written in Lua; easy to read and write</p>
+<p><strong>updateGradInput:</strong> Backward; compute gradient of input</p>
+</blockquote>
+<p><img src="media/image152.jpeg" style="width:3.29444in;height:0.38889in" /></p>
+<p><a href="https://github.com/torch/nn/blob/master/Linear.lua"><span class="underline">https://github.com/torch/nn/blob/master/Linear.lua</span></a></p>
+<p><img src="media/image153.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 59 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image154.jpeg" style="width:9.34722in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image155.jpeg" style="width:4.52569in;height:3.71458in" /></p>
+<blockquote>
+<p>Caffe has Nets and Layers; Torch just has Modules</p>
+</blockquote>
+<p><img src="media/image156.jpeg" style="width:4.76597in;height:1.90903in" /></p>
+<blockquote>
+<p>Modules are classes written in Lua; easy to read and write</p>
+<p><strong>accGradParameters:</strong> Backward; compute gradient of weights</p>
+</blockquote>
+<p><img src="media/image157.jpeg" style="width:3.29444in;height:0.38889in" /></p>
+<p><a href="https://github.com/torch/nn/blob/master/Linear.lua"><span class="underline">https://github.com/torch/nn/blob/master/Linear.lua</span></a></p>
+<p><img src="media/image158.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 60 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image159.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>Tons of built-in modules and loss functions</p>
+<p><a href="https://github.com/torch/nn"><span class="underline">https://github.com/torch/nn</span></a></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 61 22 Feb 2016</p>
+<p><img src="media/image160.jpeg" style="width:10in;height:5.625in" /></p>
+<blockquote>
+<p>Torch: Modules</p>
+<p>Tons of built-in modules and loss functions</p>
+<p>New ones all the time:</p>
+<p><a href="https://github.com/torch/nn"><span class="underline">https://github.com/torch/nn</span></a></p>
+</blockquote>
+<p>Added 2/19/2016</p>
+<p>Added 2/16/2016</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 62 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image161.jpeg" style="width:9.02778in;height:4.77569in" /></p>
+<p>Writing your own modules is easy!</p>
+</blockquote>
+<p><img src="media/image162.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 63 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image163.jpeg" style="width:9.30764in;height:1.40278in" /></p>
+<p><em>Container</em> modules allow you to combine multiple modules</p>
+</blockquote>
+<p><img src="media/image164.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 64 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image165.jpeg" style="width:9.57292in;height:2.15972in" /></p>
+<p><em>Container</em> modules allow you to combine multiple modules</p>
+</blockquote>
+<p><img src="media/image166.jpeg" style="width:0.90903in;height:2.32569in" /></p>
+<blockquote>
+<p>x</p>
+</blockquote>
+<p><img src="media/image167.jpeg" style="height:0.32847in" /></p>
+<blockquote>
+<p>mod1</p>
+</blockquote>
+<p><img src="media/image168.jpeg" style="height:0.32847in" /></p>
+<blockquote>
+<p>mod2</p>
+</blockquote>
+<p><img src="media/image169.jpeg" style="height:0.32847in" /></p>
+<blockquote>
+<p>out</p>
+</blockquote>
+<p><img src="media/image170.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 65 22 Feb 2016</p>
+<p><img src="media/image171.jpeg" style="width:9.57292in;height:2.15972in" /></p>
+<blockquote>
+<p>Torch: Modules</p>
+<p><em>Container</em> modules allow you to combine multiple modules</p>
+</blockquote>
+<p><img src="media/image172.jpeg" style="width:2.59931in;height:2.58403in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>x</td>
+<td></td>
+<td><blockquote>
+<p>x</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>mod1</td>
+<td><blockquote>
+<p>mod1</p>
+</blockquote></td>
+<td><blockquote>
+<p>mod2</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>mod2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>out</td>
+<td><blockquote>
+<p>out[1]</p>
+</blockquote></td>
+<td><blockquote>
+<p>out[2]</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</td>
+<td><blockquote>
+<p>Lecture 12 66 22 Feb 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image173.jpeg" style="width:10in;height:3.08681in" /></p>
+<p><img src="media/image177.jpeg" style="width:9.60278in;height:2.15972in" /></p>
+<blockquote>
+<p>Torch: Modules</p>
+<p><em>Container</em> modules allow you to combine multiple modules</p>
+</blockquote>
+<p><img src="media/image178.jpeg" style="width:6.16736in;height:2.64583in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>x</td>
+<td></td>
+<td><blockquote>
+<p>x</p>
+</blockquote></td>
+<td><blockquote>
+<p>x1</p>
+</blockquote></td>
+<td>x2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>mod1</td>
+<td><blockquote>
+<p>mod1</p>
+</blockquote></td>
+<td><blockquote>
+<p>mod2</p>
+</blockquote></td>
+<td><blockquote>
+<p>mod1</p>
+</blockquote></td>
+<td>mod2</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>mod2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>out</td>
+<td><blockquote>
+<p>out[1]</p>
+</blockquote></td>
+<td><blockquote>
+<p>out[2]</p>
+</blockquote></td>
+<td><blockquote>
+<p>out[1]</p>
+</blockquote></td>
+<td>out[2]</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</td>
+<td><blockquote>
+<p>Lecture 12 67</p>
+</blockquote></td>
+<td><blockquote>
+<p>22 Feb 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image179.jpeg" style="width:10in;height:3.08681in" /></p>
+<blockquote>
+<p><img src="media/image187.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image188.jpeg" style="width:4.30764in;height:3.71458in" /></p>
+<blockquote>
+<p>Use nngraph to build modules</p>
+<p>that combine their inputs in</p>
+<p>complex ways</p>
+<p><strong>Inputs</strong>: x, y, z</p>
+<p><strong>Outputs</strong>: c</p>
+<p>a = x + y</p>
+<p>b = a ☉ z</p>
+<p>c = a + b</p>
+</blockquote>
+<p><img src="media/image189.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 68 22 Feb 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Torch: nngraph <sup>x</sup></td>
+<td>y</td>
+<td><blockquote>
+<p>z</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image190.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+<blockquote>
+<p>Use nngraph to build modules that combine their inputs in complex ways</p>
+<p><strong>Inputs</strong>: x, y, z</p>
+<p><strong>Outputs</strong>: c</p>
+<p>a = x + y</p>
+<p>b = a ☉ z</p>
+<p>c = a + b</p>
+</blockquote>
+<p>a</p>
+<p><img src="media/image192.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>☉</p>
+<p><img src="media/image193.jpeg" style="height:0.31042in" /></p>
+<blockquote>
+<p>b</p>
+</blockquote>
+<p><img src="media/image194.jpeg" style="height:0.31042in" /></p>
+<blockquote>
+<p>+</p>
+</blockquote>
+<p><img src="media/image195.jpeg" style="height:0.31042in" /></p>
+<blockquote>
+<p>c</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 69 22 Feb 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Torch: nngraph <sup>x</sup></td>
+<td>y</td>
+<td><blockquote>
+<p>z</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image196.jpeg" style="width:9.37083in;height:4.80208in" /></p>
+<blockquote>
+<p>Use nngraph to build modules that combine their inputs in complex ways</p>
+<p><strong>Inputs</strong>: x, y, z</p>
+<p><strong>Outputs</strong>: c</p>
+<p>a = x + y</p>
+<p>b = a ☉ z</p>
+<p>c = a + b</p>
+</blockquote>
+<p>a</p>
+<p><img src="media/image198.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>☉</p>
+<p><img src="media/image199.jpeg" style="height:0.31042in" /></p>
+<p>b</p>
+<p><img src="media/image200.jpeg" style="height:0.31042in" /></p>
+<p>+</p>
+<p><img src="media/image201.jpeg" style="height:0.31042in" /></p>
+<p>c</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 70 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image202.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image203.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p><strong>loadcaffe</strong>: Load pretrained Caffe models: AlexNet, VGG, some others</p>
+<p><a href="https://github.com/szagoruyko/loadcaffe"><span class="underline">https://github.com/szagoruyko/loadcaffe</span></a></p>
+<p><strong>GoogLeNet v1</strong>: <a href="https://github.com/soumith/inception.torch"><span class="underline">https://github.com/soumith/inception.torch</span></a></p>
+<p><strong>GoogLeNet v3</strong>: <a href="https://github.com/Moodstocks/inception-v3.torch"><span class="underline">https://github.com/Moodstocks/inception-v3.torch</span></a></p>
+<p><strong>ResNet</strong>: <a href="https://github.com/facebook/fb.resnet.torch"><span class="underline">https://github.com/facebook/fb.resnet.torch</span></a></p>
+</blockquote>
+<p><img src="media/image204.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 71 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image205.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image206.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>After installing torch, use luarocks to install or update Lua packages</p>
+<p>(Similar to pip install from Python)</p>
+</blockquote>
+<p><img src="media/image207.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 72 22 Feb 2016</p>
+<p><a href="https://github.com/twitter/torch-autograd"><span class="underline">https://github.com/twitter/torch-autograd</span></a></p>
+<p><span class="underline"><a href="https://github.com/hughperkins/cltorch">https://github.com/hughperkins/cltorch</a>, <a href="https://github.com/hughperkins/clnn">https://github.com/hughperkins/clnn</a></span></p>
+<p><a href="https://luarocks.org/modules/luarocks/lua-cjson"><span class="underline">https://luarocks.org/modules/luarocks/lua-cjson</span></a></p>
+<p><a href="https://github.com/deepmind/torch-hdf5"><span class="underline">https://github.com/deepmind/torch-hdf5</span></a></p>
+<blockquote>
+<p><img src="media/image208.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image209.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p><strong>torch.cudnn</strong>: Bindings for NVIDIA cuDNN kernels</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><a href="https://github.com/soumith/cudnn.torch"><span class="underline">https://github.com/soumith/cudnn.torch</span></a></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>torch-hdf5</strong>: Read and write HDF5 files from Torch</p>
+</blockquote></li>
+</ul>
+<ul>
+<li><blockquote>
+<p><strong>lua-cjson</strong>: Read and write JSON files from Lua</p>
+</blockquote></li>
+</ul>
+<ul>
+<li><blockquote>
+<p><strong>cltorch, clnn</strong>: OpenCL backend for Torch, and port of nn</p>
+</blockquote></li>
+</ul>
+<ul>
+<li><blockquote>
+<p><strong>torch-autograd</strong>: Automatic differentiation; sort of like more powerful</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>nngraph, similar to Theano or TensorFlow</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>fbcunn</strong>: Facebook: FFT conv, multi-GPU (DataParallel, ModelParallel)</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><a href="https://github.com/facebook/fbcunn"><span class="underline">https://github.com/facebook/fbcunn</span></a></p>
+</blockquote>
+<p><img src="media/image210.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 73 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image211.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image212.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p><strong>Step 1</strong>: Preprocess data; usually use a Python script to dump data to HDF5</p>
+<p><strong>Step 2</strong>: Train a model in Lua / Torch; read from HDF5 datafile, save trained model to disk</p>
+<p><strong>Step 3:</strong> Use trained model for something, often with an evaluation script</p>
+</blockquote>
+<p><img src="media/image213.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 74 22 Feb 2016</p>
+<p>(<a href="https://github.com/jcjohnson/torch-rnn/blob/master/sample.lua"><span class="underline">https://github.com/jcjohnson/torch-rnn/blob/master/sample.lua</span></a>)</p>
+<p>(<a href="https://github.com/jcjohnson/torch-rnn/blob/master/train.lua"><span class="underline">https://github.com/jcjohnson/torch-rnn/blob/master/train.</span></a></p>
+<p>(<a href="https://github.com/jcjohnson/torch-rnn/blob/master/scripts/preprocess.py"><span class="underline">https://github.com/jcjohnson/torch-rnn/blob/master/scripts/preprocess.py</span></a>)</p>
+<p><img src="media/image214.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<blockquote>
+<p>Torch: Typical Workflow</p>
+</blockquote>
+<p><img src="media/image215.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p><strong>Example:</strong> <a href="https://github.com/jcjohnson/torch-rnn"><span class="underline">https://github.com/jcjohnson/torch-rnn</span></a></p>
+<p><strong>Step 1</strong>: Preprocess data; usually use a Python script to dump data to HDF5</p>
+<p><strong>Step 2</strong>: Train a model in Lua / Torch; read from HDF5 datafile, save trained model to disk</p>
+<p><a href="https://github.com/jcjohnson/torch-rnn/blob/master/train.lua"><span class="underline">lua</span></a> )</p>
+<p><strong>Step 3:</strong> Use trained model for something, often with an evaluation script</p>
+</blockquote>
+<p><img src="media/image216.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 75 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image217.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image218.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>(-) Lua</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Less plug-and-play than Caffe</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>You usually write your own training code</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>(+) Lots of modular pieces that are easy to combine</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) Easy to write your own layer types and run on GPU</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) Most of the library code is in Lua, easy to read</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) Lots of pretrained models!</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Not great for RNNs</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image219.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 76 22 Feb 2016</p>
+<p>Theano</p>
+<p><img src="media/image220.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<p><a href="http://deeplearning.net/software/theano/"><span class="underline">http://deeplearning.net/software/theano/</span></a></p>
+<p><img src="media/image221.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 77 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image222.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image223.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>From Yoshua Bengio’s group at University of Montreal</p>
+<p>Embracing computation graphs, symbolic computation</p>
+<p>High-level wrappers: Keras, Lasagne</p>
+</blockquote>
+<p><img src="media/image224.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 78 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image225.jpeg" style="width:9.39514in;height:4.71736in" /></p>
+<p>x y z</p>
+<p>+</p>
+</blockquote>
+<p><img src="media/image226.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>a</p>
+<p>☉</p>
+</blockquote>
+<p><img src="media/image227.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>b</p>
+</blockquote>
+<p><img src="media/image228.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>+</p>
+</blockquote>
+<p><img src="media/image229.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>c</p>
+</blockquote>
+<p><img src="media/image230.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 79 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image231.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>x y z</p>
+<p>+</p>
+</blockquote>
+<p><img src="media/image232.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>a</p>
+<p>☉</p>
+</blockquote>
+<p><img src="media/image233.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>b</p>
+</blockquote>
+<p><img src="media/image234.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>+</p>
+</blockquote>
+<p><img src="media/image235.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>c</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 80 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image236.jpeg" style="width:10in;height:5.41389in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td>x</td>
+<td><blockquote>
+<p>y</p>
+</blockquote></td>
+<td><blockquote>
+<p>z</p>
+</blockquote></td>
+<td><blockquote>
+<p>Define symbolic variables;</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>+</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>these are inputs to the</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td><blockquote>
+<p>graph</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p>a</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image237.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>☉</p>
+</blockquote>
+<p><img src="media/image238.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>b</p>
+</blockquote>
+<p><img src="media/image239.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>+</p>
+</blockquote>
+<p><img src="media/image240.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>c</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 81 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image241.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>x y z</p>
+<p>+</p>
+</blockquote>
+<p><img src="media/image242.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>a</p>
+<p>☉</p>
+</blockquote>
+<p><img src="media/image243.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>b</p>
+</blockquote>
+<p><img src="media/image244.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>+</p>
+</blockquote>
+<p><img src="media/image245.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>c</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+<blockquote>
+<p>Compute intermediates and outputs symbolically</p>
+</blockquote>
+<p>Lecture 12 82 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image246.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>x y z</p>
+<p>+</p>
+</blockquote>
+<p><img src="media/image247.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>a</p>
+<p>☉</p>
+</blockquote>
+<p><img src="media/image248.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>b</p>
+</blockquote>
+<p><img src="media/image249.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>+</p>
+</blockquote>
+<p><img src="media/image250.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>c</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+<blockquote>
+<p>Compile a function that produces c from x, y, z (generates code)</p>
+</blockquote>
+<p>Lecture 12 83 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image251.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>x y z</p>
+<p>+</p>
+</blockquote>
+<p><img src="media/image252.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>a</p>
+<p>☉</p>
+</blockquote>
+<p><img src="media/image253.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>b</p>
+</blockquote>
+<p><img src="media/image254.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>+</p>
+</blockquote>
+<p><img src="media/image255.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>c</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+<blockquote>
+<p>Run the function, passing some numpy arrays (may run on GPU)</p>
+</blockquote>
+<p>Lecture 12 84 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image256.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>x y z</p>
+<p>+</p>
+</blockquote>
+<p><img src="media/image257.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>a</p>
+<p>☉</p>
+</blockquote>
+<p><img src="media/image258.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>b</p>
+</blockquote>
+<p><img src="media/image259.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>+</p>
+</blockquote>
+<p><img src="media/image260.jpeg" style="height:0.28681in" /></p>
+<blockquote>
+<p>c</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+<blockquote>
+<p>Repeat the same computation using numpy operations (runs on CPU)</p>
+</blockquote>
+<p>Lecture 12 85 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image261.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+</blockquote>
+<p><img src="media/image262.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 86 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image263.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+<p>Define symbolic variables:</p>
+<p>x = data</p>
+<p>y = labels</p>
+<p>w1 = first-layer weights</p>
+<p>w2 = second-layer weights</p>
+</blockquote>
+<p><img src="media/image264.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 87 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image265.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+<p><strong>Forward</strong>: Compute scores (symbolically)</p>
+</blockquote>
+<p><img src="media/image266.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 88 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image267.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+<p><strong>Forward</strong>: Compute probs, loss (symbolically)</p>
+</blockquote>
+<p><img src="media/image268.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 89 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image269.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+<p>Compile a function that</p>
+<p>computes loss, scores</p>
+</blockquote>
+<p><img src="media/image270.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 90 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image271.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+<p>Stuff actual numpy arrays into the function</p>
+</blockquote>
+<p><img src="media/image272.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 91 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image273.jpeg" style="width:9.25069in;height:4.51528in" /></p>
+</blockquote>
+<p><img src="media/image274.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 92 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image275.jpeg" style="width:9.32292in;height:4.56806in" /></p>
+<p>Same as before: define variables, compute scores and loss symbolically</p>
+</blockquote>
+<p><img src="media/image276.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 93 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image277.jpeg" style="width:9.32292in;height:4.56806in" /></p>
+<p>Theano computes gradients for <img src="media/image278.jpeg" style="width:0.20486in;height:0.4375in" /> us symbolically!</p>
+</blockquote>
+<p><img src="media/image279.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 94 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image280.jpeg" style="width:9.32292in;height:4.56806in" /></p>
+<p>Now the function returns loss, scores, and gradients</p>
+</blockquote>
+<p><img src="media/image281.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 95 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image282.jpeg" style="width:9.67778in;height:4.56806in" /></p>
+<p>Use the function to perform gradient descent!</p>
+</blockquote>
+<p><img src="media/image283.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 96 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image284.jpeg" style="width:9.66042in;height:4.56806in" /></p>
+<p><strong>Problem</strong>: Shipping weights and gradients to CPU on every iteration to update...</p>
+</blockquote>
+<p><img src="media/image285.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 97 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image286.jpeg" style="width:9.70972in;height:4.67222in" /></p>
+<p>Same as before: Define dimensions, <img src="media/image287.jpeg" style="width:1.83333in;height:0.22847in" /> define symbolic variables for x, y</p>
+</blockquote>
+<p><img src="media/image288.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 98 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image289.jpeg" style="width:9.70972in;height:4.67222in" /></p>
+<p>Define weights as <strong>shared variables</strong> that persist in the graph between calls; initialize with numpy arrays</p>
+</blockquote>
+<p><img src="media/image290.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 99 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image291.jpeg" style="width:9.70972in;height:4.67222in" /></p>
+<p><img src="media/image292.jpeg" style="width:0.33403in;height:0.57292in" />Same as before: Compute scores, loss, gradients symbolically</p>
+</blockquote>
+<p><img src="media/image293.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 100 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image294.jpeg" style="width:9.70972in;height:4.67361in" /></p>
+<p>Compiled function inputs are x and y; weights live in the graph</p>
+</blockquote>
+<p><img src="media/image295.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 101 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image296.jpeg" style="width:9.70972in;height:4.67361in" /></p>
+<p>Function includes an <strong>update</strong> that updates weights on every call</p>
+</blockquote>
+<p><img src="media/image297.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 102 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image298.jpeg" style="width:9.70764in;height:4.67222in" /></p>
+<p>To train the net, just call function repeatedly!</p>
+</blockquote>
+<p><img src="media/image299.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 103 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image300.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image301.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p><strong>Conditionals</strong>: The <strong>ifelse</strong> and <strong>switch</strong> functions allow conditional control flow in the graph</p>
+<p><strong>Loops</strong>: The <strong>scan</strong> function allows for (some types) of loops in the computational graph; good for RNNs</p>
+<p><strong>Derivatives</strong>: Efficient Jacobian / vector products with R and L operators, symbolic hessians (gradient of gradient)</p>
+<p><strong>Sparse matrices, optimizations, etc</strong></p>
+</blockquote>
+<p><img src="media/image302.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 104 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image303.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image304.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Experimental model parallelism:</p>
+<p><a href="http://deeplearning.net/software/theano/tutorial/using_multi_gpu.html"><span class="underline">http://deeplearning.net/software/theano/tutorial/using_multi_gpu.html</span></a></p>
+<p>Data parallelism using platoon:</p>
+<p><a href="https://github.com/mila-udem/platoon"><span class="underline">https://github.com/mila-udem/platoon</span></a></p>
+</blockquote>
+<p><img src="media/image305.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 105 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image306.jpeg" style="width:9.19236in;height:4.80208in" /></p>
+<p>Lasagne gives layer abstractions, sets up weights for you, writes update rules for you</p>
+</blockquote>
+<p><img src="media/image307.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 106 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image308.jpeg" style="width:9.19236in;height:4.80208in" /></p>
+<p>Set up symbolic Theano variables for data, labels <img src="media/image309.jpeg" style="width:1.57222in;height:0.32292in" /></p>
+</blockquote>
+<p><img src="media/image310.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 107 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image311.jpeg" style="width:9.19236in;height:4.80208in" /></p>
+<p><strong>Forward</strong>: Use Lasagne layers to set up layers; don’t set up weights explicitly <img src="media/image312.jpeg" style="width:1.57222in;height:0.32292in" /></p>
+</blockquote>
+<p><img src="media/image313.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 108 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image314.jpeg" style="width:9.19236in;height:4.80208in" /></p>
+<p><strong>Forward</strong>: Use Lasagne layers to compute loss <img src="media/image315.jpeg" style="width:1.57222in;height:0.32292in" /></p>
+</blockquote>
+<p><img src="media/image316.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 109 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image317.jpeg" style="width:9.19236in;height:4.80208in" /></p>
+<p>Lasagne gets parameters, and</p>
+<p>writes the update rule for you <img src="media/image318.jpeg" style="width:0.91944in;height:0.61667in" /></p>
+</blockquote>
+<p><img src="media/image319.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 110 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image320.jpeg" style="width:9.19236in;height:4.80208in" /></p>
+<p>Same as Theano: compile a function with updates, train model by calling function with arrays</p>
+</blockquote>
+<p><img src="media/image321.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 111 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image322.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image323.jpeg" style="width:4.51597in;height:3.71458in" /></p>
+<blockquote>
+<p>keras is a layer on top of Theano; makes common things easy to do</p>
+</blockquote>
+<p><img src="media/image324.jpeg" style="width:4.44097in;height:2.91944in" /></p>
+<blockquote>
+<p>(Also supports TensorFlow backend)</p>
+</blockquote>
+<p><img src="media/image325.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 112 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image326.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image327.jpeg" style="width:9.12014in;height:3.71458in" /></p>
+<blockquote>
+<p>keras is a layer on top of Theano; makes common things easy to do</p>
+<p>Set up a two-layer ReLU net with softmax</p>
+</blockquote>
+<p><img src="media/image328.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 113 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image329.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image330.jpeg" style="width:9.12153in;height:3.71458in" /></p>
+<blockquote>
+<p>keras is a layer on top of Theano; makes common things easy to do</p>
+<p>We will optimize the model using SGD with Nesterov momentum <img src="media/image331.jpeg" style="width:0.46667in;height:0.12917in" /></p>
+</blockquote>
+<p><img src="media/image332.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 114 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image333.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image334.jpeg" style="width:4.51597in;height:3.71458in" /></p>
+<blockquote>
+<p>keras is a layer on top of Theano; makes common things easy to do</p>
+</blockquote>
+<p><img src="media/image335.jpeg" style="width:4.44444in;height:2.92083in" /></p>
+<blockquote>
+<p>Generate some random data and</p>
+<p>train the model</p>
+</blockquote>
+<p><img src="media/image336.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 115 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image337.jpeg" style="width:9.02778in;height:4.75347in" /></p>
+<p><strong>Problem</strong>: It crashes, stack trace and error message not useful :(</p>
+</blockquote>
+<p><img src="media/image338.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 116 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image339.jpeg" style="width:9.28958in;height:4.71667in" /></p>
+<p><strong>Solution</strong>: y should be one-hot</p>
+<p>(too much API for me … )</p>
+</blockquote>
+<p><img src="media/image340.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 117 22 Feb 2016</p>
+<p><a href="https://github.com/kitofans/caffe-theano-conversion"><span class="underline">https://github.com/kitofans/caffe-theano-conversion</span></a></p>
+<p><a href="http://sklearn-theano.github.io"><span class="underline">http://sklearn-theano.github.io</span></a></p>
+<p><img src="media/image341.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<blockquote>
+<p>Theano: Pretrained Models</p>
+</blockquote>
+<p><img src="media/image342.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p><strong>Lasagne Model Zoo</strong> has pretrained common architectures:</p>
+<p><a href="https://github.com/Lasagne/Recipes/tree/master/modelzoo"><span class="underline">https://github.com/Lasagne/Recipes/tree/master/modelzoo</span></a></p>
+<p><strong>AlexNet with weights</strong>: <a href="https://github.com/uoguelph-mlrg/theano_alexnet"><span class="underline">https://github.com/uoguelph-mlrg/theano_alexnet</span></a></p>
+<p><strong>sklearn-theano</strong>: Run OverFeat and GoogLeNet forward, but no fine-tuning?</p>
+<p><strong>caffe-theano-conversion</strong>: CS 231n project from last year: load models and weights from caffe! Not sure if full-featured</p>
+</blockquote>
+<p><img src="media/image343.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 118 22 Feb 2016</p>
+<p><a href="https://github.com/kitofans/caffe-theano-conversion"><span class="underline">https://github.com/kitofans/caffe-theano-conversion</span></a></p>
+<p><a href="http://sklearn-theano.github.io"><span class="underline">http://sklearn-theano.github.io</span></a></p>
+<p><img src="media/image344.jpeg" style="width:9.42917in;height:4.80208in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Theano: Pretrained Models</td>
+<td><blockquote>
+<p>Best choice</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>AlexNet with weights</strong>: <a href="https://github.com/uoguelph-mlrg/theano_alexnet"><span class="underline">https://github.com/uoguelph-mlrg/theano_alexnet</span></a></p>
+<p><strong>sklearn-theano</strong>: Run OverFeat and GoogLeNet forward, but no fine-tuning?</p>
+<p><strong>caffe-theano-conversion</strong>: CS 231n project from last year: load models and weights from caffe! Not sure if full-featured</p>
+</blockquote>
+<p><img src="media/image345.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 119 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image346.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image347.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>(+) Python + numpy</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) Computational graph is nice abstraction</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) RNNs fit nicely in computational graph</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Raw Theano is somewhat low-level</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) High level wrappers (Keras, Lasagne) ease the pain</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Error messages can be unhelpful</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Large models can have long compile times</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Much “fatter” than Torch; more magic</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Patchy support for pretrained models</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image348.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 120 22 Feb 2016</p>
+<p>TensorFlow</p>
+<p><img src="media/image349.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+<p><a href="https://www.tensorflow.org"><span class="underline">https://www.tensorflow.org</span></a></p>
+<p><img src="media/image350.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 121 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image351.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image352.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>From Google</p>
+<p>Very similar to Theano - all about computation graphs</p>
+<p>Easy visualizations (TensorBoard)</p>
+<p>Multi-GPU and multi-node training</p>
+</blockquote>
+<p><img src="media/image353.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 122 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image354.jpeg" style="width:9.11667in;height:4.80208in" /></p>
+</blockquote>
+<p><img src="media/image355.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 123 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image356.jpeg" style="width:9.11667in;height:4.80208in" /></p>
+<p>Create placeholders for data and labels: These will be fed to the graph</p>
+</blockquote>
+<p><img src="media/image357.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 124 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image358.jpeg" style="width:9.11667in;height:4.80208in" /></p>
+<p>Create Variables to hold</p>
+<p>weights; similar to Theano</p>
+<p>shared variables</p>
+<p>Initialize variables with numpy arrays</p>
+</blockquote>
+<p><img src="media/image359.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 125 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image360.jpeg" style="width:9.11667in;height:4.80208in" /></p>
+<p><strong>Forward</strong>: Compute scores, probs, loss (symbolically)</p>
+</blockquote>
+<p><img src="media/image361.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 126 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image362.jpeg" style="width:9.11875in;height:4.80208in" /></p>
+<p>Running train_step will use SGD to minimize loss</p>
+</blockquote>
+<p><img src="media/image363.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 127 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image364.jpeg" style="width:9.11667in;height:4.80208in" /></p>
+<p>Create an artificial dataset; y is one-hot like Keras</p>
+</blockquote>
+<p><img src="media/image365.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 128 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image366.jpeg" style="width:9.11667in;height:4.80208in" /></p>
+<p>Actually train the model</p>
+</blockquote>
+<p><img src="media/image367.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 129 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image368.jpeg" style="width:9.17847in;height:4.80208in" /></p>
+<p>Tensorboard makes it easy to visualize what’s happening inside your models</p>
+</blockquote>
+<p><img src="media/image369.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 130 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image370.jpeg" style="width:9.17847in;height:4.80208in" /></p>
+<p>Tensorboard makes it easy to visualize what’s happening inside your models</p>
+<p>Same as before, but now we <img src="media/image371.jpeg" style="width:1.41458in;height:0.22847in" /> create summaries for loss and</p>
+<p>weights</p>
+</blockquote>
+<p><img src="media/image374.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 131 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image375.jpeg" style="width:9.17847in;height:4.80208in" /></p>
+<p>Tensorboard makes it easy to visualize what’s happening inside your models</p>
+<p>Create a special “merged” variable and a SummaryWriter object</p>
+</blockquote>
+<p><img src="media/image376.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 132 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image377.jpeg" style="width:9.17847in;height:4.80208in" /></p>
+<p>Tensorboard makes it easy to visualize what’s happening inside your models</p>
+<p>In the training loop, also run merged and pass its value to the writer</p>
+</blockquote>
+<p><img src="media/image378.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 133 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image379.jpeg" style="width:9.02778in;height:4.80208in" /></p>
+<p>Start Tensorboard server, and we get graphs!</p>
+</blockquote>
+<p><img src="media/image380.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 134 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image381.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image382.jpeg" style="width:10in;height:4.32639in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 135 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image383.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image384.jpeg" style="width:4.33542in;height:3.71458in" /></p>
+<blockquote>
+<p>Add names to placeholders and</p>
+</blockquote>
+<p><img src="media/image385.jpeg" style="width:4.54167in;height:3.37431in" /></p>
+<blockquote>
+<p>variables</p>
+</blockquote>
+<p><img src="media/image386.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 136 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image387.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image388.jpeg" style="width:4.33542in;height:3.71458in" /></p>
+<blockquote>
+<p>Add names to placeholders and variables</p>
+</blockquote>
+<p><img src="media/image389.jpeg" style="width:4.54167in;height:3.37431in" /></p>
+<blockquote>
+<p>Break up the forward pass with name scoping <img src="media/image390.jpeg" style="width:2.50903in;height:0.27292in" /></p>
+</blockquote>
+<p><img src="media/image391.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 137 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image392.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image393.jpeg" style="width:8.60833in;height:3.71458in" /></p>
+<blockquote>
+<p>Tensorboard shows the graph!</p>
+</blockquote>
+<p><img src="media/image394.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 138 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image395.jpeg" style="width:9.44931in;height:4.80208in" /></p>
+<p>Tensorboard shows the graph!</p>
+<p>Name scopes expand to show individual operations</p>
+</blockquote>
+<p><img src="media/image396.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 139 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image397.jpeg" style="width:10in;height:5.41389in" /></p>
+<p><strong>Data parallelism</strong>:</p>
+<p>synchronous or asynchronous</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 140 22 Feb 2016</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>TensorFlow: Multi-GPU</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Data parallelism</strong>:</td>
+<td><blockquote>
+<p><strong>Model parallelism</strong>:</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>synchronous or asynchronous</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p>Split model across GPUs</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image398.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 141 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image399.jpeg" style="width:9.02778in;height:4.66597in" /></p>
+<p><strong>Single machine</strong>: <strong>Many machines</strong>:</p>
+<p>Like other frameworks Not open source (yet) =(</p>
+</blockquote>
+<p><img src="media/image400.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 142 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image401.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image402.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>You can get a pretrained version of Inception here:</p>
+<p><a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/android/README.md"><span class="underline">https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/android/README.md</span></a></p>
+<p>(In an Android example?? Very well-hidden)</p>
+<p>The only one I could find =(</p>
+</blockquote>
+<p><img src="media/image403.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 143 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image404.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image405.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<ul>
+<li><blockquote>
+<p>(+) Python + numpy</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) Computational graph abstraction, like Theano; great for RNNs</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) Much faster compile times than Theano</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) Slightly more convenient than raw Theano?</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) TensorBoard for visualization</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+) Data AND model parallelism; best of all frameworks</p>
+</blockquote></li>
+<li><blockquote>
+<p>(+/-) Distributed models, but not open-source yet</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Slower than other frameworks right now</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Much “fatter” than Torch; more magic</p>
+</blockquote></li>
+<li><blockquote>
+<p>(-) Not many pretrained models</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image406.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 144 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image407.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td><blockquote>
+<p><strong>Caffe</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Torch</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Theano</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>TensorFlow</strong></p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Language</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>C++, Python</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lua</p>
+</blockquote></td>
+<td><blockquote>
+<p>Python</p>
+</blockquote></td>
+<td><blockquote>
+<p>Python</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Pretrained</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes ++</p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes ++</p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes (Lasagne)</p>
+</blockquote></td>
+<td><blockquote>
+<p>Inception</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Multi-GPU:</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes</p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes cunn.</p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes</p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><strong>Data parallel</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>DataParallelTable</p>
+</blockquote></td>
+<td><blockquote>
+<p>platoon</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><strong>Multi-GPU:</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>No</p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes</p>
+</blockquote></td>
+<td><blockquote>
+<p>Experimental</p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes (best)</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Model parallel</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>fbcunn.ModelParallel</p>
+</blockquote></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><strong>Readable</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes (C++)</p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes (Lua)</p>
+</blockquote></td>
+<td><blockquote>
+<p>No</p>
+</blockquote></td>
+<td><blockquote>
+<p>No</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><strong>source code</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><strong>Good at RNN</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p>No</p>
+</blockquote></td>
+<td><blockquote>
+<p>Mediocre</p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes</p>
+</blockquote></td>
+<td><blockquote>
+<p>Yes (best)</p>
+</blockquote></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image408.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 145 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image409.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image410.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Extract AlexNet or VGG features?</p>
+</blockquote>
+<p><img src="media/image411.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 146 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image412.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image413.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Extract AlexNet or VGG features? <strong>Use Caffe</strong></p>
+</blockquote>
+<p><img src="media/image414.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 147 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image415.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image416.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Fine-tune AlexNet for new classes?</p>
+</blockquote>
+<p><img src="media/image417.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 148 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image418.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image419.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Fine-tune AlexNet for new classes? <strong>Use Caffe</strong></p>
+</blockquote>
+<p><img src="media/image420.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 149 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image421.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image422.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Image Captioning with finetuning?</p>
+</blockquote>
+<p><img src="media/image423.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 150 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image424.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image425.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Image Captioning with finetuning?</p>
+<p>-&gt; Need pretrained models (Caffe, Torch, Lasagne)</p>
+<p>-&gt; Need RNNs (Torch or Lasagne)</p>
+<p>-&gt; <strong>Use Torch or Lasagna</strong></p>
+</blockquote>
+<p><img src="media/image426.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 151 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image427.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image428.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Segmentation? (Classify every pixel)</p>
+</blockquote>
+<p><img src="media/image429.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 152 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image430.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image431.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Segmentation? (Classify every pixel)</p>
+<p>-&gt; Need pretrained model (Caffe, Torch, Lasagna)</p>
+<p>-&gt; Need funny loss function</p>
+<p>-&gt; If loss function exists in Caffe: <strong>Use Caffe</strong></p>
+<p>-&gt; If you want to write your own loss: <strong>Use Torch</strong></p>
+</blockquote>
+<p><img src="media/image432.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 153 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image433.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image434.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Object Detection?</p>
+</blockquote>
+<p><img src="media/image435.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 154 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image436.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image437.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Object Detection?</p>
+<p>-&gt; Need pretrained model (Torch, Caffe, Lasagne)</p>
+<p>-&gt; Need lots of custom imperative code (NOT Lasagne) -&gt; Use <strong>Caffe + Python</strong> or <strong>Torch</strong></p>
+</blockquote>
+<p><img src="media/image438.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 155 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image439.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image440.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Language modeling with new RNN structure?</p>
+</blockquote>
+<p><img src="media/image441.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 156 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image442.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image443.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Language modeling with new RNN structure?</p>
+<p>-&gt; Need easy recurrent nets (NOT Caffe, Torch)</p>
+<p>-&gt; No need for pretrained models</p>
+<p>-&gt; <strong>Use Theano or TensorFlow</strong></p>
+</blockquote>
+<p><img src="media/image444.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 157 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image445.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image446.jpeg" style="width:9.20486in;height:3.71458in" /></p>
+<blockquote>
+<p>Implement BatchNorm?</p>
+<p>-&gt; Don’t want to derive gradient? <strong>Theano</strong> or <strong>TensorFlow</strong> -&gt; Implement efficient backward pass? <strong>Use Torch</strong></p>
+</blockquote>
+<p><img src="media/image447.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 158 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image448.jpeg" style="width:9.02778in;height:0.96528in" /></p>
+</blockquote>
+<p><img src="media/image449.jpeg" style="width:9.02778in;height:3.71458in" /></p>
+<blockquote>
+<p>Feature extraction / finetuning existing models: Use Caffe</p>
+<p>Complex uses of pretrained models: Use Lasagne or Torch</p>
+<p>Write your own layers: Use Torch</p>
+<p>Crazy RNNs: Use Theano or Tensorflow</p>
+<p>Huge model, need model parallelism: Use TensorFlow</p>
+</blockquote>
+<p><img src="media/image450.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 159 22 Feb 2016</p>
+<p><img src="media/image451.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 160 22 Feb 2016</p>
+<p><img src="media/image452.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 161 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image453.jpeg" style="width:9.29583in;height:1.67778in" /></p>
+</blockquote>
+<p><img src="media/image454.jpeg" style="width:10in;height:3.76597in" /></p>
+<blockquote>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/blob.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/blob.hpp</span></a></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 162 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image455.jpeg" style="width:10in;height:5.58056in" /></p>
+<p>● N-dimensional array for</p>
+<p>storing activations and</p>
+<p>weights</p>
+</blockquote>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/blob.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/blob.hpp</span></a></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 163 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image456.jpeg" style="width:10in;height:5.60417in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>N-dimensional array for storing activations and weights</p>
+</blockquote></li>
+<li><blockquote>
+<p>Template over datatype</p>
+</blockquote></li>
+</ul>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/blob.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/blob.hpp</span></a></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 164 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image457.jpeg" style="width:10in;height:5.58056in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>N-dimensional array for storing activations and weights</p>
+</blockquote></li>
+<li><blockquote>
+<p>Template over datatype</p>
+</blockquote></li>
+<li><blockquote>
+<p>Two parallel tensors:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>data</strong>: values</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>diffs</strong>: gradients</p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/blob.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/blob.hpp</span></a></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 165 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image458.jpeg" style="width:10in;height:5.58056in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>N-dimensional array for storing activations and weights</p>
+</blockquote></li>
+<li><blockquote>
+<p>Template over datatype</p>
+</blockquote></li>
+<li><blockquote>
+<p>Two parallel tensors:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>data</strong>: values</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>diffs</strong>: gradients</p>
+</blockquote></li>
+</ul></li>
+<li><blockquote>
+<p>Stores CPU / GPU versions of each tensor</p>
+</blockquote></li>
+</ul>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/blob.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/blob.hpp</span></a></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 166 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image459.jpeg" style="width:10in;height:5.41389in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>A small unit of computation</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/layer.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/layer.hpp</span></a></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 167 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image460.jpeg" style="width:10in;height:5.41389in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>A small unit of computation</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>● <strong>Forward</strong>: Use “bottom” data to compute “top” data</p>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/layer.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/layer.hpp</span></a></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 168 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image461.jpeg" style="width:10in;height:5.41389in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>A small unit of computation</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Forward</strong>: Use “bottom” data to compute “top” data</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Backward</strong>: Use “top”</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>diffs to compute</p>
+<p>“bottom” diffs</p>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/layer.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/layer.hpp</span></a></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 169 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image462.jpeg" style="width:10in;height:5.41389in" /></p>
+<p>● A small unit of computation</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Forward</strong>: Use “bottom” data to compute “top” data</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><strong>● Backward</strong>: Use “top” diffs to compute “bottom” diffs</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Separate <strong>CPU</strong> / <strong>GPU</strong> implementations</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/layer.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/layer.hpp</span></a></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 170 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image463.jpeg" style="width:10in;height:5.54514in" /></p>
+<p>● Tons of different layer types:</p>
+</blockquote>
+<p>...</p>
+<p><a href="https://github.com/BVLC/caffe/tree/master/src/caffe/layers"><span class="underline">https://github.com/BVLC/caffe/tree/master/src/caffe/layers</span></a></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 171 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image464.jpeg" style="width:10in;height:5.54514in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Tons of different layer types:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>batch norm</strong></p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>convolution</strong></p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>cuDNN convolution</strong></p>
+</blockquote></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>...</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>.cpp:</strong> CPU implementation</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>.cu</strong>: GPU implementation</p>
+</blockquote></li>
+</ul>
+<p><a href="https://github.com/BVLC/caffe/tree/master/src/caffe/layers"><span class="underline">https://github.com/BVLC/caffe/tree/master/src/caffe/layers</span></a></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 172 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image465.jpeg" style="width:9.33056in;height:1.15694in" /></p>
+</blockquote>
+<p><img src="media/image466.jpeg" style="width:10in;height:4.32639in" /></p>
+<ul>
+<li><blockquote>
+<p>Collects layers into a DAG</p>
+</blockquote></li>
+<li><blockquote>
+<p>Run all or part of the net <strong>forward</strong> and <strong>backward</strong></p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/net.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/net.hpp</span></a></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 173 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image467.jpeg" style="width:10in;height:5.48333in" /></p>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/solver.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/solver.hpp</span></a></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 174 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image468.jpeg" style="width:10in;height:5.48333in" /></p>
+<p>● Trains a Net by running it forward / backward, updating weights</p>
+</blockquote>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/solver.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/solver.hpp</span></a></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 175 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image469.jpeg" style="width:10in;height:5.48333in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Trains a Net by running it forward / backward, updating weights</p>
+</blockquote></li>
+<li><blockquote>
+<p>Handles snapshotting, <img src="media/image470.jpeg" style="width:0.63264in;height:0.27361in" /> restoring from snapshots</p>
+</blockquote></li>
+</ul>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/solver.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/solver.hpp</span></a></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 176 22 Feb 2016</p>
+<blockquote>
+<p><img src="media/image471.jpeg" style="width:10in;height:5.48333in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Trains a Net by running it forward / backward, updating weights</p>
+</blockquote></li>
+<li><blockquote>
+<p>Handles snapshotting,</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>restoring from snapshots</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Subclasses implement different update rules <img src="media/image472.jpeg" style="width:0.61319in;height:0.22361in" /></p>
+</blockquote></li>
+</ul>
+<p><a href="https://github.com/BVLC/caffe/blob/master/include/caffe/sgd_solvers.hpp"><span class="underline">https://github.com/BVLC/caffe/blob/master/include/caffe/sgd_solvers.hpp</span></a></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 12 177 22 Feb 2016</p>

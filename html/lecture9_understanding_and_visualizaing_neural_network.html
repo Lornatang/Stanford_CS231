@@ -1,0 +1,2245 @@
+<p><img src="media/image1.jpeg" style="width:9.73125in;height:1.92431in" /></p>
+<blockquote>
+<p>Understanding and Visualizing Convolutional Neural Networks</p>
+</blockquote>
+<p><img src="media/image2.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 1 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image3.jpeg" style="width:9.7625in;height:4.16736in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>A1 is graded. We’ll send out grades tonight (or so)</p>
+</blockquote></li>
+<li><blockquote>
+<p>A2 is due Feb 5 (this Friday!): <strong>submit in Assignments tab</strong> on CourseWork (not Dropbox)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Midterm is Feb 10 (next Wednesday)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Oh and pretrained ResNets were released today</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>(152-layer ILSVRC 2015 winning ConvNets)</p>
+<p><a href="https://github.com/KaimingHe/deep-residual-networks"><span class="underline">https://github.com/KaimingHe/deep-residual-networks</span></a></p>
+</blockquote>
+<p><img src="media/image4.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 2 3 Feb 2016</p>
+<p><img src="media/image5.jpeg" style="width:9.88194in;height:5.52083in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 3</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image6.jpeg" style="width:10in;height:5.625in" /></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 4 3</p>
+<blockquote>
+<p><img src="media/image7.jpeg" style="width:8.45069in;height:0.71736in" /></p>
+</blockquote>
+<p><img src="media/image8.jpeg" style="width:9.58681in;height:2.80903in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong>Classification</strong></td>
+<td><blockquote>
+<p><strong>Classification</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Object Detection</strong></p>
+</blockquote></td>
+<td><blockquote>
+<p><strong>Instance</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><blockquote>
+<p><strong>+ Localization</strong></p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p><strong>Segmentation</strong></p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image9.jpeg" style="width:9.58264in;height:0.45833in" /></p>
+<blockquote>
+<p>CAT CAT CAT, DOG, DUCK CAT, DOG, DUCK</p>
+</blockquote>
+<p><img src="media/image10.jpeg" style="width:10in;height:1.44861in" /></p>
+<blockquote>
+<p>Single object Multiple objects</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 5 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image11.jpeg" style="width:9.30278in;height:4.41806in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Visualize patches that maximally activate neurons</p>
+</blockquote></li>
+<li><blockquote>
+<p>Visualize the weights</p>
+</blockquote></li>
+<li><blockquote>
+<p>Visualize the representation space (e.g. with t-SNE)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Occlusion experiments</p>
+</blockquote></li>
+<li><blockquote>
+<p>Human experiment comparisons</p>
+</blockquote></li>
+<li><blockquote>
+<p>Deconv approaches (single backward pass)</p>
+</blockquote></li>
+<li><blockquote>
+<p>Optimization over image approaches (optimization)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image12.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 6 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image13.jpeg" style="width:10in;height:5.625in" /></p>
+<p><em>Rich feature hierarchies for accurate object detection and semantic segmentation [Girshick, Donahue, Darrell, Malik]</em></p>
+</blockquote>
+<p>one-stream AlexNet</p>
+<p>pool5</p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 7 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image14.jpeg" style="width:9.89861in;height:4.95625in" /></p>
+</blockquote>
+<p>one-stream AlexNet</p>
+<p>conv1</p>
+<blockquote>
+<p>only interpretable on the first layer :(</p>
+</blockquote>
+<p><img src="media/image15.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 8 3 Feb 2016</p>
+<p><img src="media/image16.jpeg" style="width:2.36736in;height:0.63889in" /></p>
+<blockquote>
+<p>Visualize the filters/kernels (raw weights)</p>
+</blockquote>
+<p><img src="media/image17.jpeg" style="width:2.14236in;height:0.46528in" /></p>
+<blockquote>
+<p>you can still do it for higher layers, it’s just not that interesting</p>
+<p>(these are taken from ConvNetJS CIFAR-10 demo)</p>
+</blockquote>
+<p><img src="media/image19.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p>layer 1 weights</p>
+<p><img src="media/image20.jpeg" style="width:2in;height:0.27153in" /></p>
+<blockquote>
+<p>layer 2 weights</p>
+</blockquote>
+<p><img src="media/image22.jpeg" style="width:7.23542in;height:2.32778in" /></p>
+<blockquote>
+<p>layer 3 weights</p>
+</blockquote>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 9</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image23.jpeg" style="width:9.84306in;height:4.99306in" /></p>
+</blockquote>
+<p><img src="media/image24.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 10 3 Feb 2016</p>
+<p><img src="media/image25.jpeg" style="width:5.06944in;height:0.51944in" /></p>
+<p><img src="media/image26.jpeg" style="width:2.49792in;height:4.55208in" /></p>
+<p>fc7 layer</p>
+<p><img src="media/image27.jpeg" style="width:5.44444in;height:2.51458in" /></p>
+<blockquote>
+<p>4096-dimensional “code” for an image (layer immediately before the classifier)</p>
+<p>can collect the code for many images</p>
+</blockquote>
+<p><img src="media/image28.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 11 3 Feb 2016</p>
+</blockquote>
+<p><img src="media/image29.jpeg" style="width:9.71389in;height:5.025in" /></p>
+<blockquote>
+<p><strong>Visualizing the representation</strong></p>
+<p>t-SNE visualization</p>
+<p><em>[van der Maaten &amp; Hinton]</em></p>
+<p>Embed high-dimensional points so that locally, pairwise distances are conserved</p>
+<p>i.e. similar things end up in similar places. dissimilar things end up wherever</p>
+<p><strong>Right</strong>: Example embedding of MNIST digits (0-9) in 2D</p>
+</blockquote>
+<p><img src="media/image30.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 12</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image31.jpeg" style="width:9.75972in;height:4.95417in" /></p>
+<p>two images are placed nearby if their CNN codes are close. See more:</p>
+<p><span class="underline"><a href="http://cs.stanford.edu/people/karpathy/cnnembed/">http://cs.stanford.</a> <a href="http://cs.stanford.edu/people/karpathy/cnnembed/">edu/people/karpathy/cnnembed/</a></span></p>
+</blockquote>
+<p><img src="media/image32.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 13 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image33.jpeg" style="width:9.89861in;height:5.00764in" /></p>
+<p>[Zeiler &amp; Fergus 2013]</p>
+<p>(as a function of the</p>
+<p>position of the</p>
+<p>square of zeros in</p>
+<p>the original image)</p>
+</blockquote>
+<p><img src="media/image34.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 14 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image35.jpeg" style="width:9.89861in;height:5.00764in" /></p>
+<p>[Zeiler &amp; Fergus 2013]</p>
+<p>(as a function of the</p>
+<p>position of the</p>
+<p>square of zeros in</p>
+<p>the original image)</p>
+</blockquote>
+<p><img src="media/image36.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 15 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image37.jpeg" style="width:9.57986in;height:4.93125in" /></p>
+<p><a href="http://yosinski.com/deepvis"><span class="underline">http://yosinski.com/deepvis</span></a></p>
+<p>YouTube video</p>
+<p><a href="https://www.youtube.com/watch?v=AgkfIQ4IGaM"><span class="underline">https://www.youtube.com/watch?v=AgkfIQ4IGaM</span></a></p>
+<p>(4min)</p>
+</blockquote>
+<p><img src="media/image38.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 16 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image39.jpeg" style="width:9.1875in;height:0.96667in" /></p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Feed image into net</p>
+</blockquote>
+<ol start="17" type="A">
+<li><blockquote>
+<p>how can we compute the gradient of any arbitrary neuron in the network w.r.t. the image?</p>
+</blockquote></li>
+</ol></li>
+</ol>
+<p><img src="media/image40.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 17 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image43.jpeg" style="width:9.1875in;height:0.96667in" /></p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Feed image into net</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image44.jpeg" style="width:10in;height:4.51875in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 18 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image45.jpeg" style="width:9.1875in;height:0.96667in" /></p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Feed image into net</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image46.jpeg" style="width:0.51389in" /></p>
+<ol start="2" type="1">
+<li><blockquote>
+<p>Pick a layer, set the gradient there to be all zero except for one 1 for some neuron of interest</p>
+</blockquote></li>
+<li><blockquote>
+<p>Backprop to image:</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image48.jpeg" style="width:10in;height:2.47431in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 19 3 Feb 2016</p>
+<p><strong>“Guided</strong></p>
+<p><strong>backpropagation:”</strong> instead</p>
+<p><img src="media/image49.jpeg" style="width:9.1875in;height:0.96667in" /></p>
+<blockquote>
+<p>Deconv approaches</p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Feed image into net</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image50.jpeg" style="width:0.51389in" /></p>
+<blockquote>
+<p>2. Pick a layer, set the gradient there to be all zero except for one 1 for</p>
+</blockquote>
+<p><img src="media/image52.jpeg" style="width:5.98889in;height:1.98194in" /></p>
+<blockquote>
+<p>some neuron of interest</p>
+<p>3. Backprop to image:</p>
+</blockquote>
+<p><img src="media/image53.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 20 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image54.jpeg" style="width:9.78056in;height:0.99444in" /></p>
+<p><em>[Visualizing and Understanding Convolutional Networks, Zeiler and Fergus 2013]</em></p>
+<p><em>[Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps, Simonyan et al., 2014]</em></p>
+<p><em>[Striving for Simplicity: The all convolutional net, Springenberg, Dosovitskiy, et al., 2015]</em></p>
+</blockquote>
+<p><img src="media/image55.jpeg" style="width:10in;height:4.38194in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 21 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image56.jpeg" style="width:9.78056in;height:0.99444in" /></p>
+<p><em>[Visualizing and Understanding Convolutional Networks, Zeiler and Fergus 2013]</em></p>
+<p><em>[Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps, Simonyan et al., 2014]</em></p>
+<p><em>[Striving for Simplicity: The all convolutional net, Springenberg, Dosovitskiy, et al., 2015]</em></p>
+</blockquote>
+<p><img src="media/image57.jpeg" style="width:9.62292in;height:3.72708in" /></p>
+<blockquote>
+<p><img src="media/image58.jpeg" style="height:0.43333in" /> Backward pass for a ReLU (will be changed in Guided Backprop)</p>
+</blockquote>
+<p><img src="media/image59.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 22 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image60.jpeg" style="width:9.78056in;height:0.99444in" /></p>
+<p><em>[Visualizing and Understanding Convolutional Networks, Zeiler and Fergus 2013]</em></p>
+<p><em>[Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps, Simonyan et al., 2014]</em></p>
+<p><em>[Striving for Simplicity: The all convolutional net, Springenberg, Dosovitskiy, et al., 2015]</em></p>
+</blockquote>
+<p><img src="media/image61.jpeg" style="width:10in;height:4.38194in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 23 3 Feb 2016</p>
+<p><img src="media/image62.jpeg" style="width:10in;height:5.55694in" /><strong>conv6</strong> (top) and layer <strong>conv9</strong> (bottom) of the network trained on ImageNet.</p>
+<p>Each row corresponds to one filter.</p>
+<p>The visualization using “guided backpropagation” is based on the top 10 image patches activating this filter taken from the ImageNet dataset.</p>
+<blockquote>
+<p><em>[Striving for Simplicity: The all convolutional net, Springenberg, Dosovitskiy, et al., 2015]</em></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 24 3 Feb 2016</p>
+<p><img src="media/image63.jpeg" style="width:9.78056in;height:0.99444in" /></p>
+<p><em>[Visualizing and Understanding Convolutional Networks, Zeiler and Fergus 2013]</em></p>
+<p><em>[Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps, Simonyan et al., 2014]</em></p>
+<p><em>[Striving for Simplicity: The all convolutional net, Springenberg, Dosovitskiy, et al., 2015]</em></p>
+</blockquote>
+<p><img src="media/image64.jpeg" style="width:9.24097in;height:3.72639in" /></p>
+<blockquote>
+<p>bit weird</p>
+</blockquote>
+<p><img src="media/image65.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 25 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image66.jpeg" style="width:9.84444in;height:4.78125in" /></p>
+<p><em>Zeiler &amp; Fergus, 2013</em></p>
+<p>Visualizing arbitrary neurons along the way to the top...</p>
+</blockquote>
+<p><img src="media/image67.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 26 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image68.jpeg" style="width:9.45764in;height:0.59792in" /></p>
+</blockquote>
+<p><img src="media/image69.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 27 3 Feb 2016</p>
+<p><img src="media/image71.jpeg" style="width:9.79722in;height:4.89514in" /></p>
+<p><img src="media/image72.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 28 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image73.jpeg" style="width:6.35556in;height:0.87222in" /></p>
+</blockquote>
+<p><img src="media/image74.jpeg" style="width:7.12083in;height:3.43958in" /></p>
+<ol start="17" type="A">
+<li><blockquote>
+<p>can we find an image that maximizes some class score?</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image75.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 29 3 Feb 2016</p>
+<p><img src="media/image76.jpeg" style="width:9.55694in;height:1.00625in" /></p>
+<blockquote>
+<p>Optimization to Image</p>
+<p>score for class c (before Softmax)</p>
+</blockquote>
+<p><img src="media/image77.jpeg" style="width:7.12083in;height:3.43958in" /></p>
+<ol start="17" type="A">
+<li><blockquote>
+<p>can we find an image that maximizes some class score?</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image78.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 30</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image79.jpeg" style="width:6.35556in;height:0.87222in" /></p>
+</blockquote>
+<p><img src="media/image80.jpeg" style="width:8.15278in;height:1.57778in" /></p>
+<ol type="1">
+<li><blockquote>
+<p>feed in zeros.</p>
+</blockquote></li>
+</ol>
+<p>zero image</p>
+<p><img src="media/image81.jpeg" style="width:0.51389in" /></p>
+<blockquote>
+<p>2. set the gradient of the scores vector to be [0,0,....1,....,0], then backprop to image</p>
+</blockquote>
+<p><img src="media/image84.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 31 3 Feb 2016</p>
+<p><img src="media/image85.jpeg" style="width:6.35556in;height:0.87222in" /></p>
+<blockquote>
+<p>Optimization to Image</p>
+</blockquote>
+<p><img src="media/image86.jpeg" style="width:8.15278in;height:1.57778in" /></p>
+<ol type="1">
+<li><blockquote>
+<p>feed in zeros.</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>zero image</p>
+</blockquote>
+<p><img src="media/image87.jpeg" style="width:0.51389in" /></p>
+<ol start="2" type="1">
+<li><blockquote>
+<p>set the gradient of the scores vector to be [0,0,....1,....,0], then backprop to image</p>
+</blockquote></li>
+<li><blockquote>
+<p>do a small “image update”</p>
+</blockquote></li>
+<li><blockquote>
+<p>forward the image through the network.</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image90.jpeg" style="width:3.99583in;height:0.89306in" /></p>
+<blockquote>
+<p>5. go back to 2.</p>
+</blockquote>
+<p>score for class c (before Softmax)</p>
+<p><img src="media/image91.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 32</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image92.jpeg" style="width:9.78889in;height:0.51111in" /></p>
+</blockquote>
+<p><img src="media/image93.jpeg" style="width:9.21319in;height:4.24653in" /></p>
+<blockquote>
+<p>1. Find images that maximize some class score:</p>
+</blockquote>
+<p><img src="media/image94.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 33 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image95.jpeg" style="width:9.78889in;height:0.51111in" /></p>
+</blockquote>
+<p><img src="media/image96.jpeg" style="width:9.21319in;height:4.2125in" /></p>
+<blockquote>
+<p>1. Find images that maximize some class score:</p>
+</blockquote>
+<p><img src="media/image97.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 34 3 Feb 2016</p>
+<p><img src="media/image98.jpeg" style="width:9.78889in;height:4.93681in" /></p>
+<blockquote>
+<p><em>Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps Karen Simonyan, Andrea Vedaldi, Andrew Zisserman, 2014</em></p>
+</blockquote>
+<ol start="2" type="1">
+<li><blockquote>
+<p>Visualize the Data gradient:</p>
+</blockquote></li>
+</ol>
+<table>
+<tbody>
+<tr class="odd">
+<td>(note that the gradient on</td>
+<td><blockquote>
+<p>M = ?</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>data has three channels.</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Here they visualize M, s.t.:</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>(at each pixel take abs val, and max over channels)</p>
+</blockquote>
+<p><img src="media/image99.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 35</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image100.jpeg" style="width:9.78889in;height:4.93681in" /></p>
+<blockquote>
+<p><em>Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps Karen Simonyan, Andrea Vedaldi, Andrew Zisserman, 2014</em></p>
+</blockquote>
+<ol start="2" type="1">
+<li><blockquote>
+<p>Visualize the Data gradient:</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>(note that the gradient on data has three channels. Here they visualize M, s.t.:</p>
+<p>(at each pixel take abs val, and max over channels)</p>
+</blockquote>
+<p><img src="media/image101.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 36</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image102.jpeg" style="width:9.78889in;height:0.51111in" /></p>
+</blockquote>
+<p><img src="media/image103.jpeg" style="width:9.65556in;height:4.28333in" /></p>
+<ul>
+<li><blockquote>
+<p>Use <strong>grabcut</strong> for segmentation</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image104.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 37 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image105.jpeg" style="width:9.81458in;height:3.16181in" /></p>
+</blockquote>
+<p><img src="media/image106.jpeg" style="width:9.18125in;height:1.01528in" /></p>
+<blockquote>
+<p><strong>Repeat:</strong></p>
+</blockquote>
+<ol type="1">
+<li><blockquote>
+<p>Forward an image</p>
+</blockquote></li>
+<li><blockquote>
+<p>Set activations in layer of interest to all zero, except for a 1.0 for a neuron of interest</p>
+</blockquote></li>
+<li><blockquote>
+<p>Backprop to image</p>
+</blockquote></li>
+<li><blockquote>
+<p>Do an “image update”</p>
+</blockquote></li>
+</ol>
+<p><img src="media/image107.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 38 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image108.jpeg" style="width:9.86875in;height:2.26319in" /></p>
+<p>Proposed a different form of regularizing the image</p>
+</blockquote>
+<p><img src="media/image109.jpeg" style="width:8.22986in;height:1.91181in" /></p>
+<blockquote>
+<p>More explicit scheme:</p>
+<p><strong>Repeat:</strong></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Update the image <strong>x</strong> with gradient from some unit of interest</p>
+</blockquote></li>
+<li><blockquote>
+<p>Blur x a bit</p>
+</blockquote></li>
+<li><blockquote>
+<p>Take any pixel with small norm to zero (to encourage sparsity)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image110.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 39 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image111.jpeg" style="width:9.01389in;height:4.93125in" /></p>
+<p><a href="http://yosinski.com/deepvis"><span class="underline">http://yosinski.com/deepvis</span></a></p>
+</blockquote>
+<p><img src="media/image112.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 40 3 Feb 2016</p>
+<p><img src="media/image113.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 41</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image115.jpeg" style="width:9.90694in;height:5.35694in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 42</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image116.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 43</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image118.jpeg" style="width:8.81042in;height:1.66597in" />code, is it possible to reconstruct the original image?</p>
+</blockquote>
+<p><img src="media/image119.jpeg" style="width:10in;height:3.15208in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 44 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image120.jpeg" style="width:9.35625in;height:0.83542in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Its code is similar to a given code</p>
+</blockquote></li>
+<li><blockquote>
+<p>It “looks natural” (image prior regularization)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image121.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 45 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image124.jpeg" style="width:9.64097in;height:0.74444in" /></p>
+</blockquote>
+<p><img src="media/image125.jpeg" style="width:7.59236in;height:3.94375in" /></p>
+<blockquote>
+<p>original image</p>
+</blockquote>
+<p><img src="media/image126.jpeg" style="width:2.08194in;height:0.84722in" /></p>
+<blockquote>
+<p>reconstructions from the 1000 log probabilities for ImageNet (ILSVRC) classes</p>
+</blockquote>
+<p><img src="media/image127.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 46 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image128.jpeg" style="width:9.47639in;height:0.61389in" /></p>
+</blockquote>
+<p><img src="media/image129.jpeg" style="width:10in;height:4.30972in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 47 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image130.jpeg" style="width:9.74514in;height:2.00694in" /></p>
+</blockquote>
+<p><img src="media/image131.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 48 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image133.jpeg" style="width:9.84722in;height:1.79514in" /></p>
+</blockquote>
+<p><img src="media/image134.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 49 3 Feb 2016</p>
+<p><img src="media/image136.jpeg" style="width:10in;height:5.58125in" /></p>
+<blockquote>
+<p>DeepDream <a href="https://github.com/google/deepdream"><span class="underline">https://github.com/google/deepdream</span></a></p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 50 3 Feb 2016</p>
+<p><img src="media/image137.jpeg" style="width:9.60278in;height:5.42778in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 51</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image138.jpeg" style="width:9.35278in;height:4.68403in" /></p>
+</blockquote>
+<p>jitter regularizer</p>
+<blockquote>
+<p>“image update”</p>
+</blockquote>
+<p><img src="media/image139.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 52 3 Feb 2016</p>
+<p><img src="media/image140.jpeg" style="width:3.46528in;height:0.37917in" /></p>
+<blockquote>
+<p>inception_4c/output</p>
+</blockquote>
+<p><img src="media/image141.jpeg" style="width:9.92153in;height:2.86667in" /></p>
+<blockquote>
+<p>DeepDream modifies the image in a way that “boosts” all activations, at any layer</p>
+<p>this creates a <span class="underline">feedback loop</span>: e.g. any slightly detected dog face will be made more and more dog like over time</p>
+</blockquote>
+<p><img src="media/image142.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 53</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image143.jpeg" style="width:3.46528in;height:0.37917in" /></p>
+</blockquote>
+<p><img src="media/image144.jpeg" style="width:0.39722in" /></p>
+<blockquote>
+<p>DeepDream any layer</p>
+</blockquote>
+<p><img src="media/image146.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 54 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image147.jpeg" style="width:3.63472in;height:0.40694in" /></p>
+</blockquote>
+<p><img src="media/image148.jpeg" style="width:9.92153in;height:3.03333in" /></p>
+<blockquote>
+<p>DeepDream modifies the image in a way that “boosts” all activations, at any layer</p>
+</blockquote>
+<p><img src="media/image149.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 55 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image150.jpeg" style="width:9.77708in;height:0.97986in" /></p>
+<p>Deep Dream Grocery Trip <a href="https://www.youtube.com/watch?v=DgPaCWJL7XI"><span class="underline">https://www.youtube.com/watch?v=DgPaCWJL7XI</span></a></p>
+<p>Deep Dreaming Fear &amp; Loathing in Las Vegas: the Great San Francisco Acid Wave <a href="https://www.youtube.com/watch?v=oyxSerkkP4o"><span class="underline">https://www.youtube.com/watch?v=oyxSerkkP4o</span></a></p>
+</blockquote>
+<p><img src="media/image151.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 56 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image152.jpeg" style="width:9.68333in;height:4.89444in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><em>A Neural Algorithm of Artistic Style by Leon A. Gatys, Alexander S. Ecker, and Matthias Bethge, 2015]</em> <strong>good implementation by Justin in Torch: <a href="https://github.com/jcjohnson/neural-style"><span class="underline">https://github.com/jcjohnson/neural-style</span></a></strong></p>
+</blockquote></li>
+</ul>
+<p><img src="media/image153.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 57 3 Feb 2016</p>
+<p><img src="media/image154.jpeg" style="width:9.97222in;height:4.89306in" /></p>
+<blockquote>
+<p>make your own easily on <span class="underline">deepart.io</span></p>
+</blockquote>
+<p><img src="media/image155.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 58</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image156.jpeg" style="width:7.45278in;height:0.89167in" /><strong>content targets</strong> (ConvNet activations of all layers for the given content image)</p>
+</blockquote>
+<p><img src="media/image157.jpeg" style="width:9.23403in;height:3.28403in" /></p>
+<blockquote>
+<p>content activations</p>
+<p>e.g.</p>
+<p>at CONV5_1 layer we would have a [14x14x512] array of target activations</p>
+</blockquote>
+<p><img src="media/image158.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 59 3 Feb 2016</p>
+<p><img src="media/image159.jpeg" style="width:7.45278in;height:0.89167in" /></p>
+<blockquote>
+<p>Step 2: Extract <strong>style targets</strong> (Gram matrices of ConvNet activations of all layers for the given style image)</p>
+</blockquote>
+<p><img src="media/image160.jpeg" style="width:9.23403in;height:3.11528in" /></p>
+<blockquote>
+<p>style gram matrices</p>
+<p>e.g. <img src="media/image161.jpeg" style="width:1.11806in;height:0.39583in" /> at CONV1 layer (with [224x224x64] activations) would give a [64x64] Gram matrix of all pairwise activation covariances (summed across spatial locations)</p>
+</blockquote>
+<p><img src="media/image162.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 60</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image163.jpeg" style="width:9.20764in;height:0.89167in" /></p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>The <strong>content</strong> of the content image (activations match content)</p>
+</blockquote></li>
+<li><blockquote>
+<p>The <strong>style</strong> of the style image (Gram matrices of activations match style)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image164.jpeg" style="width:10in;height:1.09028in" /></p>
+<p>(+Total Variation regularization (maybe))</p>
+<p><img src="media/image165.jpeg" style="width:8.26667in;height:2.40625in" /></p>
+<blockquote>
+<p>match content</p>
+</blockquote>
+<p><img src="media/image166.jpeg" style="width:1.1in;height:1.01458in" /></p>
+<blockquote>
+<p>match style</p>
+</blockquote>
+<p><img src="media/image167.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 61 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image168.jpeg" style="width:9.68681in;height:1.66597in" /></p>
+<p>Question: Can we use this to “fool” ConvNets?</p>
+</blockquote>
+<p><img src="media/image169.jpeg" style="width:10in;height:1.49028in" /></p>
+<blockquote>
+<p>spoiler alert: yeah</p>
+</blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 62 3 Feb 2016</p>
+<blockquote>
+<p><em>[Intriguing properties of neural networks, Szegedy et al., 2013]</em></p>
+</blockquote>
+<p><img src="media/image170.jpeg" style="width:9.275in;height:4.67847in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>correct</p>
+</blockquote></td>
+<td><blockquote>
+<p>+distort</p>
+</blockquote></td>
+<td><blockquote>
+<p>ostrich</p>
+</blockquote></td>
+<td><blockquote>
+<p>correct</p>
+</blockquote></td>
+<td><blockquote>
+<p>+distort</p>
+</blockquote></td>
+<td><blockquote>
+<p>ostrich</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 63</p>
+</blockquote></td>
+<td></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image171.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<blockquote>
+<p><img src="media/image172.jpeg" style="width:9.29028in;height:4.70069in" /></p>
+<p>&gt;99.6% confidences</p>
+</blockquote>
+<p><img src="media/image173.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 64 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image174.jpeg" style="width:9.29028in;height:4.64514in" /></p>
+<p>&gt;99.6% confidences</p>
+</blockquote>
+<p><img src="media/image175.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 65 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image176.jpeg" style="width:9.46597in;height:0.70069in" /></p>
+<p><em>[Exploring the Representation Capabilities of the HOG Descriptor, Tatu et al., 2011]</em></p>
+</blockquote>
+<p><img src="media/image177.jpeg" style="width:8.58819in;height:2.61181in" /></p>
+<blockquote>
+<p>Identical HOG represention</p>
+</blockquote>
+<p><img src="media/image178.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 66 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image179.jpeg" style="width:9.06667in;height:1.10833in" /></p>
+<p>“primary cause of neural networks’ vulnerability to adversarial perturbation is their <strong>linear nature</strong>“</p>
+</blockquote>
+<p><img src="media/image180.jpeg" style="width:10in;height:3.95903in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 67 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image181.jpeg" style="width:9.31528in;height:2.23333in" /></p>
+<p>(logistic regression)</p>
+</blockquote>
+<p><img src="media/image182.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 68 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image184.jpeg" style="width:7.91875in;height:0.51944in" /></p>
+</blockquote>
+<p><img src="media/image185.jpeg" style="width:6.54097in;height:1.075in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>x</td>
+<td>2</td>
+<td>-1</td>
+<td>3</td>
+<td>-2</td>
+<td>2</td>
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td>1</td>
+<td><blockquote>
+<p>-4</p>
+</blockquote></td>
+<td><blockquote>
+<p>5</p>
+</blockquote></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>w</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>1</td>
+<td>-1</td>
+<td>1</td>
+<td>-1</td>
+<td>1</td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td>1</td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image186.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>input example</p>
+</blockquote>
+<p><img src="media/image191.jpeg" style="width:2.14514in;height:1.17708in" /></p>
+<p>weights</p>
+<p><img src="media/image192.jpeg" style="width:4.88125in;height:0.71111in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 69 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image193.jpeg" style="width:7.91875in;height:0.51944in" /></p>
+</blockquote>
+<p><img src="media/image194.jpeg" style="width:6.54097in;height:1.075in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td>x</td>
+<td>2</td>
+<td>-1</td>
+<td>3</td>
+<td>-2</td>
+<td>2</td>
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td>1</td>
+<td><blockquote>
+<p>-4</p>
+</blockquote></td>
+<td><blockquote>
+<p>5</p>
+</blockquote></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>w</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>1</td>
+<td>-1</td>
+<td>1</td>
+<td>-1</td>
+<td>1</td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td>1</td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image195.jpeg" style="width:0.425in" /></p>
+<blockquote>
+<p>class 1 score = dot product:</p>
+<p>= -2 + 1 + 3 + 2 + 2 - 2 + 1 - 4 - 5 + 1 = -3</p>
+<p>=&gt; probability of class 1 is 1/(1+e^(-(-3))) = 0.0474</p>
+<p>i.e. the classifier is <strong>95%</strong> certain that this is class 0 example.</p>
+</blockquote>
+<p><img src="media/image200.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>input example</p>
+</blockquote>
+<p><img src="media/image201.jpeg" style="width:2.14514in;height:1.17708in" /></p>
+<p>weights</p>
+<p><img src="media/image202.jpeg" style="width:4.88125in;height:0.71111in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 70 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image203.jpeg" style="width:7.91875in;height:0.51944in" /></p>
+</blockquote>
+<p><img src="media/image204.jpeg" style="width:6.54097in;height:1.075in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>x</p>
+</blockquote></td>
+<td>2</td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td>3</td>
+<td><blockquote>
+<p>-2</p>
+</blockquote></td>
+<td>2</td>
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td>1</td>
+<td><blockquote>
+<p>-4</p>
+</blockquote></td>
+<td><blockquote>
+<p>5</p>
+</blockquote></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>w</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>1</td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td>1</td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td>1</td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td>1</td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>adversarial x</td>
+<td>?</td>
+<td><blockquote>
+<p>?</p>
+</blockquote></td>
+<td>?</td>
+<td><blockquote>
+<p>?</p>
+</blockquote></td>
+<td>?</td>
+<td><blockquote>
+<p>?</p>
+</blockquote></td>
+<td>?</td>
+<td><blockquote>
+<p>?</p>
+</blockquote></td>
+<td><blockquote>
+<p>?</p>
+</blockquote></td>
+<td>?</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image205.jpeg" style="width:0.425in" /></p>
+<blockquote>
+<p>class 1 score = dot product:</p>
+<p>= -2 + 1 + 3 + 2 + 2 - 2 + 1 - 4 - 5 + 1 = -3</p>
+<p>=&gt; probability of class 1 is 1/(1+e^(-(-3))) = 0.0474</p>
+<p>i.e. the classifier is <strong>95%</strong> certain that this is class 0 example.</p>
+</blockquote>
+<p><img src="media/image211.jpeg" style="width:10in;height:0.58889in" /></p>
+<blockquote>
+<p>input example</p>
+</blockquote>
+<p><img src="media/image212.jpeg" style="width:2.14514in;height:1.17708in" /></p>
+<p>weights</p>
+<p><img src="media/image213.jpeg" style="width:3.75347in;height:0.55278in" /></p>
+<blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 71 3 Feb 2016</p>
+</blockquote>
+<p><img src="media/image214.jpeg" style="width:7.91875in;height:0.51944in" /></p>
+<blockquote>
+<p>Lets fool a binary linear classifier:</p>
+</blockquote>
+<p><img src="media/image215.jpeg" style="width:9.87986in;height:3.22083in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>x</p>
+</blockquote></td>
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td><blockquote>
+<p>3</p>
+</blockquote></td>
+<td><blockquote>
+<p>-2</p>
+</blockquote></td>
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>-4</p>
+</blockquote></td>
+<td><blockquote>
+<p>5</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>w</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>1</td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>adversarial x</td>
+<td><blockquote>
+<p>1.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>3.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>-2.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>2.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>1.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>1.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>-3.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>4.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>1.5</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image216.jpeg" style="width:0.425in" /></p>
+<blockquote>
+<p>input example</p>
+</blockquote>
+<p>weights</p>
+<blockquote>
+<p>class 1 score before:</p>
+<p>-2 + 1 + 3 + 2 + 2 - 2 + 1 - 4 - 5 + 1 = -3</p>
+<p>=&gt; probability of class 1 is 1/(1+e^(-(-3))) = 0.0474</p>
+</blockquote>
+<p><img src="media/image218.jpeg" style="width:5.86042in" /></p>
+<blockquote>
+<p>-1.5+1.5+3.5+2.5+2.5-1.5+1.5-3.5-4.5+1.5 = 2</p>
+<p>=&gt; probability of class 1 is now 1/(1+e^(-(2))) = 0.88</p>
+<p><strong>i.e. we improved the class 1 probability from 5% to 88%</strong></p>
+</blockquote>
+<p><img src="media/image219.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 72</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image220.jpeg" style="width:7.91875in;height:0.51944in" /></p>
+<blockquote>
+<p>Lets fool a binary linear classifier:</p>
+</blockquote>
+<p><img src="media/image221.jpeg" style="width:9.96319in;height:3.7in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>x</p>
+</blockquote></td>
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td><blockquote>
+<p>3</p>
+</blockquote></td>
+<td><blockquote>
+<p>-2</p>
+</blockquote></td>
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>2</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>-4</p>
+</blockquote></td>
+<td><blockquote>
+<p>5</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p>w</p>
+</blockquote></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>1</td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1</p>
+</blockquote></td>
+<td><blockquote>
+<p>1</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>adversarial x</td>
+<td><blockquote>
+<p>1.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>-1.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>3.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>-2.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>2.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>1.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>1.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>-3.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>4.5</p>
+</blockquote></td>
+<td><blockquote>
+<p>1.5</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image222.jpeg" style="width:0.425in" /></p>
+<blockquote>
+<p>input example</p>
+</blockquote>
+<p>weights</p>
+<blockquote>
+<p>class 1 score before:</p>
+<p>-2 + 1 + 3 + 2 + 2 - 2 + 1 - 4 - 5 + 1 = -3</p>
+<p>=&gt; probability of class 1 is 1/(1+e^(-(-3))) = 0.0474</p>
+</blockquote>
+<p><img src="media/image224.jpeg" style="width:5.86042in" /></p>
+<blockquote>
+<p>-1.5+1.5+3.5+2.5+2.5-1.5+1.5-3.5-4.5+1.5 = 2</p>
+<p>=&gt; probability of class 1 is now 1/(1+e^(-(2))) = 0.88</p>
+<p><strong>i.e. we improved the class 1 probability from 5% to 88%</strong></p>
+</blockquote>
+<p><img src="media/image225.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<p>image has 150,528.</p>
+<p>(It’s significantly easier with more numbers, need smaller nudge for each)</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 73</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image226.jpeg" style="width:7.73542in;height:0.68889in" /></p>
+</blockquote>
+<p><img src="media/image227.jpeg" style="width:9.16528in;height:0.65417in" /></p>
+<blockquote>
+<p>Recall CIFAR-10 linear classifiers:</p>
+</blockquote>
+<p><img src="media/image228.jpeg" style="width:9.68889in;height:3.21736in" /></p>
+<blockquote>
+<p>ImageNet classifiers:</p>
+</blockquote>
+<p><img src="media/image229.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 74 3 Feb 2016</p>
+<p><img src="media/image230.jpeg" style="width:3.33472in;height:0.45833in" /></p>
+<blockquote>
+<p>mix in a tiny bit of</p>
+<p>Goldfish classifier weights</p>
+</blockquote>
+<p><img src="media/image231.jpeg" style="width:9.55139in;height:3.01319in" /></p>
+<blockquote>
+<p>+ <sub>=</sub></p>
+</blockquote>
+<p><img src="media/image232.jpeg" style="width:0.69722in;height:0.38056in" /></p>
+<blockquote>
+<p><strong>100% Goldfish</strong></p>
+</blockquote>
+<p><img src="media/image234.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 75</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image235.jpeg" style="width:9.60278in;height:0.58889in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 76</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/image237.jpeg" style="width:9.60278in;height:5.5125in" /></p>
+<table>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson</p>
+</blockquote></td>
+<td><blockquote>
+<p>Lecture 9 77</p>
+</blockquote></td>
+<td><blockquote>
+<p>3 Feb 2016</p>
+</blockquote></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/image238.jpeg" style="width:9.66528in;height:2.05903in" /></p>
+<p>“primary cause of neural networks’ vulnerability to adversarial perturbation is their <strong>linear nature</strong>“</p>
+<p>(and very high-dimensional, sparsely-populated input spaces)</p>
+<p>In particular, this is not a problem with Deep Learning, and has little to do with ConvNets specifically. Same issue would come up with Neural Nets in any other modalities.</p>
+</blockquote>
+<p><img src="media/image239.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 78 3 Feb 2016</p>
+<blockquote>
+<p>Summary</p>
+</blockquote>
+<p><img src="media/image240.jpeg" style="width:9.41736in;height:1.0875in" /></p>
+<blockquote>
+<p>Backpropping to the image is powerful. It can be used for:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Understanding</strong> (e.g. visualize optimal stimuli for arbitrary neurons)</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Segmenting</strong> objects in the image (kind of)</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Inverting</strong> codes and introducing privacy concerns</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Fun</strong> (NeuralStyle/DeepDream)</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Confusion and chaos</strong> (Adversarial examples)</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image241.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 79 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image242.jpeg" style="width:9.41944in;height:4.86458in" /></p>
+<p>Image Captioning Recurrent Neural Networks RNN Language Models</p>
+</blockquote>
+<p><img src="media/image243.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 80 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image244.jpeg" style="width:0.53056in;height:0.38958in" /> ReLU W2 ReLU</p>
+</blockquote>
+<p><img src="media/image248.jpeg" style="width:9.10556in;height:3.14375in" /></p>
+<blockquote>
+<p>5 <img src="media/image249.jpeg" style="width:1.18958in;height:0.12222in" /> 2 <img src="media/image250.jpeg" style="width:0.45417in" /> 2 <img src="media/image251.jpeg" style="width:1.18958in;height:0.12222in" /> 4 <img src="media/image252.jpeg" style="width:0.45417in" /> 4</p>
+</blockquote>
+<p><img src="media/image253.jpeg" style="width:1.17569in" /></p>
+<blockquote>
+<p>W3</p>
+<p>-2 <img src="media/image257.jpeg" style="width:1.18542in;height:0.15278in" /> 3 <img src="media/image258.jpeg" style="width:0.45417in" /> 3 <img src="media/image259.jpeg" style="width:1.18542in;height:0.15347in" /> -2 <img src="media/image260.jpeg" style="width:0.45417in" /> 0 <img src="media/image261.jpeg" style="width:0.84931in;height:0.1625in" /> 5</p>
+</blockquote>
+<p><img src="media/image262.jpeg" style="width:1.17569in" /></p>
+<blockquote>
+<p>1 <img src="media/image267.jpeg" style="width:1.18958in;height:0.12222in" /> -2 <img src="media/image268.jpeg" style="width:0.45417in" /> 0 <img src="media/image269.jpeg" style="width:1.18958in;height:0.12222in" /> -3 <img src="media/image270.jpeg" style="width:0.45417in" /> 0</p>
+</blockquote>
+<p><img src="media/image271.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 81 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image276.jpeg" style="width:9.09306in;height:0.45833in" />: all +ve and -ve paths of influence through the graph interfere</p>
+</blockquote>
+<p><img src="media/image277.jpeg" style="width:9.10556in;height:3.41111in" /></p>
+<blockquote>
+<p>W1 ReLU W2 ReLU</p>
+<p>5 <img src="media/image278.jpeg" style="width:1.20347in;height:0.24444in" /> 2 <img src="media/image279.jpeg" style="width:0.45972in;height:0.15208in" /> 2 <img src="media/image280.jpeg" style="width:1.20347in;height:0.24444in" /> 4 <img src="media/image281.jpeg" style="width:0.45972in;height:0.15208in" /> 4</p>
+</blockquote>
+<p><img src="media/image282.jpeg" style="width:1.17569in" /></p>
+<blockquote>
+<p>W3</p>
+<p>-2 <img src="media/image286.jpeg" style="width:1.19583in;height:0.30625in" /> 3 <img src="media/image287.jpeg" style="width:0.45972in;height:0.15208in" /> 3 <img src="media/image288.jpeg" style="width:1.18542in;height:0.15347in" /> -2 <img src="media/image289.jpeg" style="width:0.45417in" /> 0 <img src="media/image290.jpeg" style="width:0.86111in;height:0.24375in" /> 5</p>
+</blockquote>
+<p><img src="media/image291.jpeg" style="width:1.17569in" /></p>
+<ul>
+<li><blockquote>
+<p><img src="media/image296.jpeg" style="width:1.18958in;height:0.12222in" /> -2 <img src="media/image297.jpeg" style="width:0.45417in" /> 0 <img src="media/image298.jpeg" style="width:1.18958in;height:0.12222in" /> -3 <img src="media/image299.jpeg" style="width:0.45417in" /> 0 positive gradient, negative gradient, zero gradient</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image300.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 82 3 Feb 2016</p>
+<blockquote>
+<p><img src="media/image306.jpeg" style="width:9.09306in;height:0.45833in" />: cancel out -ve paths of influence at each step (i.e. we only keep positive paths of influence)</p>
+</blockquote>
+<p><img src="media/image307.jpeg" style="width:9.10556in;height:3.41111in" /></p>
+<blockquote>
+<p>W1 ReLU W2 ReLU</p>
+<p>5 <img src="media/image308.jpeg" style="width:1.20347in;height:0.24444in" /> 2 <img src="media/image309.jpeg" style="width:0.45972in;height:0.15208in" /> 2 <img src="media/image310.jpeg" style="width:1.20347in;height:0.24444in" /> 4 <img src="media/image311.jpeg" style="width:0.45972in;height:0.15208in" /> 4</p>
+</blockquote>
+<p><img src="media/image312.jpeg" style="width:1.17569in" /></p>
+<blockquote>
+<p>W3</p>
+<p>-2 <img src="media/image316.jpeg" style="width:1.18542in;height:0.15278in" /> 3 <strong>X</strong> <img src="media/image317.jpeg" /> 3 <img src="media/image318.jpeg" style="width:1.18542in;height:0.15347in" /> -2 <img src="media/image319.jpeg" style="width:0.45417in" /> 0 <img src="media/image320.jpeg" style="width:0.86111in;height:0.24375in" /> 5</p>
+</blockquote>
+<p><img src="media/image321.jpeg" style="width:1.17569in" /></p>
+<ul>
+<li><blockquote>
+<p><img src="media/image326.jpeg" style="width:1.18958in;height:0.12222in" /> -2 <img src="media/image327.jpeg" style="width:0.45417in" /> 0 <img src="media/image328.jpeg" style="width:1.18958in;height:0.12222in" /> -3 <img src="media/image329.jpeg" style="width:0.45417in" /> 0 positive gradient, negative gradient, zero gradient</p>
+</blockquote></li>
+</ul>
+<p><img src="media/image330.jpeg" style="width:10in;height:0.58889in" /></p>
+<p>Fei-Fei Li &amp; Andrej Karpathy &amp; Justin Johnson Lecture 9 83 3 Feb 2016</p>
